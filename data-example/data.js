@@ -3,6 +3,7 @@
     Demonstrates the data structure of the data.json
 */
 
+
 // Define the data object...
 let data = {
     "questions": {
@@ -49,9 +50,10 @@ let data = {
 };
 
 
+// Call the testData function when the window loads
 window.onload = (event) => {
     testData();
-};
+}; // end window.onload
 
 
 // Demonstrates the different ways to access data from the json object.
@@ -99,4 +101,3 @@ function testData() {
         console.log(`Question 2 Correct Answer ${i}: ${question_2.answers[index]}`);
     } // end for   
 }; // end testData()
-
