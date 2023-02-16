@@ -1,43 +1,68 @@
 {
-    "questions": {
-        "question_1": {
-            "prompt": "This is an example question...",
-            "answers": [
-                "This is answer 1 (The correct answer).",
-                "This is answer 2.",
-                "This is answer 3.",
-                "This is answer 4."
-            ],
-            "correct_answer_index": [
-                0
-            ]
-        },
-        "question_2": {
-            "prompt": "This is an another example question...",
-            "answers": [
-                "This is answer 1 (A correct answer).",
-                "This is answer 2.",
-                "This is answer 3. (Another correct answer).",
-                "This is answer 4.",
-                "This is answer 5.",
-                "This is answer 6."
-            ],
-            "correct_answer_index": [
-                0,
-                2
-            ]
-        }
+  "questions": {
+    "question_1": {
+      "prompt": "This is an example question...",
+      "answers": [
+        "This is answer 1 (The correct answer).",
+        "This is answer 2.",
+        "This is answer 3.",
+        "This is answer 4."
+      ],
+      "correct_answer_index": [0]
     },
-    "images": {
-        "background_1": "path/to/background_1.xxx",
-        "character_sprite_1": "path/to/character_sprite_1.xxx"
+    "question_2": {
+      "prompt": "This is an example question 2...",
+      "answers": [
+        "This is answer 1.",
+        "This is answer 2 (The correct answer).",
+        "This is answer 3.",
+        "This is answer 4."
+      ],
+      "correct_answer_index": [1]
     },
-    "audio": {
-        "main_theme": "path/to/main_theme.xxx",
-        "attack_sound": "path/to/attack_sound.xxx"
+    "question_3": {
+      "prompt": "This is an example question 3...",
+      "answers": [
+        "This is answer 1.",
+        "This is answer 2.",
+        "This is answer 3 (The correct answer).",
+        "This is answer 4."
+      ],
+      "correct_answer_index": [2]
     },
-    "video": {
-        "sequence_1": "path/to/sequence_1.xxx",
-        "sequence_2": "path/to/sequence_2.xxx"
+    "question_4": {
+      "prompt": "This is an example question 4...",
+      "answers": [
+        "This is answer 1.",
+        "This is answer 2.",
+        "This is answer 3.",
+        "This is answer 4 (The correct answer)."
+      ],
+      "correct_answer_index": [3]
+    },
+    "question_5": {
+      "prompt": "This is an another example question...",
+      "answers": [
+        "This is answer 1 (A correct answer).",
+        "This is answer 2.",
+        "This is answer 3. (Another correct answer).",
+        "This is answer 4.",
+        "This is answer 5.",
+        "This is answer 6."
+      ],
+      "correct_answer_index": [0, 2]
     }
+  },
+  "images": {
+    "background_1": "path/to/background_1.xxx",
+    "character_sprite_1": "path/to/character_sprite_1.xxx"
+  },
+  "audio": {
+    "main_theme": "path/to/main_theme.xxx",
+    "attack_sound": "path/to/attack_sound.xxx"
+  },
+  "video": {
+    "sequence_1": "path/to/sequence_1.xxx",
+    "sequence_2": "path/to/sequence_2.xxx"
+  }
 }
