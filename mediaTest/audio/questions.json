@@ -1,0 +1,14 @@
+{
+  "questions": {
+    "question_1": {
+      "prompt": "What is 56 - 35...",
+      "answers": [
+        "This is answer is 12.",
+        "This is answer is 21.",
+        "This is answer is 22.",
+        "This is answer is 11."
+      ],
+      "correct_answer_index": [1]
+    }
+  }
+}
