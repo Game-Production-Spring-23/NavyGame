@@ -8,7 +8,7 @@ window.onload = (event) => {
     document.body.appendChild(app.view);
 
     // load the animations using
-    let texture = PIXI.Texture.from('./mediaTest/images/shark.png');
+    let texture = PIXI.Texture.from('shark.png');
     let shark = new PIXI.Sprite(texture);
 
     // center the sprite's anchor point
