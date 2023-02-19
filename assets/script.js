@@ -24,15 +24,15 @@ function getQuestion() {
       }
       app += "<div id='response'></div>";
 
-      document.getElementById("app").innerHTML = app;
+      document.getElementById("gameContainer").innerHTML = app;
     });
 }
 //On click function for clicking on a right or wrong answer
 function getAnswer(guess, correct) {
   //if the user clicks the right button the app resets
   if (guess == correct) {
-    document.getElementById("app").innerHTML =
-      "<h1>Correct</h1><input id='start' type='button' onclick='getQuestion()'' value='Redo Test'>";
+    document.getElementById("gameContainer").innerHTML =
+      "<h1>Correct</h1><input id='start' class='button-8' type='button' onclick='getQuestion()'' value='Redo Test'>";
   } else {
     //if the user clicks the wrong answer, the user is told that it is wrong
     document.getElementById("response").innerHTML =

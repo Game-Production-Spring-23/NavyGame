@@ -8,19 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Navy Game</title> <!---change name once we have one-->
     <link rel="stylesheet" href="/style.css">
-    <style>
-        #start {
-            width: 50%;
-            height: 100px;
-            font-size: 30px;
-        }
-
-        .answer {
-            width: 50%;
-            height: 75px;
-            font-size: 20px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="/pixi.js"></script>
     <script src="/assets/script.js"></script>
     <!--<script src="/data-example/data.js"></script>-->
@@ -28,13 +18,23 @@
 </head>
 
 <body>
-    <h1>eventually we will put stuff here.</h1>
+    
     <!-- This div is the questions and answer section this might change based on how the game is setup, -->
     <div id="app">
         <div id="gameContainer">
         <h1>Navy Game</h1>
-        <input id="start" type="button" onclick="startTest()" value="Start Test">
-    </div></div>
+        
+        <input id="start" class ="button-8" type="button" onclick="startTest()" value="Start Test">
+        
+    </div>
+    
+    <div id="waterHolder">
+            <img src="/assets/testWater.gif" alt="pixelated water"></img>
+        </div>
+    
+    </div>
+    
 </body>
 
 </html>
+
