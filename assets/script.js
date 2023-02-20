@@ -34,14 +34,15 @@ function getQuestion() {
 function getAnswer(guess, correct) {
   //if the user clicks the right button the app resets
   if (guess == correct) {
+    //Currently cycles back to start of test, but will eventually load future questions.
     document.getElementById("gameContainer").innerHTML =
-      "<h1>Correct</h1><input id='start' class='button-8' type='button' onclick='getQuestion()'' value='Redo Test'>";
+      "<h1>Correct</h1><input id='start' class='button-8' type='button' onclick='location.reload()' value='Redo Test'>";
       updateScore();
   } else {
     //if the user clicks the wrong answer, the user is told that it is wrong
     document.getElementById("response").innerHTML =
       "<h3>Wrong answer try again</h3>";
-      
+
   }
 }
 
