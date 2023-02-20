@@ -39,3 +39,33 @@ function getAnswer(guess, correct) {
       "<h3>Wrong answer try again</h3>";
   }
 }
+
+//Future Functions -------------------------------------------------//
+
+//grabs a video from the queue and plays it in the gameContainer div
+function playVideo(){
+  //grabs video from queue
+  //plays video in gameContainer div
+
+}
+
+function updateScore(){
+  //updates score in score div
+
+}
+
+function startDialogue(){
+  //grabs dialogue from queue
+  //plays dialogue in gameContainer div
+
+}
+
+function endDialogue(){
+  //ends dialogue
+  //updates queue number
+}
+
+function endVideo(){
+  //ends video
+  //updates queue number
+}
