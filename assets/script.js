@@ -4,7 +4,7 @@ function startTest() {
 }
 function getQuestion() {
   //Fetches data from json file, can be used with api url
-  fetch("/data-example/data.json")
+  fetch("../mediaTest/data-example/data.json")
     .then((response) => response.json())
     .then((data) => {
       //store changes to HTML in app and appends changes to app div
