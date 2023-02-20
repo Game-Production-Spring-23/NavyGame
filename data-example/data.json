@@ -1,12 +1,12 @@
 {
   "questions": {
     "question_1": {
-      "prompt": "This is an example question...",
+      "prompt": "What component do you not need to make an MBSE model?",
       "answers": [
-        "This is answer 1 (The correct answer).",
-        "This is answer 2.",
-        "This is answer 3.",
-        "This is answer 4."
+        "Modeling Runway [x]",
+        "Modeling Method",
+        "Modeling Tools",
+        "Modeling Language"
       ],
       "correct_answer_index": [0]
     },

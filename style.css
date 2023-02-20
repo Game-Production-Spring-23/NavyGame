@@ -16,6 +16,12 @@ h1{
 }
 /*Button css*/
 
+h3{
+  font-family: 'Lilita One', cursive;
+  font-size: 30px;
+  color: #373737;
+  text-align: center;
+}
 #start {
   width: 50%;
   height: 100px;

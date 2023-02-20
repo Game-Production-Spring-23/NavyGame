@@ -1,3 +1,6 @@
+//global variables
+
+
 //On click function for start test
 function startTest() {
   getQuestion();
@@ -33,10 +36,12 @@ function getAnswer(guess, correct) {
   if (guess == correct) {
     document.getElementById("gameContainer").innerHTML =
       "<h1>Correct</h1><input id='start' class='button-8' type='button' onclick='getQuestion()'' value='Redo Test'>";
+      updateScore();
   } else {
     //if the user clicks the wrong answer, the user is told that it is wrong
     document.getElementById("response").innerHTML =
       "<h3>Wrong answer try again</h3>";
+      
   }
 }
 
@@ -49,9 +54,16 @@ function playVideo(){
 
 }
 
-function updateScore(){
-  //updates score in score div
+function updateScore(){ //convert innerhtml to int and add 1
+  var score = document.getElementById("score");
+  score.innerHTML = parseInt(score.innerHTML) + 1;
+  console.log(score);
+}
 
+function clearScore(){
+  var score = document.getElementById("score");
+  score.innerHTML = 0;
+  console.log(score);
 }
 
 function startDialogue(){
