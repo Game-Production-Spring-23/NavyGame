@@ -10,7 +10,7 @@ Game Production Document
 * **style.css** - The style sheet for main project.
 
 ## Data JSON File Structure
-The data JSON file structure is integral to the project. It contains all of the outside data that needs to be accessed by the project, in a simple javascript object that can be quickly parsed for data. The structure is as follows:
+The data JSON file structure is integral to the project. It contains all of the outside data that needs to be accessed by the project, in a simple javascript object that can be quickly parsed for data. The *data-examples/* folder in *mediaTest/* goes into more detail for loading the json file as well as utilizing the json file in code. The structure is as follows:
 
 ```
 {
