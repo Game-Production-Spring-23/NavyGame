@@ -12,17 +12,17 @@ function getQuestion() {
     .then((data) => {
       //store changes to HTML in app and appends changes to app div
       let app = "";
-      app += "<h1>" + data.questions.question_1.prompt + "</h1>";
+      app += "<h1>" + data.questions[0].prompt + "</h1>";
 
       //Creates buttons for each answer, will also incorporate dials.
-      for (let i = 0; i < data.questions.question_1.answers.length; i++) {
+      for (let i = 0; i < data.questions[0].answers.length; i++) {
         app +=
           "<h2><input class='answer' type='button' onclick='getAnswer(" +
           i +
           "," +
-          data.questions.question_1.correct_answer_index +
+          data.questions[0].correct_answer_indices +
           ")' value='" +
-          data.questions.question_1.answers[i] +
+          data.questions[0].answers[i] +
           "'></h2>";
       }
       app += "<div id='response'></div>";
