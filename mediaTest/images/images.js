@@ -1,4 +1,5 @@
 // An example of loading an image in pixi
+// Edwin Sanchez
 
 // Notes from: https://www.bookstack.cn/read/learningPixi-en/spilt.5.pixi.md
 

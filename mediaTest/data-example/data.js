@@ -1,6 +1,7 @@
 /*
     JSON Data example
     Demonstrates the data structure of the data.json
+    Edwin Sanchez
 */
 
 
