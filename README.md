@@ -56,5 +56,5 @@ The data JSON file structure is integral to the project. It contains all of the 
 ### JSON Helper Functions
 To aid in parsing some of the json files, there are helper functions.
 
-* **checkForCorrectAnswers(selectedAnswers(integer array), correctAnswerIndices(integer array) -> bool:** This function goes through the list of correct answers for a question, comparing each correct answer to each value in the list of selectedAnswers. If it cannot find a match, then the function returns false. If it manages to match every selected Answer to a value in the list of Correct Answers, then it returns true.
+* **checkForCorrectAnswers(selectedAnswers(integer array), correctAnswerIndices(integer array)) -> bool:** This function goes through the list of correct answers for a question, comparing each correct answer to each value in the list of selectedAnswers. If it cannot find a match, then the function returns false. If it manages to match every selected Answer to a value in the list of Correct Answers, then it returns true.
   * This function depends on the *existInList* function, which checks to see if a certain value is in a list of values.
