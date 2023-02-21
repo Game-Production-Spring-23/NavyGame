@@ -29,10 +29,10 @@ The data JSON file structure is integral to the project. It contains all of the 
         {
             "prompt": "Where are my pants?", // a question
             "answers": [ // array of strings
-                "On my waist",        // a correct answer
+                "On my waist",            // a correct answer
                 "On my head",
-                "Somewhere in the forest"
-                "In my closet",       // another correct answer
+                "Somewhere in the forest",
+                "In my closet"            // another correct answer
             ],
             "correct_answer_indices": [0, 3] // array of correct answers
         },
