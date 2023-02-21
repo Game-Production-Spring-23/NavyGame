@@ -7,7 +7,7 @@
 // Call the testData function when the window loads
 window.onload = (event) => {
     //Fetches data from json file, can be used with api url
-    fetch("data-example/data.json")
+    fetch("data.json")
     .then((response) => response.json())
     .then((data) => {
         testData(data);
@@ -30,33 +30,74 @@ function testData(data) {
     console.log(`Video Sequence 1 Path: ${data.video.sequence_1}`);
     console.log(`Video Sequence 2 Path: ${data.video.sequence_2}`);
 
-    // Read in a question
-    question_1 = data.questions.question_1;
-    console.log(`Question 1 Prompt: ${question_1.prompt}`);
+    // Loop over questions
+    for(let i = 0; i < data.questions.length; i++) {
+        question = data.questions[i];
 
-    // Loop over answers for question 1
-    for(let i = 0; i < question_1.answers.length; i++) {
-        console.log(`Question 1 Answer ${i}: ${question_1.answers[i]}`);
+        // Print the prompt of the question
+        console.log(`Question 1 Prompt: ${question.prompt}`);
+        
+        // Loop over answers for question
+        for(let j = 0; j < question.answers.length; j++) {
+            console.log(`Question 1 Answer ${j}: ${question.answers[j]}`);
+        } // end for
+
+        // Loop over correct answers for question
+        for(let j = 0; j < question.correct_answer_indices.length; j++) {
+            correct_answer_index = question.correct_answer_indices[j];
+            console.log(`Question 1 Correct Answer ${i}: ${question.answers[correct_answer_index]}`);
+        } // end for
     } // end for
 
-    // Loop over correct answers for question 1
-    for(let i = 0; i < question_1.correct_answer_index.length; i++) {
-        index = question_1.correct_answer_index[i];
-        console.log(`Question 1 Correct Answer ${i}: ${question_1.answers[index]}`);
-    } // end for
-
-    // Read in a question - Same for different length of answers & correct answers
-    question_2 = data.questions.question_2;
-    console.log(`Question 2 Prompt: ${question_2.prompt}`);
-
-    // Loop over answers for question 1
-    for(let i = 0; i < question_1.answers.length; i++) {
-        console.log(`Question 2 Answer ${i}: ${question_2.answers[i]}`);
-    } // end for
-
-    // Loop over correct answers for question 1
-    for(let i = 0; i < question_2.correct_answer_index.length; i++) {
-        index = question_2.correct_answer_index[i];
-        console.log(`Question 2 Correct Answer ${i}: ${question_2.answers[index]}`);
-    } // end for   
+    // check if a certain input or inputs are correct
+    if(checkForCorrectAnswers([0, 2], data.questions[4])) {
+        console.log("The answers are correct!");
+    } else {
+        console.log("The answers are incorrect...");
+    } // end if
 }; // end testData()
+
+// Checks a list of selected index values to see if they match an index from the
+// list of valid anwers of a question. Can be one or many indexes.
+// Works for questions with a single answer or multiple discrete answers.
+function checkForCorrectAnswers(selectedAnswerIndices, question) {
+    /*
+    Input:
+    - selectedAnswers (list of integers): the numbers selected by the player.
+    - question (dictionary): the question we want to compare the player's answers to
+                             to see if the player got the answers right.
+
+    Output:
+    - returns 'true' if ALL of the selected answers are correct.
+    - returns 'false' if ANY of the selected answers are incorrect.
+    */
+
+    // check if selected Answers is empty...
+    if(selectedAnswerIndices.length === 0) return false;
+
+    console.log(`Selected Indices: ${selectedAnswerIndices}`);
+    console.log(`Correct Answer List: ${question.correct_answer_indices}`);
+    // loop over each of the correct answers
+    for(let i = 0; i < question.correct_answer_indices.length; i++) {
+        // check if the value does not exist in the list 
+        if(existsInList(question.correct_answer_indices[i], selectedAnswerIndices) == false) {
+            return false; // if the value does not exist in the list, we know the answers are incorrect.
+        } // end if
+    } // end for
+
+    // if the function made it through every selected answer, then all of the answers are correct.
+    return true;
+} // end checkForCorrectAnswers
+
+
+// checks if a value exists in a list of values; returns true if exists in list
+function existsInList(value, list) {
+    // loop over every item in the list
+    for(let i = 0; i < list.length; i++) {
+        // check if that value is equivalent to that item (strict comparison ===)
+        if(value === list[i]) {
+            return true;
+        } // end if
+    } // end for
+    return false; // made it through whole list w/o finding corresponding value
+} // end existsInList
