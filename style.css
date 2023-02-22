@@ -18,11 +18,12 @@ h1{
 /*Button css*/
 
 h3{
-  font-family: 'Lilita One', cursive;
+  font-family: 'Raleway', sans-serif;
   font-size: 30px;
-  color: #373737;
+  color: #ffffff;
   text-align: center;
 }
+
 #start {
   width: 50%;
   height: 60px;
@@ -124,7 +125,39 @@ h3{
   display:flex; 
 }
 
-/* Default hidden class to be removed when visible */
-/* .hidden {
-  display: none;
-} */
+/* Settings Page Css */
+
+.slider{
+  position:relative;
+  /* center slider */
+  margin-left: 25%;
+  margin-right: 20%;
+  width: 50%;
+  margin-top: 3%;
+}
+
+#goBack, #saveSettings{
+  margin-top: 5%;
+  margin-left: 12%;
+
+  width: 30%;
+  height: 50px;
+  font-size: 25px;
+}
+
+/* Pop up Styling */
+.modal{
+  position: fixed;
+  width: 25%;
+  height: 70%;
+  top: 10%;
+  background-color:#e1ecf4;
+  margin-right:auto;
+  margin-left:auto;
+  z-index: 100;
+  border-radius:10px;
+}
+
+#crewRecs{
+  padding-left:5%;
+}
