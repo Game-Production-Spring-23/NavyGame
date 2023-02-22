@@ -24,8 +24,9 @@ h3{
 }
 #start {
   width: 50%;
-  height: 100px;
+  height: 60px;
   font-size: 30px;
+  margin-top:5%;
 }
 
 .answer {
@@ -99,9 +100,27 @@ h3{
 
 }
 
-#waterHolder {
-  width: 100%;
-  height: 100%;
-  margin-top: 5%;
+#bottomLinks{
+  display:flex;
+  justify-content: space-around;
+  margin-top:10%;
+  margin-bottom:5%;
+}
+#navyLink, #navyLink2{
+  text-align: center;
+  width:20%;
+  height:80px;
+  font-size:30px;
+}
 
+#navyLink{
+  display:flex;
+  justify-content: flex-start;
+  
+}
+
+#navyLink2{
+  display:flex;
+  
+  
 }

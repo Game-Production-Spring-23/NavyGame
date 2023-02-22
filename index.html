@@ -6,37 +6,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Navy Game</title> <!---change name once we have one-->
+    <!--Set Viewport Size-->
+    <meta name="viewport" content="width=1920px, height=1080px">
+
+    <title>The Mystery of Vee Island</title>
+    <!---change name once we have one-->
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="/pixi.js"></script>
-    <script src="/assets/script.js"></script>
+    <script src="/assets/scripts/script.js"></script>
     <!--<script src="/data-example/data.js"></script>-->
     <!--<script src="/mediaTest/images/images.js"></script>-->
 </head>
 
 <body>
-    
+
     <!-- This div is the questions and answer section this might change based on how the game is setup, -->
     <div id="app">
         <div id="gameContainer">
-        <h1>The Mystery of Vee Island</h1>
-        
-        
-        <input id="start" class ="button-8" type="button" onclick="startTest()" value="Start Test">
-        
-    </div>
-    <h3>Score: <p id="score">0</p></h3>
-    
-    <div id="waterHolder">
-            <img src="/assets/testWater.gif" alt="pixelated water"></img>
+            <h1>The Mystery of Vee Island</h1>
+
+
+            <input id="start" class="button-8" type="button" onclick="startTest()" value="Start Test">
+            <input id="start" class="button-8" type="button" onclick="showOptions()" value="Options">
+            <input id="start" class="button-8" type="button" onclick="introduction()" value="Introduction">
         </div>
-    
+        
+
+        <!-- <h3>Score: <p id="score">0</p>
+        </h3> -->
+
+        <div id="bottomLinks">
+            <input id="navyLink" class="button-8" type="button" onclick="" value="US Navy">
+            <input id="navyLink2" class="button-8" type="button" onclick="" value="LSOICE">
+
+        </div>
+
     </div>
-    
+
 </body>
 
 </html>
-
