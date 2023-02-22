@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="/pixi.js"></script>
-    
+
 </head>
 
 <body>
@@ -70,15 +70,63 @@
         <div id="journalContainer">
             <div id="journalModal" class="modal">
                 <input id="modalButton" class="button-8" type="button" onclick="toggleJournalOff()" value="Close">
-                
+
                 <div id="crewRecs" class="modalCard">
-                   <h1 id="modalTitle">Journal</h1> <h2>Crew Recommendations</h2>
+                    <h1 id="modalTitle">Journal</h1>
+                    <h2>Crew Recommendations</h2>
                 </div>
-                
-                
+
+
             </div>
 
-    </div>
+        </div>
+
+        <div id="mapContainer">
+            <div id="mapModal" class="modal">
+                <input id="modalButton" class="button-8" type="button" onclick="toggleMapOff()" value="Close">
+
+                <div id="crewRecs" class="modalCard">
+                    <h1 id="modalTitle">Map</h1>
+                    <img src="/assets/images/pirateMap.jpg" id="map" alt="map">
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div id="settingContainer">
+            <div id="settingModal" class="modal">
+                <input id="modalButton" class="button-8" type="button" onclick="toggleSettingsOff()" value="Close">
+
+                
+                    <h1 id="modalTitle">Settings</h1>
+                    <div class="slidecontainer">
+                        <h3>Setting</h3>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                    <div class="slidecontainer">
+                        <h3>Setting</h3>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                    <div class="slidecontainer">
+                        <h3>Setting</h3>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                    <div class="slidecontainer">
+                        <h3>Setting</h3>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                    <input id="goBack" class="button-8" type="button" onclick="location.reload()" value="Main Menu">
+                    <input id="saveSettings" class="button-8" type="button" onclick="saveSettings" value="Save Settings">
+                </div>
+                    
+                </div>
+
+
+            </div>
+
+        </div>
 
 </body>
 <script src="/assets/scripts/script.js"></script>

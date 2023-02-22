@@ -161,3 +161,27 @@ h3{
 #crewRecs{
   padding-left:5%;
 }
+
+#mapContainer, #settingModal{
+  position: fixed;
+  width:50%;
+  height: 70%;
+  top: 10%;
+  background-color:#e1ecf4;
+  margin-right:auto;
+  margin-left:auto;
+  z-index: 100;
+  border-radius:10px;
+  
+}
+
+#map{
+  width:500px;
+  height:100%;
+  margin-left:40%;
+  margin-right:auto;
+}
+
+#settingModal{
+  overflow: scroll;
+}

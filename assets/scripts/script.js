@@ -4,10 +4,13 @@ let gameContainer = document.getElementById("gameContainer"); //Container for ga
 let settingsContainer = document.getElementById("settingsContainer"); //Container for settings
 let scoreContainer = document.getElementById("scoreContainer");
 let journalScreen = document.getElementById("journalContainer");
+let mapScreen = document.getElementById("mapContainer");
+
 
 scoreContainer.style.display="none";//Container for score
 settingsContainer.style.display="none";
 journalScreen.style.display="none";
+mapScreen.style.display="none";
 
  
 
@@ -17,6 +20,8 @@ journalScreen.style.display="none";
 
 //On click function for start test
 function startTest() {
+  bottomLinks.style.display="none";
+  scoreContainer.style.display="block";
   getQuestion();
   
 }
@@ -102,7 +107,7 @@ function endVideo(){
   //updates queue number
 }
 
-//shows main settings screen
+//shows main settings screen--TESTED. Works.
 function showOptions(){
   //shows options, hides bottom links and replaces elements with settingsContainer
   bottomLinks.style.display="none";
@@ -114,6 +119,7 @@ function showOptions(){
   
 }
 
+//Tested, Works.
 function hideOptions(){
   //hides options
   bottomLinks.style.visibility="visible";
@@ -126,12 +132,14 @@ function introduction(){
 }
 
 //shows map in a pop up box when clicked
-function toggleMapOn(){
+function toggleMapOn(){ //Tested, works
+  mapScreen.style.display="block";
   
 }
 
 //hides map popup box when clicked
-function toggleMapOff(){
+function toggleMapOff(){ //Tested, works
+  mapScreen.style.display="none";
 }
 
 function toggleSettingsOn(){
@@ -143,13 +151,13 @@ function toggleSettingsOff(){
   //hides settings popup box when clicked
 }
 
-function toggleJournalOn(){
+function toggleJournalOn(){ //tested, works
   //shows journal in a pop up box when clicked
   journalScreen.style.display="block";
 }
 
 //hides journal popup box when clicked
-function toggleJournalOff(){
+function toggleJournalOff(){ //tested, works
   journalScreen.style.display="none";
 }
 
