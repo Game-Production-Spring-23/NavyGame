@@ -12,8 +12,9 @@ h1{
   font-size: 50px;
   color: #373737;
   text-align: center;
-
 }
+
+
 /*Button css*/
 
 h3{
@@ -120,7 +121,10 @@ h3{
 }
 
 #navyLink2{
-  display:flex;
-  
-  
+  display:flex; 
 }
+
+/* Default hidden class to be removed when visible */
+/* .hidden {
+  display: none;
+} */

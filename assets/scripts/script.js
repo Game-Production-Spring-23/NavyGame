@@ -1,4 +1,14 @@
 //global variables
+let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
+let gameContainer = document.getElementById("gameContainer"); //Container for game
+let settingsContainer = document.getElementById("settingsContainer"); //Container for settings
+let scoreContainer = document.getElementById("scoreContainer");
+scoreContainer.style.display="none";//Container for score
+settingsContainer.style.display="none";
+ 
+
+
+
 
 
 //On click function for start test
@@ -85,12 +95,20 @@ function endVideo(){
 }
 
 function showOptions(){
-  //shows options
+  //shows options, hides bottom links and replaces elements with settingsContainer
+  bottomLinks.style.display="none";
+  gameContainer.style.display="none";
+  settingsContainer.style.display="block";
+  score.style.visibility="hidden";
+
+  
   
 }
 
 function hideOptions(){
   //hides options
+  bottomLinks.style.visibility="visible";
+
 }
 
 function introduction(){

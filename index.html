@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="/pixi.js"></script>
-    <script src="/assets/scripts/script.js"></script>
+    
     <!--<script src="/data-example/data.js"></script>-->
     <!--<script src="/mediaTest/images/images.js"></script>-->
 </head>
@@ -33,10 +33,18 @@
             <input id="start" class="button-8" type="button" onclick="showOptions()" value="Options">
             <input id="start" class="button-8" type="button" onclick="introduction()" value="Introduction">
         </div>
-        
 
-        <!-- <h3>Score: <p id="score">0</p>
-        </h3> -->
+        <div id="settingsContainer">
+            <h1>Settings</h1>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              </div>
+
+        </div>
+        
+        <div id="scoreContainer" class="hidden">
+        <h3>Score: <p id="score">0</p>
+        </h3></div>
 
         <div id="bottomLinks">
             <input id="navyLink" class="button-8" type="button" onclick="" value="US Navy">
@@ -47,5 +55,5 @@
     </div>
 
 </body>
-
+<script src="/assets/scripts/script.js"></script>
 </html>
