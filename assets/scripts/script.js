@@ -1,9 +1,24 @@
 //global variables
+let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
+let gameContainer = document.getElementById("gameContainer"); //Container for game
+let settingsContainer = document.getElementById("settingsContainer"); //Container for settings
+let scoreContainer = document.getElementById("scoreContainer");
+let journalScreen = document.getElementById("journalContainer");
+
+scoreContainer.style.display="none";//Container for score
+settingsContainer.style.display="none";
+journalScreen.style.display="none";
+
+ 
+
+
+
 
 
 //On click function for start test
 function startTest() {
   getQuestion();
+  
 }
 function getQuestion() {
   //Fetches data from json file, can be used with api url
@@ -61,24 +76,109 @@ function updateScore(){ //convert innerhtml to int and add 1
   console.log(score);
 }
 
+//Resets score to zero
 function clearScore(){
   var score = document.getElementById("score");
   score.innerHTML = 0;
   console.log(score);
 }
 
+//grabs a dialogue from the queue and plays it in the gameContainer div
 function startDialogue(){
   //grabs dialogue from queue
   //plays dialogue in gameContainer div
 
 }
 
+//closes the dialogue and resumes the game
 function endDialogue(){
   //ends dialogue
   //updates queue number
 }
 
+//closes the video and resumes the game
 function endVideo(){
   //ends video
   //updates queue number
+}
+
+//shows main settings screen
+function showOptions(){
+  //shows options, hides bottom links and replaces elements with settingsContainer
+  bottomLinks.style.display="none";
+  gameContainer.style.display="none";
+  settingsContainer.style.display="block";
+  score.style.visibility="hidden";
+
+  
+  
+}
+
+function hideOptions(){
+  //hides options
+  bottomLinks.style.visibility="visible";
+
+}
+
+//plays or shows the introduction
+function introduction(){
+  //shows introduction
+}
+
+//shows map in a pop up box when clicked
+function toggleMapOn(){
+  
+}
+
+//hides map popup box when clicked
+function toggleMapOff(){
+}
+
+function toggleSettingsOn(){
+  //shows settings in a pop up box when clicked
+
+}
+
+function toggleSettingsOff(){
+  //hides settings popup box when clicked
+}
+
+function toggleJournalOn(){
+  //shows journal in a pop up box when clicked
+  journalScreen.style.display="block";
+}
+
+//hides journal popup box when clicked
+function toggleJournalOff(){
+  journalScreen.style.display="none";
+}
+
+function volumeUp(){
+  //increases volume
+
+}
+
+function volumeDown(){
+  //decreases volume
+
+} 
+
+function splashScreen(){
+  //shows splash screen
+
+}
+
+function pause(){
+  //pauses game
+
+}
+
+function resume(){
+  //resumes game
+
+}
+
+function continueDialogue(){
+  //continues dialogue
+
 }

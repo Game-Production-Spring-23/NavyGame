@@ -12,20 +12,23 @@ h1{
   font-size: 50px;
   color: #373737;
   text-align: center;
-
 }
+
+
 /*Button css*/
 
 h3{
-  font-family: 'Lilita One', cursive;
+  font-family: 'Raleway', sans-serif;
   font-size: 30px;
-  color: #373737;
+  color: #ffffff;
   text-align: center;
 }
+
 #start {
   width: 50%;
-  height: 100px;
+  height: 60px;
   font-size: 30px;
+  margin-top:5%;
 }
 
 .answer {
@@ -99,9 +102,62 @@ h3{
 
 }
 
-#waterHolder {
-  width: 100%;
-  height: 100%;
-  margin-top: 5%;
+#bottomLinks{
+  display:flex;
+  justify-content: space-around;
+  margin-top:10%;
+  margin-bottom:5%;
+}
+#navyLink, #navyLink2{
+  text-align: center;
+  width:20%;
+  height:80px;
+  font-size:30px;
+}
 
+#navyLink{
+  display:flex;
+  justify-content: flex-start;
+  
+}
+
+#navyLink2{
+  display:flex; 
+}
+
+/* Settings Page Css */
+
+.slider{
+  position:relative;
+  /* center slider */
+  margin-left: 25%;
+  margin-right: 20%;
+  width: 50%;
+  margin-top: 3%;
+}
+
+#goBack, #saveSettings{
+  margin-top: 5%;
+  margin-left: 12%;
+
+  width: 30%;
+  height: 50px;
+  font-size: 25px;
+}
+
+/* Pop up Styling */
+.modal{
+  position: fixed;
+  width: 25%;
+  height: 70%;
+  top: 10%;
+  background-color:#e1ecf4;
+  margin-right:auto;
+  margin-left:auto;
+  z-index: 100;
+  border-radius:10px;
+}
+
+#crewRecs{
+  padding-left:5%;
 }
