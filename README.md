@@ -39,8 +39,14 @@ The data JSON file structure is integral to the project. It contains all of the 
         ...
     ],
     "images": { // a dictionary containing images
-        "background_1": "path/to/background_1.xxx", // image name is mapped to a file path
-        "character_sprite_1": "path/to/character_sprite_1.xxx"
+        "boat": [ // an image name is mapped to a list of file paths
+        "/images/boat.png"
+        ],
+        "water": [
+        "/images/water_background_1.png",
+        "/images/water_background_2.png",
+        "/images/water_background_3.png"
+        ]
     },
     "audio": { // same as images
         "main_theme": "path/to/main_theme.xxx",

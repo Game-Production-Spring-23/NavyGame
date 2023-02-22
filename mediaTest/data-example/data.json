@@ -52,9 +52,15 @@
       "correct_answer_indices": [0, 2]
     }],
   "images": {
-    "background_1": "path/to/background_1.xxx",
-    "character_sprite_1": "path/to/character_sprite_1.xxx"
-  },
+      "boat": [
+        "/images/boat.png"
+      ],
+      "water": [
+        "/images/water_background_1.png",
+        "/images/water_background_2.png",
+        "/images/water_background_3.png"
+      ]
+    },
   "audio": {
     "main_theme": "path/to/main_theme.xxx",
     "attack_sound": "path/to/attack_sound.xxx"
