@@ -11,6 +11,7 @@
 
     <title>The Mystery of Vee Island</title>
     <!---change name once we have one-->
+    <link rel="icon" type="image/x-icon" href="/assets//images/mapOne.png">
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +21,10 @@
 </head>
 
 <body>
+
+    <div id="splash">
+        <h1>This is a splash screen. Click any where</h1>
+    </div>
 
     <!-- This div is the questions and answer section this might change based on how the game is setup, -->
     <div id="app">
@@ -99,34 +104,34 @@
             <div id="settingModal" class="modal">
                 <input id="modalButton" class="button-8" type="button" onclick="toggleSettingsOff()" value="Close">
 
-                
-                    <h1 id="modalTitle">Settings</h1>
-                    <div class="slidecontainer">
-                        <h3>Setting</h3>
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    </div>
-                    <div class="slidecontainer">
-                        <h3>Setting</h3>
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    </div>
-                    <div class="slidecontainer">
-                        <h3>Setting</h3>
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    </div>
-                    <div class="slidecontainer">
-                        <h3>Setting</h3>
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    </div>
-                    <input id="goBack" class="button-8" type="button" onclick="location.reload()" value="Main Menu">
-                    <input id="saveSettings" class="button-8" type="button" onclick="saveSettings" value="Save Settings">
-                </div>
-                    
-                </div>
 
-
+                <h1 id="modalTitle">Settings</h1>
+                <div class="slidecontainer">
+                    <h3>Setting</h3>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <div class="slidecontainer">
+                    <h3>Setting</h3>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <div class="slidecontainer">
+                    <h3>Setting</h3>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <div class="slidecontainer">
+                    <h3>Setting</h3>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <input id="goBack" class="button-8" type="button" onclick="location.reload()" value="Main Menu">
+                <input id="saveSettings" class="button-8" type="button" onclick="saveSettings" value="Save Settings">
             </div>
 
         </div>
+
+
+    </div>
+
+    </div>
 
 </body>
 <script src="/assets/scripts/script.js"></script>
