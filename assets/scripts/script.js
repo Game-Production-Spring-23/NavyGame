@@ -153,12 +153,10 @@ function toggleJournalOff() {
   journalScreen.style.display = "none";
 }
 
-function volumeUp() {
-  //increases volume
-}
-
-function volumeDown() {
-  //decreases volume
+//changed volume
+function changeVolume(val) {
+  music.volume = val;
+  console.log(val);
 }
 
 function splashScreen() {
