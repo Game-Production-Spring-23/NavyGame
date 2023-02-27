@@ -28,9 +28,11 @@ header{
   background-image:url("/assets/images/ui/titleLogo.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-clip: inherit;
-  height: 100px;
-  width: 100%;
+  background-position-x: center;
+  background-size:contain;
+  height:40%;
+  width:100%;
+  padding-bottom:5px;
   
 }
 /*Button css*/
