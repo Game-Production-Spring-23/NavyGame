@@ -27,7 +27,7 @@
         <h1>This is a splash screen. Click any where</h1>
     </div>
     <header>
-        
+
     </header>
     
     <!-- This div is the questions and answer section this might change based on how the game is setup, -->
@@ -36,8 +36,8 @@
         <div id="gameContainer">
             <!-- Start Screen Container --------------------------------------------------------------------------------------------------------->
             
-            <input id="start" class="button-1" type="image" onclick="startTest()" value="Start Test"  src="/assets/images/ui/startBtn.png" >
-            <input id="start" class="button-1" type="image" onclick="showOptions()" value="Options" src="/assets/images/ui/settingsBtn.png">
+            <input id="start" class="button-2" type="image" onclick="startTest()" value="Start Test" onMouseOver="settingsHover(this)" onMouseout ="settingOut(this)" src="/assets/images/ui/startBtn.png" >
+            <input id="start" class="button-1" type="image" onclick="showOptions()" onMouseOver="settingsHover(this)" onMouseout="settingOut(this)" value="Options" src="/assets/images/ui/settingsBtn.png">
             
         </div>
         <!-- Settings Screen----------------------------------------------------------------------------------------------------------------- -->

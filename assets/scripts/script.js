@@ -182,3 +182,22 @@ function resume() {
 function continueDialogue() {
   //continues dialogue
 }
+
+//Changes display state of icons on hover
+function settingsHover(img){
+  if (img.src.match("/assets/images/ui/settingsBtn.png") ){
+    img.src = "/assets/images/ui/settingsBtnHover.png";
+  }
+  else{
+    img.src="assets/images/ui/startBtnHover.png";
+  }
+  
+}
+
+function settingOut(img){
+  if(img.src.match("/assets/images/ui/settingsBtnHover.png")){
+    img.src = "/assets/images/ui/settingsBtn.png";
+  }
+  else {
+  img.src = "/assets/images/ui/startBtn.png";
+}}
