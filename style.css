@@ -4,6 +4,10 @@ body {
   background: -webkit-linear-gradient(to right, #4286f4, #373b44);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4286f4, #373b44);
+  background-image:url("/assets/images/ui/navyBkgrnd.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-x: center;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -14,6 +18,21 @@ h1 {
   text-align: center;
 }
 
+header{
+/* Place header at absolute  top of page */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-image:url("/assets/images/ui/titleLogo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: inherit;
+  height: 100px;
+  width: 100%;
+  
+}
 /*Button css*/
 
 h3 {
@@ -87,18 +106,31 @@ h3 {
 
 #app {
   margin-top: 4%;
-  background: rgba(255, 255, 255, 0.65);
-  height: auto;
-  width: 50%;
-  border-radius: 10px;
+  /* background: rgba(255, 255, 255, 0.65); */
+  height:auto;
+  width: 80%;
+  
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; */
+  background-image:url("/assets/images/ui/menuHeavyChar.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
 }
 
 #gameContainer {
   text-align: center;
+  margin-top: 10%;
+  width:100%;
+  height:100%;
+  
+
+}
+
+#bottomLinks{
+  visibility: hidden;
 }
 
 #bottomLinks {

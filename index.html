@@ -21,21 +21,23 @@
 </head>
 
 <body>
+    
 
     <div id="splash">
         <h1>This is a splash screen. Click any where</h1>
     </div>
-
+    <header>
+    </header>
+    
     <!-- This div is the questions and answer section this might change based on how the game is setup, -->
     <div id="app">
+        
         <div id="gameContainer">
             <!-- Start Screen Container --------------------------------------------------------------------------------------------------------->
-            <h1>The Mystery of Vee Island</h1>
-
-
-            <input id="start" class="button-8" type="button" onclick="startTest()" value="Start Test">
-            <input id="start" class="button-8" type="button" onclick="showOptions()" value="Options">
-            <input id="start" class="button-8" type="button" onclick="introduction()" value="Introduction">
+            
+            <input id="start" class="button-1" type="image" onclick="startTest()" value="Start Test"  src="/assets/images/ui/startBtn.png" >
+            <input id="start" class="button-1" type="image" onclick="showOptions()" value="Options" src="/assets/images/ui/settingsBtn.png">
+            
         </div>
         <!-- Settings Screen----------------------------------------------------------------------------------------------------------------- -->
         <div id="settingsContainer">
@@ -101,7 +103,7 @@
         </div>
 
 
-        <!-- Hide this because what is the purpose of 2 settings  
+        <!-- Hide this because what is the purpose of 2 settings  [Not sure, but the wireframe requested one as a menu and one as a]
         <div id="settingContainer">
             <div id="settingModal" class="modal">
                 <input id="modalButton" class="button-8" type="button" onclick="toggleSettingsOff()" value="Close">
