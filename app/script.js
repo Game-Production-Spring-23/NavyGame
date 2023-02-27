@@ -23,7 +23,7 @@ function startTest() {
 }
 function getQuestion() {
   //Fetches data from json file, can be used with api url
-  fetch("../mediaTest/data-example/data.json")
+  fetch("../data/data.json")
     .then((response) => response.json())
     .then((data) => {
       //store changes to HTML in app and appends changes to app div
@@ -171,7 +171,7 @@ function splashScreen() {
   });
 }
 
-function introVideo(){
+function introVideo() {
   //plays intro video
 }
 
@@ -188,20 +188,18 @@ function continueDialogue() {
 }
 
 //Changes display state of icons on hover
-function settingsHover(img){
-  if (img.src.match("/assets/images/ui/settingsBtn.png") ){
+function settingsHover(img) {
+  if (img.src.match("/assets/images/ui/settingsBtn.png")) {
     img.src = "/assets/images/ui/settingsBtnHover.png";
+  } else {
+    img.src = "assets/images/ui/startBtnHover.png";
   }
-  else{
-    img.src="assets/images/ui/startBtnHover.png";
-  }
-  
 }
 
-function settingOut(img){
-  if(img.src.match("/assets/images/ui/settingsBtnHover.png")){
+function settingOut(img) {
+  if (img.src.match("/assets/images/ui/settingsBtnHover.png")) {
     img.src = "/assets/images/ui/settingsBtn.png";
+  } else {
+    img.src = "/assets/images/ui/startBtn.png";
   }
-  else {
-  img.src = "/assets/images/ui/startBtn.png";
-}}
+}
