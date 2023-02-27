@@ -171,6 +171,10 @@ function splashScreen() {
   });
 }
 
+function introVideo(){
+  //plays intro video
+}
+
 function pause() {
   //pauses game
 }
