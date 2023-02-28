@@ -2,9 +2,9 @@ Game Production Document
 # Navy Game
 
 ## File Structure
-* **Assets** - Contains project js scripts and other assets.
-* **mediaTest** - Contains examples for different medias- Audio, Images, Sprites, Video, and data.
-* **index.html** - The html file for the main project.
+* **app** - Contains all javascript code. The main code file is *script.js*. Code written by programmers is kept in folders created by each individual programmer in this folder.
+* **assets** - Contains assets other than code: images, audio, video.
+* **index.html** - The main html file for the project.
 * **pixi.js** - The PIXI.js library script.
 * **README.md** (this) - the guide to what is what in the project.
 * **style.css** - The style sheet for main project.
