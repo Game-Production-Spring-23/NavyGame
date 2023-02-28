@@ -6,39 +6,17 @@ export class Screen1 extends Screen {
     constructor() {
         // call previous constructor
         super();
-        this.screenContainer = new PIXI.Container();
         this.ticker = new PIXI.Ticker();
     } // end constructor
 
     
     // Called when the Screen is set to run . Starts the Screen.
     Start(app, data) {
-        // Get HTML head element
-        var head = document.getElementsByTagName('HEAD')[0];
- 
-        // Create new link Element
-        var link = document.createElement('link');
- 
-        // set the attributes for link element
-        link.rel = 'stylesheet';
-     
-        link.type = 'text/css';
-     
-        link.href = '/app/screen1/style.css';
- 
-        // Append link element to HTML head
-        head.appendChild(link);
+        super.initScreen();
+        this.setHTML();
 
-        // create container to store scene dependencies.
-        this.screenContainer = new PIXI.Container();
-        this.ticker = new PIXI.Ticker();
-
-        this.screenContainer.sortableChildren = true;
-        this.screenContainer.alpha = 0;
-        this.screenContainer.x = app.screen.width / 2;
-        this.screenContainer.y = app.screen.height / 2;
-        this.screenContainer.pivot.x = app.screen.width / 2;
-        this.screenContainer.pivot.y = app.screen.height / 2;
+        // set screen alpha to 0
+        this.screenContainer.alpha = 0;     
 
         // initialize boat sprite
         let boatTexture = PIXI.Texture.from(data.images.boat[0]);
@@ -48,7 +26,7 @@ export class Screen1 extends Screen {
         // initialize water sprite & animations
         let waterTexture = this.loadTextures(data.images.water);
         let water = new PIXI.AnimatedSprite(waterTexture);
-        this.initSprite(water, 0.5, app.screen.width, 500, (app.screen.width / 2), (app.screen.height * 0.75));
+        this.initSprite(water, 0.5, app.screen.width, app.screen.height*0.75, (app.screen.width / 2), (app.screen.height * 0.75));
         
         // set water animation details
         water.animationSpeed = 0.03;
@@ -84,14 +62,17 @@ export class Screen1 extends Screen {
         let sky = new PIXI.Graphics();
         sky.beginFill(0x7ed3f7); // blue ish sky color
         sky.drawRect(0, 0, app.screen.width, app.screen.height*1.5); // draw a rectangle
+        let backdrop = new PIXI.Graphics();
+        backdrop.beginFill(0x000000); // blue ish sky color
+        backdrop.drawRect(0, 0, app.screen.width, app.screen.height*1.5); // draw a rectangle
 
-        // add sprites to container
-        this.screenContainer.addChild(boat);
-        this.screenContainer.addChild(water);
-        this.screenContainer.addChild(sky);
-        this.screenContainer.setChildIndex(sky, 0);
-        this.screenContainer.setChildIndex(water, 1); // water is at base
-        this.screenContainer.setChildIndex(boat, 2); // boat is on top of water
+        // add sprites to containers
+        this.backgroundContainer.addChildAt(backdrop, 0);
+        this.backgroundContainer.addChildAt(sky, 1);
+
+        this.midgroundContainer.addChildAt(water, 0);
+
+        this.foregroundContainer.addChildAt(boat, 0);
 
         // add container to stage 
         app.stage.addChild(this.screenContainer);
@@ -108,18 +89,22 @@ export class Screen1 extends Screen {
         let scaleY = 1.0;
         let offsetY = 0;
 
-        // create a ticker
-        boat.x = 1700;
-        this.ticker.add((time) => {
-            counter += time;
+        // create the ticker
+        this.ticker = new PIXI.Ticker();
+
+        let boatTravelTime = 695 - 300;
+        let boatTravelDistance = (app.screen.width / 2) + (boat.width / 2);
+        boat.x = app.screen.width + boat.width*0.5;
+        this.ticker.add(() => {
+            counter += this.ticker.deltaTime;
             // set fade in
             if (this.screenContainer.alpha <= 1) {
-                this.screenContainer.alpha += 0.0025;
+                this.screenContainer.alpha += 0.005*this.ticker.deltaTime;
             } // end if
 
             // boat sails in
             if((counter >= 300) && (counter <= 695)) {
-                boat.x -= 1;
+                boat.x -= boatTravelDistance/boatTravelTime * this.ticker.deltaTime;
             } // end if
 
             // set zoom in
@@ -144,7 +129,7 @@ export class Screen1 extends Screen {
             this.ticker.add(() => {
                 // set fade out
                 if (this.screenContainer.alpha >= 0) {
-                    this.screenContainer.alpha -= 0.005;
+                    this.screenContainer.alpha -= 0.01*this.ticker.deltaTime;
                 } // end if
             }); // end ticker.add
             this.ticker.start();
@@ -155,6 +140,41 @@ export class Screen1 extends Screen {
             this.isFinished = true;
         }, 25000);
     } // end Start
+
+
+    // set html settings so that pixi loads the canvas element correctly
+    setHTML() {
+        // Get HTML head element
+        var head = document.getElementsByTagName('HEAD')[0];
+
+        // Create new link Element
+        var link = document.createElement('link');
+
+        // set the attributes for link element
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/app/screen1/style.css';
+
+        // Append link element to HTML head
+        head.appendChild(link);
+
+        let splash = document.getElementById("splash");
+        let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
+        let gameContainer = document.getElementById("gameContainer"); //Container for game
+        let settingsContainer = document.getElementById("settingsContainer"); //Container for settings
+        let scoreContainer = document.getElementById("scoreContainer");
+        let journalScreen = document.getElementById("journalContainer");
+        let mapScreen = document.getElementById("mapContainer");
+        let appContainer = document.getElementById("app");
+        splash.style.display = "none";
+        bottomLinks.style.display = "none";
+        gameContainer.style.display = "none";
+        settingsContainer.style.display = "none";
+        scoreContainer.style.display = "none";
+        journalScreen.style.display = "none";
+        mapScreen.style.display = "none";
+        appContainer.style.display = "none";
+    } // end setHTML
 
 
     // Called when the Screen has terminated.
@@ -171,6 +191,8 @@ export class Screen1 extends Screen {
     zoomIn(app, container, scaleX, scaleY, offsetY) {
         container.scale.x = scaleX;
         container.scale.y = scaleY;
+        container.pivot.x = app.screen.width / 2;
+        container.pivot.y = app.screen.height / 2;
         container.x = app.screen.width / 2;
         container.y = (app.screen.height / 2) - offsetY;
     } // end zoomIn

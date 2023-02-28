@@ -18,13 +18,6 @@ splashScreen();
 
 //On click function for start test
 function startTest() {
-  splash.style.display = "none";
-  bottomLinks.style.display = "none";
-  gameContainer.style.display = "none";
-  scoreContainer.style.display = "none"; 
-  journalScreen.style.display = "none";
-  mapScreen.style.display = "none";
-  appContainer.style.display = "none";
   startGame();
   //getQuestion();
 }
@@ -170,7 +163,7 @@ function splashScreen() {
   splash.addEventListener("click", () => {
     //Plays background music
     music.volume = 0.4;
-    music.play();
+    //music.play();
     splash.style.opacity = 0;
     setTimeout(() => {
       splash.classList.add("hidden");
