@@ -1,78 +1,195 @@
-/*
-    Screen 1 Template
-
-    Tasks:
-    - Creates a moving water effect
-    - Creates a moving ship effect
-    - Transitions to the Deck Screen, by zooming in (Screen2)
-*/
+import { Screen } from "../core/Screen.js";
 
 
-// Call the testData function when the window loads
-window.onload = (event) => {
-    // Fetch data.json file
-    fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {
-        // Create a PIXI application
-        const app = new PIXI.Application({ background: '#FFFFFF' });
-        document.body.appendChild(app.view);
+// Screen1 Implementation
+export class Screen1 extends Screen {
+    constructor() {
+        super();
+        this.screenContainer = null;
+        this.ticker = null;
+    } // end constructor
 
-        // load the boat
-        let texture = PIXI.Texture.from(data.images.boat[0]);
-        let boat = new PIXI.Sprite(texture);
+    
+    // Called when the Screen is set to run . Starts the Screen.
+    Start(app, data) {
+        // create container to store scene dependencies.
+        this.screenContainer = new PIXI.Container();
+        this.ticker = new PIXI.Ticker();
 
-        // center the sprite's anchor point
-        boat.anchor.set(0.5);
+        this.screenContainer.sortableChildren = true;
+        this.screenContainer.alpha = 0;
+        this.screenContainer.x = app.screen.width / 2;
+        this.screenContainer.y = app.screen.height / 2;
+        this.screenContainer.pivot.x = app.screen.width / 2;
+        this.screenContainer.pivot.y = app.screen.height / 2;
 
-        // move the sprite to the center of the screen
-        boat.x = app.screen.width / 2;
-        boat.y = app.screen.height / 2 + 100;
-        boat.width = 200;
-        boat.height = 200;
+        // initialize boat sprite
+        let boatTexture = PIXI.Texture.from(data.images.boat[0]);
+        let boat = new PIXI.Sprite(boatTexture);
+        this.initSprite(boat, 0.5, 175, 100, (app.screen.width / 2), 525);
 
-        // load the water
-        const textureArray = [];
-        for (let i = 0; i < 3; i++) {
-            const waterTexture = PIXI.Texture.from(data.images.water[i]);
-            textureArray.push(waterTexture);
-        }
+        // initialize water sprite & animations
+        let waterTexture = this.loadTextures(data.images.water);
+        let water = new PIXI.AnimatedSprite(waterTexture);
+        this.initSprite(water, 0.5, app.screen.width, 500, (app.screen.width / 2), (app.screen.height * 0.75));
         
-        const water = new PIXI.AnimatedSprite(textureArray);
-    
-        // center the sprite's anchor point
-        water.anchor.set(0.5);
-    
-        // move the sprite to the center of the screen
-        water.x = app.screen.width / 2;
-        water.y = app.screen.height - 100;
-    
-        // set sprite size
-        water.width = 1000;
-        water.height = 100;
-    
-        // set animation details
+        // set water animation details
         water.animationSpeed = 0.03;
         water.onFrameChange = (currentFrame) => {
-            rotateShip(boat, currentFrame);
+            let rotationA = -7 + Math.floor(Math.random() * 5);
+            let rotationB = Math.floor(Math.random() * 5);
+            let rotationC = 7 - Math.floor(Math.random() * 5)
+            let rotations = [rotationC, rotationB, rotationA];
+            let boatYPos = [535, 525, 535];
+            this.rockBoat(boat, rotations, boatYPos, currentFrame);
         } // end onFrameChange
         water.play();
+
+        // after x seconds, rock boat every time a frame of the water changes
+        setTimeout(() => {
+            water.stop();
+            water.onFrameChange = (currentFrame) => {
+                let rotations = [-10, -10, 5];
+                let boatYPos = [535, 500, 535];
+                this.rockBoat(boat, rotations, boatYPos, currentFrame);
+            } // end onFrameChange
+            water.play();
+        }, 12000); // end setTimeout
         
-        // start game loop
-        //app.ticker.add(gameLoop);
-        app.ticker.start();
+        
+        // create background
+        let sky = new PIXI.Graphics();
+        sky.beginFill(0x7ed3f7); // blue ish sky color
+        sky.drawRect(0, 0, app.screen.width, app.screen.height*1.5); // draw a rectangle
 
-        // show the sprites
-        app.stage.addChild(water);
-        app.stage.addChild(boat);
-    });
-}; // end window.onload
+        // add sprites to container
+        this.screenContainer.addChild(boat);
+        this.screenContainer.addChild(water);
+        this.screenContainer.addChild(sky);
+        this.screenContainer.setChildIndex(sky, 0);
+        this.screenContainer.setChildIndex(water, 1); // water is at base
+        this.screenContainer.setChildIndex(boat, 2); // boat is on top of water
 
-function rotateShip(boat, currentFrame) {
-    let rotations = [0, -15, 15];
-    let boatYPos = [400, 415, 415];
-    let i = currentFrame % 3;
-    boat.angle = rotations[i];
-    boat.y = boatYPos[i];
+        // add container to stage 
+        app.stage.addChild(this.screenContainer);
 
-} // end rotateShip
+        // set app to be responsive to screen size
+        window.addEventListener("resize", () => {
+            app.view.style.width = window.innerWidth;
+            app.view.style.height = window.innerHeight;
+        }); // end resize event listener
+
+        // game loop stuff
+        let counter = 0.0;
+        let scaleX = 1.0;
+        let scaleY = 1.0;
+        let offsetY = 0;
+
+        // create a ticker
+        boat.x = 1700;
+        this.ticker.add((time) => {
+            counter += time;
+            // set fade in
+            if (this.screenContainer.alpha <= 1) {
+                this.screenContainer.alpha += 0.0025;
+            } // end if
+
+            // boat sails in
+            if((counter >= 300) && (counter <= 695)) {
+                boat.x -= 1;
+            } // end if
+
+            // set zoom in
+            if(counter >= 700) {
+                if(scaleX <= 1.50) {
+                    scaleX += 0.001;
+                } // end if
+                if(scaleY <= 1.50) {
+                    scaleY += 0.001;
+                } // end if
+                if(offsetY <= 250) {
+                    offsetY += 0.5;
+                } // end if
+                this.zoomIn(app, this.screenContainer, scaleX, scaleY, offsetY);
+            } // end if
+        }); // end this.ticker.add
+        this.ticker.start();
+
+        // set when to end Screen - after 15 seconds
+        setTimeout(() => {
+            this.isFinished = true;
+        }, 20000);
+    } // end Start
+
+
+    // Called when the Screen has terminated.
+    OnEnd(app) {
+        super.OnEnd(app);
+        if(this.ticker != null) {
+            this.ticker.stop();
+            this.ticker.add(() => {
+                // set fade out
+                if (this.screenContainer.alpha >= 0) {
+                    this.screenContainer.alpha -= 0.005;
+                } // end if
+            }); // end ticker.add
+            this.ticker.start();
+
+            setTimeout(() => {
+                this.ticker.stop(); // stop the ticker I made
+                this.ticker.destroy(); // destroy ticker I made
+                if (this.screenContainer != null) {
+                    app.stage.removeChild(this.screenContainer); // remove the screen I made
+                    this.screenContainer.destroy(); // destroy the screenContainer I made
+                } // end if
+            }, 5000); // end setTimeout
+        } // end if
+    } // end OnEnd
+
+
+    // zooms into the screen
+    zoomIn(app, container, scaleX, scaleY, offsetY) {
+        container.scale.x = scaleX;
+        container.scale.y = scaleY;
+        container.x = app.screen.width / 2;
+        container.y = (app.screen.height / 2) - offsetY;
+    } // end zoomIn
+
+
+    // sets transparency values to create a fade-in type scenario, with the amount of time to run
+    fadeIn(container, alpha, waitTime) {
+        setTimeout(()=> {container.alpha = alpha;}, waitTime);
+    } // end fadeIn
+
+
+    // Sets default values of a sprite
+    initSprite(sprite, anchor, width, height, x, y) {
+        // center the sprite's anchor point
+        sprite.anchor.set(anchor); 
+        
+        // move the sprite to the center of the screen
+        sprite.x = x;
+        sprite.y = y;
+        sprite.width = width;
+        sprite.height = height;
+    } // end initSprite
+
+
+    // loads a set of textures using an array of file locations
+    loadTextures(imagesArray) {
+        let textureArray = [];
+        for (let i = 0; i < 3; i++) {
+            let waterTexture = PIXI.Texture.from(imagesArray[i]);
+            textureArray.push(waterTexture);
+        } // end for
+        return textureArray;
+    } // end loadTextures
+
+
+    // rocks the boat according to Y positions and rotations
+    rockBoat(boat, rotations, boatYPos, currentFrame) {
+        let i = currentFrame % 3;
+        boat.angle = rotations[i];
+        boat.y = boatYPos[i];
+    } // end rockBoat
+} // end Screen1 Class
