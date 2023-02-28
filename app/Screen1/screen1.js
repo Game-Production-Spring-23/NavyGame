@@ -4,14 +4,31 @@ import { Screen } from "../core/Screen.js";
 // Screen1 Implementation
 export class Screen1 extends Screen {
     constructor() {
+        // call previous constructor
         super();
-        this.screenContainer = null;
-        this.ticker = null;
+        this.screenContainer = new PIXI.Container();
+        this.ticker = new PIXI.Ticker();
     } // end constructor
 
     
     // Called when the Screen is set to run . Starts the Screen.
     Start(app, data) {
+        // Get HTML head element
+        var head = document.getElementsByTagName('HEAD')[0];
+ 
+        // Create new link Element
+        var link = document.createElement('link');
+ 
+        // set the attributes for link element
+        link.rel = 'stylesheet';
+     
+        link.type = 'text/css';
+     
+        link.href = '/app/screen1/style.css';
+ 
+        // Append link element to HTML head
+        head.appendChild(link);
+
         // create container to store scene dependencies.
         this.screenContainer = new PIXI.Container();
         this.ticker = new PIXI.Ticker();
@@ -40,7 +57,10 @@ export class Screen1 extends Screen {
             let rotationB = Math.floor(Math.random() * 5);
             let rotationC = 7 - Math.floor(Math.random() * 5)
             let rotations = [rotationC, rotationB, rotationA];
-            let boatYPos = [535, 525, 535];
+            let boatYPos = [
+                (app.screen.height * 0.75) + 5, 
+                (app.screen.height * 0.75) + -5, 
+                (app.screen.height * 0.75) + 5];
             this.rockBoat(boat, rotations, boatYPos, currentFrame);
         } // end onFrameChange
         water.play();
@@ -50,7 +70,10 @@ export class Screen1 extends Screen {
             water.stop();
             water.onFrameChange = (currentFrame) => {
                 let rotations = [-10, -10, 5];
-                let boatYPos = [535, 500, 535];
+                let boatYPos = [
+                    (app.screen.height * 0.75) + 5, 
+                    (app.screen.height * 0.75) - 30, 
+                    (app.screen.height * 0.75) + 5];
                 this.rockBoat(boat, rotations, boatYPos, currentFrame);
             } // end onFrameChange
             water.play();
@@ -115,17 +138,8 @@ export class Screen1 extends Screen {
         }); // end this.ticker.add
         this.ticker.start();
 
-        // set when to end Screen - after 15 seconds
+        // set when to end Screen - after 20 seconds
         setTimeout(() => {
-            this.isFinished = true;
-        }, 20000);
-    } // end Start
-
-
-    // Called when the Screen has terminated.
-    OnEnd(app) {
-        super.OnEnd(app);
-        if(this.ticker != null) {
             this.ticker.stop();
             this.ticker.add(() => {
                 // set fade out
@@ -134,16 +148,22 @@ export class Screen1 extends Screen {
                 } // end if
             }); // end ticker.add
             this.ticker.start();
+        }, 20000);
 
-            setTimeout(() => {
-                this.ticker.stop(); // stop the ticker I made
-                this.ticker.destroy(); // destroy ticker I made
-                if (this.screenContainer != null) {
-                    app.stage.removeChild(this.screenContainer); // remove the screen I made
-                    this.screenContainer.destroy(); // destroy the screenContainer I made
-                } // end if
-            }, 5000); // end setTimeout
-        } // end if
+        // after 25 seconds, end the screen
+        setTimeout(() => {
+            this.isFinished = true;
+        }, 25000);
+    } // end Start
+
+
+    // Called when the Screen has terminated.
+    OnEnd(app) {
+        super.OnEnd(app);
+        this.ticker.stop(); // stop the ticker I made
+        this.ticker.destroy(); // destroy ticker I made
+        app.stage.removeChild(this.screenContainer); // remove the screen I made
+        this.screenContainer.destroy(); // destroy the screenContainer I made
     } // end OnEnd
 
 

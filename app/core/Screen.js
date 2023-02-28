@@ -4,6 +4,7 @@
 
 export class Screen {
     constructor() {
+        // tells the state machine whether or not the screen has finished
         this.isFinished = false;
     } // end constructor
 
@@ -16,6 +17,6 @@ export class Screen {
 
     // Called when the Screen has terminated.
     OnEnd(app) {
-        this.isFinished = false; // reset isFinished
+        this.isFinished = false; // reset isFinished for next time
     } // end OnEnd
 } // end Screen Class
