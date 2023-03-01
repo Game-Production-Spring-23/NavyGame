@@ -32,5 +32,7 @@ export class Screen {
     // Called when the Screen has terminated.
     OnEnd(app) {
         this.isFinished = false; // reset isFinished for next time
+        app.stage.removeChild(this.screenContainer); // remove the screen I made
+        this.screenContainer.destroy(); // destroy the screenContainer I made
     } // end OnEnd
 } // end Screen Class

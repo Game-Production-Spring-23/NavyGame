@@ -12,7 +12,8 @@ export class Screen1 extends Screen {
     
     // Called when the Screen is set to run . Starts the Screen.
     Start(app, data) {
-        super.initScreen();
+        // call parent function
+        super.Start(app, data);
         this.setHTML();
 
         // set screen alpha to 0
@@ -182,8 +183,6 @@ export class Screen1 extends Screen {
         super.OnEnd(app);
         this.ticker.stop(); // stop the ticker I made
         this.ticker.destroy(); // destroy ticker I made
-        app.stage.removeChild(this.screenContainer); // remove the screen I made
-        this.screenContainer.destroy(); // destroy the screenContainer I made
     } // end OnEnd
 
 

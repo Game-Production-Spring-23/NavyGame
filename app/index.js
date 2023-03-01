@@ -1,11 +1,13 @@
 import { StateMachine } from "./core/StateMachine.js";
 import { Screen1 } from "./screen1/Screen1.js";
+import { MyParallaxScreen } from "./parallax-example/parallax-screen.js";
 
 // the function to start the State Machine sequence
 export function startGame() {
     // initialize the screens -> they get a reference to the state machine
     const SCREENS = [
-        new Screen1(),
+        //new Screen1(),
+        new MyParallaxScreen()
     ];
     fetch("/data/data.json")
     .then((response) => response.json())
