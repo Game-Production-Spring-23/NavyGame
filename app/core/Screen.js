@@ -6,9 +6,6 @@ export class Screen {
     constructor() {
         // tells the state machine whether or not the screen has finished
         this.isFinished = false;
-
-        // init the screen
-        this.initScreen();
     } // end constructor
 
     // initialize screen variables

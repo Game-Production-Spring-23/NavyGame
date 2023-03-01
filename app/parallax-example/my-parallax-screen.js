@@ -4,6 +4,8 @@ import { ParallaxScreen } from "../core/ParallaxScreen.js";
 export class MyParallaxScreen extends ParallaxScreen {
     constructor() {
         super();
+        this.ticker = new PIXI.Ticker();
+        super.initScreen(); // needed if this is the first screen...
     } // end constructor
 
 
@@ -11,7 +13,7 @@ export class MyParallaxScreen extends ParallaxScreen {
         // call parent function
         super.Start(app, data);
         
-        // set backdrop
+        // set backdrops - for visual clarity of scrolling & lock/unlock
         let backdrop = new PIXI.Graphics();
         backdrop.beginFill(0x0000FF); // blue
         backdrop.drawRect(0, 0, app.screen.width*4, app.screen.height*1.5); // draw a rectangle
@@ -64,9 +66,37 @@ export class MyParallaxScreen extends ParallaxScreen {
         this.midgroundContainer.addChildAt(midBorderLeft, 1);
         this.foregroundContainer.addChildAt(boat, 0);
         app.stage.addChild(this.screenContainer);
+
+        // unlock the second half of the stage with a button press (for example)
+        document.addEventListener('keydown', (event) => {
+            // example unlocks exploreLock
+            if(event.key === "1") {
+                super.Unlock();
+            } // end if
+        }); // end addEventListener
+
+        // check for end state (for example, has unlocked the next part)
+        let onlyOnce = true;
+        this.ticker = new PIXI.Ticker();
+        this.ticker.add(() => {
+            if(this.backgroundContainer.x <= -(app.screen.width*3-100)) {
+                if(onlyOnce) {
+                    console.log("Finished Level");
+                    onlyOnce = false;
+                    setTimeout(() => { // wait 7 seconds, then go to next stage
+                        this.isFinished = true;
+                    }, 7000);
+                } // end if
+            } // end if
+        }); // end this.ticker.add
+
+        // start the ticker
+        this.ticker.start();
     } // end Start
 
     OnEnd(app) {
         super.OnEnd(app);
+        this.ticker.stop();
+        this.ticker.destroy();
     } // end OnEnd
 } // end MyParallaxScreen class

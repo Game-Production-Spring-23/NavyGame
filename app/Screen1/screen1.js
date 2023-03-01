@@ -7,6 +7,7 @@ export class Screen1 extends Screen {
         // call previous constructor
         super();
         this.ticker = new PIXI.Ticker();
+        super.initScreen(); // needed because this is the first screen...
     } // end constructor
 
     
