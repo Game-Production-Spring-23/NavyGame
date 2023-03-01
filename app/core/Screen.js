@@ -20,7 +20,7 @@ export class Screen {
         this.screenContainer.addChildAt(this.foregroundContainer, 2);
     } // end initScreenContainers
 
-    // Called when the Screen is set to run . Starts the Screen.
+    // Called when the Screen is set to run. Starts the Screen.
     Start(app, data) {
         this.initScreen();
     } // end Start

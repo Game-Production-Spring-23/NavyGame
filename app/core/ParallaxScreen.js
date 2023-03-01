@@ -6,7 +6,7 @@ export class ParallaxScreen extends Screen {
        this.parallaxTicker = new PIXI.Ticker();
        this.scrollSpeed = 6;
        this.isLocked = false;
-       this.lockForParallax = true;
+       this.internalLock = true;
     } // end constructor
 
     initScreen() {
@@ -16,7 +16,7 @@ export class ParallaxScreen extends Screen {
     // inits parallax values
     initParallax(app) {
         this.isLocked = false;
-        this.lockForParallax = true;
+        this.internalLock = true;
         this.leftMaxDistBack = -(app.screen.width*3) / 2;
         this.leftMaxDistMid = -(app.screen.width) / 2;
     } // end initParallax
@@ -97,8 +97,8 @@ export class ParallaxScreen extends Screen {
 
     // unlocks the second part of the stage
     Unlock() {
-        if(this.lockForParallax) {
-            this.lockForParallax = false;
+        if(this.internalLock) {
+            this.internalLock = false;
             this.isLocked = true;
             this.leftMaxDistBack *= 2;
             this.leftMaxDistMid *= 2;
