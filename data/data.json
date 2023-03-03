@@ -1,5 +1,6 @@
 {
-  "questions": [{
+  "questions": [
+    {
       "prompt": "What component do you not need to make an MBSE model?",
       "answers": [
         "Modeling Runway [x]",
@@ -50,15 +51,14 @@
         "This is answer 6."
       ],
       "correct_answer_indices": [0, 2]
-    }],
+    }
+  ],
   "images": {
-    "boat": [
-      "/images/boat.png"
-    ],
+    "boat": ["/assets/images/boat.png"],
     "water": [
-      "/images/water_background_1.png",
-      "/images/water_background_2.png",
-      "/images/water_background_3.png"
+      "/assets/images/water_background_1.png",
+      "/assets/images/water_background_2.png",
+      "/assets/images/water_background_3.png"
     ]
   },
   "audio": {

@@ -1,0 +1,20 @@
+{
+  "dialogue": [
+    {
+      "portrait": "/assets/images/Screen3placeholder.png",
+      "text": "Hello this is a simple dialogue box, click anywhere"
+    },
+    {
+      "portrait": "/assets/images/Screen3placeholder.png",
+      "text": "Text changes, if we have more character expression then they would change"
+    },
+    {
+      "portrait": "",
+      "text": "This time no portrait"
+    },
+    {
+      "portrait": "/assets/images/Screen3placeholder.png",
+      "text": "This is the end, reload the page to do this again"
+    }
+  ]
+}

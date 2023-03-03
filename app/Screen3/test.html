@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogue Test</title>
+    <script src="screen3.js"></script>
+    <script src="../../pixi.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #dialogueContainer {
+            width: 100%;
+            height: 100vh;
+            background-image: url(../../assets/images/testWater.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #characterPortrait {
+            position: fixed;
+            width: auto;
+            height: 130vh;
+            bottom: -200px;
+            left: 0px;
+            z-index: 1;
+        }
+
+        #dialogueBox {
+            width: 98%;
+            height: 35vh;
+            position: fixed;
+            bottom: 2%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin: 0 auto;
+            outline: 1px solid goldenrod;
+            background-color: papayawhip;
+            z-index: 2;
+        }
+
+        p {
+            font-size: 25px;
+            font-size: 2vw;
+            font-family: "Raleway", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dialogueContainer">
+        <img id="characterPortrait"></img>
+        <div id="dialogueBox">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, tempora asperiores voluptate sint
+                repellat consectetur repellendus vitae impedit quaerat. Vitae asperiores dolorem voluptates iusto
+                obcaecati nobis, eligendi necessitatibus odit eius.</p>
+        </div>
+    </div>
+</body>
+
+</html>
