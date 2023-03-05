@@ -1,12 +1,29 @@
 import { Screen } from "./Screen.js";
 
+/*
+Ratio for screens:
+Background: 150%
+Midground: 200%
+Foreground: 300%
+*/
+
+
 export class ParallaxScreen extends Screen {
     constructor() {
-       super();
-       this.parallaxTicker = new PIXI.Ticker();
-       this.scrollSpeed = 6;
-       this.isLocked = false;
-       this.internalLock = true;
+        // call parent constructor
+        super();
+
+        // create a ticker for watching parallax values
+        this.parallaxTicker = new PIXI.Ticker();
+        
+        // set scroll values
+        this.setScrollSpeedAndRatios(1, 1.5, 2, 3);
+
+        this.character = null;
+
+        // lock booleans
+        this.isLocked = false;
+        this.internalLock = true;
     } // end constructor
 
     initScreen() {
@@ -15,10 +32,14 @@ export class ParallaxScreen extends Screen {
 
     // inits parallax values
     initParallax(app) {
+        // lock booleans
         this.isLocked = false;
         this.internalLock = true;
-        this.leftMaxDistBack = -(app.screen.width*3) / 2;
-        this.leftMaxDistMid = -(app.screen.width) / 2;
+
+        // all screens are locked to a single screen length (until unlocked)
+        this.leftMaxDistBack = 0;
+        this.leftMaxDistMid = 0;
+        this.leftMaxDistFore = 0;
     } // end initParallax
 
     // Called when the Screen is set to run . Starts the Screen.
@@ -28,29 +49,56 @@ export class ParallaxScreen extends Screen {
         this.setHTML();
         this.parallaxTicker = new PIXI.Ticker();
 
-        console.log(this.leftMaxDistBack);
-
         let goRight = false;
         let goLeft = false;
+
         // add checkers for button pressing
-        this.parallaxTicker.add(() => {         
+        this.parallaxTicker.add(() => {    
+            // if the player is trying to scroll to the right...     
             if(goRight) {
-                if(this.backgroundContainer.x > this.leftMaxDistBack) {
-                    this.backgroundContainer.x -= this.scrollSpeed;
+                // check background limit
+                if(this.character.x <= app.screen.width) {
+                    this.character.x += this.foreGroundScrollSpeed;
+                } else { // the character is at the limit
+                    if(this.backgroundContainer.x > this.leftMaxDistBack) {
+                        this.backgroundContainer.x -= this.backGroundScrollSpeed;
+                    } else { // character movement
+                        
+                    }// end if
+    
+                    // check midground limit
+                    if(this.midgroundContainer.x > this.leftMaxDistMid) {
+                        this.midgroundContainer.x -= this.midGroundScrollSpeed;
+                    } // end if
+    
+                    // check foreground limit
+                    if(this.foregroundContainer.x > this.leftMaxDistFore) {
+                        this.foregroundContainer.x -= this.foreGroundScrollSpeed;
+                    } // end if
                 } // end if
+            } // end if
 
-                if(this.midgroundContainer.x > this.leftMaxDistMid) {
-                    this.midgroundContainer.x -= this.scrollSpeed / 3;
-                } // end if
-            } // end
-
+            // if the player is trying to scroll to the left...
             if(goLeft) {
-                if(this.backgroundContainer.x < 0) {
-                    this.backgroundContainer.x += this.scrollSpeed;
-                } // end if
-
-                if(this.midgroundContainer.x < 0) {
-                    this.midgroundContainer.x += this.scrollSpeed / 3;
+                // check background limit
+                if(this.character.x >= 0) {
+                    this.character.x -= this.foreGroundScrollSpeed;
+                } else { // the character is at the limit
+                    if(this.backgroundContainer.x < 0) {
+                        this.backgroundContainer.x += this.backGroundScrollSpeed;
+                    } else { // character movement
+                        
+                    } // end if
+    
+                    // check midground limit
+                    if(this.midgroundContainer.x < 0) {
+                        this.midgroundContainer.x += this.midGroundScrollSpeed;
+                    } // end if
+    
+                    // check foreground limit
+                    if(this.foregroundContainer.x < 0) {
+                        this.foregroundContainer.x += this.foreGroundScrollSpeed;
+                    } // end if
                 } // end if
             } // end if
         }); // end this.parallaxTicker.add
@@ -90,21 +138,54 @@ export class ParallaxScreen extends Screen {
         this.parallaxTicker.stop(); // stop the ticker I made
         this.parallaxTicker.destroy(); // destroy ticker I made
         this.isLocked = false;
-        this.leftMaxDistBack = -(app.screen.width*3) / 2;
-        this.leftMaxDistMid = -(app.screen.width) / 2;
     } // end OnEnd
 
 
     // unlocks the second part of the stage
-    Unlock() {
+    Unlock(app) {
         if(this.internalLock) {
             this.internalLock = false;
             this.isLocked = true;
-            this.leftMaxDistBack *= 2;
-            this.leftMaxDistMid *= 2;
-            console.log(this.leftMaxDistBack);
+            console.log("Unlocked");
+            this.leftMaxDistBack = (-(app.screen.width)*this.backGroundRatio) + app.screen.width;
+            this.leftMaxDistMid = (-(app.screen.width)*this.midGroundRatio) + app.screen.width;
+            this.leftMaxDistFore = (-(app.screen.width)*this.foreGroundRatio) + app.screen.width;
+            console.log(`${this.leftMaxDistBack}`);
+            console.log(`${this.leftMaxDistMid}`);
+            console.log(`${this.leftMaxDistFore}`);
         } // end if
     } // end Unlock
+
+
+    // creates the character sprite and mechanics
+    createCharacter(app, data, groundLevel) {
+        this.characterTexture = PIXI.Texture.from(data.images.boat[0]);
+        this.character = new PIXI.Sprite(this.characterTexture);
+        this.character.anchor.set(0.5);
+        this.character.x = app.screen.width / 2;
+        this.character.y = groundLevel;
+        this.character.width = 175;
+        this.character.height = 100;
+
+        this.stationaryContainer.addChildAt(this.character, 0);
+    } // end createCharacter
+
+
+    // set the scroll speed and ratios of the screens
+    setScrollSpeedAndRatios(scrollSpeed, backGroundRatio, midGroundRatio, foreGroundRatio) {
+        // base element of scroll speed - change this variable to speed up/ slow down movement
+        this.scrollSpeed = scrollSpeed;
+
+        // the ratios for the different sceens
+        this.backGroundRatio = backGroundRatio; // 150% distance
+        this.midGroundRatio = midGroundRatio; // 200% distance
+        this.foreGroundRatio = foreGroundRatio; // fastest/longest screen - 300% distance (100% being one full screen)
+
+        // the scroll speeds of each screen, derived from the base scroll speed and the ratios given
+        this.backGroundScrollSpeed = this.scrollSpeed * this.backGroundRatio;
+        this.midGroundScrollSpeed = this.scrollSpeed * this.midGroundRatio * this.backGroundRatio;
+        this.foreGroundScrollSpeed = this.scrollSpeed * this.foreGroundRatio * this.midGroundRatio;
+    } // end setScrollSpeedAndRatios
 
 
     // set html settings so that pixi loads the canvas element correctly

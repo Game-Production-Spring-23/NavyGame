@@ -6,7 +6,7 @@ import { MyParallaxScreen } from "./parallax-example/my-parallax-screen.js";
 export function startGame() {
     // initialize the screens -> they get a reference to the state machine
     const SCREENS = [
-        new Screen1(),
+        //new Screen1(),
         new MyParallaxScreen()
     ];
     fetch("/data/data.json")

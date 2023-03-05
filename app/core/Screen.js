@@ -14,10 +14,12 @@ export class Screen {
         this.backgroundContainer = new PIXI.Container();
         this.midgroundContainer = new PIXI.Container();
         this.foregroundContainer = new PIXI.Container();
+        this.stationaryContainer = new PIXI.Container();
 
         this.screenContainer.addChildAt(this.backgroundContainer, 0);
         this.screenContainer.addChildAt(this.midgroundContainer, 1);
         this.screenContainer.addChildAt(this.foregroundContainer, 2);
+        this.screenContainer.addChildAt(this.stationaryContainer, 3);
     } // end initScreenContainers
 
     // Called when the Screen is set to run. Starts the Screen.
