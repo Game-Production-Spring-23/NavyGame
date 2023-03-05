@@ -41,14 +41,14 @@
             outline: 1px solid goldenrod;
             background-color: papayawhip;
             z-index: 2;
-        }
-
-        p {
             font-size: 25px;
             font-size: 2vw;
             font-family: "Raleway", sans-serif;
-            margin: 0;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
             padding: 20px;
+
         }
     </style>
 </head>
@@ -56,11 +56,8 @@
 <body>
     <div id="dialogueContainer">
         <img id="characterPortrait"></img>
-        <div id="dialogueBox">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, tempora asperiores voluptate sint
-                repellat consectetur repellendus vitae impedit quaerat. Vitae asperiores dolorem voluptates iusto
-                obcaecati nobis, eligendi necessitatibus odit eius.</p>
-        </div>
+        <p id="dialogueBox">Hello this is the dialogue test, click on the screen for a demonstration</p>
+    </div>
     </div>
 </body>
 

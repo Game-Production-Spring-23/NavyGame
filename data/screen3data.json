@@ -2,15 +2,15 @@
   "dialogue": [
     {
       "portrait": "/assets/images/Screen3placeholder.png",
-      "text": "Hello this is a simple dialogue box, click anywhere"
+      "text": "As you can see the text scrolls, press again to display the next line"
     },
     {
       "portrait": "/assets/images/Screen3placeholder.png",
-      "text": "Text changes, if we have more character expression then they would change"
+      "text": "Try to press again while text is scrolling to skip it entirely"
     },
     {
       "portrait": "",
-      "text": "This time no portrait"
+      "text": "Character portraits can change as well, watch right now there is no character on screen"
     },
     {
       "portrait": "/assets/images/Screen3placeholder.png",
