@@ -40,11 +40,14 @@ export class ParallaxScreen extends Screen {
         this.leftMaxDistBack = 0;
         this.leftMaxDistMid = 0;
         this.leftMaxDistFore = 0;
+        
+        // character boundaries
+        this.characterLeftBound = (app.screen.width/3);
+        this.characterRightBound = (app.screen.width*2/3);
     } // end initParallax
 
     // Called when the Screen is set to run . Starts the Screen.
     Start(app, data) {
-        super.initScreen();
         this.initParallax(app);
         this.setHTML();
         this.parallaxTicker = new PIXI.Ticker();
@@ -56,14 +59,15 @@ export class ParallaxScreen extends Screen {
         this.parallaxTicker.add(() => {    
             // if the player is trying to scroll to the right...     
             if(goRight) {
-                // check background limit
-                if(this.character.x <= app.screen.width) {
+                // check character limit
+                if(this.character.x <= this.characterRightBound) {
                     this.character.x += this.foreGroundScrollSpeed;
                 } else { // the character is at the limit
                     if(this.backgroundContainer.x > this.leftMaxDistBack) {
+                        this.characterLeftBound = (app.screen.width/3);
                         this.backgroundContainer.x -= this.backGroundScrollSpeed;
-                    } else { // character movement
-                        
+                    } else { // character movement -> allow to reach end of screen
+                        this.characterRightBound = app.screen.width - (this.character.width*2/3);
                     }// end if
     
                     // check midground limit
@@ -80,14 +84,15 @@ export class ParallaxScreen extends Screen {
 
             // if the player is trying to scroll to the left...
             if(goLeft) {
-                // check background limit
-                if(this.character.x >= 0) {
+                // check character limit
+                if(this.character.x >= this.characterLeftBound) {
                     this.character.x -= this.foreGroundScrollSpeed;
                 } else { // the character is at the limit
                     if(this.backgroundContainer.x < 0) {
+                        this.characterRightBound = (app.screen.width*2/3);
                         this.backgroundContainer.x += this.backGroundScrollSpeed;
                     } else { // character movement
-                        
+                        this.characterLeftBound = (this.character.width*2/3);
                     } // end if
     
                     // check midground limit

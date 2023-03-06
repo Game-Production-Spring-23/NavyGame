@@ -34,4 +34,15 @@ export class Screen {
         app.stage.removeChild(this.screenContainer); // remove the screen I made
         this.screenContainer.destroy(); // destroy the screenContainer I made
     } // end OnEnd
+
+    // load all of the items necessary for an html screen to work correctly (styling, etc.)
+    LoadHTMLDependencies(styleSheet) {
+
+    } // end LoadHTMLDependencies
+
+
+    // resets all html items (styling, etc.)
+    RemoveHTMLDependencies() {
+
+    } // end RemoveHTMLDependencies
 } // end Screen Class
