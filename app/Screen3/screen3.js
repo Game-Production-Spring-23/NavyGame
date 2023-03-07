@@ -6,7 +6,6 @@
     - Creates a moving ship effect
     - Transitions to the Deck Screen, by zooming in (Screen2)
 */
-
 // Call the testData function when the window loads
 window.onload = (event) => {
   // Fetch data.json file
@@ -14,32 +13,59 @@ window.onload = (event) => {
     .then((response) => response.json())
     .then((data) => {
       //Gathers and stores html elements by id
-      let portrait = document.getElementById("characterPortrait");
-      let dialogueBox = document.getElementById("dialogueBox");
+      let leftPortrait = document.getElementById("leftCharacterPortrait");
+      let rightPortrait = document.getElementById("rightCharacterPortrait");
+      let backButton = document.getElementById("backButton");
+      let frontButton = document.getElementById("frontButton");
+      let dialogueText = document.getElementById("dialogueText");
       let dialogueContainer = document.getElementById("dialogueContainer");
+
       //Other variables necessary for dialogue functionality
       let index = 0;
       let scrollIndex = 0; //Character index of scroll
       let scrollTimer; //Time between characters in text scroll
       let scrollSpeed = 50;
 
+      displayDialogue();
+
+      backButton.onclick = function (event) {
+        event.stopPropagation();
+        if (index > 0) {
+          index--;
+          displayDialogue();
+        }
+      };
+
       // Waits for user to click on screen
       dialogueContainer.addEventListener("click", function onClick() {
+        displayDialogue();
+      });
+
+      function displayDialogue() {
         //if index is less than dialogue array length
         if (index < data.dialogue.length) {
-          //Sets portrait to dialogue portrait and clears dialogue box
-          portrait.src = data.dialogue[index].portrait;
-          dialogueBox.innerHTML = "";
+          //Sets portraits to dialogue portraits and clears dialogue box
+          leftPortrait.src = data.dialogue[index].leftPortrait;
+          rightPortrait.src = data.dialogue[index].rightPortrait;
+          dialogueText.innerHTML = "";
+
+          if (index == data.dialogue.length - 1) {
+            frontButton.src = "/assets/images/ui/closeBtn.png";
+          } else {
+            frontButton.src = "/assets/images/ui/ArrowIcon.png";
+          }
 
           //if the does already exist
           if (scrollTimer != null) {
             skipDialogue();
           } else {
-            //Sets scrollTimer to displayDialogue function for scrollSpeed
-            scrollTimer = setTimeout(displayDialogue, scrollSpeed);
+            //Sets scrollTimer to scrollingDialogue function for scrollSpeed
+            scrollTimer = setTimeout(scrollingDialogue, scrollSpeed);
           }
+        } else {
+          location.reload();
         }
-      });
+      }
 
       function skipDialogue() {
         //Clears scrollTimer, set it null, and sets scrollIndex to 0
@@ -47,18 +73,18 @@ window.onload = (event) => {
         scrollTimer = null;
         scrollIndex = 0;
         //Displays dialogue text without scrolling
-        dialogueBox.innerHTML = data.dialogue[index].text;
+        dialogueText.innerHTML = data.dialogue[index].text;
         index++;
       }
 
-      function displayDialogue() {
+      function scrollingDialogue() {
         //if scrollIndex is less than the dialogue text's length
         if (scrollIndex < data.dialogue[index].text.length) {
           //Display scrolling text character in dialogue box at scrollIndex
-          dialogueBox.innerHTML +=
+          dialogueText.innerHTML +=
             data.dialogue[index].text.charAt(scrollIndex);
           scrollIndex++;
-          scrollTimer = setTimeout(displayDialogue, scrollSpeed); //Reload displayDialogue function and stores it in scrollTimer
+          scrollTimer = setTimeout(scrollingDialogue, scrollSpeed); //Reload scrollingDialogue function and stores it in scrollTimer
         } else {
           //Sets scrollIndex null, and sets scrollIndex to 0
           scrollTimer = null;

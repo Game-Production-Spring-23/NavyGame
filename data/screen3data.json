@@ -1,20 +1,24 @@
 {
   "dialogue": [
     {
-      "portrait": "/assets/images/Screen3placeholder.png",
-      "text": "As you can see the text scrolls, press again to display the next line"
+      "leftPortrait": "/assets/images/Screen3placeholder1.png",
+      "rightPortrait": "",
+      "text": "Hello this is a demonstration for dialogue. As you can see the text scrolls, press again to display the next line"
     },
     {
-      "portrait": "/assets/images/Screen3placeholder.png",
+      "leftPortrait": "",
+      "rightPortrait": "/assets/images/Screen3placeholder7.png",
       "text": "Try to press again while text is scrolling to skip it entirely"
     },
     {
-      "portrait": "",
-      "text": "Character portraits can change as well, watch right now there is no character on screen"
+      "leftPortrait": "/assets/images/Screen3placeholder3.png",
+      "rightPortrait": "/assets/images/Screen3placeholder6.png",
+      "text": "Character portraits can change as well as well as their expression"
     },
     {
-      "portrait": "/assets/images/Screen3placeholder.png",
-      "text": "This is the end, reload the page to do this again"
+      "leftPortrait": "/assets/images/Screen3placeholder4.png",
+      "rightPortrait": "/assets/images/Screen3placeholder5.png",
+      "text": "End of conversation."
     }
   ]
 }
