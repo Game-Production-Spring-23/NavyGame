@@ -1,18 +1,15 @@
-import { ParallaxScreen } from "../core/ParallaxScreen.js";
+import { GameScene } from "../core/classes/GameScene.js";
 
 
-export class MyParallaxScreen extends ParallaxScreen {
+export class GameDemoScene extends GameScene {
     constructor() {
         super();
-        this.ticker = new PIXI.Ticker();
-        super.initScreen(); // needed if this is the first screen...
     } // end constructor
 
 
     Start(app, data) {
         // call parent function
         super.Start(app, data);
-        super.createCharacter(app, data, app.screen.height*0.75);
 
         let backRatio = 1.5;
         let midRatio = 2;
@@ -59,20 +56,26 @@ export class MyParallaxScreen extends ParallaxScreen {
 
 
         // put objects into containers
-        this.backgroundContainer.addChildAt(backdrop, 0);
-        this.backgroundContainer.addChildAt(backMidBar, 1);
-        this.backgroundContainer.addChildAt(backLeftBar, 1);
+        this.backGroundContainer.addChildAt(backdrop, 0);
+        this.backGroundContainer.addChildAt(backMidBar, 1);
+        this.backGroundContainer.addChildAt(backLeftBar, 1);
 
-        this.midgroundContainer.addChildAt(middrop, 0);
-        this.midgroundContainer.addChildAt(midMidBar, 1);
-        this.midgroundContainer.addChildAt(midLeftBar, 1);
+        this.midGroundContainer.addChildAt(middrop, 0);
+        this.midGroundContainer.addChildAt(midMidBar, 1);
+        this.midGroundContainer.addChildAt(midLeftBar, 1);
 
-        this.foregroundContainer.addChildAt(foredrop, 0);
-        this.foregroundContainer.addChildAt(foreMidBar, 1);
-        this.foregroundContainer.addChildAt(foreLeftBar, 1);
+        this.foreGroundContainer.addChildAt(foredrop, 0);
+        this.foreGroundContainer.addChildAt(foreMidBar, 1);
+        this.foreGroundContainer.addChildAt(foreLeftBar, 1);
 
         // add containers to the screen
         app.stage.addChild(this.screenContainer);
+
+        // set character position
+        this.character.y = app.screen.height*0.6;
+        
+        // make character visible
+        this.character.visible = true;
 
         // unlock the second half of the stage with a button press (for example)
         document.addEventListener('keydown', (event) => {
@@ -83,27 +86,26 @@ export class MyParallaxScreen extends ParallaxScreen {
         }); // end addEventListener
 
         // check for end state (for example, has unlocked the next part)
-        let onlyOnce = true;
-        this.ticker = new PIXI.Ticker();
-        this.ticker.add(() => {
-            if(this.backgroundContainer.x <= (-(app.screen.width)*this.backGroundRatio + app.screen.width + 100)) {
-                if(onlyOnce) {
-                    console.log("Finished Level");
-                    onlyOnce = false;
-                    setTimeout(() => { // wait 7 seconds, then go to next stage
-                        this.isFinished = true;
-                    }, 7000);
-                } // end if
-            } // end if
-        }); // end this.ticker.add
-
-        // start the ticker
-        this.ticker.start();
+        this.onlyOnce = true;
     } // end Start
+
 
     OnEnd(app) {
         super.OnEnd(app);
-        this.ticker.stop();
-        this.ticker.destroy();
     } // end OnEnd
+
+
+    Tick(app, data) {
+        super.Tick(app, data);
+
+        if(this.backGroundContainer.x <= (-(app.screen.width)*this.backGroundRatio + app.screen.width + 100)) {
+            if(this.onlyOnce) {
+                console.log("Finished Level");
+                this.onlyOnce = false;
+                setTimeout(() => { // wait 7 seconds, then go to next stage
+                    this.isFinished = true;
+                }, 7000);
+            } // end if
+        } // end if
+    } // end Tick
 } // end MyParallaxScreen class

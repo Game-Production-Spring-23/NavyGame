@@ -1,13 +1,11 @@
-import { Screen } from "../core/Screen.js";
+import { Scene } from "../core/classes/Scene.js";
 
 
 // Screen1 Implementation
-export class Screen1 extends Screen {
+export class Scene1 extends Scene {
     constructor() {
-        // call previous constructor
-        super();
-        this.ticker = new PIXI.Ticker();
-        super.initScreen(); // needed because this is the first screen...
+        let shouldTick = true;
+        super(shouldTick);
     } // end constructor
 
     
@@ -15,7 +13,6 @@ export class Screen1 extends Screen {
     Start(app, data) {
         // call parent function
         super.Start(app, data);
-        this.setHTML();
 
         // set screen alpha to 0
         this.screenContainer.alpha = 0;     
@@ -23,7 +20,8 @@ export class Screen1 extends Screen {
         // initialize boat sprite
         let boatTexture = PIXI.Texture.from(data.images.boat[0]);
         let boat = new PIXI.Sprite(boatTexture);
-        this.initSprite(boat, 0.5, 175, 100, (app.screen.width / 2), 525);
+        this.boat = boat;
+        this.initSprite(boat, 0.5, 175, 100, (app.screen.height * 0.75) + 5, 525);
 
         // initialize water sprite & animations
         let waterTexture = this.loadTextures(data.images.water);
@@ -69,12 +67,12 @@ export class Screen1 extends Screen {
         backdrop.drawRect(0, 0, app.screen.width, app.screen.height*1.5); // draw a rectangle
 
         // add sprites to containers
-        this.backgroundContainer.addChildAt(backdrop, 0);
-        this.backgroundContainer.addChildAt(sky, 1);
+        this.backGroundContainer.addChildAt(backdrop, 0);
+        this.backGroundContainer.addChildAt(sky, 1);
 
-        this.midgroundContainer.addChildAt(water, 0);
+        this.midGroundContainer.addChildAt(water, 0);
 
-        this.foregroundContainer.addChildAt(boat, 0);
+        this.foreGroundContainer.addChildAt(boat, 0);
 
         // add container to stage 
         app.stage.addChild(this.screenContainer);
@@ -85,45 +83,17 @@ export class Screen1 extends Screen {
             app.view.style.height = window.innerHeight;
         }); // end resize event listener
 
-        // game loop stuff
-        let counter = 0.0;
-        let scaleX = 1.0;
-        let scaleY = 1.0;
-        let offsetY = 0;
 
-        // create the ticker
-        this.ticker = new PIXI.Ticker();
+        // set game loop variables
+        this.counter = 0.0;
+        this.scaleX = 1.0;
+        this.scaleY = 1.0;
+        this.offsetY = 0;
 
-        let boatTravelTime = 695 - 300;
-        let boatTravelDistance = (app.screen.width / 2) + (boat.width / 2);
+        this.boatTravelTime = 695 - 300;
+        this.boatTravelDistance = (app.screen.width / 2) + (boat.width / 2);
         boat.x = app.screen.width + boat.width*0.5;
-        this.ticker.add(() => {
-            counter += this.ticker.deltaTime;
-            // set fade in
-            if (this.screenContainer.alpha <= 1) {
-                this.screenContainer.alpha += 0.005*this.ticker.deltaTime;
-            } // end if
 
-            // boat sails in
-            if((counter >= 300) && (counter <= 695)) {
-                boat.x -= boatTravelDistance/boatTravelTime * this.ticker.deltaTime;
-            } // end if
-
-            // set zoom in
-            if(counter >= 700) {
-                if(scaleX <= 1.50) {
-                    scaleX += 0.001;
-                } // end if
-                if(scaleY <= 1.50) {
-                    scaleY += 0.001;
-                } // end if
-                if(offsetY <= 250) {
-                    offsetY += 0.5;
-                } // end if
-                this.zoomIn(app, this.screenContainer, scaleX, scaleY, offsetY);
-            } // end if
-        }); // end this.ticker.add
-        this.ticker.start();
 
         // set when to end Screen - after 20 seconds
         setTimeout(() => {
@@ -144,47 +114,41 @@ export class Screen1 extends Screen {
     } // end Start
 
 
-    // set html settings so that pixi loads the canvas element correctly
-    setHTML() {
-        // Get HTML head element
-        var head = document.getElementsByTagName('HEAD')[0];
-
-        // Create new link Element
-        var link = document.createElement('link');
-
-        // set the attributes for link element
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = '/app/screen1/style.css';
-
-        // Append link element to HTML head
-        head.appendChild(link);
-
-        let splash = document.getElementById("splash");
-        let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
-        let gameContainer = document.getElementById("gameContainer"); //Container for game
-        let settingsContainer = document.getElementById("settingsContainer"); //Container for settings
-        let scoreContainer = document.getElementById("scoreContainer");
-        let journalScreen = document.getElementById("journalContainer");
-        let mapScreen = document.getElementById("mapContainer");
-        let appContainer = document.getElementById("app");
-        splash.style.display = "none";
-        bottomLinks.style.display = "none";
-        gameContainer.style.display = "none";
-        settingsContainer.style.display = "none";
-        scoreContainer.style.display = "none";
-        journalScreen.style.display = "none";
-        mapScreen.style.display = "none";
-        appContainer.style.display = "none";
-    } // end setHTML
-
-
     // Called when the Screen has terminated.
     OnEnd(app) {
         super.OnEnd(app);
-        this.ticker.stop(); // stop the ticker I made
-        this.ticker.destroy(); // destroy ticker I made
     } // end OnEnd
+
+
+    // Ticks continuously while the screen is running if 'this.shouldTick' has been set to 'true'.
+    Tick(app, data) {
+        super.Tick(app, data);
+        
+        this.counter += this.ticker.deltaTime;
+        // set fade in
+        if (this.screenContainer.alpha <= 1) {
+            this.screenContainer.alpha += 0.005*this.ticker.deltaTime;
+        } // end if
+
+        // boat sails in
+        if((this.counter >= 300) && (this.counter <= 695)) {
+            this.boat.x -= this.boatTravelDistance/this.boatTravelTime * this.ticker.deltaTime;
+        } // end if
+
+        // set zoom in
+        if(this.counter >= 700) {
+            if(this.scaleX <= 1.50) {
+                this.scaleX += 0.001;
+            } // end if
+            if(this.scaleY <= 1.50) {
+                this.scaleY += 0.001;
+            } // end if
+            if(this.offsetY <= 250) {
+                this.offsetY += 0.5;
+            } // end if
+            this.zoomIn(app, this.screenContainer, this.scaleX, this.scaleY, this.offsetY);
+        } // end if
+    } // end Tick
 
 
     // zooms into the screen
