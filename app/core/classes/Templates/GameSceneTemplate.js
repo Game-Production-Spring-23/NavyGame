@@ -31,8 +31,11 @@ export class GameSceneTemplate extends GameScene {
             // the rest of these depend on the size of the background artwork panels
             1.5, // background ratio -> '1.5' means that the panel is 150% the width of the screen
             2.0, // midground ratio -> '2.0' means that the panel is 200% the width of the screen
-            3.0 // foreground ratio -> '3.0' means taht the panel is 300% the width of the screen
+            3.0 // foreground ratio -> '3.0' means that the panel is 300% the width of the screen
         ); // end this.setScrollSpeedAndRatios
+
+        this.backGroundContainer.addChildAt(image, 0);
+
         
         // set character position - how high should it be on the screen?
         this.character.y = app.screen.height*0.6;
@@ -47,6 +50,12 @@ export class GameSceneTemplate extends GameScene {
                 super.Unlock(app);
             } // end if
         }); // end addEventListener
+
+
+        // wait 7 seconds, then go to next stage
+        setTimeout(() => { 
+            this.isFinished = true;
+        }, 7000);
     } // end Start
 
     
@@ -62,11 +71,6 @@ export class GameSceneTemplate extends GameScene {
     Tick(app, data) {
         // calls parent class's Tick function -> necessary for GameScene to work!
         super.Tick(app, data);
-
-        // wait 7 seconds, then go to next stage
-        setTimeout(() => { 
-            this.isFinished = true;
-        }, 7000);
     } // end Tick
 
     /* add class functions that you need here */
