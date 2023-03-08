@@ -12,7 +12,7 @@ export class GameScene extends Scene {
         this.character = null;
 
         // lock booleans
-        this.isLocked = false; // should set
+        this.isLocked = false; // can check (in case you need to check if the screen is locked)
         this.internalLock = true; // don't set!
     } // end constructor
 
@@ -21,7 +21,6 @@ export class GameScene extends Scene {
     Start(app, data) {
         // call parent class's Start function -> performs important actions!
         super.Start(app, data);
-        this.setHTML();
 
         // lock booleans
         this.isLocked = false;
@@ -73,7 +72,9 @@ export class GameScene extends Scene {
     OnEnd(app) {
         // call parent class's OnEnd function -> performs important actions!
         super.OnEnd(app);
-        this.isLocked = false; // reset the lock
+
+        // reset the locks
+        this.isLocked = false; 
         this.internalLock = true;
     } // end OnEnd
 
@@ -81,12 +82,10 @@ export class GameScene extends Scene {
     // Ticks continuously while the screen is running if 'this.shouldTick' has been set to 'true'.
     Tick(app, data) {
         // if the player is trying to scroll to the right...
-        console.log(`Right Char Bound: ${this.characterRightBound}`); 
         if(this.goRight) {
             // check character limit
             if(this.character.x <= this.characterRightBound) {
                 this.character.x += this.foreGroundScrollSpeed;
-                console.log(this.foreGroundScrollSpeed);
             } else { // the character is at the limit
                 if(this.backGroundContainer.x > this.leftMaxDistBack) {
                     this.characterLeftBound = (app.screen.width/3);
@@ -148,41 +147,6 @@ export class GameScene extends Scene {
     } // end Unlock
 
 
-    // set html settings so that pixi loads the canvas element correctly
-    setHTML() {
-        // Get HTML head element
-        var head = document.getElementsByTagName('HEAD')[0];
-
-        // Create new link Element
-        var link = document.createElement('link');
-
-        // set the attributes for link element
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = '/app/core/classes/style.css';
-
-        // Append link element to HTML head
-        head.appendChild(link);
-
-        let splash = document.getElementById("splash");
-        let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
-        let gameContainer = document.getElementById("gameContainer"); //Container for game
-        let settingsContainer = document.getElementById("settingsContainer"); //Container for settings
-        let scoreContainer = document.getElementById("scoreContainer");
-        let journalScreen = document.getElementById("journalContainer");
-        let mapScreen = document.getElementById("mapContainer");
-        let appContainer = document.getElementById("app");
-        splash.style.display = "none";
-        bottomLinks.style.display = "none";
-        gameContainer.style.display = "none";
-        settingsContainer.style.display = "none";
-        scoreContainer.style.display = "none";
-        journalScreen.style.display = "none";
-        mapScreen.style.display = "none";
-        appContainer.style.display = "none";
-    } // end setHTML
-
-
     // creates the character sprite and mechanics
     createCharacter(app, data, groundLevel) {
         this.characterTexture = PIXI.Texture.from(data.images.boat[0]);
@@ -193,8 +157,8 @@ export class GameScene extends Scene {
         this.character.width = 175;
         this.character.height = 100;
 
-        this.characterContainer.addChildAt(this.character, 0);
         this.character.visible = false;
+        this.characterContainer.addChildAt(this.character, 0);
     } // end createCharacter
 
 

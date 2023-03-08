@@ -1,7 +1,7 @@
 import { StateMachine } from "./core/classes/StateMachine.js";
 import { StartScreen } from "./StartScreen/StartScreen.js";
 import { Scene1 } from "./Scene1/Scene1.js"
-import { GameDemoScene } from "./parallax-example/GameDemoScene.js";
+import { GameDemoScene } from "./GameDemoScene/GameDemoScene.js";
 
 
 // initialize the screens -> they get a reference to the state machine

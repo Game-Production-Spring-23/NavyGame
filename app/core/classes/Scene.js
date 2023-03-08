@@ -38,6 +38,9 @@ export class Scene {
         this.screenContainer.addChildAt(this.foreGroundContainer, 3);
         this.screenContainer.addChildAt(this.overlayContainer, 4);
 
+        // add containers to the screen
+        app.stage.addChild(this.screenContainer);
+
         // set ticker object to run the Tick function
         this.ticker.add(() => {
             this.Tick(app, data);

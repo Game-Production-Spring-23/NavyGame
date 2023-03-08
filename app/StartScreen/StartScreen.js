@@ -32,6 +32,7 @@ export class StartScreen extends Scene {
 
         // set what is displayed
         this.splash.style.display = "block";
+        this.splash.style.opacity = 1;
         this.bottomLinks.style.display = "block";
         this.gameContainer.style.display = "block";
         this.appContainer.style.display = "block";
@@ -46,7 +47,6 @@ export class StartScreen extends Scene {
             //music.play();
             this.splash.style.opacity = 0;
             setTimeout(() => {
-              this.splash.classList.add("hidden");
               this.splash.style.display = "none";
             }, 610);
         });

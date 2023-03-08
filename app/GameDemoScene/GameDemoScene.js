@@ -68,9 +68,6 @@ export class GameDemoScene extends GameScene {
         this.foreGroundContainer.addChildAt(foreMidBar, 1);
         this.foreGroundContainer.addChildAt(foreLeftBar, 1);
 
-        // add containers to the screen
-        app.stage.addChild(this.screenContainer);
-
         // set character position
         this.character.y = app.screen.height*0.6;
         
