@@ -1,3 +1,5 @@
+import { startGame } from "./index.js";
+
 //global variables
 let splash = document.getElementById("splash");
 let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
@@ -7,19 +9,17 @@ let scoreContainer = document.getElementById("scoreContainer");
 let journalScreen = document.getElementById("journalContainer");
 let mapScreen = document.getElementById("mapContainer");
 let music = new Audio("/assets/audio/SFXmusic.mp3");
-
-scoreContainer.style.display = "none"; //Container for score
-settingsContainer.style.display = "none";
+let appContainer = document.getElementById("app");
 journalScreen.style.display = "none";
 mapScreen.style.display = "none";
+settingsContainer.style.display = "none";
 
 splashScreen();
 
 //On click function for start test
 function startTest() {
-  bottomLinks.style.display = "none";
-  scoreContainer.style.display = "block";
-  getQuestion();
+  startGame();
+  //getQuestion();
 }
 function getQuestion() {
   //Fetches data from json file, can be used with api url
@@ -163,7 +163,7 @@ function splashScreen() {
   splash.addEventListener("click", () => {
     //Plays background music
     music.volume = 0.4;
-    music.play();
+    //music.play();
     splash.style.opacity = 0;
     setTimeout(() => {
       splash.classList.add("hidden");
@@ -203,3 +203,11 @@ function settingOut(img) {
     img.src = "/assets/images/ui/startBtn.png";
   }
 }
+
+
+window.startTest = startTest;
+window.settingsHover = settingsHover;
+window.settingOut = settingOut;
+window.showOptions = showOptions;
+window.changeVolume = changeVolume;
+window.toggleMapOff = toggleMapOff;
