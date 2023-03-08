@@ -45,8 +45,7 @@ window.onload = (event) => {
         //if index is less than dialogue array length
         if (index < data.dialogue.length) {
           //Sets portraits to dialogue portraits and clears dialogue box
-          leftPortrait.src = data.dialogue[index].leftPortrait;
-          rightPortrait.src = data.dialogue[index].rightPortrait;
+          displayPortrait();
           dialogueText.innerHTML = "";
 
           if (index == data.dialogue.length - 1) {
@@ -64,6 +63,30 @@ window.onload = (event) => {
           }
         } else {
           location.reload();
+        }
+      }
+
+      function displayPortrait() {
+        //sets leftPortrait's portraits and offsets bottom
+        leftPortrait.src = data.dialogue[index].leftPortrait;
+        leftPortrait.style.bottom = data.dialogue[index].leftOffset + "px";
+        //sets rightPortrait's portraits and offsets bottom
+        rightPortrait.src = data.dialogue[index].rightPortrait;
+        rightPortrait.style.bottom = data.dialogue[index].rightOffset + "px";
+
+        //if isLeftTalking is true
+        if (data.dialogue[index].isLeftTalking) {
+          //Enlarge and brighten left portrait, while shrink and darken right
+          leftPortrait.style.maxWidth = "20%";
+          leftPortrait.style.filter = "brightness(100%)";
+          rightPortrait.style.maxWidth = "17.5%";
+          rightPortrait.style.filter = "brightness(50%)";
+        } else {
+          //Enlarge and brighten right portrait, while shrink and darken left
+          leftPortrait.style.maxWidth = "17.5%";
+          leftPortrait.style.filter = "brightness(50%)";
+          rightPortrait.style.maxWidth = "20%";
+          rightPortrait.style.filter = "brightness(100%)";
         }
       }
 

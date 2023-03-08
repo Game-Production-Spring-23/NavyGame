@@ -6,91 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dialogue Test</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="screen3.js"></script>
     <script src="../../pixi.js"></script>
     <style>
-        body {
-            margin: 0;
-        }
 
-        #dialogueContainer {
-            width: 100%;
-            height: 100vh;
-            background-image: url(../../assets/images/testWater.gif);
-            background-size: cover;
-            background-repeat: no-repeat;
-            -webkit-touch-callout: none;
-            /* iOS Safari */
-            -webkit-user-select: none;
-            /* Safari */
-            -khtml-user-select: none;
-            /* Konqueror HTML */
-            -moz-user-select: none;
-            /* Old versions of Firefox */
-            -ms-user-select: none;
-            /* Internet Explorer/Edge */
-            user-select: none;
-            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-        }
-
-        #leftCharacterPortrait {
-            position: fixed;
-            width: 25vw;
-            max-width: 20%;
-            height: auto;
-            left: 0;
-            z-index: 2;
-            bottom: -200px;
-        }
-
-        #rightCharacterPortrait {
-            position: fixed;
-            width: 25vw;
-            max-width: 20%;
-            height: auto;
-            right: 0;
-            z-index: 2;
-            bottom: -200px;
-        }
-
-        #dialogueBox {
-            width: 85%;
-            height: 35vh;
-            position: fixed;
-            bottom: 2%;
-            left: 50%;
-            transform: translate(-50%, 0);
-            margin: 0 auto;
-            outline: 1px solid goldenrod;
-            background-color: papayawhip;
-            z-index: 1;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            display: flex;
-            padding: 20px 12.5%;
-        }
-
-        #dialogueText {
-            width: 100%;
-            padding: 0 20px;
-            margin: 0;
-            font-size: 25px;
-            font-size: 2vw;
-            font-family: "Raleway", sans-serif;
-        }
-
-        .dialogueButton {
-            width: 50px;
-            height: 50px;
-        }
     </style>
 </head>
 
 <body>
     <div id="dialogueContainer">
-        <img id="leftCharacterPortrait"></img>
-        <img id="rightCharacterPortrait"></img>
+        <img id="leftCharacterPortrait" class="characterPortrait"></img>
+        <img id="rightCharacterPortrait" class="characterPortrait"></img>
         <div id="dialogueBox">
             <input type="image" class="dialogueButton" id="backButton" src="/assets/images/ui/ArrowIcon2.png" />
             <p id="dialogueText"></p>
