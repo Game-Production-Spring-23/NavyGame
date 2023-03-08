@@ -54,11 +54,11 @@
     }
   ],
   "images": {
-    "boat": ["/assets/images/boat.png"],
+    "boat": ["assets/images/boat.png"],
     "water": [
-      "/assets/images/water_background_1.png",
-      "/assets/images/water_background_2.png",
-      "/assets/images/water_background_3.png"
+      "assets/images/water1.png",
+      "assets/images/water3.png",
+      "assets/images/water5.png"
     ]
   },
   "audio": {
