@@ -28,7 +28,7 @@ export class StartScreen extends Scene {
         super.Start(app, data);
 
         // set style sheet
-        this.styleSheet.setAttribute("href", "/app/StartScreen/style.css");
+        this.styleSheet.setAttribute("href", "/style.css");
 
         // set what is displayed
         this.splash.style.display = "block";
