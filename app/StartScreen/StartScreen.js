@@ -3,22 +3,24 @@ import { Scene } from "../core/classes/Scene.js";
 export class StartScreen extends Scene {
     constructor() {
         let shouldTick = false;
-        super(shouldTick);
+        let isHMTL = true;
+        super(shouldTick, isHMTL);
 
         // init class variables
-        this.styleSheet = document.getElementById("styleSheet");
         this.splash = document.getElementById("splash");
-        this.bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
-        this.gameContainer = document.getElementById("gameContainer"); //Container for game
-        this.settingsContainer = document.getElementById("settingsContainer"); //Container for settings
-        this.scoreContainer = document.getElementById("scoreContainer");
-        this.journalScreen = document.getElementById("journalContainer");
-        this.mapScreen = document.getElementById("mapContainer");
+        this.htmlApp = document.getElementById("app");
+        this.gameContainer = document.getElementById("gameContainer");
+        this.bottomLinks = document.getElementById("bottomLinks");
         this.music = new Audio("/assets/audio/SFXmusic.mp3");
-        this.appContainer = document.getElementById("app");
-        this.journalScreen.style.display = "none";
-        this.mapScreen.style.display = "none";
-        this.settingsContainer.style.display = "none";
+
+        // Hide Elements - using the HTML ids
+        this.elementIds = [
+            "settingsContainer",
+            "mapContainer",
+            "scoreContainer",
+            "journalContainer"
+        ]; // end elementIds
+        super.HideHTML(this.elementIds, null);
     } // end constructor
 
 
@@ -27,18 +29,14 @@ export class StartScreen extends Scene {
         // call parent class's Start function -> performs important actions!
         super.Start(app, data);
 
-        // set style sheet
-        this.styleSheet.setAttribute("href", "/style.css");
-
         // set what is displayed
+        super.HideHTML(this.elementIds, null);
+        this.htmlApp.style.display = "block";
         this.splash.style.display = "block";
-        this.splash.style.opacity = 1;
-        this.bottomLinks.style.display = "block";
         this.gameContainer.style.display = "block";
-        this.appContainer.style.display = "block";
+        this.bottomLinks.style.display = "block";
 
-        // hide pixi app
-        app.view.style.display = "none";
+        this.splash.style.opacity = 1;
 
         // set splash to disappear
         this.splash.addEventListener("click", () => {
@@ -64,20 +62,12 @@ export class StartScreen extends Scene {
         // call parent class's OnEnd function -> performs important actions!
         super.OnEnd(app);
 
-        this.styleSheet.setAttribute("href", "/app/StartScreen/removeStyle.css");
-
         // hide all elements
         this.splash.style.display = "none";
-        this.bottomLinks.style.display = "none";
+        this.htmlApp.style.display = "none";
         this.gameContainer.style.display = "none";
-        this.settingsContainer.style.display = "none";
-        this.scoreContainer.style.display = "none";
-        this.journalScreen.style.display = "none";
-        this.mapScreen.style.display = "none";
-        this.appContainer.style.display = "none";
-
-        // make pixi app viewable
-        app.view.style.display = "block";
+        this.bottomLinks.style.display = "none";
+        super.HideHTML(this.elementIds, null);
     } // end OnEnd
 
 

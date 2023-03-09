@@ -1,9 +1,16 @@
 import { GameScene } from "../core/classes/GameScene.js";
+import { DemoOverlay } from "../DemoOverlay/DemoOverlay.js";
 
 
 export class GameDemoScene extends GameScene {
     constructor() {
-        super();
+        let isHTML = false;
+        super(isHTML);
+
+        // add Overlays -> just the classes themselves, not an object
+        super.InitOverlays([
+            DemoOverlay
+        ]); // end InitOverlays
     } // end constructor
 
 

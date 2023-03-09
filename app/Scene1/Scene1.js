@@ -5,7 +5,8 @@ import { Scene } from "../core/classes/Scene.js";
 export class Scene1 extends Scene {
     constructor() {
         let shouldTick = true;
-        super(shouldTick);
+        let isHTML = false;
+        super(shouldTick, isHTML);
     } // end constructor
 
     
@@ -21,12 +22,13 @@ export class Scene1 extends Scene {
         let boatTexture = PIXI.Texture.from(data.images.boat[0]);
         let boat = new PIXI.Sprite(boatTexture);
         this.boat = boat;
+        let boatYPos = app.screen.height*0.75;
         this.initSprite(boat, // the sprite object
                         0.5, // the anchor
-                        app.screen.width*0.10, // width of boat
-                        app.screen.height*0.10, // height of boat
+                        app.screen.height*0.25, // width of boat
+                        app.screen.height*0.15, // height of boat
                         (app.screen.width * 0.75) + 5, // x location of boat
-                        app.screen.height*0.77 // y location of boat
+                        boatYPos// y location of boat
         ); // end initSprite
 
         // initialize water sprite & animations
@@ -41,11 +43,11 @@ export class Scene1 extends Scene {
             let rotationB = Math.floor(Math.random() * 5);
             let rotationC = 7 - Math.floor(Math.random() * 5)
             let rotations = [rotationC, rotationB, rotationA];
-            let boatYPos = [
-                (app.screen.height * 0.77) + 5, 
-                (app.screen.height * 0.77) + -5, 
-                (app.screen.height * 0.77) + 5];
-            this.rockBoat(boat, rotations, boatYPos, currentFrame);
+            let boatYPosStates = [
+                boatYPos + 5, 
+                boatYPos + -5, 
+                boatYPos + 5];
+            this.rockBoat(boat, rotations, boatYPosStates, currentFrame);
         } // end onFrameChange
         water.play();
 
@@ -54,11 +56,11 @@ export class Scene1 extends Scene {
             water.stop();
             water.onFrameChange = (currentFrame) => {
                 let rotations = [-10, -10, 5];
-                let boatYPos = [
-                    (app.screen.height * 0.77) + 5, 
-                    (app.screen.height * 0.77) - 30, 
-                    (app.screen.height * 0.77) + 5];
-                this.rockBoat(boat, rotations, boatYPos, currentFrame);
+                let boatYPosStates = [
+                    boatYPos + 5, 
+                    boatYPos - 30, 
+                    boatYPos + 5];
+                this.rockBoat(boat, rotations, boatYPosStates, currentFrame);
             } // end onFrameChange
             water.play();
         }, 12000); // end setTimeout
