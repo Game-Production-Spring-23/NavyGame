@@ -1,9 +1,9 @@
 import { Scene } from "./Scene.js";
 
 export class GameScene extends Scene {
-    constructor() {
+    constructor(isHTML) {
         let shouldTick = true;
-        super(shouldTick);
+        super(shouldTick, isHTML);
 
         // set scroll values
         this.setScrollSpeedAndRatios(1, 1.5, 2, 3);

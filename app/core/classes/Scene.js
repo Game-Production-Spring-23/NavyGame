@@ -1,18 +1,27 @@
 // Scene Class
 
 export class Scene {
-    constructor(shouldTick) {
+    constructor(shouldTick, isHTML) {
         // tells the state machine whether or not the screen has finished
         this.isFinished = false;
 
         // tells the Scene whether or not to call the Tick function
         this.shouldTick = shouldTick;
 
+        // tells the Scene if the scene is set up through pure HTML
+        this.isHTML = isHTML;
+
         // the PIXI ticker that runs the Tick function
         this.ticker = null;
 
         // the PIXI Container containing all screens
         this.screenContainer = null;
+
+        // the list of overlay classes for the Scene
+        this.overlayClasses = null;
+
+        // the list of overlays - managed by the Scene
+        this.overlays = null;
     } // end constructor
 
     
@@ -29,6 +38,7 @@ export class Scene {
         this.midGroundContainer = new PIXI.Container(); // for midground objects
         this.characterContainer = new PIXI.Container(); // character container
         this.foreGroundContainer = new PIXI.Container(); // for foreground object & character
+        this.iconContainer = new PIXI.Container(); // for holding icons for overlays
         this.overlayContainer = new PIXI.Container(); // for overlays
         
         // sets the depths for each container in the screenContainer
@@ -36,7 +46,8 @@ export class Scene {
         this.screenContainer.addChildAt(this.midGroundContainer, 1);
         this.screenContainer.addChildAt(this.characterContainer, 2);
         this.screenContainer.addChildAt(this.foreGroundContainer, 3);
-        this.screenContainer.addChildAt(this.overlayContainer, 4);
+        this.screenContainer.addChildAt(this.iconContainer, 4);
+        this.screenContainer.addChildAt(this.overlayContainer, 5);
 
         // add containers to the screen
         app.stage.addChild(this.screenContainer);
@@ -49,6 +60,37 @@ export class Scene {
         // tell the ticker whether it should tick or not
         if(this.shouldTick) {
             this.ticker.start();
+        } // end if
+
+        // check if the scene is pure html
+        if(this.isHTML == true) {
+            // load the style sheet
+            this.LoadStyleSheet("/style.css");
+            // hide pixi app
+            app.view.style.display = "none";
+        } else {
+            this.LoadStyleSheet("/removeStyle.css");
+            app.view.style.display = "block";
+        } // end if
+
+
+        // add Overlays to the screen
+        // icons supported only if using a pixi app
+        if(this.isHTML == false) {
+            // check if there are any classes set
+            if(this.overlayClasses != null) {
+                this.overlays = [];
+                for(let i = 0; i < this.overlayClasses.length; i++) {
+                    // create the overlay
+                    this.overlays.push(new this.overlayClasses[i](this));
+    
+                    // if the overlay has an icon, display it
+                    if(this.overlays[i].generateIcon == true) { 
+                        this.overlays[i].InitIcon(app, data, this);   
+                        this.iconContainer.addChildAt(this.overlays[i].icon, i);
+                    } // end if
+                } // end for
+            } // end if
         } // end if
     } // end Start
 
@@ -69,6 +111,9 @@ export class Scene {
             app.stage.removeChild(this.screenContainer); // remove the screenContainer from the PIXI app
             this.screenContainer.destroy(); // destroy the screenContainer (and all child containers)
         } // end if
+    
+        // de allocate overlays - will be rebuilt on Start
+        this.overlays = null;
     } // end OnEnd
 
 
@@ -76,4 +121,67 @@ export class Scene {
     Tick(app, data) {
         /* Implemented in Child Class */
     } // end Tick
+
+
+    /* Class Functions */
+
+
+    // Sets up what classes to use for Overlays
+    InitOverlays(listOfOverlayClasses) {
+        this.overlayClasses = listOfOverlayClasses;
+    } // end InitOverlays
+
+
+    // loads a style sheet for the html page
+    LoadStyleSheet(styleSheetPath) {
+        document.getElementById("styleSheet").setAttribute("href", styleSheetPath);
+    } // end loadStyleSheet
+
+
+    // tells what html elements to display
+    DisplayHTML(idList, classList) {
+        // for every id in the list, set to block
+        if(idList != null) {
+            for(let i = 0; i < idList.length; i++) {
+                document.getElementById(idList[i]).style.display = "block";
+            } // end for
+        } // end if
+
+        // for every class in the list, set every item in that class to block
+        if(classList != null) {
+            for(let i = 0; i < classList.length; i++) {
+                // get all of the elements in a class
+                let classItems = document.getElementsByClassName(classList[i]);
+
+                // set those elements to block
+                for(let j = 0; j < classItems.length; j++) {
+                    classItems[j].style.display = "block";
+                } // end for
+            } // end for
+        } // end if
+    } // end DisplayHTML
+
+
+    // tells what html elements to remove
+    HideHTML(idList, classList) {
+        // for every id in the list, set to block
+        if(idList != null) {
+            for(let i = 0; i < idList.length; i++) {
+                document.getElementById(idList[i]).style.display = "none";
+            } // end for
+        } // end if
+
+        // for every class in the list, set every item in that class to block
+        if(classList != null) {
+            for(let i = 0; i < classList.length; i++) {
+                // get all of the elements in a class
+                let classItems = document.getElementsByClassName(classList[i]);
+
+                // set those elements to block
+                for(let j = 0; j < classItems.length; j++) {
+                    classItems[j].style.display = "none";
+                } // end for
+            } // end for
+        } // end if
+    } // end HideHTML
 } // end Screen Class
