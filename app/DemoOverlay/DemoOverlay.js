@@ -16,7 +16,7 @@ export class DemoOverlay extends Overlay {
         super.InitIcon(
             app, 
             data,
-            ["/assets/images/journal.png"], // the image array to load
+            ["/assets/images/journal.png"], // the image array to load to animated sprite
             app.screen.width*0.90, // x loc of the icon
             app.screen.height*0.10, // the y loc of the icon
             app.screen.height*0.10, // the width of the icon
