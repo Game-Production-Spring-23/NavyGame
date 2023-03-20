@@ -12,7 +12,7 @@ import lib from './lib/lib.js';
 // Use functions as needed:
 lib.myLibraryFunction();
 ```
-
+NOTE: Make sure to add `type="module"` to your script tag where you import your javascript code in the html file!
 ## Functions list
 Below is a list of functions in the function library and a description of the function.
 
