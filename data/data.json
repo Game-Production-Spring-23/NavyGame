@@ -1,5 +1,6 @@
 {
-  "questions": [{
+  "questions": [
+    {
       "prompt": "What component do you not need to make an MBSE model?",
       "answers": [
         "Modeling Runway [x]",
@@ -50,16 +51,16 @@
         "This is answer 6."
       ],
       "correct_answer_indices": [0, 2]
-    }],
+    }
+  ],
   "images": {
-    "boat": [
-      "assets/images/boat.png"
-    ],
+    "boat": ["assets/images/boat.png"],
     "water": [
       "assets/images/water1.png",
       "assets/images/water3.png",
       "assets/images/water5.png"
-    ]
+    ],
+    "marker": ["../assets/images/QuestReady.png"]
   },
   "audio": {
     "main_theme": "path/to/main_theme.xxx",
@@ -68,5 +69,62 @@
   "video": {
     "sequence_1": "path/to/sequence_1.xxx",
     "sequence_2": "path/to/sequence_2.xxx"
+  },
+  "characters": {
+    "player": {
+      "name": "The Rookie Engineer",
+      "images": ["../assets/images/charpix/EngineerB.png"],
+      "active_screens": []
+    },
+    "captain": {
+      "name": "The Captain",
+      "images": [
+        "../assets/images/charpix/captain-3quarterviewback.png",
+        "../assets/images/charpix/captain-3quarterviewfront.png",
+        "../assets/images/charpix/captain-front.png",
+        "../assets/images/charpix/captain-side.png"
+      ],
+      "active_screens": []
+    },
+    "quartermaster": {
+      "name": "The Quartermaster",
+      "images": ["../assets/images/charpix/crew3-3quarterfront.png"],
+      "active_screens": []
+    },
+    "tech_1": {
+      "name": "Techie 1",
+      "images": ["../assets/images/charpix/Crew1B.png"],
+      "active_screens": []
+    },
+    "tech_2": {
+      "name": "Techie 2",
+      "images": ["../assets/images/charpix/Crew2B.png"],
+      "active_screens": [2]
+    },
+    "tech_3": {
+      "name": "Techie 3",
+      "images": ["../assets/images/charpix/KingMonkeyB.png"],
+      "active_screens": []
+    },
+    "nontech_1": {
+      "name": "Chef",
+      "images": ["../assets/images/charpix/Chef (1).png"],
+      "active_screens": []
+    },
+    "nontech_2": {
+      "name": "Crewman 1",
+      "images": ["../assets/images/charpix/crew4-3quarterfront.png"],
+      "active_screens": []
+    },
+    "nontech_3": {
+      "name": "Crewman 2",
+      "images": ["../assets/images/charpix/Monke1B.png"],
+      "active_screens": []
+    },
+    "parrot": {
+      "name": "The Bird",
+      "images": ["../assets/images/charpix/Monke2B.png"],
+      "active_screens": []
+    }
   }
 }
