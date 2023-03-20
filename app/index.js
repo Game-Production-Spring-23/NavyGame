@@ -7,7 +7,7 @@ import { GameDemoScene } from "./GameDemoScene/GameDemoScene.js";
 // initialize the screens -> they get a reference to the state machine
 const SCREENS = [
     new StartScreen(),
-    //new Scene1(),
+    new Scene1(),
     new GameDemoScene()
 ]; // end screens array
 

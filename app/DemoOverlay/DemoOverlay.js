@@ -6,8 +6,6 @@ export class DemoOverlay extends Overlay {
         let isHTML = false;
         let generateIcon = true;
         super(shouldTick, isHTML, sceneObj, generateIcon);
-
-        console.log(this.overlayTicker);
     } // end constructor
 
 
