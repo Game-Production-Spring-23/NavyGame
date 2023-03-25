@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    height:100%;
+    overflow: hidden;
+}
+
+:root {
+    /* Scene z-indices */
+    --background-z-index: 0;
+    --midground-z-index: 1;
+    --character-z-index: 2;
+    --foreground-z-index: 3;
+  }
+  
+
+
+/* Backdrops - setup the images for the background, midground, and foreground scenery */
+/*
+body {
+    background-image: url('/assets/images/background.png');
+    background-repeat: repeat-y;
+    background-position: 50% 0;    
+    transition: 0s linear;
+    transition-property: background-position;
+}
+*/
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0%;
+    z-index: var(--background-z-index);
+}
+
+
+#midground {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0%;
+    z-index: var(--midground-z-index);
+}
+
+#foreground {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0%;
+    z-index: var(--foreground-z-index);
+}
+
+
+#playerCharacter {
+    width: 5%;
+    height: 10%;
+    position: absolute;
+    top: 50%;
+    left: 47.5%;
+    z-index: var(--character-z-index);
+}

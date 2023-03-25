@@ -5,12 +5,12 @@
 
 
 // Loads a new HTML file given a file name.
-function loadNewHTMLFile(fileName) {
+function loadNewHTMLFile(fileName, next) {
+    // load the new html file
     fetch(fileName)
-    .then((response) => response.text())
-    .then((file) => {
-        document.write(file);
-    }); // end json file loading.
+    .then(response=> response.text())
+    .then(text=> document.getElementById('htmlPage').innerHTML = text)
+    .then(()=> next());
 } // end loadNewHTMLFile
 
 
@@ -24,6 +24,9 @@ function loadHTMLOnVideoFinished(videoElementID, nextScreenPath) {
     }, (video.duration - video.currentTime) * 1000);
 } // end loadScreenOnFinished
 
+function hello() {
+    console.log("FUCK THIS");
+}
 
 // Export Functions & Classes
-export default { loadNewHTMLFile, loadHTMLOnVideoFinished }
+export default { loadNewHTMLFile, loadHTMLOnVideoFinished, hello }

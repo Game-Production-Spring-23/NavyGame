@@ -1,0 +1,14 @@
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
+<HtmlCompiler>
+  <App>
+    <ID>{FB953006-763D-45AE-BD57-B576D5163888}</ID>
+    <IndexHtml>index.html</IndexHtml>
+    <Generator>
+      <Name>DecSoft HTML Compiler</Name>
+      <Website>https://www.decsoftutils.com/</Website>
+      <Orders>https://www.decsoftutils.com/store/</Orders>
+      <EMail>info@decsoftutils.com</EMail>
+      <Copyright>©2023 DecSoft HTML Compiler. All rights reserved.</Copyright>
+    </Generator>
+  </App>
+</HtmlCompiler>
