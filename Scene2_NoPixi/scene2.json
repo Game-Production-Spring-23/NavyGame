@@ -1,0 +1,86 @@
+{
+    "characters": {
+        "player": {
+            "name": "Player",
+            "sprite": [],
+            "offset": 864,
+            "key": false,
+            "minigame": false
+        },
+        "captain": {
+            "name": "Captain",
+            "sprite": [],
+            "offset": 1440,
+            "key": false,
+            "minigame": false
+        },
+        "parrot": {
+            "name": "Parrot",
+            "sprite": [],
+            "offset": 1654,
+            "key": false,
+            "minigame": false
+        },
+        "quartermaster": {
+            "name": "Quartermaster",
+            "sprite": [],
+            "offset": 2784,
+            "key": false,
+            "minigame": false
+        },
+        "chef": {
+            "name": "Chef",
+            "sprite": [],
+            "offset": 5280,
+            "key": false,
+            "minigame": false
+        },
+        "officers": {
+            "name": "Officers",
+            "sprite": [],
+            "offset": 5664,
+            "key": false,
+            "minigame": false
+        },
+        "nontech": {
+            "name": "Nontechnical Crew",
+            "sprite": [],
+            "offset": 6048,
+            "key": false,
+            "minigame": false
+        },
+        "tech": {
+            "name": "Technical Crew",
+            "sprite": [],
+            "offset": 7584,
+            "key": false,
+            "minigame": false
+        },
+        "veteran": {
+            "name": "Engineer Veteran",
+            "sprite": [],
+            "offset": 9120,
+            "key": true,
+            "minigame": false
+        },
+        "minigame": {
+            "name": "Pipeworks",
+            "sprite": [],
+            "offset": 10240,
+            "key": false,
+            "minigame": true
+        }
+    },
+    "params": {
+        "bg_images": [],
+        "mg_images": [],
+        "fg_images": [],
+        "bg_scale": 3,
+        "mg_scale": 4,
+        "fg_scale": 6,
+        "bg_speed": 8,
+        "mg_speed": 12,
+        "fg_speed": 20,
+        "lock_pos": 5
+    }
+}

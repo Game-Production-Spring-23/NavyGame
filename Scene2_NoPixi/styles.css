@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#background {
+    width: 5760px;
+    height: 1080px;
+    z-index: 0;
+    background-color: skyblue;
+}
+
+#midground {
+    width: 7680px;
+    height: 440px;
+    z-index: 1;
+    background-color: aqua;
+}
+
+#charground {
+    width: 11520px;
+    height: 320px;
+    z-index: 2;
+    background-color: black;
+}
+
+#foreground {
+    width: 11520px;
+    height: 320px;
+    z-index: 4;
+    background-color: brown;
+}
+
+.character {
+    margin: 0;
+    padding: 0;
+    width: 192px;
+    height: 192px;
+    position: absolute;
+    bottom: 320px;
+    background-color: white;
+}
+
+#player {
+    z-index: 3;
+    background-color: black;
+    left: 864px;
+}
+
+#captain {
+    left: 1440px;
+}
+
+#parrot {
+    left: 1654px;
+}
+
+#quartermaster {
+    left: 2784px;
+}
+
+#chef {
+    left: 5280px;
+}
+
+#officers {
+    left: 5664px;
+}
+
+#nontech {
+    left: 6048px;
+}
+
+#tech {
+    left: 7584px;
+}
+
+#veteran {
+    left: 9120px;
+}
+
+#minigame {
+    position: absolute;
+    background-color: white;
+    left: 10240px;
+    bottom: 320px;
+    width: 640px;
+    height: 320px;
+}
+
+#subdialogue {
+    height: 64px;
+    bottom: 120px;
+}
