@@ -1,4 +1,4 @@
-import { startGame } from "./index.js";
+// import { startGame } from "./index.js";
 
 //global variables
 let splash = document.getElementById("splash");
