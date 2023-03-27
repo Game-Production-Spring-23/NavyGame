@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <script src="/pixi.js"></script>
+    
 
 </head>
 
@@ -105,7 +105,6 @@
         </div>
 
 
-        <!-- Hide this because what is the purpose of 2 settings  [Not sure, but the wireframe requested one as a menu and one as a]
         <div id="settingContainer">
             <div id="settingModal" class="modal">
                 <input id="modalButton" class="button-8" type="button" onclick="toggleSettingsOff()" value="Close">
@@ -131,15 +130,29 @@
                 <input id="goBack" class="button-8" type="button" onclick="location.reload()" value="Main Menu">
                 <input id="saveSettings" class="button-8" type="button" onclick="saveSettings" value="Save Settings">
             </div>
--->
+
     </div>
 
 
     </div>
+
+    </div>
+
+    <!--- Create UI Overlay for Game Screens-->
+    <div id="uiOVerlay" class="overlay">
+        <div id="overlayContent">
+            <div id="uiRightSide">
+                <input id="settingOverlay" class="uiIcon" type="image" onclick="toggleSettingsOn()"  value="Options" src="/assets/images/ui/pixelSettingIcon.png">
+                <input id="journalOverlay" class="uiIcon" type="image" onclick="toggleJournalOn()" value="Journal" src="/assets/images/ui/pixelJournalIcon.png">
+                <input id="mapOverlay" class="uiIcon" type="image" onclick="toggleMapOn()" value="Map" src="/assets/images/ui/pixelMapIcon.png">
+              
+            </div>
+        </div>
 
     </div>
 
 </body>
 <script type= "module" src="/app/index.js"></script>
-
+<script type = "module" src="/app/script.js"></script>
+<script src="/pixi.js"></script>
 </html>

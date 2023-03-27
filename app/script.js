@@ -13,6 +13,8 @@ let appContainer = document.getElementById("app");
 journalScreen.style.display = "none";
 mapScreen.style.display = "none";
 settingsContainer.style.display = "none";
+let settingModal = document.getElementById("settingContainer");
+
 
 splashScreen();
 
@@ -135,6 +137,8 @@ function toggleMapOff() {
 
 function toggleSettingsOn() {
   //shows settings in a pop up box when clicked
+  settingModal.style.visibility = "visible";
+
 }
 
 function toggleSettingsOff() {
