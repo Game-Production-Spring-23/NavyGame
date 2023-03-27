@@ -9,7 +9,7 @@ export function loadNewHTMLFile(fileName, next) {
     // load the new html file
     fetch(fileName)
     .then(response=> response.text())
-    .then(text=> document.getElementById('htmlPage').innerHTML = text)
+    .then(text=> document.getElementById('htmlMainContainer').innerHTML = text)
     .then(()=> next());
 } // end loadNewHTMLFile
 

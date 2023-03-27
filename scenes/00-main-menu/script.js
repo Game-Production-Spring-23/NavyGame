@@ -1,4 +1,6 @@
 
+import { loadNewHTMLFile } from '../../lib.js';
+import { boatScene } from '../01-intro-boat-scene/boat-scene.js';
 
 export function mainMenu() {
   //global variables
@@ -261,5 +263,10 @@ export function mainMenu() {
   window.showOptions = showOptions;
   window.changeVolume = changeVolume;
   window.toggleMapOff = toggleMapOff;
+
+  
+  document.getElementById("start").onclick = () => {
+    loadNewHTMLFile('/scenes/01-intro-boat-scene/boat-scene.html', boatScene);
+  } // end setOnclick for start
 } // end mainMenu
 
