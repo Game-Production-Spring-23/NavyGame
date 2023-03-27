@@ -1,9 +1,9 @@
-html{
-  height:1080px;
-  width:1920px;
+html {
+  height: 1080px;
+  width: 1920px;
   overflow: hidden;
- 
-  
+  max-width: 100%;
+  max-height: 100%;
 }
 body {
   background: #373b44;
@@ -11,12 +11,11 @@ body {
   background: -webkit-linear-gradient(to right, #4286f4, #373b44);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4286f4, #373b44);
-   background-image:url("/assets/images/ui/navyBkgrnd.png");
+  background-image: url("/assets/images/ui/navyBkgrnd.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position-x: center;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 h1 {
@@ -26,8 +25,8 @@ h1 {
   text-align: center;
 }
 
-header{
-/* Place header at absolute  top of page */
+header {
+  /* Place header at absolute  top of page */
   position: absolute;
   top: 0;
   left: 0;
@@ -41,7 +40,6 @@ header{
   height:40%;
   width:100%;
   padding-bottom:5px; */
-  
 }
 /*Button css*/
 
@@ -52,22 +50,23 @@ h3 {
   text-align: center;
 }
 
-#start, #setting {
+#start,
+#setting {
   width: 30%;
   height: 25%;
-  margin-top:3%;
+  margin-top: 3%;
   margin-left: auto;
   margin-right: auto;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#start{
+#start {
   position: relative;
   transform: translateY(100%);
 }
-#setting{
+#setting {
   position: relative;
   transform: translateY(80%);
 }
@@ -135,23 +134,20 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; /* remove once positioned correctly*/
-  background-image:url("/assets/images/ui/menuHeavyChar.png");
+  background-image: url("/assets/images/ui/menuHeavyChar.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 85% 100%;
-  
 }
 
 #gameContainer {
   text-align: center;
   margin-top: 10%;
-  width:100%;
-  height:100%;
-  
-
+  width: 100%;
+  height: 100%;
 }
 
-#bottomLinks{
+#bottomLinks {
   visibility: hidden;
 }
 
@@ -261,7 +257,7 @@ h3 {
 
 /* UI Overlay CSS */
 
-#uiOVerlay{
+#uiOVerlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -270,33 +266,31 @@ h3 {
   z-index: 100;
 }
 
-.uiIcon{
-  height:75px;
-  width:75px;
-  margin-bottom:20px;
+.uiIcon {
+  height: 75px;
+  width: 75px;
+  margin-bottom: 20px;
 }
 
 /* Position UI icons right side of the screen*/
-#exitOverlay{
-  position:absolute;
-  left:0;
-  top:0;
+#exitOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
   z-index: 99;
 }
 
-#uiRightSide{
-  right:0;
-  top:0;
+#uiRightSide {
+  right: 0;
+  top: 0;
   z-index: 100;
   position: absolute;
   display: flex;
   flex-direction: column;
 }
 
-#settingModal{
-  display:none;
+#settingModal {
+  display: none;
 }
 
 /* position map overlay icon below setting overlay */
-
-
