@@ -1,0 +1,128 @@
+<div id="splash">
+    <h1>This is a splash screen. Click any where</h1>
+</div>
+<!--<header>
+
+</header>
+-->
+<!-- This div is the questions and answer section this might change based on how the game is setup, -->
+<div id="app">
+
+    <div id="gameContainer">
+        <!-- Start Screen Container --------------------------------------------------------------------------------------------------------->
+
+        <input id="start" class="button-2" type="image" value="Start Test"
+            onMouseOver="settingsHover(this)" onMouseout="settingOut(this)" src="/assets/images/ui/startBtn.png">
+        <input id="start" class="button-1" type="image" onclick="showOptions()" onMouseOver="settingsHover(this)"
+            onMouseout="settingOut(this)" value="Options" src="/assets/images/ui/settingsBtn.png">
+
+    </div>
+    <!-- Settings Screen----------------------------------------------------------------------------------------------------------------- -->
+    <div id="settingsContainer">
+        <h1>Settings</h1>
+        <div class="slidecontainer">
+            <h3>Music Volume</h3>
+            <input type="range" min="0" max="1" value="0.4" step=".01" class="slider"
+                onchange="changeVolume(this.value)" />
+        </div>
+        <div class="slidecontainer">
+            <h3>Setting</h3>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <div class="slidecontainer">
+            <h3>Setting</h3>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <div class="slidecontainer">
+            <h3>Setting</h3>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <input id="goBack" class="button-8" type="button" onclick="location.reload()" value="Main Menu">
+        <input id="saveSettings" class="button-8" type="button" onclick="saveSettings" value="Save Settings">
+    </div>
+    <!-- Score Container----------------------------------------------------------------------------------------------------------------- -->
+    <div id="scoreContainer" class="hidden">
+        <h3>Score: <p id="score">0</p>
+        </h3>
+    </div>
+
+    <div id="bottomLinks">
+        <input id="navyLink" class="button-8" type="button" onclick="" value="US Navy">
+        <input id="navyLink2" class="button-8" type="button" onclick="" value="LSOICE">
+    </div>
+
+    <!-- Modal Containers ----------------------------------------------------------------------------------------------------------------->
+    <div id="journalContainer">
+        <div id="journalModal" class="modal">
+            <input id="modalButton" class="button-8" type="button" onclick="toggleJournalOff()" value="Close">
+
+            <div id="crewRecs" class="modalCard">
+                <h1 id="modalTitle">Journal</h1>
+                <h2>Crew Recommendations</h2>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div id="mapContainer">
+        <div id="mapModal" class="modal">
+            <input id="modalButton" class="button-8" type="button" onclick="toggleMapOff()" value="Close">
+
+            <div id="crewRecs" class="modalCard">
+                <h1 id="modalTitle">Map</h1>
+                <img src="/assets/images/pirateMap.jpg" id="map" alt="map">
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- <div id="settingContainer">
+        <div id="settingModal" class="modal">
+            <input id="modalButton" class="button-8" type="button" onclick="toggleSettingsOff()" value="Close">
+
+
+            <h1 id="modalTitle">Settings</h1>
+            <div class="slidecontainer">
+                <h3>Setting</h3>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+            <div class="slidecontainer">
+                <h3>Setting</h3>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+            <div class="slidecontainer">
+                <h3>Setting</h3>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+            <div class="slidecontainer">
+                <h3>Setting</h3>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+            <input id="goBack" class="button-8" type="button" onclick="location.reload()" value="Main Menu">
+            <input id="saveSettings" class="button-8" type="button" onclick="saveSettings" value="Save Settings">
+        </div>
+
+</div> -->
+
+
+</div>
+
+</div>
+
+<!--- Create UI Overlay for Game Screens-->
+<!-- <div id="uiOVerlay" class="overlay">
+    <div id="overlayContent">
+        <div id="uiRightSide">
+            <input id="settingOverlay" class="uiIcon" type="image" onclick="toggleSettingsOn()"  value="Options" src="/assets/images/ui/pixelSettingIcon.png">
+            <input id="journalOverlay" class="uiIcon" type="image" onclick="toggleJournalOn()" value="Journal" src="/assets/images/ui/pixelJournalIcon.png">
+            <input id="mapOverlay" class="uiIcon" type="image" onclick="toggleMapOn()" value="Map" src="/assets/images/ui/pixelMapIcon.png">
+          
+        </div>
+    </div>
+
+</div> -->
