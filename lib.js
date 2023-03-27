@@ -15,12 +15,11 @@ export function loadNewHTMLFile(fileName, next) {
 
 
 // Loads a new screen when the video is finished
-export function loadHTMLOnVideoFinished(videoElementID, nextScreenPath) {
+export function loadHTMLOnVideoFinished(videoElementID, nextScreenPath, next) {
     let video = document.getElementById(videoElementID);
     if(video.paused) video.play();
-    
     setTimeout(() => {
-        loadNewHTMLFile(nextScreenPath);
+        loadNewHTMLFile(nextScreenPath, next);
     }, (video.duration - video.currentTime) * 1000);
 } // end loadScreenOnFinished
 
