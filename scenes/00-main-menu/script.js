@@ -266,7 +266,9 @@ export function mainMenu() {
 
   
   document.getElementById("start").onclick = () => {
-    loadNewHTMLFile('/scenes/01-intro-boat-scene/boat-scene.html', boatScene);
+    loadNewHTMLFile('/scenes/01-intro-boat-scene/boat-scene.html', 
+                    '/scenes/01-intro-boat-scene/style.css',
+                    boatScene);
   } // end setOnclick for start
 } // end mainMenu
 

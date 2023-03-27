@@ -5,22 +5,22 @@
 
 
 // Loads a new HTML file given a file name.
-export function loadNewHTMLFile(fileName, next) {
+export function loadNewHTMLFile(filePath, styleSheetPath, next) {
     // load the new html file
-    fetch(fileName)
+    fetch(filePath)
     .then(response=> response.text())
     .then(text=> document.getElementById('htmlMainContainer').innerHTML = text)
-    .then(()=> next());
+    .then(()=> {
+        loadStyleSheet(styleSheetPath);   
+        next();
+    });
 } // end loadNewHTMLFile
 
 
-// Loads a new screen when the video is finished
-export function loadHTMLOnVideoFinished(videoElementID, nextScreenPath) {
-    let video = document.getElementById(videoElementID);
-    if(video.paused) video.play();
-    
-    setTimeout(() => {
-        loadNewHTMLFile(nextScreenPath);
-    }, (video.duration - video.currentTime) * 1000);
-} // end loadScreenOnFinished
-
+export function loadStyleSheet(styleSheetPath) {
+    let file = document.createElement("link");
+    file.setAttribute("rel", "stylesheet");
+    file.setAttribute("type", "text/css");
+    file.setAttribute("href", styleSheetPath);
+    document.getElementsByTagName("head")[0].appendChild(file);
+} // end
