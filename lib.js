@@ -18,9 +18,18 @@ export function loadNewHTMLFile(filePath, styleSheetPath, next) {
 
 
 export function loadStyleSheet(styleSheetPath) {
-    let file = document.createElement("link");
-    file.setAttribute("rel", "stylesheet");
-    file.setAttribute("type", "text/css");
-    file.setAttribute("href", styleSheetPath);
-    document.getElementsByTagName("head")[0].appendChild(file);
+    // remove previous stylesheet
+    let link = document.getElementById("style");
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("type", "text/css");
+    link.setAttribute("href", styleSheetPath);
 } // end
+
+
+export function playSplashScreen(htmlFile, cssFile, next, waitTime) {
+    setTimeout(() => {
+        loadNewHTMLFile(htmlFile, 
+                        cssFile,
+                        next);
+    }, waitTime);
+} // end playSplashScreen
