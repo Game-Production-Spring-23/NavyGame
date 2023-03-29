@@ -1,3 +1,5 @@
+import { startDialogue } from "/scenes/dialogue.js";
+
 // Start
 export function loadScene() {
   //Get references from document
@@ -59,7 +61,8 @@ export function loadScene() {
 
   //Assigns onclick to submit button
   document.getElementById("mg1Submit").onclick = () => {
-    submitAnswer();
+    startDialogue();
+    // submitAnswer();
   };
   //End Start
 

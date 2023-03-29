@@ -1,16 +1,3 @@
-<!-- Dialogue Screen
-<div id="dialogueScreen" onclick="displayDialogue()">
-    <img id="lCharaPortrait" class="charaPortrait"></img>
-    <img id="rCharaPortrait" class="charaPortrait"></img>
-    <div id="dialogueBox">
-        <input type="image" class="dialogueBtn" onclick="backDialogue()" src="/assets/images/leftBtn.png" />
-        <p id="dialogueText"></p>
-        <input type="image" class="dialogueBtn" id="frontButton" src="/assets/images/rightBtn.png" />
-    </div>
-</div>
--->
-
-
 <!-- Pipe Mini game -->
 <div id="miniGame1" class="">
     <img src='/assets/images/NG_PipeGame_Valve.png' class="mg1Valve" id="mg1Valve1"></img>
@@ -33,3 +20,16 @@
     <!-- Red Screen -->
     <div id="redScreen"></div>
 </div>
+
+<!-- Dialogue Screen -->
+<div id="dialogueScreen">
+    <img id="lCharaPortrait" class="charaPortrait"></img>
+    <img id="rCharaPortrait" class="charaPortrait"></img>
+    <div id="dialogueBox">
+        <input type="image" class="dialogueBtn" id="backBtn" src="/assets/images/ui/leftBtn.png" />
+        <p id="dialogueText"></p>
+        <input type="image" class="dialogueBtn" id="frontButton" src="/assets/images/ui/rightBtn.png" />
+    </div>
+</div>
+
+<script type="modules" src="/scenes/dialogue.js"></script>
