@@ -1,0 +1,70 @@
+{
+    "characters": {
+        "player": {
+            "name": "Player",
+            "sprite": ["../../assets/images/characters/player/pwalk1.png",
+                "../../assets/images/characters/player/playerwalk.gif "],
+            "offset": 384
+        },
+        "captain": {
+            "name": "Captain",
+            "sprite": ["../../assets/images/characters/captain/capt3Back.png"],
+            "offset": 720,
+            "key": false
+        },
+        "parrot": {
+            "name": "Parrot",
+            "sprite": ["../../assets/images/characters/parrot/parrot.png"],
+            "offset": 896,
+            "key": true
+        },
+        "quartermaster": {
+            "name": "Quartermaster",
+            "sprite": ["../../assets/images/characters/crew/crew2B.png"],
+            "offset": 360,
+            "key": false
+        },
+        "chef": {
+            "name": "Chef",
+            "sprite": ["../../assets/images/characters/chef/chef.png"],
+            "offset": 2340,
+            "key": false
+        },
+        "officers": {
+            "name": "Officers",
+            "sprite": ["../../assets/images/characters/crew/crew1B.png"],
+            "offset": 1600,
+            "key": false
+        },
+        "nontech": {
+            "name": "Nontechnical Crew",
+            "sprite": ["../../assets/images/characters/crew/crew3Front.png"],
+            "offset": 72,
+            "key": false
+        },
+        "tech": {
+            "name": "Technical Crew",
+            "sprite": ["../../assets/images/characters/crew/crew4Front.png"],
+            "offset": 1780,
+            "key": false
+        },
+        "veteran": {
+            "name": "Veteran Engineer",
+            "sprite": ["../../assets/images/characters/engineer/engineer.png"],
+            "offset": 2650,
+            "key": false
+        }
+    },
+    "params": {
+        "bg_images": ["../../assets/images/backdrops/skyparallax.png"],
+        "mg_images": [],
+        "cg_images": [],
+        "fg_images": [],
+        "bg_scale": 1.5,
+        "mg_scale": 1.5,
+        "fg_scale": 1.5,
+        "bg_speed": 10,
+        "mg_speed": 11.5,
+        "fg_speed": 14
+    }
+}
