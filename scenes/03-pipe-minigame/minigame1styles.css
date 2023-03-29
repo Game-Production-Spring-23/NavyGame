@@ -1,0 +1,209 @@
+* {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(139, 0, 0, 0.8),
+    rgba(139, 0, 0, 0.8)
+  );
+}
+#redScreen {
+  z-index: 400px;
+  pointer-events: none;
+  position: fixed;
+}
+#miniGame1 {
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/NG_PipeGame_Scene.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.screenShake {
+  animation: shake 1s;
+  animation-iteration-count: 2;
+}
+/* Taken from w3schools */
+@keyframes shake {
+  Thant 0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.mg1Valve {
+  position: fixed;
+  width: 5%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 300px;
+}
+#mg1Valve1 {
+  left: 5%;
+  top: 6.5%;
+}
+#mg1Valve2 {
+  left: 13.5%;
+  top: 46.5%;
+}
+#mg1Valve3 {
+  left: 40%;
+  top: 70%;
+}
+#mg1Valve4 {
+  left: 61.5%;
+  top: 70%;
+}
+#mg1Valve5 {
+  left: 78.5%;
+  top: 42.5%;
+}
+#mg1Valve6 {
+  left: 93%;
+  top: 5%;
+}
+#mg1GaugeBG {
+  max-width: 12.5%;
+  height: 25%;
+  position: fixed;
+  left: 52%;
+  top: 40%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(/assets/images/NG_PipeGame_Gauge_Face.png);
+}
+#mg1Gauge {
+  transition: 500ms ease all;
+}
+#mg1Submit {
+  width: 5%;
+  height: auto;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
+#mg1Text {
+  position: fixed;
+  max-width: 27%;
+  height: 15%;
+  left: 23.5%;
+  top: 48.5%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(/assets/images/NG_BoilerRoom_ValveItemDisplay.png);
+}
+#mg1number {
+  position: fixed;
+  max-width: 4%;
+  height: 8%;
+  left: 41.5%;
+  top: 38%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(/assets/images/NG_PipeGame_ValveNumberDisplay_Module.png);
+}
+
+/* End MINIGAME >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* DIALOGUE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+#dialogueScreen {
+  position: fixed;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.charaPortrait {
+  width: 25vw;
+  position: fixed;
+  height: auto;
+  z-index: 502;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+#lCharaPortrait {
+  max-width: 20%;
+  left: 0;
+  bottom: -200px;
+  filter: brightness(100%);
+}
+#rCharaPortrait {
+  max-width: 20%;
+  right: 0;
+  bottom: -200px;
+  filter: brightness(100%);
+}
+#dialogueBox {
+  width: 85%;
+  height: 35vh;
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0 auto;
+  background-image: url(/assets/images/dialogueBox.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 501;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  padding: 45px 12.5%;
+}
+#dialogueText {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0;
+  font-size: 25px;
+  font-size: 2vw;
+  font-family: "Raleway", sans-serif;
+  color: darkred;
+}
+.dialogueBtn {
+  width: 50px;
+  height: 50px;
+}

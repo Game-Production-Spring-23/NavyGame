@@ -1,6 +1,5 @@
-
-import { loadNewHTMLFile } from '../../lib.js';
-import { boatScene } from '../01-intro-boat-scene/boat-scene.js';
+import { loadNewHTMLFile } from "../../lib.js";
+import { boatScene } from "../01-intro-boat-scene/boat-scene.js";
 
 export function mainMenu() {
   //global variables
@@ -18,53 +17,7 @@ export function mainMenu() {
   settingsContainer.style.display = "none";
   let settingModal = document.getElementById("settingContainer");
 
-
   splashScreen();
-
-  //On click function for start test
-  function startTest() {
-    startGame();
-    //getQuestion();
-  }
-  function getQuestion() {
-    //Fetches data from json file, can be used with api url
-    fetch("../data/data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        //store changes to HTML in app and appends changes to app div
-        let app = "";
-        app += "<h1>" + data.questions[0].prompt + "</h1>";
-
-        //Creates buttons for each answer, will also incorporate dials.
-        for (let i = 0; i < data.questions[0].answers.length; i++) {
-          app +=
-            "<h2><input class='answer' type='button' onclick='getAnswer(" +
-            i +
-            "," +
-            data.questions[0].correct_answer_indices +
-            ")' value='" +
-            data.questions[0].answers[i] +
-            "'></h2>";
-        }
-        app += "<div id='response'></div>";
-
-        document.getElementById("gameContainer").innerHTML = app;
-      });
-  }
-  //On click function for clicking on a right or wrong answer
-  function getAnswer(guess, correct) {
-    //if the user clicks the right button the app resets
-    if (guess == correct) {
-      //Currently cycles back to start of test, but will eventually load future questions.
-      document.getElementById("gameContainer").innerHTML =
-        "<h1>Correct</h1><input id='start' class='button-8' type='button' onclick='location.reload()' value='Redo Test'>";
-      updateScore();
-    } else {
-      //if the user clicks the wrong answer, the user is told that it is wrong
-      document.getElementById("response").innerHTML =
-        "<h3>Wrong answer try again</h3>";
-    }
-  }
 
   //Future Functions -------------------------------------------------//
 
@@ -141,7 +94,6 @@ export function mainMenu() {
   function toggleSettingsOn() {
     //shows settings in a pop up box when clicked
     settingModal.style.visibility = "visible";
-
   }
 
   function toggleSettingsOff() {
@@ -211,15 +163,6 @@ export function mainMenu() {
     }
   }
 
-
-  window.startTest = startTest;
-  window.settingsHover = settingsHover;
-  window.settingOut = settingOut;
-  window.showOptions = showOptions;
-  window.changeVolume = changeVolume;
-  window.toggleMapOff = toggleMapOff;
-
-
   //Changes display state of icons on hover
   function settingsHover(img) {
     if (img.src.match("/assets/images/ui/settingsBtn.png")) {
@@ -231,9 +174,9 @@ export function mainMenu() {
 
   function settingOut(img) {
     if (img.src.match("/assets/images/ui/settingsBtnHover.png")) {
-        img.src = "/assets/images/ui/settingsBtn.png";
+      img.src = "/assets/images/ui/settingsBtn.png";
     } else {
-        img.src = "/assets/images/ui/startBtn.png";
+      img.src = "/assets/images/ui/startBtn.png";
     }
   }
 
@@ -264,11 +207,11 @@ export function mainMenu() {
   window.changeVolume = changeVolume;
   window.toggleMapOff = toggleMapOff;
 
-  
   document.getElementById("start").onclick = () => {
-    loadNewHTMLFile('/scenes/01-intro-boat-scene/boat-scene.html', 
-                    '/scenes/01-intro-boat-scene/style.css',
-                    boatScene);
-  } // end setOnclick for start
+    loadNewHTMLFile(
+      "/scenes/01-intro-boat-scene/boat-scene.html",
+      "/scenes/01-intro-boat-scene/style.css",
+      boatScene
+    );
+  }; // end setOnclick for start
 } // end mainMenu
-
