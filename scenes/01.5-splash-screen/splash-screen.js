@@ -1,11 +1,12 @@
-
 // Imports
 import { playSplashScreen } from "../../lib.js";
-import { mainMenu } from "../00-main-menu/script.js";
+import { loadScene } from "/scenes/03-pipe-minigame/pipe-minigame.js";
 
 export function splashScreen() {
-    playSplashScreen("/scenes/00-main-menu/Main-Menu-Scene.html",
-                     "/scenes/00-main-menu/style.css",
-                     mainMenu,
-                     3000);
+  playSplashScreen(
+    "/scenes/03-pipe-minigame/pipemini-game.html",
+    "/scenes/03-pipe-minigame/minigame1styles.css",
+    loadScene,
+    3000
+  );
 } // end splashScreen
