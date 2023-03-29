@@ -1,0 +1,19 @@
+{
+  "dialogue": [
+    [
+      {
+        "playerPortrait": "/assets/images/placeholders/Screen3placeholder1.png",
+        "playerPortrait1": "/assets/images/placeholders/Screen3placeholder1.png",
+        "playerPortrait2": "/assets/images/placeholders/Screen3placeholder1.png",
+        "playerPortrait3": "/assets/images/placeholders/Screen3placeholder1.png",
+        "playerName": "",
+        "playerOffset": -200,
+        "isPlayerTalking": false,
+        "rightPortrait": "/assets/images/placeholders/Screen3placeholder8.png",
+        "rightName": "Cross Bird",
+        "rightOffset": -200,
+        "text": "Hello this is a demonstration for dialogue. As you can see the text scrolls, press again to display the next line"
+      }
+    ]
+  ]
+}

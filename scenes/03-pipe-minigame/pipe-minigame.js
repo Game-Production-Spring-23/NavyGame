@@ -1,7 +1,7 @@
 import { startDialogue } from "/scenes/dialogue.js";
 
 // Start
-export function loadScene() {
+export function loadScene3() {
   //Get references from document
   const valves = [
     document.getElementById("mg1Valve1"),
