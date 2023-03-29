@@ -61,8 +61,7 @@ export function loadScene() {
 
   //Assigns onclick to submit button
   document.getElementById("mg1Submit").onclick = () => {
-    startDialogue();
-    // submitAnswer();
+    submitAnswer();
   };
   //End Start
 
@@ -103,14 +102,13 @@ export function loadScene() {
     //if the mini game is over hide this app
     if (isMinigameOver) {
       //Add mini game complete dialogue
-      console.log("MINIGAME COMPLETE");
+      startDialogue(0, "/scenes/03-pipe-minigame/dialogue.json");
     } else if (
       JSON.stringify(chosenIndices) === JSON.stringify([0, 1, 2, 3, 4, 5])
     ) {
       //Shows that answer is correct
       document.getElementById("mg1Gauge").style.transform = "rotate(-75deg)";
-      document.getElementById("mg1Submit").src =
-        "/assets/images/ui/exitBtn.png";
+      document.getElementById("mg1Submit").src = "/assets/images/ui/xBtn.png";
       isMinigameOver = true;
     } else {
       //Show that answer is wrong

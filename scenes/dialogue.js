@@ -1,6 +1,13 @@
 // Start
+var characterIndex = 0;
+var dataPath = "";
+
 //Starts dialogue screen
-export function startDialogue() {
+export function startDialogue(index, data) {
+  //Sets global dialogue variables
+  characterIndex = index;
+  dataPath = data;
+
   document.getElementById("dialogueScreen").style.display = "block";
   //Get references from document
   const dialogueText = document.getElementById("dialogueText");
@@ -15,7 +22,7 @@ export function startDialogue() {
 
   //Starts first dialogue
   displayDialogue();
-
+  console.log(characterIndex);
   //Assigns onclick to progress dialogue
   document.getElementById("dialogueScreen").onclick = () => {
     displayDialogue();
@@ -27,20 +34,20 @@ export function startDialogue() {
   //Displays dialogue
   function displayDialogue() {
     //Fetches a dialogue from JSON
-    fetch("/scenes/03-pipe-minigame/dialogue.json")
+    fetch(dataPath)
       .then((response) => response.json())
       .then((data) => {
         //Displays dialogue from JSON
-        if (dialogueIndex < data.dialogue.length) {
+        if (dialogueIndex < data.dialogue[characterIndex].length) {
           //  Sets portraits to dialogue portraits and clears dialogue box   //
-          displayPortrait(data);
+          displayPortrait(data.dialogue[characterIndex]);
           dialogueText.innerHTML = "";
 
           //  Changes the front button depending on if there is no more dialogue   //
-          if (dialogueIndex == data.dialogue.length - 1)
+          if (dialogueIndex == data.dialogue[characterIndex].length - 1)
             //Changes the front button to a close button
             document.getElementById("frontButton").src =
-              "/assets/images/ui/exitBtn.png";
+              "/assets/images/ui/xBtn.png";
           //Keeps the front button image
           else
             document.getElementById("frontButton").src =
@@ -48,11 +55,11 @@ export function startDialogue() {
 
           //  Starts scrolling text   //
           if (scrollTimer != null) {
-            skipDialogue(data);
+            skipDialogue(data.dialogue[characterIndex]);
           } else {
             //Starts scrolling dialogue at scroll speed
             scrollTimer = setTimeout(() => {
-              scrollingDialogue(data);
+              scrollingDialogue(data.dialogue[characterIndex]);
             }, scrollSpeed);
           }
         } else {
@@ -64,21 +71,16 @@ export function startDialogue() {
   //Displays the portraits of dialogue
   function displayPortrait(data) {
     //sets left portrait and right portraits and offsets bottom of both
-    leftPortrait.src = data.dialogue[dialogueIndex].leftPortrait;
-    leftPortrait.style.bottom = data.dialogue[dialogueIndex].leftOffset + "px";
-    rightPortrait.src = data.dialogue[dialogueIndex].rightPortrait;
-    rightPortrait.style.bottom =
-      data.dialogue[dialogueIndex].rightOffset + "px";
+    leftPortrait.src = data[dialogueIndex].playerPortrait;
+    leftPortrait.style.bottom = data[dialogueIndex].playerOffset + "px";
+    rightPortrait.src = data[dialogueIndex].rightPortrait;
+    rightPortrait.style.bottom = data[dialogueIndex].rightOffset + "px";
 
-    //if the left portrait is talking
-    if (data.dialogue[dialogueIndex].isLeftTalking) {
+    //if the player is talking
+    if (data[dialogueIndex].isPlayerTalking) {
       //Enlarge and brighten left portrait, while shrink and darken right
       leftPortrait.style.maxWidth = "20%";
       leftPortrait.style.filter = "brightness(100%)";
-      // leftPortrait.setAttribute(
-      //   "style",
-      //   "max-width: 20%; filter: brightness(100%);"
-      // );
       rightPortrait.style.maxWidth = "17.5%";
       rightPortrait.style.filter = "brightness(50%)";
     } else {
@@ -96,16 +98,15 @@ export function startDialogue() {
     scrollTimer = null;
     scrollIndex = 0;
     //Displays dialogue text without scrolling
-    dialogueText.innerHTML = data.dialogue[dialogueIndex].text;
+    dialogueText.innerHTML = data[dialogueIndex].text;
     dialogueIndex++;
   }
   //Scrolls dialogue
   function scrollingDialogue(data) {
     //if dialogue text isn't finished scrolling
-    if (scrollIndex < data.dialogue[dialogueIndex].text.length) {
+    if (scrollIndex < data[dialogueIndex].text.length) {
       //Display scrolling text character in dialogue box at scrollIndex
-      dialogueText.innerHTML +=
-        data.dialogue[dialogueIndex].text.charAt(scrollIndex);
+      dialogueText.innerHTML += data[dialogueIndex].text.charAt(scrollIndex);
       scrollIndex++;
 
       //Recalls scrollingDialogue at scrollSpeed
