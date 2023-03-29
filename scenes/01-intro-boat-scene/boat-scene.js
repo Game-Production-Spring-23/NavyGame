@@ -1,11 +1,11 @@
 
 // Import the useful function library
 import { loadHTMLOnVideoEnd } from '/lib.js';
-import { mainMenu } from '/scenes/00-main-menu/script.js';
+import { splashScreen } from '/scenes/01.5-splash-screen/splash-screen.js';
 
 export function boatScene() {
-    loadHTMLOnVideoEnd("/scenes/00-main-menu/Main-Menu-Scene.html",
-                       "/scenes/00-main-menu/style.css",
-                       mainMenu,
+    loadHTMLOnVideoEnd("/scenes/01.5-splash-screen/splash-screen.html",
+                       "/scenes/01.5-splash-screen/style.css",
+                       splashScreen,
                        "screen_1_video");
 } // end boatScene

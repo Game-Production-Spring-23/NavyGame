@@ -44,6 +44,7 @@ export function loadStyleSheet(styleSheetPath) {
 
 
 // plays a splash screen for a given amount of time.
+// waitTime is in miliseconds.
 export function playSplashScreen(filePath, styleSheetPath, next, waitTime) {
     setTimeout(() => {
         loadNewHTMLFile(filePath, 
