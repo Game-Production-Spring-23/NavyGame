@@ -1,5 +1,6 @@
 import { loadNewHTMLFile } from "../../lib.js";
 import { boatScene } from "../01-intro-boat-scene/boat-scene.js";
+import { loadScene3 } from "../03-pipe-minigame/pipe-minigame.js";
 
 export function mainMenu() {
   //global variables
@@ -209,9 +210,15 @@ export function mainMenu() {
 
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
-      "/scenes/01-intro-boat-scene/boat-scene.html",
-      "/scenes/01-intro-boat-scene/style.css",
-      boatScene
+      "/scenes/03-pipe-minigame/pipemini-game.html",
+      "/scenes/03-pipe-minigame/minigame1styles.css",
+      loadScene3
     );
+
+    // loadNewHTMLFile(
+    //   "/scenes/01-intro-boat-scene/boat-scene.html",
+    //   "/scenes/01-intro-boat-scene/style.css",
+    //   boatScene
+    // );
   }; // end setOnclick for start
 } // end mainMenu

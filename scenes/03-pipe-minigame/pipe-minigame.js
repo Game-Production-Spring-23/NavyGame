@@ -63,6 +63,8 @@ export function loadScene3() {
   document.getElementById("mg1Submit").onclick = () => {
     submitAnswer();
   };
+
+  startDialogue(0, "/scenes/03-pipe-minigame/dialogue.json");
   //End Start
 
   //OnClick, turns a valve and changes its value
@@ -102,7 +104,7 @@ export function loadScene3() {
     //if the mini game is over hide this app
     if (isMinigameOver) {
       //Add mini game complete dialogue
-      startDialogue(0, "/scenes/03-pipe-minigame/dialogue.json");
+      startDialogue(1, "/scenes/03-pipe-minigame/dialogue.json");
     } else if (
       JSON.stringify(chosenIndices) === JSON.stringify([0, 1, 2, 3, 4, 5])
     ) {
