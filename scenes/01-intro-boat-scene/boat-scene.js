@@ -11,4 +11,4 @@ export function boatScene() {
       loadScene
     );
   }, 2000); //24 * 1000);
-} // end boatScene
+}

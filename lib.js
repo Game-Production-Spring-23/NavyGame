@@ -4,7 +4,8 @@
 */
 
 
-// Loads a new HTML file given a file name.
+// Loads a new HTML file given a file name and a style sheet
+// the next parameter is a callback function.
 export function loadNewHTMLFile(filePath, styleSheetPath, next) {
     // load the new html file
     fetch(filePath)
@@ -17,10 +18,37 @@ export function loadNewHTMLFile(filePath, styleSheetPath, next) {
 } // end loadNewHTMLFile
 
 
+// loads the next screen once the given video ends. 
+// The video is given as the id of the element.
+// the first 3 parameters are the same as loadNewHTMLFile
+export function loadHTMLOnVideoEnd(filePath, styleSheetPath, next, videoElementID) {
+    let video = document.getElementById(videoElementID);
+    video.onloadedmetadata = () => {
+        video.play();
+        setTimeout(() => {
+            loadNewHTMLFile(filePath, styleSheetPath, next);
+        }, video.duration * 1000);
+    } // end onloadedmetadata
+} // end loadHTMLOnVideoEnd
+
+
+// Loads a stylesheet into the current html file.
+// Called by default in LoadNewHTMLFile and loadHTMLOnVideoEnd
 export function loadStyleSheet(styleSheetPath) {
-    let file = document.createElement("link");
-    file.setAttribute("rel", "stylesheet");
-    file.setAttribute("type", "text/css");
-    file.setAttribute("href", styleSheetPath);
-    document.getElementsByTagName("head")[0].appendChild(file);
+    // remove previous stylesheet
+    let link = document.getElementById("style");
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("type", "text/css");
+    link.setAttribute("href", styleSheetPath);
 } // end
+
+
+// plays a splash screen for a given amount of time.
+// waitTime is in miliseconds.
+export function playSplashScreen(filePath, styleSheetPath, next, waitTime) {
+    setTimeout(() => {
+        loadNewHTMLFile(filePath, 
+            styleSheetPath,
+                        next);
+    }, waitTime); // end setTimeout
+} // end playSplashScreen
