@@ -123,8 +123,8 @@ function init(global_data) {
             moveLeft();
         }
 
-        if (playerAbs > global_data.characters.captain.offset -24 && 
-            playerAbs < global_data.characters.captain.offset + 216) {
+        if (playerAbs > global_data.characters.captain.offset - 24 && 
+            playerAbs < global_data.characters.captain.offset + 132) {
             // captain
             if (global_data.characters.captain.key) {
                 interaction = "key";
@@ -134,7 +134,7 @@ function init(global_data) {
         
             //interaction = "other";
         } else if (playerAbs > global_data.characters.parrot.offset - 24 && 
-            playerAbs < global_data.characters.parrot.offset + 216) {
+            playerAbs < global_data.characters.parrot.offset + 132) {
             // parrot
             if (global_data.characters.parrot.key) {
                 interaction = "key";
@@ -144,7 +144,7 @@ function init(global_data) {
             
             //interaction = "other";
         } else if (playerAbs > global_data.characters.quartermaster.offset -24 && 
-            playerAbs < global_data.characters.quartermaster.offset + 216) {
+            playerAbs < global_data.characters.quartermaster.offset + 152) {
             // quartermaster
             if (global_data.characters.quartermaster.key) {
                 interaction = "key";
@@ -154,7 +154,7 @@ function init(global_data) {
         
             //interaction = "other";
         } else if (playerAbs > global_data.characters.chef.offset - 24 && 
-            playerAbs < global_data.characters.chef.offset + 216) {
+            playerAbs < global_data.characters.chef.offset + 132) {
             // chef
             if (global_data.characters.chef.key) {
                 interaction = "key";
@@ -164,7 +164,7 @@ function init(global_data) {
             
             //interaction = "other";
         } else if (playerAbs > global_data.characters.officers.offset - 24 && 
-            playerAbs < global_data.characters.officers.offset + 216) {
+            playerAbs < global_data.characters.officers.offset + 132) {
             // officers
             if (global_data.characters.officers.key) {
                 interaction = "key";
@@ -174,7 +174,7 @@ function init(global_data) {
             
             //interaction = "other";
         } else if (playerAbs > global_data.characters.nontech.offset - 24 && 
-            playerAbs < global_data.characters.nontech.offset + 216) {
+            playerAbs < global_data.characters.nontech.offset + 132) {
             // nontech
             if (global_data.characters.nontech.key) {
                 interaction = "key";
@@ -184,7 +184,7 @@ function init(global_data) {
             
             //interaction = "other";
         } else if (playerAbs > global_data.characters.tech.offset - 24 && 
-            playerAbs < global_data.characters.tech.offset + 216) {
+            playerAbs < global_data.characters.tech.offset + 132) {
             // tech
             if (global_data.characters.tech.key) {
                 interaction = "key";
@@ -194,7 +194,7 @@ function init(global_data) {
             
             //interaction = "other";
         } else if (playerAbs > global_data.characters.veteran.offset - 24 && 
-            playerAbs < global_data.characters.veteran.offset + 216) {
+            playerAbs < global_data.characters.veteran.offset + 132) {
             // vet
             if (global_data.characters.veteran.key) {
                 interaction = "key";
@@ -207,7 +207,7 @@ function init(global_data) {
             interaction = "";
         }
 
-        if (!locked && playerAbs > playerAbsLimit - 164) {
+        if (!locked && playerAbs > playerAbsLimit - 200) {
             // transition to minigame
             console.log("End of Screen. Load Minigame.");
         }
