@@ -133,7 +133,7 @@ h3 {
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; /* remove once positioned correctly*/
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px; remove once positioned correctly */
   background-image: url("/assets/images/ui/menuHeavyChar.png");
   background-position: center;
   background-repeat: no-repeat;
