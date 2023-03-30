@@ -103,6 +103,7 @@ export function loadScene2() {
 
       //console.log(global_data);
       init(global_data);
+      startDialogue(0, "/scenes/02-deck-explore/dialogue.json");
     });
 
   //console.log(global_data);
