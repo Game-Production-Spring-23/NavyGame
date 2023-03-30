@@ -425,8 +425,7 @@ function moveLeft() {
 
     if (interaction == "key") {
       unlock();
-      // load dialogue overlay
-      // wait for end of dialogue scene
+      startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
       // wait 5 seconds and display arrow to right of screen
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
