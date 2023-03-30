@@ -23,31 +23,36 @@ div {
 #midground {
     height: 440px;
     z-index: 1;
-    background-color: aqua;
+    background-color: #469bf0;
 }
 
 #charground {
-    height: 320px;
-    z-index: 1;
+    height: 240px;
+    bottom: 112px;
+    z-index: 2;
+    background-image: url("../../assets/images/backdrops/deckbg-blankplaceholder.png");
     background-color: burlywood;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 200% 400%;
 }
 
 #chars-upper {
     z-index: 2;
     height: 128px;
-    bottom: 288px;
+    bottom: 160px;
 }
 
 #chars-lower {
     z-index: 4;
     height: 128px;
-    bottom: 144px;
+    bottom: 48px;
 }
 
 #foreground {
-    height: 128px;
+    height: 112px;
     z-index: 5;
-    background-color: brown;
+    background-color: #1a1218;
 }
 
 #stationary {
@@ -75,7 +80,7 @@ div {
 #player {
     z-index: 3;
     height: 170px;
-    bottom: 216px;
+    bottom: 88px;
 }
 
 #subtitles {

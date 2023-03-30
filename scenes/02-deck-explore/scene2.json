@@ -60,7 +60,7 @@
   "params": {
     "bg_images": ["../../assets/images/backdrops/skyparallax.png"],
     "mg_images": [],
-    "cg_images": [],
+    "cg_images": ["../../assets/images/backdrops/deckbg-blankplaceholder.png"],
     "fg_images": [],
     "bg_scale": 1.5,
     "mg_scale": 1.5,

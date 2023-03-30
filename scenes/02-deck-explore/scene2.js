@@ -93,14 +93,14 @@ export function loadScene2() {
       bgContainer.style.backgroundImage =
         "url(" + data.params.bg_images[0] + ")";
       mgContainer.style.width = 1920 * data.params.mg_scale + "px";
-      mgContainer.style.backgroundImage =
-        "url(" + data.params.mg_images[0] + ")";
+      //mgContainer.style.backgroundImage =
+      //  "url(" + data.params.mg_images[0] + ")";
       cgContainer.style.width = 1920 * data.params.fg_scale + "px";
       cgContainer.style.backgroundImage =
         "url(" + data.params.cg_images[0] + ")";
       fgContainer.style.width = 1920 * data.params.fg_scale + "px";
-      fgContainer.style.backgroundImage =
-        "url(" + data.params.fg_images[0] + ")";
+      //fgContainer.style.backgroundImage =
+      //  "url(" + data.params.fg_images[0] + ")";
 
       //console.log(global_data);
       init(global_data);
