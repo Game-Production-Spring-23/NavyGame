@@ -1,12 +1,14 @@
 // Start
 var characterIndex = 0;
 var dataPath = "";
+var isDialogueOccurring = false;
 
 //Starts dialogue screen
 export function startDialogue(index, data) {
   //Sets global dialogue variables
   characterIndex = index;
   dataPath = data;
+  isDialogueOccurring = true;
 
   document.getElementById("dialogueScreen").style.display = "block";
   //Get references from document
@@ -65,6 +67,7 @@ export function startDialogue(index, data) {
         } else {
           //Ends dialogue
           document.getElementById("dialogueScreen").style.display = "none";
+          isDialogueOccurring = false;
         }
       });
   }
@@ -129,3 +132,5 @@ export function startDialogue(index, data) {
     }
   }
 }
+
+export { isDialogueOccurring };

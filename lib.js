@@ -32,7 +32,7 @@ export function loadHTMLOnVideoEnd(
     video.play();
     setTimeout(() => {
       loadNewHTMLFile(filePath, styleSheetPath, next);
-    }, video.duration * 1000);
+    }, 1000); //video.duration * 1000);
   }; // end onloadedmetadata
 } // end loadHTMLOnVideoEnd
 

@@ -1,6 +1,6 @@
 import { loadNewHTMLFile } from "../../lib.js";
 import { loadScene3 } from "/scenes/03-pipe-minigame/pipe-minigame.js";
-import { startDialogue } from "/scenes/dialogue.js";
+import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene2() {
   // Get Document Elements
@@ -136,13 +136,19 @@ export function loadScene2() {
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowRight" || event.key === "d") {
+      if (
+        (event.key === "ArrowRight" || event.key === "d") &&
+        !isDialogueOccurring
+      ) {
         player.style.backgroundImage =
           "url(" + global_data.characters.player.sprite[1] + ")";
         moveRight();
       }
 
-      if (event.key === "ArrowLeft" || event.key === "a") {
+      if (
+        (event.key === "ArrowLeft" || event.key === "a") &&
+        !isDialogueOccurring
+      ) {
         player.style.backgroundImage =
           "url(" + global_data.characters.player.sprite[1] + ")";
         moveLeft();
