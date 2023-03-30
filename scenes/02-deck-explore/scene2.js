@@ -36,6 +36,7 @@ export function loadScene2() {
 
   let locked = true;
   let hasPlayerReachedMinigame = false;
+  let hasPlayerTalkedToKey = false;
 
   let speed;
   let fgSpeed;
@@ -424,18 +425,16 @@ function moveLeft() {
   function interact() {
     console.log(interaction);
 
-    if (interaction == "key") {
-      unlock();
+    if (interaction == "key" && !hasPlayerTalkedToKey) {
       startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
+      hasPlayerTalkedToKey = true;
+      locked = false;
+
       // wait 5 seconds and display arrow to right of screen
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
       subtitles.innerHTML = interaction + ': "Go talk to the parrot."';
       setTimeout(resetSubtitles, 2500);
     }
-  }
-
-  function unlock() {
-    locked = false;
   }
 }
