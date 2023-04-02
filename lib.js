@@ -2,10 +2,40 @@
     Edwin Sanchez - Navy Game - Function Library
     A library of useful functions.
 */
+import { transition } from "./index.js";
 
-// Loads a new HTML file given a file name and a style sheet
+// Loads and transitions to a new HTML file given a file name and a style sheet
 // the next parameter is a callback function.
 export function loadNewHTMLFile(filePath, styleSheetPath, next) {
+  //Fade in
+  transition.style.display = "block";
+  transition.classList.add("fadeInAndOut");
+
+  //Loads new html file in between fade in and out
+  setTimeout(() => {
+    // load the new html file
+    fetch(filePath)
+      .then((response) => response.text())
+      .then(
+        (text) =>
+          (document.getElementById("htmlMainContainer").innerHTML = text)
+      )
+      .then(() => {
+        loadStyleSheet(styleSheetPath);
+        next();
+
+        //Fade Out
+        setTimeout(() => {
+          transition.classList.remove("fadeInAndOut");
+          transition.style.display = "none";
+        }, 2000); // end setTimeout
+      });
+  }, 1000); // end setTimeout
+} // end loadNewHTMLFile
+
+// Loads a new HTML file given a file name and a style sheet for the beginning
+// the next parameter is a callback function.
+export function loadNewHTMLFileIndex(filePath, styleSheetPath, next) {
   // load the new html file
   fetch(filePath)
     .then((response) => response.text())

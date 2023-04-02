@@ -235,8 +235,12 @@ h3 {
 #settingModal {
   overflow: scroll;
 }
+.hidden {
+  display: none;
+}
 
 #splash {
+  display: block;
   z-index: 200;
   position: fixed;
   top: 0;
@@ -244,18 +248,20 @@ h3 {
   width: 100%;
   height: 100%;
   background-color: black;
-  color: white;
   text-align: center;
   line-height: 90vh;
-  transition: all ease-in-out 600ms;
 }
-
-.hidden {
-  transition: 0.5s;
-  display: none;
+.fadeOut {
+  animation: fadeOut 600ms;
 }
-
-/* UI Overlay CSS */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} /* UI Overlay CSS */
 
 #uiOVerlay {
   position: absolute;

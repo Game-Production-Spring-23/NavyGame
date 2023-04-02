@@ -122,9 +122,13 @@ export function mainMenu() {
       //Plays background music
       music.volume = 0.4;
       //music.play();
+
+      splash.classList.add("fadeOut");
+
       splash.style.opacity = 0;
       setTimeout(() => {
-        splash.classList.add("hidden");
+        splash.classList.remove("fadeOut");
+        splash.style.display = "none";
       }, 610);
     });
   }

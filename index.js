@@ -1,10 +1,16 @@
 // Start Script
 
-import { loadNewHTMLFile } from './lib.js';
-import * as mainMenuScene from './scenes/00-main-menu/script.js';
+import { loadNewHTMLFileIndex } from "./lib.js";
+import * as mainMenuScene from "./scenes/00-main-menu/script.js";
 
-// loads next screen using an html file (given a path) 
+const transition = document.getElementById("transition");
+
+// loads next screen using an html file (given a path)
 // and a function to call when the page is loaded
-loadNewHTMLFile('/scenes/00-main-menu/Main-Menu-Scene.html',
-                '/scenes/00-main-menu/style.css',
-                mainMenuScene.mainMenu);
+loadNewHTMLFileIndex(
+  "/scenes/00-main-menu/Main-Menu-Scene.html",
+  "/scenes/00-main-menu/style.css",
+  mainMenuScene.mainMenu
+);
+
+export { transition };
