@@ -83,3 +83,16 @@ export function playSplashScreen(filePath, styleSheetPath, next, waitTime) {
     loadNewHTMLFile(filePath, styleSheetPath, next);
   }, waitTime); // end setTimeout
 } // end playSplashScreen
+
+
+export function insertName(text, name) {
+  let newText = "";
+  for(let i = 0; i < text.length; i++) {
+    if(text[i] === "*") {
+      newText += name;
+    } else {
+      newText += text[i];
+    } // end if
+  } // end for
+  return newText;
+} // end insertText
