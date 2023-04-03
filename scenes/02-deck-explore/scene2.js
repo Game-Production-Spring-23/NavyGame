@@ -19,10 +19,11 @@ export function loadScene2() {
   const nt = document.getElementById("nontech");
   const characters = document.getElementsByClassName("character");
   const subtitles = document.getElementById("subtitles");
+  const keyMark = document.getElementById("keyMark");
+  const dialogueReady = document.getElementById("dialogueReady");
 
   let global_data = null;
 
-  let playerX;
   let playerAbs;
   let playerLBound;
   let playerRBound;
@@ -36,7 +37,7 @@ export function loadScene2() {
 
   let locked = true;
   let hasPlayerReachedMinigame = false;
-  let hasPlayerTalkedToKey = false;
+  let currentKey = 0;
 
   let speed;
   let fgSpeed;
@@ -56,34 +57,42 @@ export function loadScene2() {
       player.style.backgroundImage =
         "url(" + data.characters.player.sprite[0] + ")";
       player.setAttribute("name", data.characters.player.name);
+
       captain.style.left = data.characters.captain.offset + "px";
       captain.style.backgroundImage =
         "url(" + data.characters.captain.sprite[0] + ")";
       captain.setAttribute("name", data.characters.captain.name);
+
       parrot.style.left = data.characters.parrot.offset + "px";
       parrot.style.backgroundImage =
         "url(" + data.characters.parrot.sprite[0] + ")";
       parrot.setAttribute("name", data.characters.parrot.name);
+
       qm.style.left = data.characters.quartermaster.offset + "px";
       qm.style.backgroundImage =
         "url(" + data.characters.quartermaster.sprite[0] + ")";
       qm.setAttribute("name", data.characters.quartermaster.name);
+
       vet.style.left = data.characters.veteran.offset + "px";
       vet.style.backgroundImage =
         "url(" + data.characters.veteran.sprite[0] + ")";
       vet.setAttribute("name", data.characters.veteran.name);
+
       chef.style.left = data.characters.chef.offset + "px";
       chef.style.backgroundImage =
         "url(" + data.characters.chef.sprite[0] + ")";
       chef.setAttribute("name", data.characters.chef.name);
+
       officers.style.left = data.characters.officers.offset + "px";
       officers.style.backgroundImage =
         "url(" + data.characters.officers.sprite[0] + ")";
       officers.setAttribute("name", data.characters.officers.name);
+
       tech.style.left = data.characters.tech.offset + "px";
       tech.style.backgroundImage =
         "url(" + data.characters.tech.sprite[0] + ")";
       tech.setAttribute("name", data.characters.tech.name);
+
       nt.style.left = data.characters.nontech.offset + "px";
       nt.style.backgroundImage =
         "url(" + data.characters.nontech.sprite[0] + ")";
@@ -156,7 +165,7 @@ export function loadScene2() {
 
       if (
         playerAbs > global_data.characters.captain.offset - 24 &&
-        playerAbs < global_data.characters.captain.offset + 132
+        playerAbs < global_data.characters.captain.offset + 96
       ) {
         // captain
         if (global_data.characters.captain.key) {
@@ -168,7 +177,7 @@ export function loadScene2() {
         //interaction = "other";
       } else if (
         playerAbs > global_data.characters.parrot.offset - 24 &&
-        playerAbs < global_data.characters.parrot.offset + 132
+        playerAbs < global_data.characters.parrot.offset + 96
       ) {
         // parrot
         if (global_data.characters.parrot.key) {
@@ -180,7 +189,7 @@ export function loadScene2() {
         //interaction = "other";
       } else if (
         playerAbs > global_data.characters.quartermaster.offset - 24 &&
-        playerAbs < global_data.characters.quartermaster.offset + 152
+        playerAbs < global_data.characters.quartermaster.offset + 96
       ) {
         // quartermaster
         if (global_data.characters.quartermaster.key) {
@@ -192,7 +201,7 @@ export function loadScene2() {
         //interaction = "other";
       } else if (
         playerAbs > global_data.characters.chef.offset - 24 &&
-        playerAbs < global_data.characters.chef.offset + 132
+        playerAbs < global_data.characters.chef.offset + 96
       ) {
         // chef
         if (global_data.characters.chef.key) {
@@ -204,7 +213,7 @@ export function loadScene2() {
         //interaction = "other";
       } else if (
         playerAbs > global_data.characters.officers.offset - 24 &&
-        playerAbs < global_data.characters.officers.offset + 132
+        playerAbs < global_data.characters.officers.offset + 96
       ) {
         // officers
         if (global_data.characters.officers.key) {
@@ -216,7 +225,7 @@ export function loadScene2() {
         //interaction = "other";
       } else if (
         playerAbs > global_data.characters.nontech.offset - 24 &&
-        playerAbs < global_data.characters.nontech.offset + 132
+        playerAbs < global_data.characters.nontech.offset + 96
       ) {
         // nontech
         if (global_data.characters.nontech.key) {
@@ -228,7 +237,7 @@ export function loadScene2() {
         //interaction = "other";
       } else if (
         playerAbs > global_data.characters.tech.offset - 24 &&
-        playerAbs < global_data.characters.tech.offset + 132
+        playerAbs < global_data.characters.tech.offset + 96
       ) {
         // tech
         if (global_data.characters.tech.key) {
@@ -240,7 +249,7 @@ export function loadScene2() {
         //interaction = "other";
       } else if (
         playerAbs > global_data.characters.veteran.offset - 24 &&
-        playerAbs < global_data.characters.veteran.offset + 132
+        playerAbs < global_data.characters.veteran.offset + 96
       ) {
         // vet
         if (global_data.characters.veteran.key) {
@@ -252,6 +261,12 @@ export function loadScene2() {
         //interaction = "key";
       } else {
         interaction = "";
+      }
+
+      if (interaction != "") {
+        dialogueReady.style.visibility = "visible";
+      } else {
+        dialogueReady.style.visibility = "hidden";
       }
 
       if (!locked && playerAbs > playerAbsLimit - 200) {
@@ -267,7 +282,7 @@ export function loadScene2() {
       }
 
       if (event.key === "e") {
-        interact();
+        interact(global_data);
       }
     });
 
@@ -369,71 +384,12 @@ export function loadScene2() {
     }
   }
 
-  /*
-function moveRight() {
-    console.log("moving right");
-    //console.log(playerAbsLimit);
-    if (playerAbs < playerAbsLimit) {
-        playerAbs += speed;
-        if (playerX < playerRBound) {
-            // move player element right by speed
-            playerLBound = 576;
-            playerX += speed;            
-            player.style.left = playerX + "px";
-        } else {
-            // player at bound, move containers left by speed * ratio
-            if (fgOffset > fgMaxOffset) {
-                // containers have space to move
-                fgOffset -=  fgSpeed;
-                fgContainer.style.left = fgOffset + "px";
-                cgContainer.style.left = fgOffset + "px";
-                mgOffset -=  mgSpeed;
-                mgContainer.style.left = mgOffset + "px";
-                bgOffset -=  bgSpeed;
-                bgContainer.style.left = bgOffset + "px";
-            } else {
-                // containers reached limit, disable player bound to reach edge of screen
-                playerRBound = 1856;
-            }
-        }
-    }
-}
-
-function moveLeft() {
-    console.log("moving left");
-    if (playerAbs > 0) {
-        playerAbs -= speed;
-        if (playerX > playerLBound) {
-            // move player element right by speed
-            playerRBound = 1216;
-            playerX -= speed;            
-            player.style.left = playerX + "px";
-        } else {
-            // player at bound, move containers left by speed * ratio
-            if (fgOffset < 0) {
-                // containers have space to move
-                fgOffset +=  fgSpeed;
-                fgContainer.style.left = fgOffset + "px";
-                cgContainer.style.left = fgOffset + "px";
-                mgOffset +=  mgSpeed;
-                mgContainer.style.left = mgOffset + "px";
-                bgOffset +=  bgSpeed;
-                bgContainer.style.left = bgOffset + "px";
-            } else {
-                // containers reached limit, disable player bound to reach edge of screen
-                playerLBound = 0;
-            }
-        }
-    }
-}
-*/
-
-  function interact() {
+  function interact(global_data) {
     console.log(interaction);
 
-    if (interaction == "key" && !hasPlayerTalkedToKey) {
+    if (interaction == "key" && locked) {
       startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
-      hasPlayerTalkedToKey = true;
+      keyMark.style.visibility = "hidden";
       locked = false;
 
       // wait 5 seconds and display arrow to right of screen

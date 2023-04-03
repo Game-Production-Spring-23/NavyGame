@@ -68,5 +68,10 @@
     "bg_speed": 10,
     "mg_speed": 11.5,
     "fg_speed": 14
+  },
+  "mark": {
+    "numMarks": 1,
+    "offsetsX": [896],
+    "offsetsY": [480]
   }
 }
