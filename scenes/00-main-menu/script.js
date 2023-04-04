@@ -215,7 +215,7 @@ export function mainMenu() {
     "/scenes/01-intro-boat-scene/boat-scene.html",
     "/scenes/01-intro-boat-scene/style.css",
     boatScene
-  )
+  );
 
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
