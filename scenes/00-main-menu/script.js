@@ -1,4 +1,4 @@
-import { loadNewHTMLFile } from "../../lib.js";
+import { loadNewHTMLFile, devSkip } from "../../lib.js";
 import { boatScene } from "../01-intro-boat-scene/boat-scene.js";
 
 export function mainMenu() {
@@ -209,6 +209,13 @@ export function mainMenu() {
   window.showOptions = showOptions;
   window.changeVolume = changeVolume;
   window.toggleMapOff = toggleMapOff;
+
+  // what to skip to
+  devSkip(
+    "/scenes/01-intro-boat-scene/boat-scene.html",
+    "/scenes/01-intro-boat-scene/style.css",
+    boatScene
+  )
 
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
