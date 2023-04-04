@@ -10,7 +10,7 @@ export function mainMenu() {
   let scoreContainer = document.getElementById("scoreContainer");
   let journalScreen = document.getElementById("journalContainer");
   let mapScreen = document.getElementById("mapContainer");
-  let music = new Audio("/assets/audio/SFXmusic.mp3");
+  let music = document.getElementById("audio");
   journalScreen.style.display = "none";
   mapScreen.style.display = "none";
   settingsContainer.style.display = "none";
@@ -183,11 +183,6 @@ export function mainMenu() {
     }
   }
 
-  //changed volume
-  function changeVolume(val) {
-    music.volume = val;
-    console.log(val);
-  }
 
   //hides map popup box when clicked
   function toggleMapOff() {
