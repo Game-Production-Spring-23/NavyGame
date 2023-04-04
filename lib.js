@@ -4,6 +4,7 @@
 */
 import { transition } from "./index.js";
 
+// the list of globalTimeouts. used to remove timeouts when devSkip is called.
 document.globalTimeouts = [];
 
 // Loads and transitions to a new HTML file given a file name and a style sheet
@@ -128,7 +129,6 @@ function skipper(event) {
   
   // check if the ~ key was pressed
   if(event.key == "~") {
-    console.log("~ pressed");
     loadNewHTMLFile(
       document.devSkipObj.filePath,
       document.devSkipObj.styleSheetPath,
