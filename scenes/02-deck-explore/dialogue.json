@@ -1,32 +1,40 @@
-{
-  "dialogue": [
-    [
+[
+  {
+    "otherName": "",
+    "otherOffset": 0,
+    "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "",
         "isPlayerTalking": false,
-        "rightPortrait": "",
-        "rightName": "",
-        "rightOffset": 0,
-        "text": "Welcome to the deck! use the arrow keys or [wasd] to move, and [e] to interact with the crew"
+        "text": "Welcome to the deck! use the arrow keys or the [w] or [d] key to move, and [e] key to interact with the crew"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "This is a test to see if an image appears",
+        "image": "/assets/images/placeholders/screen3imgTest1.png"
       }
-    ],
-    [
+    ]
+  },
+  {
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
+    "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Ahoy there, me hearty! *Squawk* I'm Cross Bird, the pirate parrot. I see you are with the pirate ship Signet Messenger! *Squawk* Chief Engineer no less!"
       },
       {
@@ -34,12 +42,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "I have been a ship's parrot going over 200 years now *Squawk* and have seen me fair share of repairs. How can I help ye?"
       },
       {
@@ -47,12 +51,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "I've been hearing some scuttlebutt from the Pirate School of Engineering about a way to get better at making repairs. What do ye know of it?"
       },
       {
@@ -60,12 +60,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Aye! There is. *Squawk* Have ya heard of Model Based Systems Engineering?"
       },
       {
@@ -73,12 +69,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Some. Tell me more."
       },
       {
@@ -86,12 +78,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "*Squawk* Model-based systems engineering, or MBSE for short, is a way of designing and building complex systems using computer models."
       },
       {
@@ -99,25 +87,18 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
-        "text": "It can help ye be better pirate engineers by improving the ship systems' efficiency and effectiveness. *Squawk*"
+        "text": "It can help ye be better pirate engineers by improving the ship systems' efficiency and effectiveness. *Squawk*",
+        "image": "/assets/images/placeholders/screen3imgTest2.png"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "How so?"
       },
       {
@@ -125,12 +106,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "As a pirate engineer, ye know how important it is to make sure ships and systems are safe and reliable to take on them thar new adventures."
       },
       {
@@ -138,12 +115,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "With MBSE, we can create digital 3D models of our ships and systems to show us all the important parts and how they fit together."
       },
       {
@@ -151,12 +124,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "MBSE can also help test ye different approaches to see how the ship's systems would behave under different conditions. *Squawk* Need to take on the Pirates of Ambush Island?"
       },
       {
@@ -164,12 +133,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Ye can model their defenses and test the Signet Messenger's canon upgrades before spending many chests of ye gold."
       },
       {
@@ -177,12 +142,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "*Squawk* Thar models help ye better understand the approach to repairing the ships, and to catch any potential problems before they become too costly to fix."
       },
       {
@@ -190,12 +151,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Is that something ye think ye can learn? *Squawk*"
       },
       {
@@ -203,12 +160,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "I think so. There be a process to follow?"
       },
       {
@@ -216,12 +169,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Aye! *Squawk* There be six core steps:"
       },
       {
@@ -229,26 +178,18 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
-        "text": " 1) Requirements Development and System Analysis, 2) Logical Analysis and Design Solution, 3) Implementation, 4) Integration, 5) Verification and Validation, and 6) Transition"
+        "text": " 1) Requirements Development and System Analysis, 2) Logical Analysis and Design Solution, 3) Implementation, 4) Integration, 5) Verification and Validation, and 6) Transition",
+        "image": "/assets/images/placeholders/screen3imgTest3.png"
       },
-
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "That sounds straightforward. What should Ye' know about each step?"
       },
       {
@@ -256,12 +197,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "*Squawk* Aye, great question! Ye be a smart one…"
       },
       {
@@ -269,12 +206,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Using the Requirements Development and System Analysis step, ye crew uses computer models to simulate different scenarios and identify the requirements for making yon ship repairs."
       },
       {
@@ -282,12 +215,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Y'all have to consider factors like *Squawk* available resources, time constraints, safety requirements, and risks involved."
       },
       {
@@ -295,12 +224,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Got it. What's next?"
       },
       {
@@ -308,12 +233,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "For the Logical Analysis and Design Solution step ye use the same computer models to design and optimize the repair solutions."
       },
       {
@@ -321,25 +242,17 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
-        "text": " *Squawk* Yon team needs to continue to balance factors like risk, speed, power, and safety to come up with a logical design solution that meets all the requirements."
+        "text": "*Squawk* Yon team needs to continue to balance factors like risk, speed, power, and safety to come up with a logical design solution that meets all the requirements."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "And then what happens?"
       },
       {
@@ -347,12 +260,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Ye has ta' get 'er done in the Implementation step. *Squawk* This means actually carrying out the repairs."
       },
       {
@@ -360,25 +269,17 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
-        "text": " Then, with the Integration step, ye have to make sure everything works together smoothly and efficiently with the ship's existing systems."
+        "text": "Then, with the Integration step, ye have to make sure everything works together smoothly and efficiently with the ship's existing systems."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "And how do we make sure everything is working properly?"
       },
       {
@@ -386,12 +287,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "*Squawk* Ye haf'ta do the Verification and Validation step with the computer models. Ye' crew needs to test and verify that everything is working correctly and meets all the requirements."
       },
       {
@@ -399,12 +296,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Then we're done?"
       },
       {
@@ -412,12 +305,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. The Transition step gets the ship back to its normal operating mode, and move ye crew to the next repair. Got all this? *Squawk*"
       },
       {
@@ -425,12 +314,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "That sounds like just the ticket for our crew and our ship!"
       },
       {
@@ -438,12 +323,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Did ye write those steps down in ye book of knowledge?"
       },
       {
@@ -451,12 +332,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Aye I did!"
       },
       {
@@ -464,12 +341,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "1) Requirements Development and System Analysis, 2) Logical Analysis and Design Solution, 3) Implementation, 4) Integration, 5) Verification and Validation, and 6) Transition"
       },
       {
@@ -477,12 +350,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "So there ye have it, me hearties! That's what model-based systems engineering be all about. Arrr! *Squawk*"
       },
       {
@@ -490,12 +359,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Aye. Let's get started."
       },
       {
@@ -503,12 +368,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "*Squawk* Learning MBSE can take some time, but it's worth the investment and effort."
       },
       {
@@ -516,12 +377,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "You and ye crew w'll come away understanding MBSE better and how to apply it to ye work as pirate engineers. Are ye game? *Squawk*"
       },
       {
@@ -529,14 +386,10 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "rightName": "Cross Bird",
-        "rightOffset": -50,
         "text": "Let's do this!"
       }
     ]
-  ]
-}
+  }
+]

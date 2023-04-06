@@ -1,17 +1,15 @@
-{
-  "dialogue": [
-    [
+[
+  {
+    "otherName": "Gobs",
+    "otherOffset": -50,
+    "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "*whistling*"
       },
       {
@@ -19,12 +17,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "Ahoy, matey. Lend an' old seafarer a hand would ye"
       },
       {
@@ -32,12 +26,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "Aye aye. What can I help ye with?"
       },
       {
@@ -45,12 +35,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "To be honest with ya lad, me memory's not what she used ta be. The boiler downstairs be having a scary steam build up and we be needing ta release the steam by releasing the valves in the correct order."
       },
       {
@@ -58,12 +44,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "Sounds simple enough. What d'ya need me for?"
       },
       {
@@ -71,12 +53,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "Like I said, me memory's not all she used ta be. I'm just not quite sure I remember which valve needs ta be released and when and there be not enough time to review tha manual."
       },
       {
@@ -84,12 +62,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "I haven't been taught to operate the boiler. How can I help?"
       },
       {
@@ -97,12 +71,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "So long as ye remember yer MBSE flow, you'll do fine. Trust me. C'mon, there be little time!"
       },
       {
@@ -110,12 +80,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "Hover yer mouse over the valves to see which step in the MBSE it is."
       },
       {
@@ -123,12 +89,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "From the first step to the last, loosen the valves in the correct order of the MBSE flow. "
       },
       {
@@ -136,12 +98,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "When ye think ye have it right, press the arrow button to the right to expel the steam."
       },
       {
@@ -149,12 +107,8 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "If ye can't do it, then all hope be lost."
       },
       {
@@ -162,42 +116,33 @@
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
         "text": "No pressure."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi4.png",
         "playerPortrait1": "",
-        "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
-        "isPlayerTalking": true,
-        "rightPortrait": "/assets/images/characterSplashes/gob.png",
-        "rightName": "Gobs",
-        "rightOffset": -50,
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
+        "isPlayerTalking": false,
         "text": "Ye'll be fine. Sailors honor."
       }
-    ],
-    [
+    ]
+  },
+  {
+    "otherName": "",
+    "otherOffset": 0,
+    "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "playerName": "",
-        "playerOffset": -200,
+        "otherPortrait": "",
         "isPlayerTalking": false,
-        "rightPortrait": "",
-        "rightName": "",
-        "rightOffset": 0,
         "text": "Congratulations! You have reached the end of the demo."
       }
     ]
-  ]
-}
+  }
+]

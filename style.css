@@ -96,6 +96,13 @@ h3 {
   bottom: -200px;
   filter: brightness(100%);
 }
+#dialogueImage {
+  width: 75%;
+  height: 75%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 #dialogueBox {
   width: 85%;
   height: 35vh;
