@@ -93,11 +93,10 @@ export function playSplashScreen(filePath, styleSheetPath, next, waitTime) {
   ); // end append
 } // end playSplashScreen
 
-
 export function insertName(text, name) {
   let newText = "";
-  for(let i = 0; i < text.length; i++) {
-    if(text[i] === "*") {
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] === "*") {
       newText += name;
     } else {
       newText += text[i];
@@ -106,13 +105,12 @@ export function insertName(text, name) {
   return newText;
 } // end insertText
 
-
 // dirty the document object with a global parameter
 document.devSkipObj = {
-  "filePath": null,
-  "styleSheetPath": null,
-  "next": null
-}
+  filePath: null,
+  styleSheetPath: null,
+  next: null,
+};
 
 export function devSkip(filePath, styleSheetPath, next) {
   document.devSkipObj.filePath = filePath;
@@ -120,15 +118,14 @@ export function devSkip(filePath, styleSheetPath, next) {
   document.devSkipObj.next = next;
 } // end devSkip
 
-
 function skipper(event) {
   // remove all setTimeouts that have been set
-  for(let i = 0; i < document.globalTimeouts.length; i++) {
+  for (let i = 0; i < document.globalTimeouts.length; i++) {
     clearTimeout(document.globalTimeouts[i]);
   } // end for
-  
+
   // check if the ~ key was pressed
-  if(event.key == "~") {
+  if (event.key == "~") {
     loadNewHTMLFile(
       document.devSkipObj.filePath,
       document.devSkipObj.styleSheetPath,

@@ -101,6 +101,12 @@ h3 {
   height: 75%;
   position: fixed;
   left: 50%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   transform: translate(-50%, 0);
 }
 #dialogueBox {

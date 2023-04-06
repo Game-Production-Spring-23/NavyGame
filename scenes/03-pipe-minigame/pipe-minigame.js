@@ -16,20 +16,20 @@ export function loadScene3() {
 
   //possible answers
   const possibleDisplay = [
-    "/assets/images/NG_BoilerRoom_ValveItem1.png",
-    "/assets/images/NG_BoilerRoom_ValveItem2.png",
-    "/assets/images/NG_BoilerRoom_ValveItem3.png",
-    "/assets/images/NG_BoilerRoom_ValveItem4.png",
-    "/assets/images/NG_BoilerRoom_ValveItem5.png",
-    "/assets/images/NG_BoilerRoom_ValveItem6.png",
+    "/assets/images/minigame1/NG_BoilerRoom_ValveItem1.png",
+    "/assets/images/minigame1/NG_BoilerRoom_ValveItem2.png",
+    "/assets/images/minigame1/NG_BoilerRoom_ValveItem3.png",
+    "/assets/images/minigame1/NG_BoilerRoom_ValveItem4.png",
+    "/assets/images/minigame1/NG_BoilerRoom_ValveItem5.png",
+    "/assets/images/minigame1/NG_BoilerRoom_ValveItem6.png",
   ];
   const possibleNumbers = [
-    "/assets/images/NG_PipeGame_ValveNumberDisplay_1.png",
-    "/assets/images/NG_PipeGame_ValveNumberDisplay_2.png",
-    "/assets/images/NG_PipeGame_ValveNumberDisplay_3.png",
-    "/assets/images/NG_PipeGame_ValveNumberDisplay_4.png",
-    "/assets/images/NG_PipeGame_ValveNumberDisplay_5.png",
-    "/assets/images/NG_PipeGame_ValveNumberDisplay_6.png",
+    "/assets/images/minigame1/NG_PipeGame_ValveNumberDisplay_1.png",
+    "/assets/images/minigame1/NG_PipeGame_ValveNumberDisplay_2.png",
+    "/assets/images/minigame1/NG_PipeGame_ValveNumberDisplay_3.png",
+    "/assets/images/minigame1/NG_PipeGame_ValveNumberDisplay_4.png",
+    "/assets/images/minigame1/NG_PipeGame_ValveNumberDisplay_5.png",
+    "/assets/images/minigame1/NG_PipeGame_ValveNumberDisplay_6.png",
   ];
 
   //variables
@@ -76,7 +76,7 @@ export function loadScene3() {
     }
 
     //Sets that valves turn animation to play
-    valves[index].src = "/assets/images/NG_PipeGame_Valve_Turn.gif";
+    valves[index].src = "/assets/images/minigame1/NG_PipeGame_Valve_Turn.gif";
     answerDisplay.src = "/assets/images/NG_empty.png";
 
     //Clears timer if timer is already active
@@ -85,7 +85,7 @@ export function loadScene3() {
     //After 1 seconds change valve back to original animation and set chosen answer to new answer
     valveTimer = setTimeout(() => {
       clearTimeout(valveTimer);
-      valves[index].src = "/assets/images/NG_PipeGame_Valve.png";
+      valves[index].src = "/assets/images/minigame1/NG_PipeGame_Valve.png";
       answerDisplay.src = possibleDisplay[chosenIndices[index]];
     }, 1000);
   }

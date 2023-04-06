@@ -7,7 +7,7 @@ export function loadScene2() {
     "/scenes/03-pipe-minigame/pipemini-game.html",
     "/scenes/03-pipe-minigame/minigame1styles.css",
     loadScene3
-  )
+  );
 
   // Get Document Elements
   const player = document.getElementById("player");

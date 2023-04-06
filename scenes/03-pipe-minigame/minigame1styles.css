@@ -19,7 +19,7 @@ body {
   position: fixed;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/NG_PipeGame_Scene.png);
+  background-image: url(/assets/images/minigame1/NG_PipeGame_Scene.png);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -109,7 +109,7 @@ body {
   top: 40%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url(/assets/images/NG_PipeGame_Gauge_Face.png);
+  background-image: url(/assets/images/minigame1/NG_PipeGame_Gauge_Face.png);
 }
 #mg1Gauge {
   transition: 500ms ease all;
@@ -130,7 +130,7 @@ body {
   top: 48.5%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url(/assets/images/NG_BoilerRoom_ValveItemDisplay.png);
+  background-image: url(/assets/images/minigame1/NG_BoilerRoom_ValveItemDisplay.png);
 }
 #mg1number {
   position: fixed;
@@ -140,5 +140,5 @@ body {
   top: 38%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url(/assets/images/NG_PipeGame_ValveNumberDisplay_Module.png);
+  background-image: url(/assets/images/minigame1/NG_PipeGame_ValveNumberDisplay_Module.png);
 }

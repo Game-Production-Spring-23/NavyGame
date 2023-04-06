@@ -62,8 +62,9 @@ export function startDialogue(index, data) {
         //Displays dialogue from JSON
         if (dialogueIndex < data[characterIndex].dialogue.length) {
           //Sets portraits to dialogue portraits and clears dialogue box  //
-          displayPortrait(data[characterIndex].dialogue);
           dialogueText.innerHTML = "";
+
+          displayPortrait(data[characterIndex].dialogue);
 
           //  Changes the front button depending on if there is no more dialogue   //
           if (dialogueIndex == data[characterIndex].dialogue.length - 1)
@@ -86,6 +87,7 @@ export function startDialogue(index, data) {
           }
         } else {
           //Ends dialogue
+          dialogueImage.src = "/assets/images/NG_empty.png";
           document.getElementById("dialogueScreen").style.display = "none";
           isDialogueOccurring = false;
         }
