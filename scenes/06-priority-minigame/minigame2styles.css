@@ -1,0 +1,54 @@
+* {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#miniGame2 {
+  position: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/minigame2/NG_PriorityGame_Scene.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#mg2ItemBox {
+  width: 45%;
+  height: 40%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2.5%;
+  justify-content: space-between;
+  position: fixed;
+  left: 25%;
+  top: 32.5%;
+}
+.mg2Item {
+  cursor: move;
+}
+#mg2Quill {
+  position: fixed;
+  width: 11.5%;
+  height: auto;
+  right: 3%;
+  bottom: 35%;
+  z-index: 202;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+.mg2Inkwell {
+  position: fixed;
+  width: 15%;
+  height: auto;
+  right: 5%;
+  bottom: 2.5%;
+}
+#mg2InkwellBG {
+  z-index: 201;
+}
+#mg2Submit {
+  z-index: 203;
+}

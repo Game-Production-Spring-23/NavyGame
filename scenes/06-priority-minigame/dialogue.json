@@ -1,0 +1,48 @@
+[
+  {
+    "otherName": "",
+    "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "How to play"
+      }
+    ]
+  },
+  {
+    "otherName": "",
+    "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "",
+        "isPlayerTalking": true,
+        "text": "Hmm, not sure that's right"
+      }
+    ]
+  },
+  {
+    "otherName": "",
+    "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "",
+        "isPlayerTalking": true,
+        "text": "I did it, I saved the day",
+        "image": "/assets/images/minigame2/NG_PriorityGame_Win.jpg"
+      }
+    ]
+  }
+]
