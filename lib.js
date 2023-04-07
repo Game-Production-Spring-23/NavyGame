@@ -5,7 +5,7 @@
 import { transition } from "./index.js";
 
 // the list of globalTimeouts. used to remove timeouts when devSkip is called.
-document.globalTimeouts = [];
+//document.globalTimeouts = [];
 
 // Loads and transitions to a new HTML file given a file name and a style sheet
 // the next parameter is a callback function.
@@ -15,7 +15,7 @@ export function loadNewHTMLFile(filePath, styleSheetPath, next) {
   transition.classList.add("fadeInAndOut");
 
   //Loads new html file in between fade in and out
-  document.globalTimeouts.push(
+  //document.globalTimeouts.push(
     setTimeout(() => {
       // load the new html file
       fetch(filePath)
@@ -35,7 +35,7 @@ export function loadNewHTMLFile(filePath, styleSheetPath, next) {
           }, 2000); // end setTimeout
         });
     }, 1000) // end setTimeout
-  );
+  //);
 } // end loadNewHTMLFile
 
 // Loads a new HTML file given a file name and a style sheet for the beginning
@@ -65,11 +65,11 @@ export function loadHTMLOnVideoEnd(
   let video = document.getElementById(videoElementID);
   video.onloadedmetadata = () => {
     video.play();
-    document.globalTimeouts.push(
+    //document.globalTimeouts.push(
       setTimeout(() => {
         loadNewHTMLFile(filePath, styleSheetPath, next);
       }, video.duration * 1000)
-    ); // end append
+    //); // end append
   }; // end onloadedmetadata
 } // end loadHTMLOnVideoEnd
 
@@ -86,11 +86,11 @@ export function loadStyleSheet(styleSheetPath) {
 // plays a splash screen for a given amount of time.
 // waitTime is in miliseconds.
 export function playSplashScreen(filePath, styleSheetPath, next, waitTime) {
-  document.globalTimeouts.push(
+  //document.globalTimeouts.push(
     setTimeout(() => {
       loadNewHTMLFile(filePath, styleSheetPath, next);
     }, waitTime)
-  ); // end append
+  //); // end append
 } // end playSplashScreen
 
 export function insertName(text, name) {
@@ -120,10 +120,12 @@ export function devSkip(filePath, styleSheetPath, next) {
 
 function skipper(event) {
   // remove all setTimeouts that have been set
+  /*
   for (let i = 0; i < document.globalTimeouts.length; i++) {
     clearTimeout(document.globalTimeouts[i]);
   } // end for
-
+  */
+ 
   // check if the ~ key was pressed
   if (event.key == "~") {
     loadNewHTMLFile(
