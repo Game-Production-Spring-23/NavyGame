@@ -402,7 +402,9 @@ export function loadScene2() {
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
       subtitles.innerHTML = interaction + ': "Go talk to the parrot."';
-      setTimeout(resetSubtitles, 2500);
+      document.globalTimeouts.push(
+        setTimeout(resetSubtitles, 2500)
+      );
     }
   }
 }
