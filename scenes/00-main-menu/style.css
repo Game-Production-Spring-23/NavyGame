@@ -54,7 +54,7 @@ h3 {
 #setting {
   width: 30%;
   height: 25%;
-  margin-top: 3%;
+  margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -71,7 +71,7 @@ h3 {
   transform: translateY(80%);
 }
 
-.answer {
+/* .answer {
   width: 50%;
   height: 75px;
   font-size: 20px;
@@ -79,7 +79,7 @@ h3 {
 
 #answer {
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-}
+} */
 
 .button-8 {
   background-color: #e1ecf4;
