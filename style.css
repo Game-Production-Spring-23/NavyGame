@@ -1,6 +1,6 @@
-html {
-  height: 1080px;
-  width: 1920px;
+ html {
+  height: 1080px !important;
+  width: 1920px !important;
   overflow: hidden;
   max-width: 100%;
   max-height: 100%;
