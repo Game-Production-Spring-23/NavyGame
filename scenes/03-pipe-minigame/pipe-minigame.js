@@ -101,17 +101,19 @@ export function loadScene3() {
   }
   //OnClick, a button that is pressed to submit the answer
   function submitAnswer() {
-    //if the mini game is over hide this app
-    if (isMinigameOver) {
-      //Add mini game complete dialogue
-      startDialogue(1, "/scenes/03-pipe-minigame/dialogue.json");
-    } else if (
-      JSON.stringify(chosenIndices) === JSON.stringify([0, 1, 2, 3, 4, 5])
+    if (
+      JSON.stringify(chosenIndices) ===
+      JSON.stringify([0, 1, 2, 3, 4, 5] && !isMinigameOver)
     ) {
       //Shows that answer is correct
       document.getElementById("mg1Gauge").style.transform = "rotate(-75deg)";
-      document.getElementById("mg1Submit").src = "/assets/images/ui/xBtn.png";
       isMinigameOver = true;
+
+      //if the mini game is over hide this app
+      setTimeout(() => {
+        //Add mini game complete dialogue
+        startDialogue(1, "/scenes/03-pipe-minigame/dialogue.json");
+      }, 500);
     } else {
       //Show that answer is wrong
       document.getElementById("mg1Gauge").style.transform = "rotate(75deg)";
