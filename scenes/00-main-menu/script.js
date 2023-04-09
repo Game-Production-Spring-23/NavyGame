@@ -19,6 +19,12 @@ export function mainMenu() {
 
   splashScreen();
 
+  //shows map in a pop up box when clicked
+  function toggleMapOn(){
+    mapScreen.style.display = "block";
+    console.log("mapOn");
+  }
+
   //Future Functions -------------------------------------------------//
 
   //grabs a video from the queue and plays it in the gameContainer div
@@ -80,17 +86,8 @@ export function mainMenu() {
     //shows introduction
   }
 
-  //shows map in a pop up box when clicked
-  function toggleMapOn() {
-    //Tested, works
-    mapScreen.style.display = "block";
-  }
 
-  //hides map popup box when clicked
-  function toggleMapOff() {
-    //Tested, works
-    mapScreen.style.display = "none";
-  }
+ 
 
   function toggleSettingsOn() {
     //shows settings in a pop up box when clicked
@@ -205,6 +202,7 @@ export function mainMenu() {
   window.showOptions = showOptions;
   window.changeVolume = changeVolume;
   window.toggleMapOff = toggleMapOff;
+  window.toggleMapOn = toggleMapOn;
 
   // what to skip to
   devSkip(
@@ -213,6 +211,7 @@ export function mainMenu() {
     boatScene
   );
 
+  document.getElementById("mapOverlay").onclick = () => { toggleMapOn(); };
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
       "/scenes/01-intro-boat-scene/boat-scene.html",
