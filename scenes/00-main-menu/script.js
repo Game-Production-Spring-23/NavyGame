@@ -16,14 +16,23 @@ export function mainMenu() {
   settingsContainer.style.display = "none";
   let settingModal = document.getElementById("settingContainer");
   let mainContainer = document.getElementById("app");
+  let mapStatus = false;
 
   splashScreen();
 
   //shows map in a pop up box when clicked
-  function toggleMapOn(){
-    mapScreen.style.display = "block";
-    console.log("mapOn");
+  function toggleMap(){
+    if (mapStatus == false) {
+      mapScreen.style.display="block";
+      console.log("map on");
+      mapStatus = true;
+    } else {
+      mapScreen.style.display="none";
+      console.log("map off");
+      mapStatus = false;
+    }
   }
+
 
   //Future Functions -------------------------------------------------//
 
@@ -182,11 +191,6 @@ export function mainMenu() {
     }
   }
 
-  //hides map popup box when clicked
-  function toggleMapOff() {
-    //Tested, works
-    mapScreen.style.display = "none";
-  }
 
   //shows main settings screen--TESTED. Works.
   function showOptions() {
@@ -201,8 +205,7 @@ export function mainMenu() {
   window.settingOut = settingOut;
   window.showOptions = showOptions;
   window.changeVolume = changeVolume;
-  window.toggleMapOff = toggleMapOff;
-  window.toggleMapOn = toggleMapOn;
+  window.toggleMap = toggleMap;
 
   // what to skip to
   devSkip(
@@ -211,7 +214,7 @@ export function mainMenu() {
     boatScene
   );
 
-  document.getElementById("mapOverlay").onclick = () => { toggleMapOn(); };
+  document.getElementById("mapOverlay").onclick = () => { toggleMap(); };
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
       "/scenes/01-intro-boat-scene/boat-scene.html",
