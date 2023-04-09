@@ -11,32 +11,18 @@
         <!-- Start Screen Container --------------------------------------------------------------------------------------------------------->
         <input id="start" class="button-2" type="image" value="Start Test" onMouseOver="settingsHover(this)"
             onMouseout="settingOut(this)" src="/assets/images/ui/startBtn.png">
-        <!-- <input id="start" class="button-1" type="image" onclick="showOptions()" onMouseOver="settingsHover(this)"
-            onMouseout="settingOut(this)" value="Options" src="/assets/images/ui/settingsBtn.png"> -->
+        <input id="setting" class="button-1" type="image" onclick="showOptions()"  value="Options" src="/assets/images/ui/introBtn.png">
 
     </div>
-    <!-- Settings Screen----------------------------------------------------------------------------------------------------------------- -->
+    <!-- characterSelectScreen Screen----------------------------------------------------------------------------------------------------------------- -->
     <div id="settingsContainer">
-        <h1>Settings</h1>
-        <div class="slidecontainer">
-            <h3>Music Volume</h3>
-            <input type="range" min="0" max="1" value="0.4" step=".01" class="slider"
-                onchange="changeVolume(this.value)" />
+        <h1>Select Your Character</h1>
+        <div id = "charRow">
+             <input id="characterOne" class="charSelectBtn" type="image" value="charOne" src="/assets/images/characterSplashes/charSelect/charOne.png">
+             <input id="characterTwo" class="charSelectBtn" type="image" value="charTwo" src="/assets/images/characterSplashes/charSelect/charTwo.png">
+             <input id="characterThree" class="charSelectBtn" type="image" value="charThree" src="/assets/images/characterSplashes/charSelect/charThree.png">
+
         </div>
-        <div class="slidecontainer">
-            <h3>Setting</h3>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
-        <div class="slidecontainer">
-            <h3>Setting</h3>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
-        <div class="slidecontainer">
-            <h3>Setting</h3>
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
-        <input id="goBack" class="button-8" type="button" onclick="location.reload()" value="Main Menu">
-        <input id="saveSettings" class="button-8" type="button" onclick="saveSettings" value="Save Settings">
     </div>
     <!-- Score Container----------------------------------------------------------------------------------------------------------------- -->
     <div id="scoreContainer" class="hidden">
