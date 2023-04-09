@@ -260,15 +260,23 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width:5%;
+  margin-top:2%;
   height: 100%;
-  z-index: 100;
+ 
 }
 
 .uiIcon {
   height: 75px;
   width: 75px;
   margin-bottom: 20px;
+}
+
+/* slide icon to the left and add text next to it on hover */
+.uiIcon:hover {
+  margin-left: -20px;
+  margin-right: 20px;
+  transition: 0.5s;
 }
 
 /* Position UI icons right side of the screen*/
