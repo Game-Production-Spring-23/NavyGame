@@ -15,6 +15,7 @@ export function mainMenu() {
   mapScreen.style.display = "none";
   settingsContainer.style.display = "none";
   let settingModal = document.getElementById("settingContainer");
+  let mainContainer = document.getElementById("app");
 
   splashScreen();
 
@@ -65,6 +66,7 @@ export function mainMenu() {
     gameContainer.style.display = "none";
     settingsContainer.style.display = "block";
     score.style.visibility = "hidden";
+    
   }
 
   //Tested, Works.
@@ -177,7 +179,7 @@ export function mainMenu() {
 
   function settingOut(img) {
     if (img.src.match("/assets/images/ui/introBtnHover.png")) {
-      img.src = "/assets/images/ui/introBtn.png";
+      img.src = "/assets/images/ui/introsBtn.png";
     } else {
       img.src = "/assets/images/ui/startBtn.png";
     }
