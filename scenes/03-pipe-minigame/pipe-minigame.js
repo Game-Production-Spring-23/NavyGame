@@ -101,10 +101,7 @@ export function loadScene3() {
   }
   //OnClick, a button that is pressed to submit the answer
   function submitAnswer() {
-    if (
-      JSON.stringify(chosenIndices) ===
-      JSON.stringify([0, 1, 2, 3, 4, 5] && !isMinigameOver)
-    ) {
+    if (JSON.stringify(chosenIndices) === JSON.stringify([0, 1, 2, 3, 4, 5])) {
       //Shows that answer is correct
       document.getElementById("mg1Gauge").style.transform = "rotate(-75deg)";
       isMinigameOver = true;

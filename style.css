@@ -1,4 +1,4 @@
- html {
+html {
   height: 1080px !important;
   width: 1920px !important;
   overflow: hidden;
@@ -152,7 +152,7 @@ h3 {
   display: none;
 }
 .fadeInAndOut {
-  animation: fade 3s;
+  animation: fade 5s;
 }
 @keyframes fade {
   0% {

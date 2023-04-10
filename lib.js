@@ -16,25 +16,25 @@ export function loadNewHTMLFile(filePath, styleSheetPath, next) {
 
   //Loads new html file in between fade in and out
   //document.globalTimeouts.push(
-    setTimeout(() => {
-      // load the new html file
-      fetch(filePath)
-        .then((response) => response.text())
-        .then(
-          (text) =>
-            (document.getElementById("htmlMainContainer").innerHTML = text)
-        )
-        .then(() => {
-          loadStyleSheet(styleSheetPath);
-          next();
+  setTimeout(() => {
+    // load the new html file
+    fetch(filePath)
+      .then((response) => response.text())
+      .then(
+        (text) =>
+          (document.getElementById("htmlMainContainer").innerHTML = text)
+      )
+      .then(() => {
+        loadStyleSheet(styleSheetPath);
+        next();
 
-          //Fade Out
-          setTimeout(() => {
-            transition.classList.remove("fadeInAndOut");
-            transition.style.display = "none";
-          }, 2000); // end setTimeout
-        });
-    }, 1000) // end setTimeout
+        //Fade Out
+        setTimeout(() => {
+          transition.classList.remove("fadeInAndOut");
+          transition.style.display = "none";
+        }, 2000); // end setTimeout
+      });
+  }, 1000); // end setTimeout
   //);
 } // end loadNewHTMLFile
 
@@ -119,13 +119,13 @@ export function devSkip(filePath, styleSheetPath, next) {
 } // end devSkip
 
 function skipper(event) {
-  // remove all setTimeouts that have been set
-  for (let i = 0; i < document.globalTimeouts.length; i++) {
-    clearTimeout(document.globalTimeouts[i]);
-  } // end for
- 
   // check if the ~ key was pressed
   if (event.key == "~") {
+    // remove all setTimeouts that have been set
+    for (let i = 0; i < document.globalTimeouts.length; i++) {
+      clearTimeout(document.globalTimeouts[i]);
+    } // end for
+
     loadNewHTMLFile(
       document.devSkipObj.filePath,
       document.devSkipObj.styleSheetPath,

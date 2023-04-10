@@ -66,7 +66,6 @@ export function mainMenu() {
     gameContainer.style.display = "none";
     settingsContainer.style.display = "block";
     score.style.visibility = "hidden";
-    
   }
 
   //Tested, Works.
@@ -131,7 +130,7 @@ export function mainMenu() {
       setTimeout(() => {
         splash.classList.remove("fadeOut");
         splash.style.display = "none";
-      }, 610);
+      }, 1000);
     });
   }
 

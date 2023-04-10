@@ -246,12 +246,22 @@ h3 {
   color: white;
   text-align: center;
   line-height: 90vh;
-  transition: all ease-in-out 600ms;
 }
 
 .hidden {
   transition: 0.5s;
   display: none;
+}
+.fadeOut {
+  animation: fadeOut 1s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* UI Overlay CSS */
@@ -294,23 +304,21 @@ h3 {
 
 /* character Selection Screen */
 .charSelectBtn {
-  position:relative;
+  position: relative;
   display: flex;
-  padding:10px;
+  padding: 10px;
   width: 15%;
   height: 15%;
   z-index: 100;
-  
 }
 
-.charSelectBtn::hover{
+.charSelectBtn::hover {
   border: turquoise;
   border-style: solid;
   border-width: 2px;
-
 }
 
-#charRow{
+#charRow {
   display: flex;
   flex-direction: row;
   justify-content: center;

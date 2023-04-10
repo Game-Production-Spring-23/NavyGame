@@ -59,6 +59,7 @@ export function startDialogue(index, data) {
     fetch(dataPath)
       .then((response) => response.json())
       .then((data) => {
+        performance.now();
         //Displays dialogue from JSON
         if (dialogueIndex < data[characterIndex].dialogue.length) {
           //Sets portraits to dialogue portraits and clears dialogue box  //
@@ -88,6 +89,7 @@ export function startDialogue(index, data) {
         } else {
           //Ends dialogue
           dialogueImage.src = "/assets/images/NG_empty.png";
+          dialogueText.innerHTML = "";
           document.getElementById("dialogueScreen").style.display = "none";
           isDialogueOccurring = false;
         }
@@ -167,6 +169,27 @@ export function startDialogue(index, data) {
     if (dialogueIndex > 0) {
       dialogueIndex--;
       displayDialogue();
+    }
+  }
+
+  document.addEventListener("keydown", skipDialogueAll);
+
+  function skipDialogueAll(event) {
+    if (event.key == "!") {
+      //Fetches a dialogue from JSON
+      clearTimeout(scrollTimer);
+      scrollTimer = null;
+      scrollIndex = 0;
+      dialogueText.innerHTML = "";
+
+      fetch(dataPath)
+        .then((response) => response.json())
+        .then((data) => {
+          if (dialogueIndex < data[characterIndex].dialogue.length - 1) {
+            //Clears scrollTimer, set it null, and sets scrollIndex to 0
+            dialogueIndex = data[characterIndex].dialogue.length - 1;
+          }
+        });
     }
   }
 }
