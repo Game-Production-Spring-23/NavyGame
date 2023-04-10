@@ -270,15 +270,23 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width:5%;
+  margin-top:2%;
   height: 100%;
-  z-index: 100;
+ 
 }
 
 .uiIcon {
   height: 75px;
   width: 75px;
   margin-bottom: 20px;
+}
+
+/* slide icon to the left and add text next to it on hover */
+.uiIcon:hover {
+  margin-left: -20px;
+  margin-right: 20px;
+  transition: 0.5s;
 }
 
 /* Position UI icons right side of the screen*/
@@ -328,4 +336,28 @@ h3 {
   margin-right: 10%;
   margin-bottom: 10%;
 }
-/* position map overlay icon below setting overlay */
+
+
+#mapContainer{
+  /* display in center of screen*/
+  position: absolute;
+  height:80%;
+  width:80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+#mapModal{
+  background-image: url("/assets/images/ui/miniMap.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+}
