@@ -4,7 +4,13 @@ body {
   overflow: hidden;
 }
 
-div {
+#background {
+  height: 1080px;
+  z-index: 0;
+  background-color: skyblue;
+  background-position: center;
+  background-repeat: no-repeat;
+
   margin: 0;
   padding: 0;
   position: absolute;
@@ -12,18 +18,16 @@ div {
   left: 0;
 }
 
-#background {
-  height: 1080px;
-  z-index: 0;
-  background-color: skyblue;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 #midground {
   height: 440px;
   z-index: 1;
   background-color: #469bf0;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 #charground {
@@ -35,34 +39,60 @@ div {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 200% 400%;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
 }
 
 #chars-upper {
   z-index: 2;
   height: 128px;
   bottom: 160px;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
 }
 
 #chars-lower {
   z-index: 4;
   height: 128px;
   bottom: 48px;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
 }
 
 #foreground {
   height: 112px;
   z-index: 5;
   background-color: #1a1218;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 #stationary {
   z-index: 10;
   width: 1920px;
   height: 128px;
-  bottom: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .character {
@@ -74,6 +104,9 @@ div {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  bottom: 0;
+  left: 0;
 }
 
 #player {
@@ -97,6 +130,10 @@ div {
   height: 64px;
   bottom: 132px;
   left: 40px;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 
 #dialogueReady {
@@ -107,4 +144,9 @@ div {
   width: 128px;
   height: 128px;
   bottom: 128px;
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
 }
