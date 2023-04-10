@@ -33,19 +33,19 @@
       "key": false
     },
     "officers": {
-      "name": "Officers",
+      "name": "Gunner",
       "sprite": ["../../assets/images/characters/crew/crew1B.png"],
       "offset": 1600,
       "key": false
     },
     "nontech": {
-      "name": "Nontechnical Crew",
+      "name": "Pirate 1",
       "sprite": ["../../assets/images/characters/crew/crew3Front.png"],
       "offset": 72,
       "key": false
     },
     "tech": {
-      "name": "Technical Crew",
+      "name": "Pirate 2",
       "sprite": ["../../assets/images/characters/crew/crew4Front.png"],
       "offset": 1780,
       "key": false
@@ -73,5 +73,6 @@
     "numMarks": 1,
     "offsetsX": [896],
     "offsetsY": [480]
-  }
+  },
+  "key": "Parrot"
 }

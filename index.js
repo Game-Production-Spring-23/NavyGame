@@ -2,7 +2,6 @@
 
 import { loadNewHTMLFileIndex } from "./lib.js";
 import * as mainMenuScene from "./scenes/00-main-menu/script.js";
-//import { loadScene6 } from "../06-priority-minigame/priority-minigame.js";
 
 const transition = document.getElementById("transition");
 

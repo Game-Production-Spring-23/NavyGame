@@ -145,5 +145,3 @@ export function loadScene9() {
       });
   }
 }
-
-export { loadScene9 };

@@ -23,7 +23,7 @@ export function loadScene2() {
   const officers = document.getElementById("officers");
   const tech = document.getElementById("tech");
   const nt = document.getElementById("nontech");
-  const characters = document.getElementsByClassName("character");
+  //const characters = document.getElementsByClassName("character");
   const subtitles = document.getElementById("subtitles");
   const keyMark = document.getElementById("keyMark");
   const dialogueReady = document.getElementById("dialogueReady");
@@ -43,13 +43,13 @@ export function loadScene2() {
 
   let locked = true;
   let hasPlayerReachedMinigame = false;
-  let currentKey = 0;
 
   let speed;
   let fgSpeed;
   let mgSpeed;
   let bgSpeed;
 
+  let key;
   let interaction = "";
 
   // Get JSON Data
@@ -138,6 +138,8 @@ export function loadScene2() {
     mgSpeed = global_data.params.mg_speed;
     bgSpeed = global_data.params.bg_speed;
 
+    key = global_data.key;
+
     document.addEventListener("keyup", (event) => {
       if (
         event.key === "ArrowRight" ||
@@ -174,105 +176,60 @@ export function loadScene2() {
         playerAbs < global_data.characters.captain.offset + 96
       ) {
         // captain
-        if (global_data.characters.captain.key) {
-          interaction = "key";
-        } else {
-          interaction = global_data.characters.captain.name;
-        }
-
-        //interaction = "other";
+        interaction = global_data.characters.captain.name;
       } else if (
         playerAbs > global_data.characters.parrot.offset - 24 &&
         playerAbs < global_data.characters.parrot.offset + 96
       ) {
         // parrot
-        if (global_data.characters.parrot.key) {
-          interaction = "key";
-        } else {
-          interaction = global_data.characters.parrot.name;
-        }
-
-        //interaction = "other";
+        interaction = global_data.characters.parrot.name;
       } else if (
         playerAbs > global_data.characters.quartermaster.offset - 24 &&
         playerAbs < global_data.characters.quartermaster.offset + 96
       ) {
         // quartermaster
-        if (global_data.characters.quartermaster.key) {
-          interaction = "key";
-        } else {
-          interaction = global_data.characters.quartermaster.name;
-        }
-
-        //interaction = "other";
+        interaction = global_data.characters.quartermaster.name;
       } else if (
         playerAbs > global_data.characters.chef.offset - 24 &&
         playerAbs < global_data.characters.chef.offset + 96
       ) {
         // chef
-        if (global_data.characters.chef.key) {
-          interaction = "key";
-        } else {
-          interaction = global_data.characters.chef.name;
-        }
-
-        //interaction = "other";
+        interaction = global_data.characters.chef.name;
       } else if (
         playerAbs > global_data.characters.officers.offset - 24 &&
         playerAbs < global_data.characters.officers.offset + 96
       ) {
         // officers
-        if (global_data.characters.officers.key) {
-          interaction = "key";
-        } else {
-          interaction = global_data.characters.officers.name;
-        }
-
-        //interaction = "other";
+        interaction = global_data.characters.officers.name;
       } else if (
         playerAbs > global_data.characters.nontech.offset - 24 &&
         playerAbs < global_data.characters.nontech.offset + 96
       ) {
         // nontech
-        if (global_data.characters.nontech.key) {
-          interaction = "key";
-        } else {
-          interaction = global_data.characters.nontech.name;
-        }
-
-        //interaction = "other";
+        interaction = global_data.characters.nontech.name;
       } else if (
         playerAbs > global_data.characters.tech.offset - 24 &&
         playerAbs < global_data.characters.tech.offset + 96
       ) {
         // tech
-        if (global_data.characters.tech.key) {
-          interaction = "key";
-        } else {
-          interaction = global_data.characters.tech.name;
-        }
-
-        //interaction = "other";
+        interaction = global_data.characters.tech.name;
       } else if (
         playerAbs > global_data.characters.veteran.offset - 24 &&
         playerAbs < global_data.characters.veteran.offset + 96
       ) {
         // vet
-        if (global_data.characters.veteran.key) {
-          interaction = "key";
-        } else {
-          interaction = global_data.characters.veteran.name;
-        }
-
-        //interaction = "key";
+        interaction = global_data.characters.veteran.name;
       } else {
         interaction = "";
       }
 
       if (interaction != "") {
         dialogueReady.style.visibility = "visible";
+        let text = "Press [E] to Talk to " + interaction;
+        setSubtitle(text);
       } else {
         dialogueReady.style.visibility = "hidden";
+        resetSubtitles();
       }
 
       if (!locked && playerAbs > playerAbsLimit - 200) {
@@ -292,6 +249,7 @@ export function loadScene2() {
       }
     });
 
+    /*
     // This Does Not Seem To Work
     for (var i = 0; i < characters.length; i++) {
       characters[i].addEventListener("onmouseover", (event) => {
@@ -302,6 +260,7 @@ export function loadScene2() {
 
       characters[i].addEventListener("onmouseout", resetSubtitles());
     }
+    */
   }
 
   function setSubtitle(text) {
@@ -393,7 +352,7 @@ export function loadScene2() {
   function interact(global_data) {
     console.log(interaction);
 
-    if (interaction == "key" && locked) {
+    if (interaction == key && locked) {
       startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
       keyMark.style.visibility = "hidden";
       locked = false;
