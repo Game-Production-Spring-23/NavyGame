@@ -1,7 +1,16 @@
 import { startDialogue } from "/scenes/dialogue.js";
+import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import { splashScreen } from "/scenes/04-splash-screen/splash-screen.js";
 
 // Start
 export function loadScene3() {
+  // Allow developer to skip to next file
+  devSkip(
+    "/scenes/04-splash-screen/splash-screen.html",
+    "/scenes/04-splash-screen/style.css",
+    splashScreen
+  );
+
   //Get references from document
   const valves = [
     document.getElementById("mg1Valve1"),
@@ -110,6 +119,11 @@ export function loadScene3() {
       setTimeout(() => {
         //Add mini game complete dialogue
         startDialogue(1, "/scenes/03-pipe-minigame/dialogue.json");
+        loadNewHTMLFile(
+          "/scenes/04-splash-screen/splash-screen.html",
+          "/scenes/04-splash-screen/style.css",
+          splashScreen
+        );
       }, 500);
     } else {
       //Show that answer is wrong

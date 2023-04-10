@@ -1,6 +1,15 @@
 import { startDialogue } from "/scenes/dialogue.js";
+import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import { splashScreen } from "/scenes/07-splash-screen/splash-screen.js";
 
 export function loadScene6() {
+  // allow developer to skip to next level
+  devSkip(
+    "/scenes/07-splash-screen/splash-screen.html",
+    "/scenes/07-splash-screen/style.css",
+    splashScreen
+  );
+
   // Start
   //Get references from document
   const items = document.querySelectorAll("#mg2ItemBox .mg2Item");
@@ -120,6 +129,11 @@ export function loadScene6() {
         }
         quillTimer = setTimeout(() => {
           startDialogue(2, "/scenes/06-priority-minigame/dialogue.json");
+          loadNewHTMLFile(
+            "/scenes/07-splash-screen/splash-screen.html",
+            "/scenes/07-splash-screen/style.css",
+            splashScreen
+          );
         }, 500);
       }, 2000);
     } else {
