@@ -168,3 +168,136 @@ h3 {
     opacity: 0;
   }
 }
+
+#uiOVerlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:5%;
+  margin-top:2%;
+  height: 100%;
+  z-index:999;
+ 
+}
+
+.uiIcon {
+  height: 75px;
+  width: 75px;
+  margin-bottom: 20px;
+}
+
+/* slide icon to the left and add text next to it on hover */
+.uiIcon:hover {
+  margin-left: -20px;
+  margin-right: 20px;
+  transition: 0.5s;
+}
+
+/* Position UI icons right side of the screen*/
+#exitOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+#uiRightSide {
+  right: 0;
+  top: 0;
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Pop up Styling */
+.modal {
+  position: fixed;
+  width: 25%;
+  height: 70%;
+  top: 10%;
+  background-color: #e1ecf4;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+#crewRecs {
+  padding-left: 5%;
+}
+
+#mapContainer,
+#settingModal {
+  position: fixed;
+  width: 50%;
+  height: 70%;
+  top: 10%;
+  background-color: #e1ecf4;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+#map {
+  width: 500px;
+  height: 100%;
+  margin-left: 40%;
+  margin-right: auto;
+}
+
+#settingModal {
+  overflow: scroll;
+}
+
+#mapContainer{
+  /* display in center of screen*/
+  position: absolute;
+  height:80%;
+  width:80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+#mapModal{
+  background-image: url("/assets/images/ui/miniMap.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+}
+
+#journalContainer{
+  position: absolute;
+  height:80%;
+  width:80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: #e1ecf4;
+  border-radius: 10px;
+}
+
+#journalModal{
+  background-image: url("/assets/images/ui/bookscreen.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+}

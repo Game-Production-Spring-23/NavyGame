@@ -26,6 +26,60 @@
         <source src="/assets/audio/bgMusic/cursedSea.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio> 
+    
+<div id="settingsContainer">
+    <h1>Select Your Character</h1>
+    <div id="charRow">
+        <input id="characterOne" class="charSelectBtn" type="image" value="charOne"
+            src="/assets/images/characterSplashes/charSelect/charOne.png">
+        <input id="characterTwo" class="charSelectBtn" type="image" value="charTwo"
+            src="/assets/images/characterSplashes/charSelect/charTwo.png">
+        <input id="characterThree" class="charSelectBtn" type="image" value="charThree"
+            src="/assets/images/characterSplashes/charSelect/charThree.png">
+  
+    </div>
+  </div>
+  
+  
+  <!-- UI Containers ----------------------------------------------------------------------------------------------------------------->
+  <div id="journalContainer">
+    <div id="journalModal" class="modal">
+        <input id="modalButton" class="button-8" type="button" onclick="toggleJournalOff()" value="Close">
+  
+        <div id="crewRecs" class="modalCard">
+            <h1 id="modalTitle">Journal</h1>
+            <h2>Crew Recommendations</h2>
+        </div>
+  
+  
+    </div>
+  
+  </div>
+  
+  <div id="mapContainer">
+    <div id="mapModal" class="modal">
+  
+  
+        <div id="crewRecs" class="modalCard">
+        </div>
+  
+    </div>
+  
+  </div>
+  <div id="uiOVerlay" class="overlay">
+    <div id="overlayContent">
+        <div id="uiRightSide">
+            <input id="volumeIcon" class="uiIcon" type="image" onclick="toggleVolume()" value="Options"
+                src="/assets/images/ui/soundBtn.png">
+            <input id="journalOverlay" class="uiIcon" type="image" onclick="toggleJournalOn()" value="Journal"
+                src="/assets/images/ui/pixelJournalIcon.png">
+            <input id="mapOverlay" class="uiIcon" type="image" onclick="toggleMap()" value="Map"
+                src="/assets/images/ui/pixelMapIcon.png">
+  
+        </div>
+    </div>
+  
+  </div>
 </body>
 <script type="module" src="./index.js"></script>
 
