@@ -17,6 +17,8 @@ export function mainMenu() {
   let settingModal = document.getElementById("settingContainer");
   let mainContainer = document.getElementById("app");
   let mapStatus = false;
+  let uiOverlay = document.getElementById("uiOverlay");
+
 
   splashScreen();
 
