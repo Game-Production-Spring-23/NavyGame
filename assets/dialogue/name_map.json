@@ -1,0 +1,11 @@
+{
+    "playerPortrait": "path/to/player/portrait.png",
+    "otherNames": [
+        [
+            "Name 3", "path/to/other/name/portrait.png"
+        ],
+        [
+            "Name 2", "path/to/name2/portrait.png"
+        ]
+    ]
+}

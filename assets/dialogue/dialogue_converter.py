@@ -30,7 +30,7 @@ def main():
                 "playerPortrait3": "",
                 "otherPortrait": "",
                 "isPlayerTalking": True,
-                "text": "*whistling*"
+                "text": ""
             }
 
     # conversation framework
@@ -60,8 +60,9 @@ def main():
 
             # check if we have collected the names for the conversation
             if other_name == " ":
-                other_name = line
-                new_conversation["otherName"] = line
+                other_name = (line.lower()).capitalize()
+                print(other_name)
+                new_conversation["otherName"] = other_name
                 continue
         
             # if not any of the above situations, the line is a character & dialogue
@@ -76,7 +77,8 @@ def main():
                         name += char
                     else:
                         text += char
-                
+            name = (name.lower()).capitalize()
+            print(name)
             # add name & text into dialogue
             new_dialogue["text"] = text
             if name == other_name:
