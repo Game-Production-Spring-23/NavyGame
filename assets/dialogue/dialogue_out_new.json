@@ -1,0 +1,59 @@
+[
+    {
+        "otherName": "Name 2",
+        "otherOffset": 0,
+        "dialogue": [
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Hello There!",
+                "playerPortrait": "path/to/player/portrait.png",
+                "isPlayerTalking": true,
+                "otherPortrait": "path/to/name2/portrait.png"
+            },
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Hi!",
+                "playerPortrait": "path/to/player/portrait.png",
+                "isPlayerTalking": false,
+                "otherPortrait": "path/to/name2/portrait.png"
+            }
+        ]
+    },
+    {
+        "otherName": "Name 3",
+        "otherOffset": 0,
+        "dialogue": [
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Its time to get busy.",
+                "playerPortrait": "path/to/player/portrait.png",
+                "isPlayerTalking": false,
+                "otherPortrait": "path/to/other/name/portrait.png"
+            },
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Lets start by doing some work.",
+                "playerPortrait": "path/to/player/portrait.png",
+                "isPlayerTalking": false,
+                "otherPortrait": "path/to/other/name/portrait.png"
+            },
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Gotcha!",
+                "playerPortrait": "path/to/player/portrait.png",
+                "isPlayerTalking": true,
+                "otherPortrait": "path/to/other/name/portrait.png"
+            }
+        ]
+    }
+]

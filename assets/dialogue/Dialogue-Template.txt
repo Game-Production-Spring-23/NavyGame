@@ -1,6 +1,6 @@
-Name 2
+name 2
 Player Name:Hello There!
-Name 2:Hi!
+NAME 2:Hi!
 !
 Name 3
 Name 3:Its time to get busy.
