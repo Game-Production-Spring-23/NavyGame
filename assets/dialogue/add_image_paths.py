@@ -4,6 +4,7 @@ names to an image path. It loops through every conversation,
 adding the image that is to be used by the characters.
 
 cmd test: python add_image_paths.py --name_map_file=name_map.json
+cmd: python add_image_paths.py --input_file=./conversion-test/dialogue_out.json --output_file=./conversion-test/dialogue_out_new.json --name_map_file=./conversion-test/name_map.json
 """
 
 import json

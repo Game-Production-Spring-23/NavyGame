@@ -1,6 +1,8 @@
 """
 This file is used to convert text files in dialogue format
 into dialogue json files.
+
+cmd: python dialogue_converter.py --input_file=./conversion-test/dialog-level-1-mini-game-1.txt --output_file=./conversion-test/dialogue_out.json
 """
 
 import json
@@ -61,7 +63,6 @@ def main():
             # check if we have collected the names for the conversation
             if other_name == " ":
                 other_name = (line.lower()).capitalize()
-                print(other_name)
                 new_conversation["otherName"] = other_name
                 continue
         
@@ -78,7 +79,6 @@ def main():
                     else:
                         text += char
             name = (name.lower()).capitalize()
-            print(name)
             # add name & text into dialogue
             new_dialogue["text"] = text
             if name == other_name:

@@ -1,0 +1,170 @@
+[
+    {
+        "otherName": "Gobs",
+        "otherOffset": 0,
+        "dialogue": [
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": true,
+                "text": "*whistling* "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "Ahoy, matey. Lend an\u00e2\u20ac\u2122 old seafarer a hand would ye? "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": true,
+                "text": "Aye aye. What can I help ye with? "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "To be honest with ya lad, me memory\u00e2\u20ac\u2122s not what she used ta be "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "The boiler downstairs be having a scary steam build up and we be needing ta release the steam by releasing the valves "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "In the correct order. "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": true,
+                "text": "Sounds simple enough. What d\u00e2\u20ac\u2122ya need me for? "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "Like I said, me memory\u00e2\u20ac\u2122s not all she used ta be."
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "I\u00e2\u20ac\u2122m just not quite sure I remember which valve needs ta be released and when and there be not enough time to review tha manual. "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": true,
+                "text": "I haven\u00e2\u20ac\u2122t been taught to operate the boiler. How can I help? "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "So long as ye remember yer SE flow, you\u00e2\u20ac\u2122ll do fine. Trust me. "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "C\u00e2\u20ac\u2122mon, there be little time! "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "Hover yer mouse over the valves to see which step in SE it is. "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "From the first step to the last, loosen the valves in the correct order of the SE flow. "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "When ye think ye have it right, press the [item/button] and expel the steam. "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "If ye can\u00e2\u20ac\u2122t do it, then all hope be lost "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": true,
+                "text": "No pressure. "
+            },
+            {
+                "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+                "playerPortrait1": "",
+                "playerPortrait2": "",
+                "playerPortrait3": "",
+                "otherPortrait": "/assets/images/characterSplashes/gob.png",
+                "isPlayerTalking": false,
+                "text": "Ye\u00e2\u20ac\u2122ll be fine. Sailors honor "
+            }
+        ]
+    }
+]
