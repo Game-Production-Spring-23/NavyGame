@@ -1,0 +1,20 @@
+Gobs
+Chief Engineer:*whistling* 
+Gobs:Ahoy, matey. Lend an’ old seafarer a hand would ye? 
+Chief Engineer:Aye aye. What can I help ye with? 
+Gobs:To be honest with ya lad, me memory’s not what she used ta be 
+Gobs:The boiler downstairs be having a scary steam build up and we be needing ta release the steam by releasing the valves 
+Gobs:In the correct order. 
+Chief Engineer:Sounds simple enough. What d’ya need me for? 
+Gobs:Like I said, me memory’s not all she used ta be.
+Gobs:I’m just not quite sure I remember which valve needs ta be released and when and there be not enough time to review tha manual. 
+Chief Engineer:I haven’t been taught to operate the boiler. How can I help? 
+Gobs:So long as ye remember yer SE flow, you’ll do fine. Trust me. 
+Gobs:C’mon, there be little time! 
+Gobs:Hover yer mouse over the valves to see which step in SE it is. 
+Gobs:From the first step to the last, loosen the valves in the correct order of the SE flow. 
+Gobs:When ye think ye have it right, press the [item/button] and expel the steam. 
+Gobs:If ye can’t do it, then all hope be lost 
+Chief Engineer:No pressure. 
+Gobs:Ye’ll be fine. Sailors honor 
+!
