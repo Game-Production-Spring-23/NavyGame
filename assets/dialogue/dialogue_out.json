@@ -1,0 +1,59 @@
+[
+    {
+        "otherName": "Name 2",
+        "otherOffset": 0,
+        "dialogue": [
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Hello There!",
+                "playerPortrait": "",
+                "isPlayerTalking": true,
+                "otherPortrait": ""
+            },
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Hi!",
+                "playerPortrait": "",
+                "isPlayerTalking": false,
+                "otherPortrait": ""
+            }
+        ]
+    },
+    {
+        "otherName": "Name 3",
+        "otherOffset": 0,
+        "dialogue": [
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Its time to get busy.",
+                "playerPortrait": "",
+                "isPlayerTalking": false,
+                "otherPortrait": ""
+            },
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Lets start by doing some work.",
+                "playerPortrait": "",
+                "isPlayerTalking": false,
+                "otherPortrait": ""
+            },
+            {
+                "playerPortrait1": "",
+                "playerPortrait3": "",
+                "playerPortrait2": "",
+                "text": "Gotcha!",
+                "playerPortrait": "",
+                "isPlayerTalking": true,
+                "otherPortrait": ""
+            }
+        ]
+    }
+]
