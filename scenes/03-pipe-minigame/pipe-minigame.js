@@ -1,4 +1,4 @@
-import { startDialogue } from "/scenes/dialogue.js";
+import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
 import { splashScreen } from "/scenes/04-splash-screen/splash-screen.js";
 
@@ -118,12 +118,13 @@ export function loadScene3() {
       //if the mini game is over hide this app
       setTimeout(() => {
         //Add mini game complete dialogue
-        startDialogue(1, "/scenes/03-pipe-minigame/dialogue.json");
-        loadNewHTMLFile(
-          "/scenes/04-splash-screen/splash-screen.html",
-          "/scenes/04-splash-screen/style.css",
-          splashScreen
-        );
+        startDialogueNext(1, "/scenes/03-pipe-minigame/dialogue.json", () => {
+          loadNewHTMLFile(
+            "/scenes/04-splash-screen/splash-screen.html",
+            "/scenes/04-splash-screen/style.css",
+            splashScreen
+          );
+        });
       }, 500);
     } else {
       //Show that answer is wrong
