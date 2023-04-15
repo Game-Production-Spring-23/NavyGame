@@ -19,22 +19,20 @@ export function mainMenu() {
   let mapStatus = false;
   let uiOverlay = document.getElementById("uiOverlay");
 
-
   splashScreen();
 
   //shows map in a pop up box when clicked
-  function toggleMap(){
+  function toggleMap() {
     if (mapStatus == false) {
-      mapScreen.style.display="block";
+      mapScreen.style.display = "block";
       console.log("map on");
       mapStatus = true;
     } else {
-      mapScreen.style.display="none";
+      mapScreen.style.display = "none";
       console.log("map off");
       mapStatus = false;
     }
   }
-
 
   //Future Functions -------------------------------------------------//
 
@@ -95,9 +93,6 @@ export function mainMenu() {
   function introduction() {
     //shows introduction
   }
-
-
- 
 
   function toggleSettingsOn() {
     //shows settings in a pop up box when clicked
@@ -192,7 +187,6 @@ export function mainMenu() {
     }
   }
 
-
   //shows main settings screen--TESTED. Works.
   function showOptions() {
     //shows options, hides bottom links and replaces elements with settingsContainer
@@ -215,7 +209,9 @@ export function mainMenu() {
     boatScene
   );
 
-  document.getElementById("mapOverlay").onclick = () => { toggleMap(); };
+  document.getElementById("mapOverlay").onclick = () => {
+    toggleMap();
+  };
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
       "/scenes/01-intro-boat-scene/boat-scene.html",

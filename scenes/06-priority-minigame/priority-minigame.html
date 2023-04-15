@@ -1,20 +1,106 @@
 <!-- Priority Mini game -->
-<div id="miniGame2" class="">
-    <div id="mg2ItemBox">
-        <div draggable="true" class="mg2Item">
-            <img class="mg2ItemImg" src="/assets/images/minigame2/NG_PriorityGame_Choice_ForeMast.png" data-index='0'>
+<div id="miniGame2">
+    <div id="mg2Part1">
+        <div id="mg2Nav">
+            <input type="image" class="mg2TabBtn" id="mg2TabRudderBtn"
+                src="/assets/images/minigame2/NG_PriorityGame_Choice_Rudder.png" />
+            <input type="image" class="mg2TabBtn" id="mg2TabMainMastBtn"
+                src="/assets/images/minigame2/NG_PriorityGame_Choice_MainMast.png" />
+            <input type="image" class="mg2TabBtn" id="mg2ForeMastTabBtn"
+                src="/assets/images/minigame2/NG_PriorityGame_Choice_ForeMast.png" />
         </div>
-        <div draggable="true" class="mg2Item">
-            <img class="mg2ItemImg" src="/assets/images/minigame2/NG_PriorityGame_Choice_MainMast.png" data-index='1'>
+        <div class="mg2Tab">
+            <div class="mg2answer">
+                <img class="mg2answerImg" src="/assets/images/minigame2/NG_P1_ForeMastComplete_0.png">
+            </div>
+            <div class="mg2blocks">
+                <div class="mg2row">
+                    <div draggable="true" class="mg2block" data-size='1'>
+                        <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_1.png" />
+                    </div>
+                    <div draggable="true" class="mg2block" data-size='3'>
+                        <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_3.png" />
+                    </div>
+                </div>
+                <div class="mg2row">
+                    <div draggable="true" class="mg2block" data-size='4'>
+                        <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_4.png" />
+                    </div>
+                    <div draggable="true" class="mg2block" data-size='2'>
+                        <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_2.png" />
+                    </div>
+                </div>
+            </div>
+            <p class="mg2Text">
+                <b>Lesson Learned:</b><br>You should work on the foremast first
+            </p>
         </div>
-        <div draggable="true" class="mg2Item">
-            <img class="mg2ItemImg" src="/assets/images/minigame2/NG_PriorityGame_Choice_Rudder.png" data-index='2'>
+        <div class="mg2Tab">
+            <div class="mg2answer">
+                <img class="mg2answerImg" src="/assets/images/minigame2/NG_P1_RudderComplete_0.png">
+            </div>
+            <div class="mg2blocks">
+                <div class="mg2row">
+                    <div draggable="true" class="mg2block" data-size='2'>
+                        <img src="/assets/images/minigame2/NG_P1_RudderPiece_2.png" />
+                    </div>
+                    <div draggable="true" class="mg2block" data-size='1'>
+                        <img src="/assets/images/minigame2/NG_P1_RudderPiece_1.png" />
+                    </div>
+                    <div draggable="true" class="mg2block" data-size='3'>
+                        <img src="/assets/images/minigame2/NG_P1_RudderPiece_3.png" />
+                    </div>
+                </div>
+            </div>
+            <p class="mg2Text">
+                <b>Lesson Learned:</b><br>You should work on the rudder second
+            </p>
+        </div>
+        <div class="mg2Tab">
+            <div class="mg2answer">
+                <img class="mg2answerImg" src="/assets/images/minigame2/NG_P1_MainMastComplete_0.png">
+            </div>
+            <div class="mg2blocks">
+                <div class="mg2row">
+                    <div draggable="true" class="mg2block" data-size='4'>
+                        <img src="/assets/images/minigame2/NG_P1_MainMastPiece_4.png" />
+                    </div>
+                    <div draggable="true" class="mg2block" data-size='2'>
+                        <img src="/assets/images/minigame2/NG_P1_MainMastPiece_2.png" />
+                    </div>
+                    <div draggable="true" class="mg2block" data-size='1'>
+                        <img src="/assets/images/minigame2/NG_P1_MainMastPiece_1.png" />
+                    </div>
+                    <div draggable="true" class="mg2block" data-size='3'>
+                        <img src="/assets/images/minigame2/NG_P1_MainMastPiece_3.png" />
+                    </div>
+                </div>
+            </div>
+            <p class="mg2Text">
+                <b>Lesson Learned:</b><br>You should work on the mainmast last
+            </p>
         </div>
     </div>
-    <img id="mg2Quill" src="/assets/images/minigame2/NG_PriorityGame_Quill.png">
-    <img class="mg2Inkwell" id="mg2InkwellBG" src="/assets/images/minigame2/NG_PriorityGame_Inkwell.png">
-    <input type="image" class="mg2Inkwell" id="mg2Submit"
-        src="/assets/images/minigame2/NG_PriorityGame_Inkwell_Top.png" />
+
+    <div id="mg2Part2">
+        <div id="mg2ItemBox">
+            <div draggable="true" class="mg2Item">
+                <img class="mg2ItemImg" src="/assets/images/minigame2/NG_PriorityGame_Choice_ForeMast.png"
+                    data-index='0'>
+            </div>
+            <div draggable="true" class="mg2Item">
+                <img class="mg2ItemImg" src="/assets/images/minigame2/NG_PriorityGame_Choice_MainMast.png"
+                    data-index='1'>
+            </div>
+            <div draggable="true" class="mg2Item">
+                <img class="mg2ItemImg" src="/assets/images/minigame2/NG_PriorityGame_Choice_Rudder.png" data-index='2'>
+            </div>
+        </div>
+        <img id="mg2Quill" src="/assets/images/minigame2/NG_PriorityGame_Quill.png">
+        <img class="mg2Inkwell" id="mg2InkwellBG" src="/assets/images/minigame2/NG_PriorityGame_Inkwell.png">
+        <input type="image" class="mg2Inkwell" id="mg2Submit"
+            src="/assets/images/minigame2/NG_PriorityGame_Inkwell_Top.png" />
+    </div>
 </div>
 
 <!-- Dialogue Screen -->

@@ -5,15 +5,85 @@
 }
 #miniGame2 {
   position: fixed;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image: url(/assets/images/minigame2/NG_PriorityGame_Scene.png);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+#mg2Part1 {
+  position: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/minigame2/NG_PritorityPart1Background.png);
+  z-index: 2;
+}
+#mg2Nav {
+  position: fixed;
+  top: 17.5%;
+  left: 47.5%;
+  transform: translate(-50%, 0);
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.mg2TabBtn {
+  width: 30%;
+  height: auto;
+}
+.mg2answer {
+  position: fixed;
+  width: 25%;
+  height: auto;
+  bottom: 15%;
+  left: 10%;
+}
+.mg2blocks {
+  width: 52.5%;
+  height: 55%;
+  position: fixed;
+  bottom: 15%;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.mg2row {
+  width: 100%;
+  min-height: 50%;
+  max-height: 75%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.mg2block {
+  width: 50%;
+  height: 100%;
+  padding: 0 5px;
+  cursor: move;
+  width: fit-content;
+}
+.mg2Text {
+  position: fixed;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  font-size: 3.5vw;
+  font-family: "Raleway", sans-serif;
+  color: darkred;
+  bottom: 27.5%;
+  right: 12.5%;
+  display: none;
+}
+
+/* FEAf */
+
+#mg2Part2 {
+  position: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/minigame2/NG_PriorityGame_Scene.png);
 }
 #mg2ItemBox {
   width: 45%;
