@@ -129,6 +129,7 @@ export function loadScene5() {
       //console.log(global_data);
       init(global_data);
       startDialogue(0, "/scenes/02-deck-explore/dialogue.json");
+      //isDialogueOccurring = false;
     });
 
   //console.log(global_data);
@@ -420,22 +421,22 @@ export function loadScene5() {
       locked[1] = false;
     } else if (interaction == global_data.keys.keys[2] && locked[2]) {
       // Play Quartermaster Dialogue
-      keyMark2.style.visibility = "hidden";
+      keyMark4.style.visibility = "hidden";
       keysFound++;
       locked[2] = false;
     } else if (interaction == global_data.keys.keys[3] && locked[3]) {
       // Play Chef Dialogue
-      keyMark3.style.visibility = "hidden";
+      keyMark2.style.visibility = "hidden";
       keysFound++;
       locked[3] = false;
     } else if (interaction == global_data.keys.keys[4] && locked[4]) {
       // Play Gunner Dialogue
-      keyMark4.style.visibility = "hidden";
+      keyMark5.style.visibility = "hidden";
       keysFound++;
       locked[4] = false;
     } else if (interaction == global_data.keys.keys[5] && locked[5]) {
       // Play Pirate 1 Dialogue
-      keyMark5.style.visibility = "hidden";
+      keyMark3.style.visibility = "hidden";
       keysFound++;
       locked[5] = false;
     } else if (interaction == global_data.keys.keys[6] && locked[6]) {
