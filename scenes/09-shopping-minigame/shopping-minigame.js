@@ -1,51 +1,79 @@
-// Start
+import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import { startDialogueNext } from "/scenes/dialogue.js";
+import { splashScreen } from "/scenes/10-splash-screen/splash-screen.js";
+
+//    START INIT    //
 export function loadScene9() {
+  devSkip(
+    "/scenes/10-splash-screen/splash-screen.html",
+    "/scenes/10-splash-screen/style.css",
+    splashScreen
+  );
+
   //Get references from document
-  const items = document.querySelectorAll(".mg3item");
-  const textBox = document.getElementById("mg3text");
+  const chosen = document.getElementById("mg3chosenItem");
+  const itemImages = document.getElementsByClassName("mg3itemImg");
+  const itemTexts = document.getElementsByClassName("mg3itemText");
+  const textBox = document.getElementById("mg3questionText");
+
+  //Data
+  const possibleImages = [
+    "/assets/images/minigame3/Minigame3_placeholder_item1.png",
+    "/assets/images/minigame3/Minigame3_placeholder_item2.png",
+    "/assets/images/minigame3/Minigame3_placeholder_item3.png",
+    "/assets/images/minigame3/Minigame3_placeholder_item4.png",
+  ];
+  const possibleTexts = [
+    "Keyword: Item 1",
+    "Keyword: Item 2",
+    "Keyword: Item 3",
+    "Keyword: Item 4",
+  ];
 
   //variables
-  let isMinigameOver = false;
-  let answer;
   let questionIndex = 0;
+  let correctIndex = 0;
+  let possibleAnswers = [0, 1, 2, 3];
 
   let scrollIndex = 0;
   let scrollTimer;
   let scrollSpeed = 50;
-  let wrongTimer;
 
-  //Add event listeners
-  //If the player clicks the background reset selection
-  document.getElementById("miniGame3").onclick = () => {
-    if (!isMinigameOver) deselectItem();
-  };
-  //if the player clicks on an item, select item, while deselects others
-  items.forEach(function (item) {
-    item.addEventListener("click", () => {
-      if (!isMinigameOver) {
-        event.stopPropagation();
-        deselectItem();
-        selectItem(item);
+  let hasPlayerChosenItem = false;
+
+  fetch("/scenes/09-shopping-minigame/minigame3.json")
+    .then((response) => response.json())
+    .then((data) => {
+      //Add event listeners
+      for (let i = 0; i < itemImages.length; i++) {
+        itemImages[i].onclick = () => {
+          if (!hasPlayerChosenItem) selectAnswer(itemImages[i]);
+        };
       }
-    });
-  });
-  //If the player clicks the submit button
-  document.getElementById("mg3Submit").onclick = () => {
-    if (!isMinigameOver) {
-      event.stopPropagation();
-      submitAnswer();
-    }
-  };
+      newQuestion();
+      //    END INIT    //
 
-  newQuestion();
-  //End Start
+      //Resets screen after answering correct
+      function newQuestion() {
+        //Shuffles possible answers
+        for (let i = possibleAnswers.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [possibleAnswers[i], possibleAnswers[j]] = [
+            possibleAnswers[j],
+            possibleAnswers[i],
+          ];
+        }
+        //sets items to possible answers
+        for (let i = 0; i < 4; i++) {
+          itemImages[i].style.display = "block";
+          itemImages[i].value = possibleAnswers[i];
+          itemImages[i].src = possibleImages[possibleAnswers[i]];
+          itemImages[i].style.filter = "brightness(0%)";
+          itemTexts[i].innerHTML = possibleTexts[possibleAnswers[i]];
+        }
+        resetChosenImage();
 
-  //Gets a new question from json
-  function newQuestion() {
-    fetch("/scenes/09-shopping-minigame/minigame3.json")
-      .then((response) => response.json())
-      .then((data) => {
-        //clears text box
+        //Display question in scrolling format
         textBox.innerHTML = "";
 
         //Starts scrolling text at scroll speed
@@ -55,93 +83,91 @@ export function loadScene9() {
 
         //If the player clicks the text box they can skip the scroll
         textBox.onclick = () => {
-          if (!isMinigameOver) {
-            event.stopPropagation();
-            skipText(data[questionIndex].question);
-          }
+          event.stopPropagation();
+          skipText(data[questionIndex].question);
         };
-      });
 
-    //Scrolls question text
-    function scrollingText(text) {
-      //if text isn't finished scrolling
-      if (scrollIndex < text.length) {
-        //Display scrolling text character in text box at scrollIndex
-        textBox.innerHTML += text.charAt(scrollIndex);
-        scrollIndex++;
+        //Scrolls question text
+        function scrollingText(text) {
+          //if text isn't finished scrolling
+          if (scrollIndex < text.length) {
+            //Display scrolling text character in text box at scrollIndex
+            textBox.innerHTML += text.charAt(scrollIndex);
+            scrollIndex++;
 
-        //Recalls scrollingText at scrollSpeed
-        scrollTimer = setTimeout(() => {
-          scrollingText(text);
-        }, scrollSpeed);
-      } else {
-        //Sets scrollIndex null, and sets scrollIndex to 0
-        scrollTimer = null;
-        scrollIndex = 0;
-      }
-    }
-
-    //Skips question text
-    function skipText(text) {
-      //Clears scrollTimer, set it null, and sets scrollIndex to 0
-      clearTimeout(scrollTimer);
-      scrollTimer = null;
-      scrollIndex = 0;
-      //Displays text without scrolling
-      textBox.innerHTML = text;
-    }
-  }
-
-  //Selects item
-  function selectItem(index) {
-    index.style.filter = "brightness(75%)";
-    answer = index.value;
-  }
-
-  //Deselects all items
-  function deselectItem() {
-    items.forEach(function (item) {
-      item.style.filter = "brightness(100%)";
-    });
-    answer = null;
-  }
-
-  //OnClick, a button that is pressed to submit the answer
-  function submitAnswer() {
-    fetch("/scenes/09-shopping-minigame/minigame3.json")
-      .then((response) => response.json())
-      .then((data) => {
-        //Clears scrollTimer, set it null, and sets scrollIndex to 0
-        clearTimeout(scrollTimer);
-        scrollTimer = null;
-        scrollIndex = 0;
-
-        //If the player gets the answer correct
-        if (answer == data[questionIndex].answer && !isMinigameOver) {
-          questionIndex++;
-          deselectItem();
-
-          //Selects a new question if there are still more
-          if (questionIndex < data.length) {
-            newQuestion();
+            //Recalls scrollingText at scrollSpeed
+            scrollTimer = setTimeout(() => {
+              scrollingText(text);
+            }, scrollSpeed);
           } else {
-            //Displays finished minigame
-            textBox.innerHTML = "You did it!";
-            isMinigameOver = true;
+            //Sets scrollIndex null, and sets scrollIndex to 0
+            scrollTimer = null;
+            scrollIndex = 0;
           }
-        } else {
-          //If the player is wrong
-          textBox.innerHTML = "Hmm that's not quite right...";
-
-          //Clears timer if timer is already active
-          if (wrongTimer) clearTimeout(wrongTimer);
-
-          //Reset everything back to normal
-          wrongTimer = setTimeout(() => {
-            clearTimeout(wrongTimer);
-            newQuestion();
-          }, 1000);
         }
-      });
-  }
+
+        //Skips question text
+        function skipText(text) {
+          //Clears scrollTimer, set it null, and sets scrollIndex to 0
+          clearTimeout(scrollTimer);
+          scrollTimer = null;
+          scrollIndex = 0;
+          //Displays text without scrolling
+          textBox.innerHTML = text;
+        }
+      }
+
+      function resetChosenImage() {
+        //Reset Chosen image
+        chosen.style.visibility = "hidden";
+        chosen.style.transition = "none";
+        chosen.style.width = "15%";
+        chosen.style.filter = "brightness(0%)";
+      }
+
+      function selectAnswer(selected) {
+        hasPlayerChosenItem = true;
+        selected.style.display = "none";
+        chosen.src = selected.src;
+        chosen.style.transition = "all 3s";
+        chosen.style.visibility = "visible";
+        chosen.style.width = "55%";
+        chosen.style.filter = "brightness(100%)";
+
+        if (selected.value == data[questionIndex].answer) {
+          setTimeout(() => {
+            questionIndex++;
+            correctIndex++;
+            hasPlayerChosenItem = false;
+
+            if (correctIndex >= data.length) {
+              startDialogueNext(
+                2,
+                "/scenes/09-shopping-minigame/dialogue.json",
+                loadNewHTMLFile(
+                  "/scenes/10-splash-screen/splash-screen.html",
+                  "/scenes/10-splash-screen/style.css",
+                  splashScreen
+                )
+              );
+            } else {
+              startDialogueNext(
+                1,
+                "/scenes/09-shopping-minigame/dialogue.json",
+                newQuestion
+              );
+            }
+          }, 2500);
+        } else {
+          setTimeout(() => {
+            hasPlayerChosenItem = false;
+            startDialogueNext(
+              0,
+              "/scenes/09-shopping-minigame/dialogue.json",
+              resetChosenImage
+            );
+          }, 2500);
+        }
+      }
+    });
 }

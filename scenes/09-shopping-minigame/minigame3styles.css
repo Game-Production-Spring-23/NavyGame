@@ -15,6 +15,17 @@
   -ms-user-select: none;
   user-select: none;
 }
+#mg3chosenItem {
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 3s;
+}
 #mg3items {
   width: 45%;
   height: 17.5%;
@@ -27,8 +38,39 @@
 .mg3item {
   width: auto;
   height: auto;
+  position: relative;
 }
-#mg3text {
+.mg3itemText {
+  visibility: hidden;
+  width: 100%;
+  height: auto;
+  font-family: "Raleway", sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.5vw;
+  padding: 2px;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  z-index: 1;
+}
+.mg3item:hover .mg3itemText {
+  visibility: visible;
+}
+.mg3item .mg3itemText::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+#mg3questionText {
   width: 25%;
   height: 30%;
   position: fixed;
@@ -41,12 +83,4 @@
   font-size: 2vw;
   font-family: "Raleway", sans-serif;
   color: darkred;
-}
-#mg3Submit {
-  width: 5%;
-  height: auto;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  transform: translate(-50%, -50%);
 }
