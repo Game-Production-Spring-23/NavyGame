@@ -3,6 +3,7 @@
     A library of useful functions.
 */
 import { transition } from "./index.js";
+import { setDialogueOccurring } from "./scenes/dialogue.js";
 
 // the list of globalTimeouts. used to remove timeouts when devSkip is called.
 document.globalTimeouts = [];
@@ -125,7 +126,7 @@ function skipper(event) {
     for (let i = 0; i < document.globalTimeouts.length; i++) {
       clearTimeout(document.globalTimeouts[i]);
     } // end for
-
+    setDialogueOccurring(false);
     loadNewHTMLFile(
       document.devSkipObj.filePath,
       document.devSkipObj.styleSheetPath,
