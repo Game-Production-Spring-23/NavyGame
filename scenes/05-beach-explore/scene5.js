@@ -459,6 +459,14 @@ export function loadScene5() {
     if (keysFound == global_data.keys.num_keys) {
       console.log("All Pieces Found");
       // Transition to Minigame after Delay
+      if (!hasPlayerReachedMinigame) {
+        hasPlayerReachedMinigame = true;
+        loadNewHTMLFile(
+          "/scenes/06-priority-minigame/priority-minigame.html",
+          "/scenes/06-priority-minigame/minigame2styles.css",
+          loadScene6
+        );
+      }
     }
   }
 }
