@@ -13,7 +13,7 @@ export function loadScene5() {
   // Get Document Elements
   const player = document.getElementById("player");
   const bgContainer = document.getElementById("background");
-  const mgContainer = document.getElementById("midground");
+  //const mgContainer = document.getElementById("midground");
   const cgContainer = document.getElementById("charground");
   const fgContainer = document.getElementById("foreground");
   const captain = document.getElementById("captain");
@@ -43,7 +43,7 @@ export function loadScene5() {
   let playerRBound;
 
   let bgOffset = 0;
-  let mgOffset = 0;
+  //let mgOffset = 0;
   let fgOffset = 0;
 
   let fgMaxOffset;
@@ -54,9 +54,10 @@ export function loadScene5() {
 
   let speed;
   let fgSpeed;
-  let mgSpeed;
+  //let mgSpeed;
   let bgSpeed;
 
+  let totalKeys = 0;
   let keysFound = 0;
   let interaction = "";
 
@@ -115,7 +116,7 @@ export function loadScene5() {
       bgContainer.style.width = 1920 * data.params.bg_scale + "px";
       bgContainer.style.backgroundImage =
         "url(" + data.params.bg_images[0] + ")";
-      mgContainer.style.width = 1920 * data.params.mg_scale + "px";
+      //mgContainer.style.width = 1920 * data.params.mg_scale + "px";
       //mgContainer.style.backgroundImage =
       //  "url(" + data.params.mg_images[0] + ")";
       cgContainer.style.width = 1920 * data.params.fg_scale + "px";
@@ -143,8 +144,53 @@ export function loadScene5() {
 
     speed = global_data.params.fg_speed;
     fgSpeed = global_data.params.fg_speed;
-    mgSpeed = global_data.params.mg_speed;
+    //mgSpeed = global_data.params.mg_speed;
     bgSpeed = global_data.params.bg_speed;
+
+    if (playerAbs > playerRBound) {
+      if (playerAbs > playerAbsLimit) {
+        playerAbs = playerAbsLimit;
+        fgOffset = fgMaxOffset;
+        //mgOffset = -1920 * (global_data.params.mg_scale - 1);
+        bgOffset = -1920 * (global_data.params.bg_scale - 1);
+
+        fgContainer.style.left = fgOffset + "px";
+        cgContainer.style.left = fgOffset + "px";
+        //mgContainer.style.left = mgOffset + "px";
+        bgContainer.style.left = bgOffset + "px";
+        player.style.left = playerAbs + "px";
+
+        playerRBound = playerAbsLimit - 576;
+        playerLBound = playerAbsLimit - 1216;
+      } else if (playerAbs > playerAbsLimit - 576) {
+        fgOffset = fgMaxOffset;
+        //mgOffset = -1920 * (global_data.params.mg_scale - 1);
+        bgOffset = -1920 * (global_data.params.bg_scale - 1);
+
+        fgContainer.style.left = fgOffset + "px";
+        cgContainer.style.left = fgOffset + "px";
+        //mgContainer.style.left = mgOffset + "px";
+        bgContainer.style.left = bgOffset + "px";
+
+        playerRBound = playerAbsLimit - 576;
+        playerLBound = playerAbsLimit - 1216;
+      } else {
+        let distance = playerAbs - playerRBound;
+        let steps = distance / speed;
+
+        fgOffset = -1 * fgSpeed * steps;
+        //mgOffset = -1 * mgSpeed * steps;
+        bgOffset = -1 * bgSpeed * steps;
+
+        fgContainer.style.left = fgOffset + "px";
+        cgContainer.style.left = fgOffset + "px";
+        //mgContainer.style.left = mgOffset + "px";
+        bgContainer.style.left = bgOffset + "px";
+
+        playerRBound = playerAbs - 1;
+        playerLBound = playerAbs - 640;
+      }
+    }
 
     totalKeys = global_data.keys.num_keys;
 
@@ -240,6 +286,7 @@ export function loadScene5() {
         resetSubtitles();
       }
 
+      // Adjust for Proper To Minigame Transition
       if (!locked && playerAbs > playerAbsLimit - 200) {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
@@ -294,8 +341,8 @@ export function loadScene5() {
           fgOffset -= fgSpeed;
           fgContainer.style.left = fgOffset + "px";
           cgContainer.style.left = fgOffset + "px";
-          mgOffset -= mgSpeed;
-          mgContainer.style.left = mgOffset + "px";
+          //mgOffset -= mgSpeed;
+          //mgContainer.style.left = mgOffset + "px";
           bgOffset -= bgSpeed;
           bgContainer.style.left = bgOffset + "px";
           // Player Right
@@ -333,8 +380,8 @@ export function loadScene5() {
           fgOffset += fgSpeed;
           fgContainer.style.left = fgOffset + "px";
           cgContainer.style.left = fgOffset + "px";
-          mgOffset += mgSpeed;
-          mgContainer.style.left = mgOffset + "px";
+          //mgOffset += mgSpeed;
+          //mgContainer.style.left = mgOffset + "px";
           bgOffset += bgSpeed;
           bgContainer.style.left = bgOffset + "px";
           // Player Left
