@@ -1,6 +1,7 @@
 import { loadHTMLOnVideoEnd, devSkip } from "/lib.js";
 import { loadScene2 } from "/scenes/02-deck-explore/scene2.js";
 
+
 export function boatScene() {
   devSkip(
     "/scenes/02-deck-explore/index.html",

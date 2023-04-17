@@ -1,0 +1,36 @@
+
+#background-img {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+}
+
+#char-1 {
+  z-index: 1;
+  margin-left: -150px;
+  margin-top: 550px;
+  width: 500px;
+  height: 275px;
+  position: absolute;
+  transform: rotate(90deg);
+}
+
+#char-2 {
+    z-index: 1;
+    margin-left: 450px;
+    margin-top: 425px;
+    width: 275px;
+    height: 500px;
+    position: absolute;
+}
+
+#char-3 {
+    z-index: 1;
+    margin-left: 900px;
+    margin-top: 300px;
+    width: 275px;
+    height: 500px;
+    position: absolute;
+}

@@ -1,0 +1,61 @@
+Cross Bird
+Cross Bird:Ahoy there, me hearty! *Squawk* I'm Cross Bird, the pirate parrot. 
+Cross Bird:I see you are with the pirate ship Signet Messenger! *Squawk* Chief Engineer no less! 
+Cross Bird:I have been a ship’s parrot going over 200 years now *Squawk* and have seen me fair share of repairs. How can I help ye? 
+Chief Engineer:I’ve been hearing some scuttlebutt from the Pirate School of Engineering about a way to get better at making repairs. What do ye know of it? 
+Cross Bird:Aye! There is. *Squawk* 
+Cross Bird:Have ya heard of Model Based Systems Engineering? 
+Chief Engineer:Some. Tell me more. 
+Cross Bird:*Squawk* Model-based systems engineering, or MBSE for short, is a way of designing and building complex systems using computer models. 
+Cross Bird:It can help ye be better pirate engineers by improving the ship systems’ efficiency and effectiveness. *Squawk* 
+Chief Engineer:How so? 
+Cross Bird:As an engineer, ye know how important it is to make sure ships and systems are safe and reliable to take on them thar new adventures. 
+Cross Bird:Systems Engineering (SE) can help test ye different approaches to see how the ship’s systems would behave under different conditions.  
+Cross Bird:These systems can include hardware, software, information, processes, facilities and more, working together as part of an interconnecting network.  
+Cross Bird:When they work together, the system performs in a way that is different than how each individual part behaves. *Squawk* 
+Cross Bird:MBSE is a form of SE. With MBSE, ye can create digital models of our ships and systems to show us all the important parts and how they fit together. 
+Cross Bird:Need to take on the Pirates of Ambush Island? Ye can model their defenses and test the Signet Messenger’s canon upgrades before spending many chests of ye gold. 
+Cross Bird:*Squawk* Thar models help ye better understand the approach to repairing the ships, and to catch any potential problems before they become too costly to fix.  
+Cross Bird:Is that something ye think ye can learn? *Squawk* 
+Chief Engineer:I think so. There be a process to follow? 
+Cross Bird:Aye! *Squawk* There be six core steps of Systems Engineering. 
+Cross Bird:1) Requirements Development and System Analysis 
+Cross Bird:2) Logical Analysis and Design Solution 
+Cross Bird:3) Implementation 
+Cross Bird:4) Integration 
+Cross Bird:5) Verification and Validation 
+Cross Bird:and 6) Transition 
+Chief Engineer:That sounds straightforward. What should Ye’ know about each step? 
+Cross Bird:*Squawk* Aye, great question! Ye be a smart one… 
+Cross Bird:Using the Requirements Development and System Analysis step, ye crew uses computer models to simulate different scenarios and identify the requirements for making yon ship repairs. 
+Cross Bird:Y’all have to consider factors like *Squawk* available resources, time constraints, safety requirements, and risks involved. 
+Chief Engineer:Got it. What’s next? 
+Cross Bird:For the Logical Analysis and Design Solution step ye use the same models to design and optimize the repair solutions. 
+Cross Bird:*Squawk* Yon team needs to continue to balance factors like risk, speed, power, and safety to come up with a logical design solution that meets all the requirements. 
+Chief Engineer:And then what happens? 
+Cross Bird:Ye has ta’ get ‘er done in the Implementation step. *Squawk* 
+Cross Bird:This means actually carrying out the repairs. 
+Cross Bird:Then, with the Integration step, ye have to make sure everything works together smoothly and efficiently with the ship’s existing systems. 
+Chief Engineer:And how do we make sure everything is working properly? 
+Cross Bird:*Squawk* Ye haf’ta do the Verification and Validation step with the computer models. 
+Cross Bird:Ye’ crew needs to test and verify that everything is working correctly and validate that it meets all the requirements. 
+Chief Engineer:Then we’re done? 
+Cross Bird:*Squawk* Almost! Ye’ gots’ ta wrap up ye work. 
+Cross Bird:The Transition step gets the ship back to its normal operating mode, and move ye crew to the next repair. 
+Cross Bird:Got all this? *Squawk* 
+Chief Engineer:That sounds like just the ticket for our crew and our ship! 
+Cross Bird:Did ye write those steps down in ye book of knowledge? 
+Chief Engineer:Aye I did! 
+Chief Engineer:1) Requirement Development and System Analysis 
+Chief Engineer:2) Logical Analysis and Design Solution 
+Chief Engineer:3) Implementation 
+Chief Engineer:4) Integration 
+Chief Engineer:5) Verification and Validation 
+Chief Engineer:and 6) Transition 
+Cross Bird:So there ye have it, me hearties! That's what systems engineering be all about. Arrr! *Squawk* 
+Chief Engineer:Aye. Let’s get started. 
+Cross Bird:*Squawk* Learning SE can take some time, but it's worth the investment and effort. 
+Cross Bird:You and ye crew will come away understanding SE better and how to apply it to ye work as pirate engineers. 
+Cross Bird:Are ye game? *Squawk* 
+Chief Engineer:Let’s do this!!! 
+!
