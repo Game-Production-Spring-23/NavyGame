@@ -10,7 +10,7 @@ export function miniGame4() {
       );
     */ 
     // Wait for the page to load (the element don't exist until the page is fully loaded).
-    fetch('/data.json')
+    fetch('/scenes/12-mini-game-4/data.json')
     .then((res) => res.json())
     .then((data) => {
         // Set event listeners
@@ -52,7 +52,7 @@ export function miniGame4() {
         } // end for
     }); // end load data.json
 
-    
+
     // Allows an item to receive an option when an option is dropped on.
     function allowDrop(ev) {
         ev.preventDefault();
@@ -88,7 +88,7 @@ export function miniGame4() {
 
     // changes the text of the character when an option is selected
     function changeCharacterText(optionIndex) {
-        fetch('/data.json')
+        fetch('/scenes/12-mini-game-4/data.json')
         .then((res) => res.json())
         .then((data) => {
             let characterTexts = document.getElementsByClassName("character-text");
@@ -120,7 +120,7 @@ export function miniGame4() {
 
     // allows player to click on box and put option back into options list.
     function resetSelection(gridElementIndex) {
-        fetch('/data.json')
+        fetch('/scenes/12-mini-game-4/data.json')
         .then((res) => res.json())
         .then((data) => {
             let gridItems = document.getElementsByClassName("grid-item");
@@ -160,7 +160,7 @@ export function miniGame4() {
 
     // Checks for if the game is finished
     function checkForGameFinished() {
-        fetch('/data.json')
+        fetch('/scenes/12-mini-game-4/data.json')
         .then((res) => res.json())
         .then((data) => {
             // check if all options have left the options panel
