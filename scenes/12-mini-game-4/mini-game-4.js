@@ -72,17 +72,20 @@ export function miniGame4() {
         ev.preventDefault();
         let data = ev.dataTransfer.getData("text");
         let gridElement = document.getElementById(ev.target.id);
-        
-        gridElement.textContent = data;
-        gridElement.style.backgroundColor = "blue";
-        gridElement.dataset.optionID = ev.dataTransfer.getData("optionID");
 
-        // Remove the option from the options list
-        let optionElement = document.getElementById(ev.dataTransfer.getData("optionID"));
-        optionElement.remove();
+        // ensure that element is empty
+        if(gridElement.textContent == "") {
+            gridElement.textContent = data;
+            gridElement.style.backgroundColor = "blue";
+            gridElement.dataset.optionID = ev.dataTransfer.getData("optionID");
 
-        // check if the game has been finished
-        checkForGameFinished();
+            // Remove the option from the options list
+            let optionElement = document.getElementById(ev.dataTransfer.getData("optionID"));
+            optionElement.remove();
+
+            // check if the game has been finished
+            checkForGameFinished();
+        } // end if
     } // end drop
 
 
