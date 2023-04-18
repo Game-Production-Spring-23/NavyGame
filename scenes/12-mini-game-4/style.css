@@ -1,16 +1,11 @@
-/* Settings to reset CSS. */
-* {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(225, 216, 216);
-
-    user-select: none;
-}
-
 /* Settings to get the right height out of the body element. */
 body {
     min-height: 100vh;
     background-color: rgb(225, 216, 216);
+    user-select: none;
+
+    margin: 0;
+    padding: 0;
 }
 
 #flexbox {
@@ -47,6 +42,7 @@ body {
 .character-container {
     display: flex;
     flex-direction: row;
+    background-color: rgb(225, 216, 216);
 }
 
 .character {
@@ -74,6 +70,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: rgb(225, 216, 216);
 
     width: 15%;
     height: 95%;
@@ -105,6 +102,7 @@ body {
 #flexbox-grid-outer {
     display: flex;
     flex-direction: row;
+    background-color: rgb(225, 216, 216);
 
     width: 70%;
     height: 100%;
@@ -125,6 +123,7 @@ body {
 #flexbox-grid-inner {
     display: flex;
     flex-direction: column;
+    background-color: rgb(225, 216, 216);
 
     width: 97.5%;
 }

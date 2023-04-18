@@ -1,14 +1,14 @@
 import { startDialogue } from "/scenes/dialogue.js";
 import { devSkip } from "../../lib.js";
 import { loadScene6_2 } from "/scenes/06-priority-minigame/priority-minigame_2.js";
-import { splashScreen } from "/scenes/07-splash-screen/splash-screen.js";
+import { loadScene8 } from "/scenes/08-explore/scene8.js";
 
 export function loadScene6() {
   // allow developer to skip to next level
   devSkip(
-    "/scenes/07-splash-screen/splash-screen.html",
-    "/scenes/07-splash-screen/style.css",
-    splashScreen
+    "/scenes/08-explore/index.html",
+    "/scenes/08-explore/styles.css",
+    loadScene8
   );
 
   // Start
