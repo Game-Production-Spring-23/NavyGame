@@ -1,0 +1,84 @@
+{
+    "options-text": [
+        "Option 1",
+        "Option 2",
+        "Option 3"
+    ],
+
+    "severity-scale": [
+        "low",
+        "low-ish",
+        "mid",
+        "high-ish",
+        "high"        
+    ],
+
+    "probability-scale": [
+        "low",
+        "low-ish",
+        "mid",
+        "high-ish",
+        "high"
+    ],
+
+    "character-texts": [
+        [
+            {
+                "axis": 0,
+                "text": "I propose Option 1." 
+            },
+            {
+                "axis": 1,
+                "text": "You can't be serious." 
+            },
+            {
+                "axis": 2,
+                "text": "This idea is mid at best." 
+            }
+        ],
+        [
+            {
+                "axis": 1,
+                "text": "I dunno about this one." 
+            },
+            {
+                "axis": 0,
+                "text": "I propose Option 2." 
+            },
+            {
+                "axis": 2,
+                "text": "Do you want us all to die?" 
+            }
+        ],
+        [
+            {
+                "axis": 1,
+                "text": "... Wait, who let you on board?" 
+            },
+            {
+                "axis": 2,
+                "text": "Are we talking to a coconut in a barrel?" 
+            },
+            {
+                "axis": 0,
+                "text": "I propose Option 3."
+            }
+        ]
+    ],
+
+    "solutions": [
+        {
+            "probability": 3,
+            "severity": 2
+        },
+        {
+            "probability": 3,
+            "severity": 4
+        },
+        {
+            "probability": 0,
+            "severity": 0
+        }
+    ]
+}
+
