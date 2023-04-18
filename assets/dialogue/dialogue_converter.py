@@ -64,9 +64,12 @@ def main():
             if other_name == " ":
                 other_name = (line.lower()).capitalize()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 print(other_name)
 >>>>>>> 663977f (finished dialogue conversion script)
+=======
+>>>>>>> 7e762c572a9cef084a600d744eeef0f37bab752d
                 new_conversation["otherName"] = other_name
                 continue
         
@@ -84,9 +87,12 @@ def main():
                         text += char
             name = (name.lower()).capitalize()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             print(name)
 >>>>>>> 663977f (finished dialogue conversion script)
+=======
+>>>>>>> 7e762c572a9cef084a600d744eeef0f37bab752d
             # add name & text into dialogue
             new_dialogue["text"] = text
             if name == other_name:

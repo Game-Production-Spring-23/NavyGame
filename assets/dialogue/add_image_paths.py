@@ -5,9 +5,13 @@ adding the image that is to be used by the characters.
 
 cmd test: python add_image_paths.py --name_map_file=name_map.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 cmd: python add_image_paths.py --input_file=./conversion-test/dialogue_out.json --output_file=./conversion-test/dialogue_out_new.json --name_map_file=./conversion-test/name_map.json
 =======
 >>>>>>> 663977f (finished dialogue conversion script)
+=======
+cmd: python add_image_paths.py --input_file=./conversion-test/dialogue_out.json --output_file=./conversion-test/dialogue_out_new.json --name_map_file=./conversion-test/name_map.json
+>>>>>>> 7e762c572a9cef084a600d744eeef0f37bab752d
 """
 
 import json
