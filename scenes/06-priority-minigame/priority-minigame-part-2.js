@@ -11,9 +11,9 @@ export function loadScene6_2() {
 
   //possible answers
   const possibleImages = [
+    "/assets/images/minigame2/NG_PriorityGame_Choice_MainMast.png",
     "/assets/images/minigame2/NG_PriorityGame_Choice_ForeMast.png",
     "/assets/images/minigame2/NG_PriorityGame_Choice_Rudder.png",
-    "/assets/images/minigame2/NG_PriorityGame_Choice_MainMast.png",
   ];
 
   //variables
@@ -33,7 +33,7 @@ export function loadScene6_2() {
     submitAnswer();
   };
 
-  startDialogue(1, "/scenes/06-priority-minigame/dialogue.json");
+  startDialogue(2, "/scenes/06-priority-minigame/dialogue.json");
   randomizeAnswers();
   //End Start
 
@@ -41,7 +41,7 @@ export function loadScene6_2() {
   function randomizeAnswers() {
     //declares index number, random number, and an array of unique numbers
     let i = 0,
-      random = 2,
+      random = 1,
       unique = [];
 
     while (i < 3) {
@@ -123,7 +123,7 @@ export function loadScene6_2() {
         }
         quillTimer = setTimeout(() => {
           startDialogueNext(
-            3,
+            4,
             "/scenes/06-priority-minigame/dialogue.json",
             () => {
               loadNewHTMLFile(
@@ -143,7 +143,7 @@ export function loadScene6_2() {
         quill.style.transition = "0.1s";
         quill.style.bottom = "35%";
         quillTimer = setTimeout(() => {
-          startDialogue(2, "/scenes/06-priority-minigame/dialogue.json");
+          startDialogue(3, "/scenes/06-priority-minigame/dialogue.json");
         }, 500);
       }, 1000);
     }

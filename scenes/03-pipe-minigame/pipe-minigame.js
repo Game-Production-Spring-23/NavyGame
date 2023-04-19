@@ -85,8 +85,7 @@ export function loadScene3() {
     }
 
     //Sets that valves turn animation to play
-    valves[index].src = "/assets/images/minigame1/NG_PipeGame_Valve_Turn.gif";
-    answerDisplay.src = "/assets/images/NG_empty.png";
+    valves[index].classList.add("mg1ValveSpin");
 
     //Clears timer if timer is already active
     if (valveTimer) clearTimeout(valveTimer);
@@ -94,7 +93,7 @@ export function loadScene3() {
     //After 1 seconds change valve back to original animation and set chosen answer to new answer
     valveTimer = setTimeout(() => {
       clearTimeout(valveTimer);
-      valves[index].src = "/assets/images/minigame1/NG_PipeGame_Valve.png";
+      valves[index].classList.remove("mg1ValveSpin");
       answerDisplay.src = possibleDisplay[chosenIndices[index]];
     }, 1000);
   }

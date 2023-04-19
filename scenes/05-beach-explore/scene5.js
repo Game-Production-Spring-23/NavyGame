@@ -1,5 +1,5 @@
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
-import { loadScene6 } from "/scenes/06-priority-minigame/priority-minigame.js";
+import { loadScene6 } from "/scenes/06-priority-minigame/priority-minigame-part-1.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene5() {

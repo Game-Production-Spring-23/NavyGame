@@ -12,74 +12,114 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+/* PART 1 */
+
 #mg2Part1 {
   position: fixed;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/minigame2/NG_PritorityPart1Background.png);
+  background-image: url(/assets/images/minigame2/minigame2part2-background.png);
   z-index: 2;
+}
+#test {
+  display: none;
+  position: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-image: url(/assets/images/minigame2/minigame2part2-backgroundoverlay.png);
+  z-index: 3;
 }
 #mg2Nav {
   position: fixed;
-  top: 17.5%;
-  left: 47.5%;
-  transform: translate(-50%, 0);
-  width: 75%;
-  height: auto;
+  top: 7.5%;
+  width: 97.5%;
+  height: 27.5%;
   display: flex;
   justify-content: space-between;
 }
 .mg2TabBtn {
-  width: 30%;
+  width: 27.5%;
   height: auto;
 }
 .mg2answer {
   position: fixed;
-  width: 25%;
-  height: auto;
-  bottom: 15%;
-  left: 10%;
+  width: 47.5%;
+  height: 65%;
+  bottom: 5%;
+  left: 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/minigame2/minigame2part2-answer.png);
+  display: flex;
+  justify-content: center;
+}
+.mg2answerImg {
+  position: absolute;
+  width: 47.5%;
+  height: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.mg2blocksBox {
+  width: 47.5%;
+  height: 62.5%;
+  position: fixed;
+  bottom: 1.5%;
+  right: 2%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/minigame2/minigame2part2-blocks.png);
 }
 .mg2blocks {
-  width: 52.5%;
-  height: 55%;
-  position: fixed;
-  bottom: 15%;
-  right: 10%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.mg2row {
-  width: 100%;
-  min-height: 50%;
-  max-height: 75%;
-  display: flex;
-  justify-content: space-evenly;
+  position: relative;
+  width: 82.5%;
+  height: 72.5%;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 0;
+  min-height: 0;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52.5%, -52.5%);
 }
 .mg2block {
-  width: 50%;
-  height: 100%;
-  padding: 0 5px;
-  cursor: move;
   width: fit-content;
+  height: 100%;
+  cursor: move;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .mg2Text {
   position: fixed;
-  width: 50%;
+  width: 40%;
   height: auto;
   text-align: center;
   font-size: 3.5vw;
   font-family: "Raleway", sans-serif;
   color: darkred;
-  bottom: 27.5%;
-  right: 12.5%;
+  bottom: 25%;
+  right: 6.5%;
   display: none;
 }
+#mg2p1Submit {
+  display: none;
+  width: 5%;
+  height: auto;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
 
-/* FEAf */
+/* PART 2 */
 
 #mg2Part2 {
+  display: none;
   position: fixed;
   background-size: 100% 100%;
   background-repeat: no-repeat;

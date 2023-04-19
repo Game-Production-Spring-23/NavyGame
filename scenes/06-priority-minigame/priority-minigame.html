@@ -1,46 +1,44 @@
-<!-- Priority Mini game -->
 <div id="miniGame2">
+    <div id="test"></div>
     <div id="mg2Part1">
         <div id="mg2Nav">
             <input type="image" class="mg2TabBtn" id="mg2TabRudderBtn"
-                src="/assets/images/minigame2/NG_PriorityGame_Choice_Rudder.png" />
+                src="/assets/images/minigame2/m22-rudderbutton.png" />
             <input type="image" class="mg2TabBtn" id="mg2TabMainMastBtn"
-                src="/assets/images/minigame2/NG_PriorityGame_Choice_MainMast.png" />
+                src="/assets/images/minigame2/mm22-mainmastbutton.png" />
             <input type="image" class="mg2TabBtn" id="mg2ForeMastTabBtn"
-                src="/assets/images/minigame2/NG_PriorityGame_Choice_ForeMast.png" />
+                src="/assets/images/minigame2/mm22-foremastbutton.png" />
         </div>
         <div class="mg2Tab">
             <div class="mg2answer">
                 <img class="mg2answerImg" src="/assets/images/minigame2/NG_P1_ForeMastComplete_0.png">
             </div>
-            <div class="mg2blocks">
-                <div class="mg2row">
-                    <div draggable="true" class="mg2block" data-size='1'>
-                        <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_1.png" />
-                    </div>
+            <div class="mg2blocksBox">
+                <div class="mg2blocks">
                     <div draggable="true" class="mg2block" data-size='3'>
                         <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_3.png" />
                     </div>
-                </div>
-                <div class="mg2row">
                     <div draggable="true" class="mg2block" data-size='4'>
                         <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_4.png" />
                     </div>
                     <div draggable="true" class="mg2block" data-size='2'>
                         <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_2.png" />
                     </div>
+                    <div draggable="true" class="mg2block" data-size='1'>
+                        <img src="/assets/images/minigame2/NG_P1_ForeMastPiece_1.png" />
+                    </div>
                 </div>
+                <p class="mg2Text">
+                    <b>Lesson Learned:</b><br>You should work on the foremast second
+                </p>
             </div>
-            <p class="mg2Text">
-                <b>Lesson Learned:</b><br>You should work on the foremast first
-            </p>
         </div>
         <div class="mg2Tab">
             <div class="mg2answer">
                 <img class="mg2answerImg" src="/assets/images/minigame2/NG_P1_RudderComplete_0.png">
             </div>
-            <div class="mg2blocks">
-                <div class="mg2row">
+            <div class="mg2blocksBox">
+                <div class="mg2blocks">
                     <div draggable="true" class="mg2block" data-size='2'>
                         <img src="/assets/images/minigame2/NG_P1_RudderPiece_2.png" />
                     </div>
@@ -51,37 +49,37 @@
                         <img src="/assets/images/minigame2/NG_P1_RudderPiece_3.png" />
                     </div>
                 </div>
+                <p class="mg2Text">
+                    <b>Lesson Learned:</b><br>You should work on the rudder last
+                </p>
             </div>
-            <p class="mg2Text">
-                <b>Lesson Learned:</b><br>You should work on the rudder second
-            </p>
         </div>
         <div class="mg2Tab">
             <div class="mg2answer">
                 <img class="mg2answerImg" src="/assets/images/minigame2/NG_P1_MainMastComplete_0.png">
             </div>
-            <div class="mg2blocks">
-                <div class="mg2row">
+            <div class="mg2blocksBox">
+                <div class="mg2blocks">
                     <div draggable="true" class="mg2block" data-size='4'>
                         <img src="/assets/images/minigame2/NG_P1_MainMastPiece_4.png" />
                     </div>
                     <div draggable="true" class="mg2block" data-size='2'>
                         <img src="/assets/images/minigame2/NG_P1_MainMastPiece_2.png" />
                     </div>
-                    <div draggable="true" class="mg2block" data-size='1'>
-                        <img src="/assets/images/minigame2/NG_P1_MainMastPiece_1.png" />
-                    </div>
                     <div draggable="true" class="mg2block" data-size='3'>
                         <img src="/assets/images/minigame2/NG_P1_MainMastPiece_3.png" />
                     </div>
+                    <div draggable="true" class="mg2block" data-size='1'>
+                        <img src="/assets/images/minigame2/NG_P1_MainMastPiece_1.png" />
+                    </div>
                 </div>
+                <p class="mg2Text">
+                    <b>Lesson Learned:</b><br>You should work on the mainmast first
+                </p>
             </div>
-            <p class="mg2Text">
-                <b>Lesson Learned:</b><br>You should work on the mainmast last
-            </p>
         </div>
+        <input type="image" id="mg2p1Submit" src="/assets/images/ui/arrowIcon.png" />
     </div>
-
     <div id="mg2Part2">
         <div id="mg2ItemBox">
             <div draggable="true" class="mg2Item">
@@ -114,5 +112,4 @@
         <input type="image" class="dialogueBtn" id="frontButton" src="/assets/images/ui/rightBtn.png" />
     </div>
 </div>
-
-<script type="modules" src="/scenes/dialogue.js"></script>
+<script type="module" src="/scenes/dialogue.js"></script>

@@ -1,6 +1,6 @@
 import { startDialogue } from "/scenes/dialogue.js";
 import { devSkip } from "../../lib.js";
-import { loadScene6_2 } from "/scenes/06-priority-minigame/priority-minigame_2.js";
+import { loadScene6_2 } from "/scenes/06-priority-minigame/priority-minigame-part-2.js";
 import { loadScene8 } from "/scenes/08-explore/scene8.js";
 
 export function loadScene6() {
@@ -10,7 +10,6 @@ export function loadScene6() {
     "/scenes/08-explore/styles.css",
     loadScene8
   );
-
   // Start
   //Get references from document
   const tabButtons = [
@@ -19,12 +18,16 @@ export function loadScene6() {
     document.getElementById("mg2TabMainMastBtn"),
   ];
   const tabs = document.getElementsByClassName("mg2Tab");
-  const answers = document.querySelectorAll(".mg2answer");
-  const answerImages = document.getElementsByClassName("mg2answerImg");
+  const answers = document.querySelectorAll(".mg2answerImg");
   const blocks = document.querySelectorAll(".mg2block");
   const texts = document.getElementsByClassName("mg2Text");
 
   //Assets
+  const tabComplete = [
+    "/assets/images/minigame2/mm22-foremastbutton-complete.png",
+    "/assets/images/minigame2/m22-rudderbutton-complete.png",
+    "/assets/images/minigame2/mm22-mainmastbutton-complete.png",
+  ];
   const complete = [
     [
       "/assets/images/minigame2/NG_P1_ForeMastComplete_0.png",
@@ -77,10 +80,10 @@ export function loadScene6() {
   function updateTab(index) {
     tabIndex = index;
     for (let i = 0; i < 3; i++) {
-      tabButtons[i].style.opacity = "0.6";
+      tabButtons[i].style.filter = "brightness(1)";
       tabs[i].style.display = "none";
     }
-    tabButtons[index].style.opacity = "1";
+    tabButtons[index].style.filter = "brightness(1.1)";
     tabs[index].style.display = "block";
   }
   //Called when an draggable element has been dragged
@@ -96,27 +99,34 @@ export function loadScene6() {
   }
   //Called when an draggable element is dropped
   function drop(e) {
-    e.stopPropagation();
+    e.preventDefault();
     //if the block is the right block for the tab
     if (
       parseInt(dragSrcEl.getAttribute("data-size")) == blockIndices[tabIndex]
     ) {
-      e.target.appendChild(dragSrcEl);
       //Update answer
-      answerImages[tabIndex].src = complete[tabIndex][blockIndices[tabIndex]];
+      answers[tabIndex].src = complete[tabIndex][blockIndices[tabIndex]];
       blockIndices[tabIndex]++;
+      e.target.appendChild(dragSrcEl);
 
       //if the answer is finished
       if (blockIndices[tabIndex] == complete[tabIndex].length) {
         texts[tabIndex].style.display = "block";
+        tabButtons[tabIndex].src = tabComplete[tabIndex];
         completeCount++;
 
         //if all 3 answers are finished
         if (completeCount >= 3) {
-          document.getElementById("mg2Part1").style.display = "none";
-          loadScene6_2();
+          document.getElementById("mg2p1Submit").style.display = "block";
+          document.getElementById("mg2Part2").style.display = "block";
+          startDialogue(1, "/scenes/06-priority-minigame/dialogue.json");
         }
       }
     }
   }
+
+  mg2p1Submit.onclick = () => {
+    document.getElementById("mg2Part1").style.display = "none";
+    loadScene6_2();
+  };
 }

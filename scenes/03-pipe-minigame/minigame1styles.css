@@ -77,6 +77,17 @@ body {
   flex-direction: column;
   z-index: 300px;
 }
+.mg1ValveSpin {
+  animation: spin 1s;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
 #mg1Valve1 {
   left: 5%;
   top: 6.5%;
