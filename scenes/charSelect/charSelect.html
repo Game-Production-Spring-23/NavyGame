@@ -1,0 +1,45 @@
+<!--Html boilerplate-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Set Viewport Size to 1080 x 1920-->
+
+    <title>The Mystery of Vee Island</title>
+    <!---change name once we have one-->
+    <link rel="icon" type="image/x-icon" href="/assets/images/mapOne.png">
+    <link id="styleSheet" rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cubicfive" rel="stylesheet">
+
+    <link id="style" rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <img id="charSelExit" src="/assets/images/ui/exitBtn.png" alt="exit" onclick="charSelectExit()">
+    <div id="gameContainer"></div>
+    <div id="transition"></div>
+    <audio id="audio" autoplay>
+        <source src="/assets/audio/bgMusic/cursedSea.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+  <h1 id="charSelectHeader">Choose Your Character</h1>
+  <div id="charSelectContainer">
+    <input id="charThreeAv" class="charSelect" type="button" onclick="" value="charThree">
+    <input id="charTwoAv" class="charSelect" type="button" onclick="" value="charTwo">
+    <input id="charOneAv" class="charSelect" type="button" onclick="charOneSelect()" value="charOne">
+  </div>
+  <input id="charSelectStart" type="button" onclick="charSelectStart()" value="Start">
+</body>
+<!-- <script type="module" src="index.js"></script> -->
+<script type="module" src="charSelect.js"></script>
+
+
+</html>
