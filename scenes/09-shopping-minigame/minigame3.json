@@ -1,18 +1,18 @@
 [
   {
-    "question": "Hi, this is a demonstration of mini game 3, right now there isn't much but it currently working at the moment, anyway please give me item 3",
+    "question": "I am looking for item 3",
     "answer": 2
   },
   {
-    "question": "Wow you got it, here the next one, try giving me item 1",
+    "question": "I am looking for item 1",
     "answer": 0
   },
   {
-    "question": "Awesome, your getting the hang of it, hand me item 4",
+    "question": "I am looking for item 4",
     "answer": 3
   },
   {
-    "question": "Alright this should be the last one, give me item 2",
+    "question": "I am looking for item 2",
     "answer": 1
   }
 ]

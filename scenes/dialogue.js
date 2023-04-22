@@ -348,4 +348,8 @@ export function startDialogueNext(index, data, next) {
   }
 }
 
+export function setDialogueOccurring(set) {
+  isDialogueOccurring = set;
+}
+
 export { isDialogueOccurring };
