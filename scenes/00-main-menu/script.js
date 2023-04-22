@@ -74,14 +74,14 @@ export function mainMenu() {
     //updates queue number
   }
 
-  //shows main settings screen--TESTED. Works.
-  function showOptions() {
-    //shows options, hides bottom links and replaces elements with settingsContainer
-    bottomLinks.style.display = "none";
-    gameContainer.style.display = "none";
-    settingsContainer.style.display = "block";
-    score.style.visibility = "hidden";
-  }
+  // //shows main settings screen--TESTED. Works.
+  // function showOptions() {
+  //   //shows options, hides bottom links and replaces elements with settingsContainer
+  //   bottomLinks.style.display = "none";
+  //   gameContainer.style.display = "none";
+  //   settingsContainer.style.display = "block";
+  //   score.style.visibility = "hidden";
+  // }
 
   //Tested, Works.
   function hideOptions() {
@@ -194,6 +194,8 @@ export function mainMenu() {
     gameContainer.style.display = "none";
     settingsContainer.style.display = "block";
     score.style.visibility = "hidden";
+    document.getElementById("app").style.backgroundImage ="none";
+    
   }
 
   window.settingsHover = settingsHover;

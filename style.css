@@ -301,3 +301,15 @@ h3 {
   z-index: 100;
 
 }
+
+/* Controls Screen */
+#controlTutScreen{
+  height:80%;
+width:40%; /* centered in screen*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+}
