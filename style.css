@@ -11,16 +11,19 @@ body {
   background: -webkit-linear-gradient(to right, #4286f4, #373b44);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4286f4, #373b44);
-  background-color: black;
+  background-image: url("/assets/images/ui/navyBkgrnd.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position-x: center;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 h1 {
-  font-family: "Lilita One", cursive;
-  font-size: 50px;
-  color: #373737;
+  font-family: 'CubicFive10', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 77px;
+  color: #000000;
   text-align: center;
 }
 h3 {
@@ -313,3 +316,97 @@ width:40%; /* centered in screen*/
   z-index: 100;
 
 }
+
+/* Character Select Screen */
+
+
+
+#charThreeAv{
+position: absolute;
+width: 426.96px;
+height: 400px;
+left: 118px;
+top: 340px;
+background: url(/assets/images/characterSplashes/charSelect/charThree.png);
+background-size: contain;
+border-radius: 10px;
+font-size: 0;
+line-height: 0;
+}
+
+
+
+#charTwoAv{
+position: absolute;
+width: 426.96px;
+height: 400px;
+left: calc(50% - 426.96px/2 + 0.48px);
+bottom: 340px;
+background: url(/assets/images/characterSplashes/charSelect/charTwo.png);
+background-size: contain;
+border-radius: 10px;
+font-size: 0;
+line-height: 0;
+}
+
+#charOneAv{
+  position: absolute;
+  width: 427.27px;
+  height: 400px;
+  right: 116.73px;
+  top: 340px;
+  background: url(/assets/images/characterSplashes/charSelect/charOne.png);
+  background-size: contain;
+  border-radius: 10px;
+  font-size: 0;
+  line-height: 0;
+}
+
+#charSelectStart{
+position: absolute;
+width: 700px;
+height: 110px;
+left: calc(50% - 690px/2 + 4px);
+bottom: 71px;
+background: url(/assets/images/ui/startBtn.png);
+background-repeat:no-repeat;
+border-style:none;
+}
+
+#charSelectStart:hover{
+  background: url(/assets/images/ui/startBtnHover.png);
+  background-repeat:no-repeat;
+}
+
+#charSelectHeader{
+position: absolute;
+width: 713px;
+height: 77px;
+left: 607px;
+top: 90px;
+animation-name: pulse;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#charSelExit{
+  position:absolute;
+  width: 75px;
+  height: 75px;
+  left: 10px;
+  top: 10px;
+
+}
+

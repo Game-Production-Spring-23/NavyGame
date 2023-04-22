@@ -21,6 +21,10 @@ let journalScreen = document.getElementById("journalContainer");
 let mapScreen = document.getElementById("mapContainer");
 let music = document.getElementById("audio");
 let settingsContainer = document.getElementById("settingsContainer");
+let charOneSelect = document.getElementById("charOneAv");
+let charTwoSelect = document.getElementById("charTwoAv");
+let charThreeSelect = document.getElementById("charThreeAv");
+
 
 let mapStatus = false;
 let journalStatus = false;
@@ -63,6 +67,7 @@ function toggleJournal() {
     console.log("journal off");
   }
 }
+
 
 document.getElementById("mapOverlay").onclick = () => {
   toggleMap();
