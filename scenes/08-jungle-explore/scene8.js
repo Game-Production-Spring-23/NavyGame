@@ -1,9 +1,9 @@
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import { loadNewHTMLFile, devSkip } from "/lib.js";
 import { loadScene9 } from "/scenes/09-shopping-minigame/shopping-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene8() {
-  console.log("Scene 8 - Explore");
+  console.log("Scene8 - Beach");
   devSkip(
     "/scenes/09-shopping-minigame/shopping_minigame.html",
     "/scenes/09-shopping-minigame/minigame3styles.css",
@@ -13,7 +13,7 @@ export function loadScene8() {
   // Get Document Elements
   const player = document.getElementById("player");
   const bgContainer = document.getElementById("background");
-  const mgContainer = document.getElementById("midground");
+  //const mgContainer = document.getElementById("midground");
   const cgContainer = document.getElementById("charground");
   const fgContainer = document.getElementById("foreground");
   const captain = document.getElementById("captain");
@@ -43,7 +43,7 @@ export function loadScene8() {
   let playerRBound;
 
   let bgOffset = 0;
-  let mgOffset = 0;
+  //let mgOffset = 0;
   let fgOffset = 0;
 
   let fgMaxOffset;
@@ -54,14 +54,15 @@ export function loadScene8() {
 
   let speed;
   let fgSpeed;
-  let mgSpeed;
+  //let mgSpeed;
   let bgSpeed;
 
+  let totalKeys = 0;
   let keysFound = 0;
   let interaction = "";
 
   // Get JSON Data
-  fetch("/scenes/08-explore/scene2.json")
+  fetch("/scenes/05-beach-explore/scene5.json")
     .then((response) => response.json())
     .then((data) => {
       global_data = JSON.parse(JSON.stringify(data));
@@ -115,7 +116,7 @@ export function loadScene8() {
       bgContainer.style.width = 1920 * data.params.bg_scale + "px";
       bgContainer.style.backgroundImage =
         "url(" + data.params.bg_images[0] + ")";
-      mgContainer.style.width = 1920 * data.params.mg_scale + "px";
+      //mgContainer.style.width = 1920 * data.params.mg_scale + "px";
       //mgContainer.style.backgroundImage =
       //  "url(" + data.params.mg_images[0] + ")";
       cgContainer.style.width = 1920 * data.params.fg_scale + "px";
@@ -127,7 +128,9 @@ export function loadScene8() {
 
       //console.log(global_data);
       init(global_data);
-      startDialogue(0, "/scenes/02-deck-explore/dialogue.json");
+      // startDialogue(0, "/scenes/02-deck-explore/dialogue.json");
+      console.log(isDialogueOccurring);
+      //isDialogueOccurring = false;
     });
 
   //console.log(global_data);
@@ -143,8 +146,53 @@ export function loadScene8() {
 
     speed = global_data.params.fg_speed;
     fgSpeed = global_data.params.fg_speed;
-    mgSpeed = global_data.params.mg_speed;
+    //mgSpeed = global_data.params.mg_speed;
     bgSpeed = global_data.params.bg_speed;
+
+    if (playerAbs > playerRBound) {
+      if (playerAbs > playerAbsLimit) {
+        playerAbs = playerAbsLimit;
+        fgOffset = fgMaxOffset;
+        //mgOffset = -1920 * (global_data.params.mg_scale - 1);
+        bgOffset = -1920 * (global_data.params.bg_scale - 1);
+
+        fgContainer.style.left = fgOffset + "px";
+        cgContainer.style.left = fgOffset + "px";
+        //mgContainer.style.left = mgOffset + "px";
+        bgContainer.style.left = bgOffset + "px";
+        player.style.left = playerAbs + "px";
+
+        playerRBound = playerAbsLimit - 576;
+        playerLBound = playerAbsLimit - 1216;
+      } else if (playerAbs > playerAbsLimit - 576) {
+        fgOffset = fgMaxOffset;
+        //mgOffset = -1920 * (global_data.params.mg_scale - 1);
+        bgOffset = -1920 * (global_data.params.bg_scale - 1);
+
+        fgContainer.style.left = fgOffset + "px";
+        cgContainer.style.left = fgOffset + "px";
+        //mgContainer.style.left = mgOffset + "px";
+        bgContainer.style.left = bgOffset + "px";
+
+        playerRBound = playerAbsLimit - 576;
+        playerLBound = playerAbsLimit - 1216;
+      } else {
+        let distance = playerAbs - playerRBound;
+        let steps = distance / speed;
+
+        fgOffset = -1 * fgSpeed * steps;
+        //mgOffset = -1 * mgSpeed * steps;
+        bgOffset = -1 * bgSpeed * steps;
+
+        fgContainer.style.left = fgOffset + "px";
+        cgContainer.style.left = fgOffset + "px";
+        //mgContainer.style.left = mgOffset + "px";
+        bgContainer.style.left = bgOffset + "px";
+
+        playerRBound = playerAbs - 1;
+        playerLBound = playerAbs - 640;
+      }
+    }
 
     totalKeys = global_data.keys.num_keys;
 
@@ -240,6 +288,7 @@ export function loadScene8() {
         resetSubtitles();
       }
 
+      // Adjust for Proper To Minigame Transition
       if (!locked && playerAbs > playerAbsLimit - 200) {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
@@ -294,8 +343,8 @@ export function loadScene8() {
           fgOffset -= fgSpeed;
           fgContainer.style.left = fgOffset + "px";
           cgContainer.style.left = fgOffset + "px";
-          mgOffset -= mgSpeed;
-          mgContainer.style.left = mgOffset + "px";
+          //mgOffset -= mgSpeed;
+          //mgContainer.style.left = mgOffset + "px";
           bgOffset -= bgSpeed;
           bgContainer.style.left = bgOffset + "px";
           // Player Right
@@ -333,8 +382,8 @@ export function loadScene8() {
           fgOffset += fgSpeed;
           fgContainer.style.left = fgOffset + "px";
           cgContainer.style.left = fgOffset + "px";
-          mgOffset += mgSpeed;
-          mgContainer.style.left = mgOffset + "px";
+          //mgOffset += mgSpeed;
+          //mgContainer.style.left = mgOffset + "px";
           bgOffset += bgSpeed;
           bgContainer.style.left = bgOffset + "px";
           // Player Left
@@ -373,22 +422,22 @@ export function loadScene8() {
       locked[1] = false;
     } else if (interaction == global_data.keys.keys[2] && locked[2]) {
       // Play Quartermaster Dialogue
-      keyMark2.style.visibility = "hidden";
+      keyMark4.style.visibility = "hidden";
       keysFound++;
       locked[2] = false;
     } else if (interaction == global_data.keys.keys[3] && locked[3]) {
       // Play Chef Dialogue
-      keyMark3.style.visibility = "hidden";
+      keyMark2.style.visibility = "hidden";
       keysFound++;
       locked[3] = false;
     } else if (interaction == global_data.keys.keys[4] && locked[4]) {
       // Play Gunner Dialogue
-      keyMark4.style.visibility = "hidden";
+      keyMark5.style.visibility = "hidden";
       keysFound++;
       locked[4] = false;
     } else if (interaction == global_data.keys.keys[5] && locked[5]) {
       // Play Pirate 1 Dialogue
-      keyMark5.style.visibility = "hidden";
+      keyMark3.style.visibility = "hidden";
       keysFound++;
       locked[5] = false;
     } else if (interaction == global_data.keys.keys[6] && locked[6]) {
@@ -410,6 +459,14 @@ export function loadScene8() {
     if (keysFound == global_data.keys.num_keys) {
       console.log("All Pieces Found");
       // Transition to Minigame after Delay
+      if (!hasPlayerReachedMinigame) {
+        hasPlayerReachedMinigame = true;
+        loadNewHTMLFile(
+          "/scenes/09-shopping-minigame/shopping_minigame.html",
+          "/scenes/09-shopping-minigame/minigame3styles.css",
+          loadScene9
+        );
+      }
     }
   }
 }

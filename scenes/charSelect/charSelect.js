@@ -1,8 +1,14 @@
-import { loadNewHTMLFile } from "/lib.js";
+import { loadNewHTMLFile, devSkip } from "/lib.js";
 import { boatScene } from "/scenes/01-intro-boat-scene/boat-scene.js";
 
 
 export function charSelect() {
+  devSkip(
+    "/scenes/01-intro-boat-scene/boat-scene.html",
+    "/scenes/01-intro-boat-scene/style.css",
+    boatScene
+  );
+
   const charOneBtn = document.getElementById("charOneAv");
   const charTwoBtn = document.getElementById("charTwoAv");
   const charThreeBtn = document.getElementById("charThreeAv");

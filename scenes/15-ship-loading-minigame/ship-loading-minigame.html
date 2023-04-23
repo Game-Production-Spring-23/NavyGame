@@ -1,59 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="/scenes/15-ship-loading-minigame/minigame5styles.css">
-    <link rel="stylesheet" href="/style.css">
-</head>
-
-<body>
-    <div id="miniGame5">
-        <div class="mg5containerBG">
-            <div class="mg5crewFront">
-                <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
-                <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
-            </div>
-            <img class="mg5container" src="/assets/images/minigame5/NG_Element.png" />
-            <div class="mg5crewBack">
-                <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
-                <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
-            </div>
+<div id="miniGame5">
+    <div class="mg5containerBG">
+        <div class="mg5crewFront">
+            <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
+            <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
         </div>
-        <div class="mg5containerBG">
-            <div class="mg5crewFront">
-                <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
-                <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
-            </div>
-            <img class="mg5container" src="/assets/images/minigame5/NG_Element.png" />
-            <div class="mg5crewBack">
-                <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
-                <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
-            </div>
-        </div>
-        <div id="mg5officers">
-            <img class="mg5officer" src="/assets/images/minigame5/NG_Officer_Intelligence.png" data-value="3" />
-            <img class="mg5officer" src="/assets/images/minigame5/NG_Officer_Fight.png" data-value="1" />
-            <img class="mg5officer" src="/assets/images/minigame5/NG_Officer_LifeSupport.png" data-value="2" />
-            <img class="mg5officer" src="/assets/images/minigame5/NG_Officer_Navigation.png" data-value="0" />
+        <img class="mg5container" src="/assets/images/minigame5/NG_Element.png" />
+        <div class="mg5crewBack">
+            <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
+            <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
         </div>
     </div>
-    <!-- Dialogue Screen -->
-    <div id="dialogueScreen">
-        <img id="dialogueImage">
-        <img id="lCharaPortrait" class="charaPortrait"></img>
-        <img id="rCharaPortrait" class="charaPortrait"></img>
-        <div id="dialogueBox">
-            <input type="image" class="dialogueBtn" id="backBtn" src="/assets/images/ui/leftBtn.png" />
-            <p id="dialogueText"></p>
-            <input type="image" class="dialogueBtn" id="frontButton" src="/assets/images/ui/rightBtn.png" />
+    <div class="mg5containerBG">
+        <div class="mg5crewFront">
+            <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
+            <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
+        </div>
+        <img class="mg5container" src="/assets/images/minigame5/NG_Element.png" />
+        <div class="mg5crewBack">
+            <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
+            <img class="mg5crew" src="/assets/images/minigame5/NG_Crew.png" />
         </div>
     </div>
-    <script type="module" src="/scenes/dialogue.js"></script>
-    <script type="module" src="/scenes/15-ship-loading-minigame/ship-loading-minigam.js"></script>
-</body>
-
-</html>
+    <div id="mg5officers">
+        <img class="mg5officer" src="/assets/images/minigame5/NG_Officer_Intelligence.png" data-value="3" />
+        <img class="mg5officer" src="/assets/images/minigame5/NG_Officer_Fight.png" data-value="1" />
+        <img class="mg5officer" src="/assets/images/minigame5/NG_Officer_LifeSupport.png" data-value="2" />
+        <img class="mg5officer" src="/assets/images/minigame5/NG_Officer_Navigation.png" data-value="0" />
+    </div>
+</div>
+<!-- Dialogue Screen -->
+<div id="dialogueScreen">
+    <img id="dialogueImage">
+    <img id="lCharaPortrait" class="charaPortrait"></img>
+    <img id="rCharaPortrait" class="charaPortrait"></img>
+    <div id="dialogueBox">
+        <input type="image" class="dialogueBtn" id="backBtn" src="/assets/images/ui/leftBtn.png" />
+        <p id="dialogueText"></p>
+        <input type="image" class="dialogueBtn" id="frontButton" src="/assets/images/ui/rightBtn.png" />
+    </div>
+</div>

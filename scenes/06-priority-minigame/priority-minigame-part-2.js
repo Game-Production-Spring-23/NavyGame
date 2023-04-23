@@ -1,6 +1,6 @@
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
-import { loadNewHTMLFile } from "../../lib.js";
-import { loadScene8 } from "/scenes/08-explore/scene8.js";
+import { loadNewHTMLFile } from "/lib.js";
+import { loadScene8 } from "/scenes/08-jungle-explore/scene8.js";
 
 export function loadScene6_2() {
   // Start
@@ -127,8 +127,8 @@ export function loadScene6_2() {
             "/scenes/06-priority-minigame/dialogue.json",
             () => {
               loadNewHTMLFile(
-                "/scenes/08-explore/index.html",
-                "/scenes/08-explore/styles.css",
+                "/scenes/08-jungle-explore/index.html",
+                "/scenes/08-jungle-explore/styles.css",
                 loadScene8
               );
             }

@@ -1,13 +1,13 @@
 import { startDialogue } from "/scenes/dialogue.js";
-import { devSkip } from "../../lib.js";
+import { devSkip } from "/lib.js";
 import { loadScene6_2 } from "/scenes/06-priority-minigame/priority-minigame-part-2.js";
-import { loadScene8 } from "/scenes/08-explore/scene8.js";
+import { loadScene8 } from "/scenes/08-jungle-explore/scene8.js";
 
 export function loadScene6() {
   // allow developer to skip to next level
   devSkip(
-    "/scenes/08-explore/index.html",
-    "/scenes/08-explore/styles.css",
+    "/scenes/08-jungle-explore/index.html",
+    "/scenes/08-jungle-explore/styles.css",
     loadScene8
   );
   // Start

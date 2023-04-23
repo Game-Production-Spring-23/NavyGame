@@ -1,0 +1,10 @@
+#centerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#restartBtn {
+    width: 100px;
+    height: 40px;
+}
