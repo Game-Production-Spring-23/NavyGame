@@ -1,14 +1,13 @@
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
+import { loadScene14 } from "../14-beach-explore/scene14.js";
 
 export function miniGame4() {
-    /*
     devSkip(
-        "/scenes/12-mini-game-4/index.html",
-        "/scenes/12-mini-game-4/style.css",
-        loadScene6
-      );
-    */ 
+        "/scenes/14-beach-explore/index.html",
+        "/scenes/14-beach-explore/styles.css",
+        loadScene14
+    );
     // Wait for the page to load (the element don't exist until the page is fully loaded).
     fetch('/scenes/12-mini-game-4/data.json')
     .then((res) => res.json())
@@ -201,6 +200,11 @@ export function miniGame4() {
                 } else {
                     // end the game
                     console.log("Congrats! You solved the game.");
+                    loadNewHTMLFile(
+                        "/scenes/14-beach-explore/index.html",
+                        "/scenes/14-beach-explore/styles.css",
+                        loadScene14
+                    );
                 } // end if
             } // end if
         }); // end load data.json

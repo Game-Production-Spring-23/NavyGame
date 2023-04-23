@@ -1,25 +1,16 @@
 :root {
     --animation-playback-speed: 5s;
     --animation-delay: 0s;
-    --background-image-width: 150vw;
-    --background-image-height: 110vh;
-    --top-offset: -5vh;
 
     --animation-start-pos: -5vw;
     --animation-stop-pos: -20vw;
-    --image-path: url(/assets/images/splashscreens/Ship-Wreck.png);
 }
 
 body {
     background-color: black;
 }
 
-#splash-screen-div {
-  width: var(--background-image-width);
-  height: var(--background-image-height);
-  top: var(--top-offset);
-  background-color: black;
-  background-image: var(--image-path);
+#splash-screen {
   position: relative;
   animation: splashScreenAnimation var(--animation-playback-speed) linear var(--animation-delay) infinite alternate;
 }
