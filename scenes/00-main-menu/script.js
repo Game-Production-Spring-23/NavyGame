@@ -1,5 +1,5 @@
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
-import { boatScene } from "../01-intro-boat-scene/boat-scene.js";
+import { loadNewHTMLFile, devSkip } from "/lib.js";
+import { charSelect } from "/scenes/charSelect/charSelect.js";
 
 export function mainMenu() {
   //global variables
@@ -206,9 +206,9 @@ export function mainMenu() {
 
   // what to skip to
   devSkip(
-    "/scenes/01-intro-boat-scene/boat-scene.html",
-    "/scenes/01-intro-boat-scene/style.css",
-    boatScene
+    "/scenes/charSelect/charSelect.html",
+    "/style.css",
+    charSelect
   );
 
   document.getElementById("mapOverlay").onclick = () => {
@@ -216,9 +216,9 @@ export function mainMenu() {
   };
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
-      "/scenes/01-intro-boat-scene/boat-scene.html",
-      "/scenes/01-intro-boat-scene/style.css",
-      boatScene
+      "/scenes/charSelect/charSelect.html",
+      "/style.css",
+      charSelect
     );
   }; // end setOnclick for start
 } // end mainMenu

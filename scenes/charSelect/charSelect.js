@@ -1,83 +1,93 @@
-const charOneBtn = document.getElementById("charOneAv");
-const charTwoBtn = document.getElementById("charTwoAv");
-const charThreeBtn = document.getElementById("charThreeAv");
-let characterSelection = 0;
-let btnSelected = false;
+import { loadNewHTMLFile } from "/lib.js";
+import { boatScene } from "/scenes/01-intro-boat-scene/boat-scene.js";
 
-import
 
-function charOneSelect(){
-if (btnSelected == false){
-charOneBtn.style.border = "10px solid white";
-characterSelection=1;
-btnSelected=true;
+export function charSelect() {
+  const charOneBtn = document.getElementById("charOneAv");
+  const charTwoBtn = document.getElementById("charTwoAv");
+  const charThreeBtn = document.getElementById("charThreeAv");
+  let characterSelection = 0;
+  let btnSelected = false;
 
-}
-else if(btnSelected == true){
-  charTwoBtn.style.border="none";
-  charThreeBtn.style.border="none";
+  function charOneSelect(){
+  if (btnSelected == false){
   charOneBtn.style.border = "10px solid white";
   characterSelection=1;
   btnSelected=true;
 
-};
-}
+  }
+  else if(btnSelected == true){
+    charTwoBtn.style.border="none";
+    charThreeBtn.style.border="none";
+    charOneBtn.style.border = "10px solid white";
+    characterSelection=1;
+    btnSelected=true;
 
-function charTwoSelect(){
-if (btnSelected == false){
-charTwoBtn.style.border = "10px solid white";
-characterSelection=2;
-btnSelected=true;
+  };
+  }
 
-}
-else if(btnSelected == true){
-  charOneBtn.style.border="none";
-  charThreeBtn.style.border="none";
+  function charTwoSelect(){
+  if (btnSelected == false){
   charTwoBtn.style.border = "10px solid white";
   characterSelection=2;
   btnSelected=true;
- 
-};
-}
 
-function charThreeSelect(){
-if (btnSelected == false){
-charThreeBtn.style.border = "10px solid white";
-characterSelection=3;
-btnSelected=true;
+  }
+  else if(btnSelected == true){
+    charOneBtn.style.border="none";
+    charThreeBtn.style.border="none";
+    charTwoBtn.style.border = "10px solid white";
+    characterSelection=2;
+    btnSelected=true;
+  
+  };
+  }
 
-}
-else if(btnSelected == true){
-  charOneBtn.style.border="none";
-  charTwoBtn.style.border="none";
+  function charThreeSelect(){
+  if (btnSelected == false){
   charThreeBtn.style.border = "10px solid white";
   characterSelection=3;
   btnSelected=true;
-  
-};
-}
+
+  }
+  else if(btnSelected == true){
+    charOneBtn.style.border="none";
+    charTwoBtn.style.border="none";
+    charThreeBtn.style.border = "10px solid white";
+    characterSelection=3;
+    btnSelected=true;
+    
+  };
+  }
 
 
-charOneBtn.onclick = () => {
-charOneSelect();
-}
+  charOneBtn.onclick = () => {
+  charOneSelect();
+  }
 
-charTwoBtn.onclick = () => {
-charTwoSelect();
-}
+  charTwoBtn.onclick = () => {
+  charTwoSelect();
+  }
 
-charThreeBtn.onclick = () => {
-charThreeSelect();
-}
+  charThreeBtn.onclick = () => {
+  charThreeSelect();
+  }
 
-//Listen for hover over start button
-const startBtn = document.getElementById("charSelectStart");
-startBtn.addEventListener("mouseover", function( event ) {
-  //change background image
-  startBtn.style.backgroundImage = "url('/assets/images/ui/startBtnHover.png')";
-  //change cursor
-  startBtn.style.cursor = "pointer";
-}, false);
+  //Listen for hover over start button
+  const startBtn = document.getElementById("charSelectStart");
+  startBtn.addEventListener("mouseover", function( event ) {
+    //change background image
+    startBtn.style.backgroundImage = "url('/assets/images/ui/startBtnHover.png')";
+    //change cursor
+    startBtn.style.cursor = "pointer";
+  }, false);
 
-
-
+  // when start button is pressed, move to next scene
+  startBtn.onclick = () => {
+    loadNewHTMLFile(
+      "/scenes/01-intro-boat-scene/boat-scene.html",
+      "/scenes/01-intro-boat-scene/style.css",
+      boatScene
+    );
+  } // end startBtn.onclick
+} // end charSelect
