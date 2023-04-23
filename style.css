@@ -44,16 +44,16 @@ h3 {
 /* UI Overlay CSS */
 #uiOVerlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
+width: 159px;
+height: 1080px;
+left: 0px;
+top: 0px;
+background: rgba(58, 70, 113, 0.75);
+z-index: 999;
 }
 .uiIcon {
-  height: 75px;
-  width: 75px;
-  margin-bottom: 20px;
+  height: 100px;
+  width: 100px;
 }
 /* Position UI icons right side of the screen*/
 #exitOverlay {
@@ -62,14 +62,32 @@ h3 {
   top: 0;
   z-index: 99;
 }
-#uiRightSide {
-  right: 0;
-  top: 0;
-  z-index: 100;
+
+#volumeIcon{
   position: absolute;
-  display: flex;
-  flex-direction: column;
+width: 100px;
+height: 100px;
+left: 24px;
+top: 385px;
 }
+
+#journalOverlay{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 24px;
+top: 705px;
+}
+
+#mapOverlay{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 24px;
+top: 545px;
+}
+
+
 #settingModal {
   display: none;
 }
