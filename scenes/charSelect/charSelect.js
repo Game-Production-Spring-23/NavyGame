@@ -4,7 +4,7 @@ const charThreeBtn = document.getElementById("charThreeAv");
 let characterSelection = 0;
 let btnSelected = false;
 
-import
+
 
 function charOneSelect(){
 if (btnSelected == false){
