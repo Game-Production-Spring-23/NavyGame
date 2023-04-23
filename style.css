@@ -32,20 +32,58 @@ h3 {
   color: #ffffff;
   text-align: center;
 }
-/* UI Overlay CSS */
-#uiOVerlay {
+/*----------------- UI Overlay CSS------------------------------ */
+#charRank{
+position: absolute;
+width: 108px;
+height: 180px;
+left: 32px;
+top: 59px;
+border-radius: 0px 50px 50px 0px;
+}
+
+#volumeIcon{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 37px;
+top: 336px;
+border-radius: 0px 50px 50px 0px;
+}
+
+#mapOverlay{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 28px;
+top: 511px;
+border-radius: 0px 50px 50px 0px;
+}
+
+#journalOverlay{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 32px;
+top: 687px;
+border-radius: 0px 50px 50px 0px;
+}
+
+#rankText{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
+  width: 79px;
+  height: 39px;
+  left: 48px;
+  top: 240px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  
+  color: #000000;
 }
-.uiIcon {
-  height: 75px;
-  width: 75px;
-  margin-bottom: 20px;
-}
+
 /* Position UI icons right side of the screen*/
 #exitOverlay {
   position: absolute;
@@ -53,14 +91,18 @@ h3 {
   top: 0;
   z-index: 99;
 }
-#uiRightSide {
-  right: 0;
-  top: 0;
-  z-index: 100;
+
+#uiOverlayLeft{
   position: absolute;
-  display: flex;
-  flex-direction: column;
+width: 174px;
+height: 872px;
+left: 0px;
+top: 214px;
+background: rgba(28, 28, 70, 0.69);
+border-radius: 0px 50px 50px 0px;
+z-index:999;
 }
+
 #settingModal {
   display: none;
 }
