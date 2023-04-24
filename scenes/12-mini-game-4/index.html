@@ -1,74 +1,57 @@
-<section id="flexbox">
-    <section id="flexbox-top">
-        <div id="options-panel">
-            <p class="option" id="option-1" draggable="true"></p>
-            <p class="option" id="option-2" draggable="true"></p>
-            <p class="option" id="option-3" draggable="true"></p>
-        </div>
+<!-- Background Image -->
+<img id="background-scene" src="/scenes/12-mini-game-4/images/NG_RiskAssessment_Scene.png" alt="Background Scene">
 
-        <section id="flexbox-grid-outer">
-            <p id="vertical-label">Severity</p>
-            <section id="flexbox-grid-inner">
-                <div id="grid-panel">
-                    <div class="grid-label" id="box-11">High Severity</div>
-                    <div class="grid-item" id="box-12"></div>
-                    <div class="grid-item" id="box-13"></div>
-                    <div class="grid-item" id="box-14"></div>
-                    <div class="grid-item" id="box-15"></div>
-                    <div class="grid-item" id="box-16"></div>
+<!-- Speech Bubbles -->
+<div class="speech-bubbles" id="speech-bubble-1">
+    <p class="speech-bubble-text" id="speech-bubble-text-1">Click on an option to see how we react to your selection. Once you have read our thoughts on the option, you can then drag the option into one of the spots on the grid.</p>
+</div>
+<div class="speech-bubbles" id="speech-bubble-2">
+    <p class="speech-bubble-text" id="speech-bubble-text-2">Click on an option already!</p>
+</div>
+<div class="speech-bubbles" id="speech-bubble-3">
+    <p class="speech-bubble-text" id="speech-bubble-text-3">I am a pirate.</p>
+</div>
 
-                    <div class="grid-label" id="box-21">High-ish Severity</div>
-                    <div class="grid-item" id="box-22"></div>
-                    <div class="grid-item" id="box-23"></div>
-                    <div class="grid-item" id="box-24"></div>
-                    <div class="grid-item" id="box-25"></div>
-                    <div class="grid-item" id="box-26"></div>
+<!-- Options -->
+<div class="option" id="option-1">
+    <p class="option-text" id="option-text-1">This is Text.</p>
+</div>
+<div class="option" id="option-2">
+    <p class="option-text" id="option-text-2">This is Text.</p>
+</div>
+<div class="option" id="option-3">
+    <p class="option-text" id="option-text-3">This is Text.</p>
+</div>
 
-                    <div class="grid-label" id="box-31">Mid Severity</div>
-                    <div class="grid-item" id="box-32"></div>
-                    <div class="grid-item" id="box-33"></div>
-                    <div class="grid-item" id="box-34"></div>
-                    <div class="grid-item" id="box-35"></div>
-                    <div class="grid-item" id="box-36"></div>
+<!-- Severity-Probability Grid -->
+<div id="severity-probability-grid">
+        <div class="grid-item" id="box-11"></div>
+        <div class="grid-item" id="box-12"></div>
+        <div class="grid-item" id="box-13"></div>
+        <div class="grid-item" id="box-14"></div>
+        <div class="grid-item" id="box-11"></div>
 
-                    <div class="grid-label" id="box-41">Low-ish Severity</div>
-                    <div class="grid-item" id="box-42"></div>
-                    <div class="grid-item" id="box-43"></div>
-                    <div class="grid-item" id="box-44"></div>
-                    <div class="grid-item" id="box-45"></div>
-                    <div class="grid-item" id="box-46"></div>
+        <div class="grid-item" id="box-21"></div>
+        <div class="grid-item" id="box-22"></div>
+        <div class="grid-item" id="box-23"></div>
+        <div class="grid-item" id="box-24"></div>
+        <div class="grid-item" id="box-25"></div>
 
-                    <div class="grid-label" id="box-51">Low Severity</div>
-                    <div class="grid-item" id="box-52"></div>
-                    <div class="grid-item" id="box-53"></div>
-                    <div class="grid-item" id="box-54"></div>
-                    <div class="grid-item" id="box-55"></div>
-                    <div class="grid-item" id="box-56"></div>
+        <div class="grid-item" id="box-31"></div>
+        <div class="grid-item" id="box-32"></div>
+        <div class="grid-item" id="box-33"></div>
+        <div class="grid-item" id="box-34"></div>
+        <div class="grid-item" id="box-35"></div>
 
-                    <div class="grid-item" id="box-61"></div>
-                    
-                    <div class="grid-label" id="box-62">Low Probability</div>
-                    <div class="grid-label" id="box-63">Low-ish Probability</div>
-                    <div class="grid-label" id="box-64">Mid Probability</div>
-                    <div class="grid-label" id="box-65">High-sh Probability</div>
-                    <div class="grid-label" id="box-66">High Probability</div>
-                </div>
-                <p id="horizontal-label">Probability</p>
-            </section>
-        </section>
-    </section>
-    <section id="flexbox-bottom">
-        <div class="character-container">
-            <img class="character" id="pirate-captain" src="/scenes/12-mini-game-4/images/PirateCaptain_NoBackground.png" alt="Pirate Captain"> 
-            <p class="character-text" id="text-1">Click on an option to see how we react to your selection. Once you have read our thoughts on the option, you can then drag the option into one of the spots on the grid.</p>
-        </div>
-        <div class="character-container">
-            <img class="character" src="/scenes/12-mini-game-4/images/PossiblePirate_NoBackground.PNG" alt="Random Pirate"> 
-            <p class="character-text" id="text-2">Click on an option already!</p>
-        </div>
-        <div class="character-container">
-            <img class="character" src="/scenes/12-mini-game-4/images/coconut.png" alt="Coconut"> 
-            <p class="character-text" id="text-3">I am a coconut.</p>
-        </div>
-    </section>
-</section>
+        <div class="grid-item" id="box-41"></div>
+        <div class="grid-item" id="box-42"></div>
+        <div class="grid-item" id="box-43"></div>
+        <div class="grid-item" id="box-44"></div>
+        <div class="grid-item" id="box-45"></div>
+
+        <div class="grid-item" id="box-51"></div>
+        <div class="grid-item" id="box-52"></div>
+        <div class="grid-item" id="box-53"></div>
+        <div class="grid-item" id="box-54"></div>
+        <div class="grid-item" id="box-55"></div>
+</div>
