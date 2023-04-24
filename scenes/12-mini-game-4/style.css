@@ -1,172 +1,125 @@
-/* Settings to get the right height out of the body element. */
-body {
-    min-height: 100vh;
-    background-color: rgb(225, 216, 216);
-    user-select: none;
+/* Base Styles */
+:root {
+    /* Speech Bubble Vars */
+    --speech-bubble-top-spacing: 68vh;
+    --speech-bubble-1-left-spacing: 18vw;
+    --speech-bubble-2-left-spacing: 50vw;
+    --speech-bubble-3-left-spacing: 83vw;
 
+    --speech-bubble-width: 295px;
+    --speech-bubble-height: 335px;
+
+    /* Options Vars */
+    --options-left-spacing: 3vw;
+    --options-width: 400px;
+    --options-height: 150px;
+}
+
+body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: antiquewhite;
 }
 
-#flexbox {
+/* Speech Bubble Styles */
+.speech-bubbles {
+    background-image: url("/scenes/12-mini-game-4/images/NG_RiskAssessment_SpeechBubble.png");
+    background-color: transparent;
+    position: absolute;
+    user-select: none;
+
+    top: var(--speech-bubble-top-spacing);
+
+    width: var(--speech-bubble-width);
+    height: var(--speech-bubble-height);
+
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
-
-    padding: 2.5vh;
-    background-color: aqua;
-    min-height: 95vh;
 }
 
-#flexbox-top {
-    display: flex;
-    justify-content: space-between;
-
-    min-width: 95vw;
-    height: 65vh;
-    
-    background-color: aqua;
+#speech-bubble-1 {
+    left: var(--speech-bubble-1-left-spacing);
 }
 
-#flexbox-bottom {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-
-    min-width: 95vw;
-    min-height: 15vh;
-
-    background-color: seagreen;
+#speech-bubble-2 {
+    left: var(--speech-bubble-2-left-spacing);
 }
 
-.character-container {
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(225, 216, 216);
+#speech-bubble-3 {
+    left: var(--speech-bubble-3-left-spacing);
 }
 
-.character {
-    width: 100px;
-    height: 150px;
-}
-
-.character-text {
-    text-align: left;
-    padding: 5px;
-
-    width: 300px;
-    height: 150px;
-
-    border-style: solid;
-    border-radius: 25px;
-    border-width: 5px;
-}
-
-/* Settings for all of the boxes inside the grid.
-   Options Section, Drag & Drop Grid Section, and Character Section. */
-
-
-#options-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: rgb(225, 216, 216);
-
-    width: 15%;
-    height: 95%;
-    padding: 10px;
-
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 10px;
-}
-
-.option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    height: 20%;
-
-    background-color: blue;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 5px;
-
-    font-size: x-large;
-    font-weight: bolder;
+.speech-bubble-text {
+    font: bold;
+    font-size: large;
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 35px;
     user-select: none;
 }
 
+/* Options Styles */
+.option {
+    background-image: url("/scenes/12-mini-game-4/images/NG_RiskAssessment_Options_Sheet.png");
+    background-color: transparent;
+    position: absolute;
+    user-select: none;
 
-#flexbox-grid-outer {
+    left: var(--options-left-spacing);
+
+    width: var(--options-width);
+    height: var(--options-height);
+
     display: flex;
-    flex-direction: row;
-    background-color: rgb(225, 216, 216);
+    justify-content: center;
+    flex-wrap: wrap;
 
-    width: 70%;
-    height: 100%;
-
-    border-style: solid;
-    border-width: 6px;
+    z-index: 1;
 }
 
-#vertical-label {
-    writing-mode: vertical-lr;
-    width: 3%;
+#option-1 {
+    transform: rotate(5deg);
+    top: 5vh;
+}
 
-    text-align: center;
+#option-2 {
+    transform: rotate(-7deg);
+    top: 25vh;
+}
+
+#option-3 {
+    transform: rotate(2deg);
+    top: 44vh;
+}
+
+.option-text {
     font-size: x-large;
-    font-weight: bold;
+    padding-top: 45px;
+    user-select: none;
 }
 
-#flexbox-grid-inner {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(225, 216, 216);
+/* Severity-Probability Grid Styles */
+#severity-probability-grid {
+    background-color: transparent;
+    
+    position: absolute;
+    top: 8vh;
+    left: 43vw;
+    width: 50.5vw;
+    height: 43vh;
 
-    width: 97.5%;
-}
-
-#horizontal-label {    
-    height: 6%;
-
-    text-align: center;
-    font-size: x-large;
-    font-weight: bold;
-}
-
-#grid-panel {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 4px;
-
-    height: 95%;
-
-    background-color: black;
-
-    border-style: solid;
-    border-bottom-width: 6px;
-    border-left-width: 6px;
-    border-top-width: 0;
-    border-right-width: 0;
+    user-select: none;
 }
 
 .grid-item {
-    background-color: goldenrod;
+    background-color: transparent;
 
-    text-align: center;
-    padding-top: 16%;
-    user-select: none;
-}
-
-.grid-label {
-    background-color: crimson;
-
-    text-align: center;
-    font-size: large;
-    font-weight: bold;
-    padding-top: 15%;
-    user-select: none;
+    border-style: solid;
+    border-width: 5px;
 }

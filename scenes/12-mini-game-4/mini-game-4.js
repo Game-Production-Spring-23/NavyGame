@@ -1,6 +1,6 @@
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import { loadScene14 } from "/scenes/14-beach-explore/scene14.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
-import { loadScene14 } from "../14-beach-explore/scene14.js";
 
 export function miniGame4() {
     devSkip(
@@ -8,84 +8,93 @@ export function miniGame4() {
         "/scenes/14-beach-explore/styles.css",
         loadScene14
     );
-    // Wait for the page to load (the element don't exist until the page is fully loaded).
+
+    // draggable element
+    let draggableElement;
+    let posX = 0;
+    let posY = 0;
+
     fetch('/scenes/12-mini-game-4/data.json')
     .then((res) => res.json())
     .then((data) => {
         // Set event listeners
         let options = document.getElementsByClassName("option");
         let gridItems = document.getElementsByClassName("grid-item");
+        let optionTexts = document.getElementsByClassName("option-text");
 
         // loop over options, set them to be draggable
         for(let i = 0; i < options.length; i++) {
-            options[i].addEventListener("dragstart", drag);
-            options[i].addEventListener("mousedown", () => {
+            options[i].dataset.hasMoved = "false";
+            options[i].addEventListener("mousedown", (event) => {
+                posX = event.pageX;
+                posY = event.pageY;
+                dragMove(options[i].id);
                 changeCharacterText(i);
             }); // end mousedown event listener
 
-            options[i].textContent = data["options-text"][i];
+            optionTexts[i].textContent = data["options-text"][i];
         } // end for
 
-        // loop over grid spaces, set them to allow for dropping items into them
+        // loop over grid items, set default for option
         for(let i = 0; i < gridItems.length; i++) {
             gridItems[i].dataset.probability = i % 5;
             gridItems[i].dataset.severity = 4 - Math.floor(i / 5);
-            gridItems[i].addEventListener("drop", drop);
-            gridItems[i].addEventListener("dragover", allowDrop);
-            gridItems[i].addEventListener("mousedown", () => {
-                resetSelection(i);
-            }); // end mousedown event listener
-        } // end for
-
-        // set initial values for severity
-        let severityIDs = ["box-51", "box-41", "box-31", "box-21", "box-11"];
-        for(let i = 0; i < severityIDs.length; i++) {
-            document.getElementById(severityIDs[i]).textContent = data["severity-scale"][i];
-        } // end for
-        
-        
-        // set initial values for severity
-        let probabilityIDs = ["box-62", "box-63", "box-64", "box-65", "box-66"];
-        for(let i = 0; i < probabilityIDs.length; i++) {
-            document.getElementById(probabilityIDs[i]).textContent = data["probability-scale"][i];
+            gridItems[i].dataset.option = "";
         } // end for
     }); // end load data.json
 
-
-    // Allows an item to receive an option when an option is dropped on.
-    function allowDrop(ev) {
-        ev.preventDefault();
-    } // end allowDrop
-
-    
-    // Tells what to do when an option is dragged.
-    function drag(ev) {
-        ev.dataTransfer.setData("text", document.getElementById(ev.target.id).textContent);
-        ev.dataTransfer.setData("optionID", ev.target.id);
-    } // end drag
-
-
-    // Transfers the data from the option to the item when dropped.
-    function drop(ev) {
-        // Set the grid item to recieve the text from the selected option
-        ev.preventDefault();
-        let data = ev.dataTransfer.getData("text");
-        let gridElement = document.getElementById(ev.target.id);
-
-        // ensure that element is empty
-        if(gridElement.textContent == "") {
-            gridElement.textContent = data;
-            gridElement.style.backgroundColor = "blue";
-            gridElement.dataset.optionID = ev.dataTransfer.getData("optionID");
-
-            // Remove the option from the options list
-            let optionElement = document.getElementById(ev.dataTransfer.getData("optionID"));
-            optionElement.remove();
-
-            // check if the game has been finished
-            checkForGameFinished();
+    // check if elements overlap
+    function mouseIsOver(cursorX, cursorY, ele) {  
+        let rect = ele.getBoundingClientRect();
+        if((rect.top <= cursorY) && (rect.bottom >= cursorY)) {
+            if((rect.left <= cursorX) && (rect.right >= cursorX )) {
+                return true;
+            } // end if
         } // end if
-    } // end drop
+
+        return false;
+    } // end elementsOverlap
+
+    // allows element to be dragged
+    function dragMove(id) {
+        let element = document.getElementById(id);
+        element.onmousedown = () => {
+            draggableElement = element;
+        } // end onmousedown
+    } // end dragMove
+
+    document.onmouseup = (event) => {
+        // loop over grid items, check if any are overlapping w/ dragged option
+        let gridItems = document.getElementsByClassName("grid-item");
+        for(let i = 0; i < gridItems.length; i++) {
+            if(draggableElement) {
+                if(mouseIsOver(event.clientX, event.clientY, gridItems[i])) {
+                    // tell grid item that it has an option
+                    gridItems[i].dataset.option = draggableElement.id;
+                    draggableElement.dataset.hasMoved = "true";
+                    let rect = gridItems[i].getBoundingClientRect();
+                    draggableElement.style.top = (rect.top - rect.height/4) + "px";
+                    draggableElement.style.left = (rect.left - rect.width/2) + "px";
+                    swing(draggableElement.id);
+                } // end if
+            } // end if
+        } // end for
+
+        draggableElement = null;
+        checkForGameFinished();
+    } // end doc onmouseup
+
+    document.onmousemove = (event) => {
+        if(draggableElement != null) {
+            draggableElement.dataset.hasMoved = "true";
+            let mouseX = posX - event.pageX;
+            let mouseY = posY - event.pageY;
+            posX = event.pageX;
+            posY = event.pageY;
+            draggableElement.style.left = (draggableElement.offsetLeft - mouseX) + "px";
+            draggableElement.style.top = (draggableElement.offsetTop - mouseY) + "px";
+        } // end if
+    } // end onmousemove
 
 
     // changes the text of the character when an option is selected
@@ -93,7 +102,7 @@ export function miniGame4() {
         fetch('/scenes/12-mini-game-4/data.json')
         .then((res) => res.json())
         .then((data) => {
-            let characterTexts = document.getElementsByClassName("character-text");
+            let characterTexts = document.getElementsByClassName("speech-bubble-text");
 
             // loop over every character text, setting to their respective text for the option.
             for(let i = 0; i < characterTexts.length; i++) {
@@ -114,50 +123,10 @@ export function miniGame4() {
         }); // end load data.json
 
         // shake boxes
-        shake("text-1", 1, 300);
-        shake("text-2", 1, 300);
-        shake("text-3", 1, 300);
+        shake("speech-bubble-1", 1, 300);
+        shake("speech-bubble-2", 1, 300);
+        shake("speech-bubble-3", 1, 300);
     } // end changeCharacterText
-
-
-    // allows player to click on box and put option back into options list.
-    function resetSelection(gridElementIndex) {
-        fetch('/scenes/12-mini-game-4/data.json')
-        .then((res) => res.json())
-        .then((data) => {
-            let gridItems = document.getElementsByClassName("grid-item");
-
-            // reset grid item
-            let gridItem = gridItems[gridElementIndex];
-            let optionText = gridItem.textContent;
-            
-            if(optionText != "") {
-                gridItem.textContent = "";
-                gridItem.style.backgroundColor = "goldenrod";
-
-                // add option back to options panel
-                let optionsPanel = document.getElementById("options-panel");
-                let reinstatedOption = document.createElement("p");
-                optionsPanel.appendChild(reinstatedOption);
-
-                // set option element parameters
-                reinstatedOption.className = "option";
-                reinstatedOption.id = gridItem.dataset.optionID;
-                reinstatedOption.textContent = optionText;
-                reinstatedOption.draggable = true;
-
-                // Add events to option element
-                reinstatedOption.addEventListener("dragstart", drag);
-                reinstatedOption.addEventListener("mousedown", () => {
-                    for(let i = 0; i < data["options-text"].length; i++) {
-                        if(data["options-text"][i] == optionText) {
-                            changeCharacterText(i);
-                        } // end if
-                    } // end for
-                }); // end mousedown event listener
-            } // end if
-        }); // end load data.json
-    } // end resetSelection
 
 
     // Checks for if the game is finished
@@ -165,47 +134,71 @@ export function miniGame4() {
         fetch('/scenes/12-mini-game-4/data.json')
         .then((res) => res.json())
         .then((data) => {
-            // check if all options have left the options panel
-            let optionsPanel = document.getElementById("options-panel");
-            if(optionsPanel.children.length == 0) {
-                let correctAnswerCount = 0;
-                
-                // check if the selections are correct
-                let gridItems = document.getElementsByClassName("grid-item");
-                // loop over every item in the grid
-                for(let i = 0; i < gridItems.length; i++) {
-                    // loop over the correct answers
-                    for(let j = 0; j < data["solutions"].length; j++) {
-                        // check if the text matches any of the options
-                        if(gridItems[i].textContent == data["options-text"][j]) {
-                            // if it does, check if that grid item's row and column
-                            // match the correct row and column for the option based on the solutions
-                            if(
-                                (gridItems[i].dataset.probability == data["solutions"][j]["probability"]) &&
-                                (gridItems[i].dataset.severity == data["solutions"][j]["severity"])
-                            ) {
-                                correctAnswerCount++;
+            let gridItems = document.getElementsByClassName("grid-item");
+            let solutions = data.solutions;
+            let correctCounter = 0;
+
+            // loop over the solutions
+            for(let i = 0; i < solutions.length; i++) {
+                for(let j = 0; j < gridItems.length; j++) {
+                    if(solutions[i].probability == gridItems[j].dataset.probability) {
+                        if(solutions[i].severity == gridItems[j].dataset.severity) {
+                            let currentOption = `option-${i+1}`;
+                            if(gridItems[j].dataset.option == currentOption) {
+                                correctCounter += 1;
                             } // end if
                         } // end if
-                    } // end for
+                    } // end if
+                } // end for
+            } // end for
+
+            // check if win
+            if(correctCounter >= 3) {
+                loadNewHTMLFile(
+                    "/scenes/14-beach-explore/index.html",
+                    "/scenes/14-beach-explore/styles.css",
+                    loadScene14
+                );
+            } // end if
+
+            // find out how many options have been moved
+            let options = document.getElementsByClassName("option");
+            let movedOptionsCount = 0;
+            for(let i = 0; i < options.length; i++) {
+                if(options[i].dataset.hasMoved == "true") {
+                    movedOptionsCount += 1;
+                } // end if
+            } // end for
+
+            // check if failed, then reset
+            if(movedOptionsCount >= 3 && correctCounter < 3) {
+                // reset grid items
+                for(let i = 0; i < gridItems.length; i++) {
+                    gridItems[i].dataset.option = "";
                 } // end for
 
-                // check how many correct answers there are
-                if(correctAnswerCount < data["solutions"].length) { 
-                    // not enough correct answers - reset grid
-                    for(let i = 0; i < gridItems.length; i++) {
-                        resetSelection(i);
-                        shake("flexbox-grid-outer");
-                    } // end for
-                } else {
-                    // end the game
-                    console.log("Congrats! You solved the game.");
-                    loadNewHTMLFile(
-                        "/scenes/14-beach-explore/index.html",
-                        "/scenes/14-beach-explore/styles.css",
-                        loadScene14
-                    );
-                } // end if
+                // reset 
+                let x = 55;
+                let initLoc = [
+                    {
+                        "x": x,
+                        "y": 50
+                    },
+                    {
+                        "x": x,
+                        "y": 250,
+                    },
+                    {
+                        "x": x,
+                        "y": 450,
+                    }
+                ]; // end initLoc
+                for(let i = 0; i < options.length; i++) {
+                    options[i].dataset.hasMoved = "false";
+                    let destX = initLoc[i].x - parseInt(options[i].style.left.slice(0, -2));
+                    let destY = initLoc[i].y - parseInt(options[i].style.top.slice(0, -2));
+                    slide(options[i].id, destX, destY, initLoc[i].x, initLoc[i].y);
+                } // end for
             } // end if
         }); // end load data.json
     } // end checkForGameFinished
@@ -228,5 +221,51 @@ export function miniGame4() {
 
         document.getElementById(elementID).animate(action, timing);
     } // end shake
-} // end miniGame4
 
+    // swing the option back & forth when dropped onto the grid
+    function swing(elementID, iterations=1, duration=1000) {
+        let action = [
+            { transform: "rotate(0)" },
+            { transform: "rotate(15deg)" },
+            { transform: "rotate(22deg)" },
+            { transform: "rotate(25deg)" },
+            { transform: "rotate(22deg)" },
+            { transform: "rotate(15deg)" },
+            { transform: "rotate(0)" },
+            { transform: "rotate(-13deg)" },
+            { transform: "rotate(-20deg)" },
+            { transform: "rotate(-22deg)" },
+            { transform: "rotate(-20deg)" },
+            { transform: "rotate(-13deg)" },
+            { transform: "rotate(-5deg)" },
+            { transform: "rotate(-2deg)" },
+            { transform: "rotate(0)" },
+        ]; // end action
+
+        let timing = {
+            duration: duration,
+            iterations: iterations
+        }; // end timing
+
+        document.getElementById(elementID).animate(action, timing);
+    } // end swing
+
+    // swing the option back & forth when dropped onto the grid
+    function slide(elementID, xSlide, ySlide, xLoc, yLoc, iterations=1, duration=1000) {
+        let ele = document.getElementById(elementID);
+        let action = [
+            { transform: `translate(${xSlide}px, ${ySlide}px)` }
+        ]; // end action
+
+        let timing = {
+            duration: duration,
+            iterations: iterations
+        }; // end timing
+
+        let animation = ele.animate(action, timing);
+        animation.onfinish = () => {
+            ele.style.left = xLoc + "px";
+            ele.style.top = yLoc + "px";
+        }; // end animation.onfinish
+    } // end slide
+} // end miniGame4
