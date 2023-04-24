@@ -47,7 +47,7 @@ body {
 #chars-upper {
   z-index: 2;
   height: 128px;
-  bottom: 212px;
+  bottom: 288px;
 
   margin: 0;
   padding: 0;
@@ -112,13 +112,18 @@ body {
 #player {
   z-index: 3;
   height: 170px;
-  bottom: 148px;
+  bottom: 128px;
+}
+
+#native1 {
+  bottom: -60px;
 }
 
 #subtitles {
   height: 128px;
   font-size: 40px;
   color: black;
+  background-color: antiquewhite;
 }
 
 .keyMark {
