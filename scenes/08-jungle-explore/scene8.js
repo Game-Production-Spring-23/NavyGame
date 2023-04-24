@@ -12,28 +12,12 @@ export function loadScene8() {
 
   // Get Document Elements
   const player = document.getElementById("player");
-  const bgContainer = document.getElementById("background");
-  //const mgContainer = document.getElementById("midground");
   const cgContainer = document.getElementById("charground");
   const fgContainer = document.getElementById("foreground");
-  const captain = document.getElementById("captain");
   const parrot = document.getElementById("parrot");
-  const qm = document.getElementById("quartermaster");
-  const vet = document.getElementById("veteran");
-  const chef = document.getElementById("chef");
-  const officers = document.getElementById("officers");
-  const tech = document.getElementById("tech");
-  const nt = document.getElementById("nontech");
-  //const characters = document.getElementsByClassName("character");
+  const shopkeep = document.getElementById("shopkeep");
   const subtitles = document.getElementById("subtitles");
   const keyMark0 = document.getElementById("keyMark0");
-  const keyMark1 = document.getElementById("keyMark1");
-  const keyMark2 = document.getElementById("keyMark2");
-  const keyMark3 = document.getElementById("keyMark3");
-  const keyMark4 = document.getElementById("keyMark4");
-  const keyMark5 = document.getElementById("keyMark5");
-  const keyMark6 = document.getElementById("keyMark6");
-  const keyMark7 = document.getElementById("keyMark7");
   const dialogueReady = document.getElementById("dialogueReady");
 
   let global_data = null;
@@ -49,7 +33,7 @@ export function loadScene8() {
   let fgMaxOffset;
   let playerAbsLimit;
 
-  let locked = [true, true, true, true, true, true, true, true];
+  let locked = [true];
   let hasPlayerReachedMinigame = false;
 
   let speed;
@@ -57,7 +41,6 @@ export function loadScene8() {
   //let mgSpeed;
   let bgSpeed;
 
-  let totalKeys = 0;
   let keysFound = 0;
   let interaction = "";
 
@@ -73,49 +56,19 @@ export function loadScene8() {
         "url(" + data.characters.player.sprite[0] + ")";
       player.setAttribute("name", data.characters.player.name);
 
-      captain.style.left = data.characters.captain.offset + "px";
-      captain.style.backgroundImage =
-        "url(" + data.characters.captain.sprite[0] + ")";
-      captain.setAttribute("name", data.characters.captain.name);
-
       parrot.style.left = data.characters.parrot.offset + "px";
       parrot.style.backgroundImage =
         "url(" + data.characters.parrot.sprite[0] + ")";
       parrot.setAttribute("name", data.characters.parrot.name);
 
-      qm.style.left = data.characters.quartermaster.offset + "px";
-      qm.style.backgroundImage =
-        "url(" + data.characters.quartermaster.sprite[0] + ")";
-      qm.setAttribute("name", data.characters.quartermaster.name);
+      shopkeep.style.left = data.characters.shopkeep.offset + "px";
+      shopkeep.style.backgroundImage =
+        "url(" + data.characters.shopkeep.sprite[0] + ")";
+      shopkeep.setAttribute("name", data.characters.shopkeep.name);
 
-      vet.style.left = data.characters.veteran.offset + "px";
-      vet.style.backgroundImage =
-        "url(" + data.characters.veteran.sprite[0] + ")";
-      vet.setAttribute("name", data.characters.veteran.name);
-
-      chef.style.left = data.characters.chef.offset + "px";
-      chef.style.backgroundImage =
-        "url(" + data.characters.chef.sprite[0] + ")";
-      chef.setAttribute("name", data.characters.chef.name);
-
-      officers.style.left = data.characters.officers.offset + "px";
-      officers.style.backgroundImage =
-        "url(" + data.characters.officers.sprite[0] + ")";
-      officers.setAttribute("name", data.characters.officers.name);
-
-      tech.style.left = data.characters.tech.offset + "px";
-      tech.style.backgroundImage =
-        "url(" + data.characters.tech.sprite[0] + ")";
-      tech.setAttribute("name", data.characters.tech.name);
-
-      nt.style.left = data.characters.nontech.offset + "px";
-      nt.style.backgroundImage =
-        "url(" + data.characters.nontech.sprite[0] + ")";
-      nt.setAttribute("name", data.characters.nontech.name);
-
-      bgContainer.style.width = 1920 * data.params.bg_scale + "px";
-      bgContainer.style.backgroundImage =
-        "url(" + data.params.bg_images[0] + ")";
+      //bgContainer.style.width = 1920 * data.params.bg_scale + "px";
+      //bgContainer.style.backgroundImage =
+      //  "url(" + data.params.bg_images[0] + ")";
       //mgContainer.style.width = 1920 * data.params.mg_scale + "px";
       //mgContainer.style.backgroundImage =
       //  "url(" + data.params.mg_images[0] + ")";
@@ -154,12 +107,12 @@ export function loadScene8() {
         playerAbs = playerAbsLimit;
         fgOffset = fgMaxOffset;
         //mgOffset = -1920 * (global_data.params.mg_scale - 1);
-        bgOffset = -1920 * (global_data.params.bg_scale - 1);
+        //bgOffset = -1920 * (global_data.params.bg_scale - 1);
 
         fgContainer.style.left = fgOffset + "px";
         cgContainer.style.left = fgOffset + "px";
         //mgContainer.style.left = mgOffset + "px";
-        bgContainer.style.left = bgOffset + "px";
+        //bgContainer.style.left = bgOffset + "px";
         player.style.left = playerAbs + "px";
 
         playerRBound = playerAbsLimit - 576;
@@ -167,12 +120,12 @@ export function loadScene8() {
       } else if (playerAbs > playerAbsLimit - 576) {
         fgOffset = fgMaxOffset;
         //mgOffset = -1920 * (global_data.params.mg_scale - 1);
-        bgOffset = -1920 * (global_data.params.bg_scale - 1);
+        //bgOffset = -1920 * (global_data.params.bg_scale - 1);
 
         fgContainer.style.left = fgOffset + "px";
         cgContainer.style.left = fgOffset + "px";
         //mgContainer.style.left = mgOffset + "px";
-        bgContainer.style.left = bgOffset + "px";
+        //bgContainer.style.left = bgOffset + "px";
 
         playerRBound = playerAbsLimit - 576;
         playerLBound = playerAbsLimit - 1216;
@@ -182,19 +135,17 @@ export function loadScene8() {
 
         fgOffset = -1 * fgSpeed * steps;
         //mgOffset = -1 * mgSpeed * steps;
-        bgOffset = -1 * bgSpeed * steps;
+        //bgOffset = -1 * bgSpeed * steps;
 
         fgContainer.style.left = fgOffset + "px";
         cgContainer.style.left = fgOffset + "px";
         //mgContainer.style.left = mgOffset + "px";
-        bgContainer.style.left = bgOffset + "px";
+        //bgContainer.style.left = bgOffset + "px";
 
         playerRBound = playerAbs - 1;
         playerLBound = playerAbs - 640;
       }
     }
-
-    totalKeys = global_data.keys.num_keys;
 
     document.addEventListener("keyup", (event) => {
       if (
@@ -410,54 +361,22 @@ export function loadScene8() {
     console.log(interaction);
 
     if (interaction == global_data.keys.keys[0] && locked[0]) {
-      // Play Captain Dialogue
+      // Play Shopkeep Dialogue
       //startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
       keyMark0.style.visibility = "hidden";
       keysFound++;
       locked[0] = false;
-    } else if (interaction == global_data.keys.keys[1] && locked[1]) {
+    } else if (interaction == "Parrot") {
       // Play Parrot Dialogue
-      keyMark1.style.visibility = "hidden";
-      keysFound++;
-      locked[1] = false;
-    } else if (interaction == global_data.keys.keys[2] && locked[2]) {
-      // Play Quartermaster Dialogue
-      keyMark4.style.visibility = "hidden";
-      keysFound++;
-      locked[2] = false;
-    } else if (interaction == global_data.keys.keys[3] && locked[3]) {
-      // Play Chef Dialogue
-      keyMark2.style.visibility = "hidden";
-      keysFound++;
-      locked[3] = false;
-    } else if (interaction == global_data.keys.keys[4] && locked[4]) {
-      // Play Gunner Dialogue
-      keyMark5.style.visibility = "hidden";
-      keysFound++;
-      locked[4] = false;
-    } else if (interaction == global_data.keys.keys[5] && locked[5]) {
-      // Play Pirate 1 Dialogue
-      keyMark3.style.visibility = "hidden";
-      keysFound++;
-      locked[5] = false;
-    } else if (interaction == global_data.keys.keys[6] && locked[6]) {
-      // Play Pirate 2 Dialogue
-      keyMark6.style.visibility = "hidden";
-      keysFound++;
-      locked[6] = false;
-    } else if (interaction == global_data.keys.keys[7] && locked[7]) {
-      // Play Veteran Dialogue
-      keyMark7.style.visibility = "hidden";
-      keysFound++;
-      locked[7] = false;
+      subtitles.innerHTML = interaction + ": *Squawk* Go find that shopkeep!";
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
-      subtitles.innerHTML = interaction + ': "That is all I know."';
+      subtitles.innerHTML = interaction + ': "?????"';
       document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
     }
 
     if (keysFound == global_data.keys.num_keys) {
-      console.log("All Pieces Found");
+      //console.log("All Pieces Found");
       // Transition to Minigame after Delay
       if (!hasPlayerReachedMinigame) {
         hasPlayerReachedMinigame = true;
