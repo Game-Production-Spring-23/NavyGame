@@ -10,6 +10,9 @@ export function loadScene5() {
     loadScene6
   );
 
+  // Scene 5 - Beach Dialogue
+  startDialogue(0, "/scenes/05-beach-explore/dialogue.json");
+
   // Get Document Elements
   const player = document.getElementById("player");
   const bgContainer = document.getElementById("background");

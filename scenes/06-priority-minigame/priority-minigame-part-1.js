@@ -115,11 +115,13 @@ export function loadScene6() {
         tabButtons[tabIndex].src = tabComplete[tabIndex];
         completeCount++;
 
+        // Dialogue
+        startDialogue(tabIndex+1, "/scenes/06-priority-minigame/dialogue.json");
+
         //if all 3 answers are finished
         if (completeCount >= 3) {
           document.getElementById("mg2p1Submit").style.display = "block";
           document.getElementById("mg2Part2").style.display = "block";
-          startDialogue(1, "/scenes/06-priority-minigame/dialogue.json");
         }
       }
     }

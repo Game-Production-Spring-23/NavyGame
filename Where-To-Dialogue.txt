@@ -16,3 +16,15 @@ After each outline puzzle game is complete, this is text to show, in file "n436-
 Priority order instruction lines in file "n436-mini-game-2-instructions-priority-order" in writing folder, this link also gets you there=> https://bit.ly/mini-game-2-priority-order-instructions
 
 Let me know if you have any questions 🙂
+
+Ex Dialogue Block:
+
+{
+    "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+    "playerPortrait1": "",
+    "playerPortrait2": "",
+    "playerPortrait3": "",
+    "otherPortrait": "",
+    "isPlayerTalking": false,
+    "text": ""
+},

@@ -1,77 +1,163 @@
 [
   {
-    "otherName": "",
-    "otherOffset": 0,
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "How to play Part 1"
-      }
-    ]
-  },
-  {
-    "otherName": "",
-    "otherOffset": 0,
-    "dialogue": [
+        "text": "Ho ho, me hearty! 'Tis time to get our hands dirty and fix this ship up proper! Ye've spoken with th' crew and got some intel that th' rudder, main mast, and foremast be damaged."
+      },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Wow I did it, press the arrow button in the bottom left to start prioritizing repairs"
-      }
-    ]
-  },
-  {
-    "otherName": "",
-    "otherOffset": 0,
-    "dialogue": [
+        "text": "But wait, we've got ourselves some outline puzzle games to solve first! Ye'll be given an outline puzzle piece game for each o' the rudder, main mast, and foremast. Ye must solve them to learn what part needs to be repaired first, second, or third."
+      },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "How to play Part 2"
+        "text": "Listen closely, me hearties! Each piece o' the puzzle corresponds to a specific part o' the ship. Ye must use yer knowledge o' th' MBSE approach to assess th' damage to each part and figure out th' proper order o' repair."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Solve each puzzle piece by piece, and as ye do, the order o' repair will become clear. Be swift, be smart, and fix these parts up right, so we can set sail and find our new adventure! Arrr!"
       }
     ]
   },
   {
-    "otherName": "",
-    "otherOffset": 0,
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "otherPortrait": "",
-        "isPlayerTalking": true,
-        "text": "Hmm, not sure that's right"
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "We'll be fixin' the foremast last, which is still important, but not as crucial as the others."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Buckle down and prioritize the repairs to get the whole ship up and runnin' again, and fast!"
       }
     ]
   },
   {
-    "otherName": "",
-    "otherOffset": 0,
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
     "dialogue": [
       {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "",
         "playerPortrait2": "",
         "playerPortrait3": "",
-        "otherPortrait": "",
-        "isPlayerTalking": true,
-        "text": "I did it, I saved the day",
-        "image": "/assets/images/minigame2/NG_PriorityGame_Win.jpg"
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Arrr, it be crucial we fix the rudder first, as it be responsible for steerin' our vessel. Without a properly functioning rudder, the ship may not be able to navigate and could be at risk of running aground or colliding with other ships."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Avast ye! The puzzles ye solved showed us the repair order for the parts of the ship that be damaged."
+      }
+    ]
+  },
+  {
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "We can mov'in to repair yon main mast second, which be holdin' our sails high and provide the power to move the ship forward."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Arrr, settin' priorities for the repairs be crucial if we want our ship to sail again in a jiffy."
+      }
+    ]
+  },
+  {
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Avast! Listen ye all! Yer task is to drag the damaged parts to place them in the priority order based on the repair order ye have learned in the previous outline puzzle games."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Make sure ye got the first line representin' the ship's part that should be fixed first, the second line the ship's part that should be fixed second, and the third line the ship's part that should be fixed last, ya scallywag!"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Once ye are certain with the priority order, click on the ink well to submit yer answer. "
+      }
+    ]
+  },
+  {
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Game Complete!"
       }
     ]
   }
