@@ -75,13 +75,30 @@ border-radius: 0px 50px 50px 0px;
   height: 39px;
   left: 48px;
   top: 240px;
-  font-family: 'Inter';
-  font-style: normal;
+  font-family: 'Raleway';
+  font-style: semi-bold;
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
   
-  color: #000000;
+  color: #FFFFFF;
+}
+
+#uiTab{
+position: absolute;
+width: 96px;
+height: 152px;
+left: 172px;
+top: 600px;
+z-index:999;
+}
+
+#uiTabArrow{
+position: absolute;
+left: 2.08%;
+right: 19.79%;
+top: 25.66%;
+bottom: 25%;
 }
 
 /* Position UI icons right side of the screen*/
@@ -93,7 +110,7 @@ border-radius: 0px 50px 50px 0px;
 }
 
 #uiOverlayLeft{
-  position: absolute;
+position: absolute;
 width: 174px;
 height: 872px;
 left: 0px;
