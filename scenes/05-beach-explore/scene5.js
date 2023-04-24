@@ -35,6 +35,7 @@ export function loadScene5() {
   const keyMark6 = document.getElementById("keyMark6");
   const keyMark7 = document.getElementById("keyMark7");
   const dialogueReady = document.getElementById("dialogueReady");
+  const keyCounter = document.getElementById("keyCounter");
 
   let global_data = null;
 
@@ -494,6 +495,9 @@ export function loadScene5() {
       subtitles.innerHTML = interaction + ': "That is all I know."';
       document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
     }
+
+    keyCounter.innerHTML =
+      "<p>" + keysFound + " / " + global_data.keys.num_keys + "</p>";
 
     if (keysFound == global_data.keys.num_keys) {
       console.log("All Pieces Found");
