@@ -30,13 +30,6 @@
     <div id="settingsContainer">
     </div>
 
-    <!--Adds arrow to right side of screen-->
-    <div id="rightArrowUi">
-        <div id="rightArrowContainer">
-            <img id="arrowIcon" src="/assets/images/ui/arrowIcon.png">
-        </div>
-    </div>
-
     <!-- UI Containers ----------------------------------------------------------------------------------------------------------------->
     <div id="journalContainer">
         <div id="journalModal" class="modal">
@@ -53,19 +46,19 @@
             </div>
         </div>
     </div>
-    <div id="uiOVerlay" class="overlay">
-        
-            <div id="sideBarBacking">
-                <div id="uiLeftSide">
+    <input type="image" id="uiTab" src="/assets/images/ui/uiTabClose.png">
 
-                    <input id="volumeIcon" class="uiIcon" type="image" onclick="toggleVolume()" value="Options"
-                        src="/assets/images/ui/soundBtn.png">
-                    <input id="journalOverlay" class="uiIcon" type="image" onclick="toggleJournalOn()" value="Journal"
-                        src="/assets/images/ui/pixelJournalIcon.png">
-                    <input id="mapOverlay" class="uiIcon" type="image" onclick="toggleMap()" value="Map"
-                        src="/assets/images/ui/pixelMapIcon.png">
-                </div>
-            </div>
+    <div id="uiOverlayLeft">
+        
+        <img id="charRank" class="uiIcon" src="/assets/images/ui/rank1.png">
+        <p id="rankText">Rank</p>
+        <input id="volumeIcon" class="uiIcon" type="image" onclick="toggleVolume()" value="Options"
+                    src="/assets/images/ui/soundBtn.png">
+                <input id="journalOverlay" class="uiIcon" type="image" onclick="toggleJournalOn()" value="Journal"
+                    src="/assets/images/ui/pixelJournalIcon.png">
+                <input id="mapOverlay" class="uiIcon" type="image" onclick="toggleMap()" value="Map"
+                    src="/assets/images/ui/pixelMapIcon.png">
+
     </div>
 </body>
 <script type="module" src="./index.js"></script>

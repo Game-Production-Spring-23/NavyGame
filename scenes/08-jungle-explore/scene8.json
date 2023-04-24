@@ -6,81 +6,37 @@
         "../../assets/images/characters/player/pwalk1.png",
         "../../assets/images/characters/player/playerwalk.gif "
       ],
-      "offset": 5376
-    },
-    "captain": {
-      "name": "Captain",
-      "sprite": ["../../assets/images/characters/captain/capt3Front.png"],
-      "offset": 2200
+      "offset": 8640
     },
     "parrot": {
       "name": "Parrot",
       "sprite": ["../../assets/images/characters/parrot/parrot.png"],
-      "offset": 1500
+      "offset": 8200
     },
-    "quartermaster": {
-      "name": "Quartermaster",
-      "sprite": ["../../assets/images/characters/crew/crew2B.png"],
-      "offset": 2650
-    },
-    "chef": {
-      "name": "Chef",
-      "sprite": ["../../assets/images/characters/chef/chef.png"],
-      "offset": 3060
-    },
-    "officers": {
-      "name": "Gunner",
-      "sprite": ["../../assets/images/characters/crew/crew1B.png"],
-      "offset": 1960
-    },
-    "nontech": {
-      "name": "Pirate 1",
-      "sprite": ["../../assets/images/characters/crew/crew3Front.png"],
-      "offset": 512
-    },
-    "tech": {
-      "name": "Pirate 2",
-      "sprite": ["../../assets/images/characters/crew/crew4Front.png"],
-      "offset": 4200
-    },
-    "veteran": {
-      "name": "Veteran Engineer",
-      "sprite": ["../../assets/images/characters/engineer/engineer.png"],
-      "offset": 3432
+    "shopkeep": {
+      "name": "Shopkeep",
+      "sprite": [],
+      "offset": 2880
     }
   },
   "params": {
-    "bg_images": ["../../assets/images/backdrops/skyparallax.png"],
+    "bg_images": [],
     "mg_images": [],
     "cg_images": [
-      "../../assets/images/backdrops/beachgamearea-background-animated.gif"
+      "../../assets/images/backdrops/junglegamearea-background.png"
     ],
     "fg_images": [
-      "../../assets/images/backdrops/beachgamearea-foreground-animated.gif"
+      "../../assets/images/backdrops/junglegamearea-foreground.png"
     ],
-    "bg_scale": 2,
-    "mg_scale": 1.5,
-    "fg_scale": 3,
-    "bg_speed": 5,
-    "mg_speed": 11.5,
+    "bg_scale": 0,
+    "mg_scale": 0,
+    "fg_scale": 5,
+    "bg_speed": 0,
+    "mg_speed": 0,
     "fg_speed": 14
   },
-  "mark": {
-    "numMarks": 1,
-    "offsetsX": [896],
-    "offsetsY": [480]
-  },
   "keys": {
-    "num_keys": 8,
-    "keys": [
-      "Captain",
-      "Parrot",
-      "Quartermaster",
-      "Chef",
-      "Gunner",
-      "Pirate 1",
-      "Pirate 2",
-      "Veteran Engineer"
-    ]
+    "num_keys": 1,
+    "keys": ["Shopkeep"]
   }
 }
