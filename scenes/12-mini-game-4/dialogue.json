@@ -1,0 +1,32 @@
+[
+  {
+    "otherName": "",
+    "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "How to play Part 1"
+      }
+    ]
+  },
+  {
+    "otherName": "",
+    "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "End"
+      }
+    ]
+  }
+]

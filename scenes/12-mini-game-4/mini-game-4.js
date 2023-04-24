@@ -1,6 +1,6 @@
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
 import { loadScene14 } from "/scenes/14-beach-explore/scene14.js";
-import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
+import { startDialogue, isDialogueOccurring, startDialogueNext } from "/scenes/dialogue.js";
 
 export function miniGame4() {
     devSkip(
@@ -8,6 +8,9 @@ export function miniGame4() {
         "/scenes/14-beach-explore/styles.css",
         loadScene14
     );
+
+    // Start Dialogue
+    startDialogue(0, "/scenes/12-mini-game-4/dialogue.json");
 
     // draggable element
     let draggableElement;
@@ -153,11 +156,13 @@ export function miniGame4() {
 
             // check if win
             if(correctCounter >= 3) {
-                loadNewHTMLFile(
-                    "/scenes/14-beach-explore/index.html",
-                    "/scenes/14-beach-explore/styles.css",
-                    loadScene14
-                );
+                startDialogueNext(1, "/scenes/12-mini-game-4/dialogue.json", () => {
+                    loadNewHTMLFile(
+                        "/scenes/14-beach-explore/index.html",
+                        "/scenes/14-beach-explore/styles.css",
+                        loadScene14
+                    );
+                }); 
             } // end if
 
             // find out how many options have been moved
