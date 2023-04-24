@@ -81,6 +81,56 @@
       "Pirate 1",
       "Pirate 2",
       "Veteran Engineer"
-    ]
+    ],
+    "key_lines": {
+      "Captain": [
+        "Avast, Chief! Ye ship were caught in a fierce storm,",
+        "and we had ta’ beach her to avoid sinkin'.",
+        "The rudder be damaged and won't turn proper.",
+        "We need to fix it afore we can set sail again."
+      ],
+      "Parrot": [
+        "Blimey, Chief! The main mast be in terrible shape.",
+        "It were hit by lightning during the storm,",
+        "and now it be leanin' to one side, pieces everywhere!",
+        "We'll have to repair it afore we can raise the sails."
+      ],
+      "Quartermaster": [
+        "Avast, Chief! We've emptied the ship",
+        "to see what damage the storm hath wrought.",
+        "It be a mess down below, and we'll need to sift",
+        "through everything to see what we can salvage."
+      ],
+      "Chef": [
+        "Shiver me timbers, Chief! The storm were so rough,",
+        "we had to jettison some cargo to lighten the ship's load.",
+        "We were able to save most of the valuable stuff,",
+        "but we lost a few barrels of rum in the process."
+      ],
+      "Gunner": [
+        "Ahoy, Chief! We've unloaded the ship to assess the damage.",
+        "It be a good thing we did, 'cause the rudder be not a working.",
+        "We need to patch it up afore we can sail a’gin.",
+        ""
+      ],
+      "Pirate1": [
+        "Arr, Chief, it be lookin' like the foremast snapped",
+        "and the rigging and ropes had some weak points that gave way.",
+        "We'll need to repair it before we can set a sail again.",
+        ""
+      ],
+      "Pirate2": [
+        "Arr, Chief! The foremast took a beatin' during the storm.",
+        "It be cracked in several places,",
+        "and we'll need to replace some of the damaged parts.",
+        "We'll need your expertise to get it back in shape."
+      ],
+      "Veteran": [
+        "Avast ye, Chief!",
+        "We've been workin' on finding the rudder parts",
+        "scattered across the beach.",
+        "We'll keep ye posted of any further pieces we ‘a find."
+      ]
+    }
   }
 }

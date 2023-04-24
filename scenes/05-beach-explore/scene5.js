@@ -57,7 +57,7 @@ export function loadScene5() {
   //let mgSpeed;
   let bgSpeed;
 
-  let totalKeys = 0;
+  let lineCounter = [0, 0, 0, 0, 0, 0, 0, 0];
   let keysFound = 0;
   let interaction = "";
 
@@ -193,8 +193,6 @@ export function loadScene5() {
         playerLBound = playerAbs - 640;
       }
     }
-
-    totalKeys = global_data.keys.num_keys;
 
     document.addEventListener("keyup", (event) => {
       if (
@@ -411,45 +409,86 @@ export function loadScene5() {
 
     if (interaction == global_data.keys.keys[0] && locked[0]) {
       // Play Captain Dialogue
-      //startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
-      keyMark0.style.visibility = "hidden";
-      keysFound++;
-      locked[0] = false;
+      subtitles.innerHTML =
+        interaction + ": " + global_data.keys.key_lines.Captain[lineCounter[0]];
+      lineCounter[0] += 1;
+      if (lineCounter[0] >= 4) {
+        keyMark0.style.visibility = "hidden";
+        keysFound++;
+        locked[0] = false;
+      }
     } else if (interaction == global_data.keys.keys[1] && locked[1]) {
       // Play Parrot Dialogue
-      keyMark1.style.visibility = "hidden";
-      keysFound++;
-      locked[1] = false;
+      subtitles.innerHTML =
+        interaction + ": " + global_data.keys.key_lines.Parrot[lineCounter[1]];
+      lineCounter[1] += 1;
+      if (lineCounter[1] >= 4) {
+        keyMark1.style.visibility = "hidden";
+        keysFound++;
+        locked[1] = false;
+      }
     } else if (interaction == global_data.keys.keys[2] && locked[2]) {
       // Play Quartermaster Dialogue
-      keyMark4.style.visibility = "hidden";
-      keysFound++;
-      locked[2] = false;
+      subtitles.innerHTML =
+        interaction +
+        ": " +
+        global_data.keys.key_lines.Quartermaster[lineCounter[2]];
+      lineCounter[2] += 1;
+      if (lineCounter[2] >= 4) {
+        keyMark4.style.visibility = "hidden";
+        keysFound++;
+        locked[2] = false;
+      }
     } else if (interaction == global_data.keys.keys[3] && locked[3]) {
       // Play Chef Dialogue
-      keyMark2.style.visibility = "hidden";
-      keysFound++;
-      locked[3] = false;
+      subtitles.innerHTML =
+        interaction + ": " + global_data.keys.key_lines.Chef[lineCounter[3]];
+      lineCounter[3] += 1;
+      if (lineCounter[3] >= 4) {
+        keyMark2.style.visibility = "hidden";
+        keysFound++;
+        locked[3] = false;
+      }
     } else if (interaction == global_data.keys.keys[4] && locked[4]) {
       // Play Gunner Dialogue
-      keyMark5.style.visibility = "hidden";
-      keysFound++;
-      locked[4] = false;
+      subtitles.innerHTML =
+        interaction + ": " + global_data.keys.key_lines.Gunner[lineCounter[4]];
+      lineCounter[4] += 1;
+      if (lineCounter[4] >= 4) {
+        keyMark5.style.visibility = "hidden";
+        keysFound++;
+        locked[4] = false;
+      }
     } else if (interaction == global_data.keys.keys[5] && locked[5]) {
       // Play Pirate 1 Dialogue
-      keyMark3.style.visibility = "hidden";
-      keysFound++;
-      locked[5] = false;
+      subtitles.innerHTML =
+        interaction + ": " + global_data.keys.key_lines.Pirate1[lineCounter[5]];
+      lineCounter[5] += 1;
+      if (lineCounter[5] >= 4) {
+        keyMark3.style.visibility = "hidden";
+        keysFound++;
+        locked[5] = false;
+      }
     } else if (interaction == global_data.keys.keys[6] && locked[6]) {
       // Play Pirate 2 Dialogue
-      keyMark6.style.visibility = "hidden";
-      keysFound++;
-      locked[6] = false;
+      subtitles.innerHTML =
+        interaction + ": " + global_data.keys.key_lines.Pirate2[lineCounter[6]];
+      lineCounter[6] += 1;
+      if (lineCounter[6] >= 4) {
+        keyMark6.style.visibility = "hidden";
+        keysFound++;
+        locked[6] = false;
+      }
     } else if (interaction == global_data.keys.keys[7] && locked[7]) {
       // Play Veteran Dialogue
-      keyMark7.style.visibility = "hidden";
-      keysFound++;
-      locked[7] = false;
+      subtitles.innerHTML =
+        interaction + ": " + global_data.keys.key_lines.Veteran[lineCounter[7]];
+      lineCounter[7] += 1;
+      if (lineCounter[7] >= 4) {
+        keyMark7.style.visibility = "hidden";
+        keysFound++;
+        locked[7] = false;
+      }
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
       subtitles.innerHTML = interaction + ': "That is all I know."';
