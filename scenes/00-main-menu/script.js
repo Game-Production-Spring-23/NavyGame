@@ -3,7 +3,6 @@ import { charSelect } from "/scenes/charSelect/charSelect.js";
 
 export function mainMenu() {
   //global variables
-  let splash = document.getElementById("splash");
   let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
   let gameContainer = document.getElementById("gameContainer"); //Container for game
   let settingsContainer = document.getElementById("settingsContainer"); //Container for settings
@@ -18,8 +17,6 @@ export function mainMenu() {
   let mainContainer = document.getElementById("app");
   let mapStatus = false;
   let uiOverlay = document.getElementById("uiOverlay");
-
-  splashScreen();
 
   //shows map in a pop up box when clicked
   function toggleMap() {

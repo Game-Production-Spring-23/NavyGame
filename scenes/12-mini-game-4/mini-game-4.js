@@ -86,7 +86,6 @@ export function miniGame4() {
 
     document.onmousemove = (event) => {
         if(draggableElement != null) {
-            draggableElement.dataset.hasMoved = "true";
             let mouseX = posX - event.pageX;
             let mouseY = posY - event.pageY;
             posX = event.pageX;
