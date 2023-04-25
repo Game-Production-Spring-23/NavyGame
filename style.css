@@ -18,7 +18,7 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 h1 {
-  font-family: 'CubicFive10', sans-serif;
+  font-family: "CubicFive10", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -33,72 +33,72 @@ h3 {
   text-align: center;
 }
 /*----------------- UI Overlay CSS------------------------------ */
-#charRank{
-position: absolute;
-width: 108px;
-height: 180px;
-left: 32px;
-top: 59px;
-border-radius: 0px 50px 50px 0px;
+#charRank {
+  position: absolute;
+  width: 108px;
+  height: 180px;
+  left: 32px;
+  top: 59px;
+  border-radius: 0px 50px 50px 0px;
 }
 
-#volumeIcon{
-position: absolute;
-width: 100px;
-height: 100px;
-left: 37px;
-top: 336px;
-border-radius: 0px 50px 50px 0px;
+#volumeIcon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 37px;
+  top: 336px;
+  border-radius: 0px 50px 50px 0px;
 }
 
-#mapOverlay{
-position: absolute;
-width: 100px;
-height: 100px;
-left: 28px;
-top: 511px;
-border-radius: 0px 50px 50px 0px;
+#mapOverlay {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 28px;
+  top: 511px;
+  border-radius: 0px 50px 50px 0px;
 }
 
-#journalOverlay{
-position: absolute;
-width: 100px;
-height: 100px;
-left: 32px;
-top: 687px;
-border-radius: 0px 50px 50px 0px;
+#journalOverlay {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 32px;
+  top: 687px;
+  border-radius: 0px 50px 50px 0px;
 }
 
-#rankText{
+#rankText {
   position: absolute;
   width: 79px;
   height: 39px;
   left: 48px;
   top: 240px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: semi-bold;
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
-  
-  color: #FFFFFF;
+
+  color: #ffffff;
 }
 
-#uiTab{
-position: absolute;
-width: 96px;
-height: 152px;
-left: 172px;
-top: 600px;
-z-index:999;
+#uiTab {
+  position: absolute;
+  width: 96px;
+  height: 152px;
+  left: 172px;
+  top: 600px;
+  z-index: 999;
 }
 
-#uiTabArrow{
-position: absolute;
-left: 2.08%;
-right: 19.79%;
-top: 25.66%;
-bottom: 25%;
+#uiTabArrow {
+  position: absolute;
+  left: 2.08%;
+  right: 19.79%;
+  top: 25.66%;
+  bottom: 25%;
 }
 
 /* Position UI icons right side of the screen*/
@@ -109,15 +109,15 @@ bottom: 25%;
   z-index: 99;
 }
 
-#uiOverlayLeft{
-position: absolute;
-width: 174px;
-height: 872px;
-left: 0px;
-top: 214px;
-background: rgba(28, 28, 70, 0.69);
-border-radius: 0px 50px 50px 0px;
-z-index:999;
+#uiOverlayLeft {
+  position: absolute;
+  width: 174px;
+  height: 872px;
+  left: 0px;
+  top: 214px;
+  background: rgba(28, 28, 70, 0.69);
+  border-radius: 0px 50px 50px 0px;
+  z-index: 999;
 }
 
 #settingModal {
@@ -187,13 +187,12 @@ z-index:999;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: flex;
-  padding: 45px 12.5%;
+  padding: 3% 12.5%;
 }
 #dialogueText {
   width: 100%;
   padding: 0 20px;
   margin: 0;
-  font-size: 25px;
   font-size: 2vw;
   font-family: "Raleway", sans-serif;
   color: darkred;
@@ -235,11 +234,10 @@ z-index:999;
   position: absolute;
   top: 0;
   left: 0;
-  width:5%;
-  margin-top:2%;
+  width: 5%;
+  margin-top: 2%;
   height: 100%;
-  z-index:999;
- 
+  z-index: 999;
 }
 
 .uiIcon {
@@ -270,7 +268,6 @@ z-index:999;
   position: absolute;
   display: flex;
   flex-direction: column;
-
 }
 
 /* Pop up Styling */
@@ -314,17 +311,17 @@ z-index:999;
   overflow: scroll;
 }
 
-#mapContainer{
+#mapContainer {
   /* display in center of screen*/
   position: absolute;
-  height:80%;
-  width:80%;
+  height: 80%;
+  width: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
 }
-#mapModal{
+#mapModal {
   background-image: url("/assets/images/ui/miniMap.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -335,13 +332,12 @@ z-index:999;
   top: 0;
   left: 0;
   z-index: 100;
-
 }
 
-#journalContainer{
+#journalContainer {
   position: absolute;
-  height:80%;
-  width:80%;
+  height: 80%;
+  width: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -350,7 +346,7 @@ z-index:999;
   border-radius: 10px;
 }
 
-#journalModal{
+#journalModal {
   background-image: url("/assets/images/ui/bookscreen.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -361,54 +357,48 @@ z-index:999;
   top: 0;
   left: 0;
   z-index: 100;
-
 }
 
 /* Controls Screen */
-#controlTutScreen{
-  height:80%;
-width:40%; /* centered in screen*/
+#controlTutScreen {
+  height: 80%;
+  width: 40%; /* centered in screen*/
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-
 }
 
 /* Character Select Screen */
 
-
-
-#charThreeAv{
-position: absolute;
-width: 426.96px;
-height: 400px;
-left: 118px;
-top: 340px;
-background: url(/assets/images/characterSplashes/charSelect/charThree.png);
-background-size: contain;
-border-radius: 10px;
-font-size: 0;
-line-height: 0;
+#charThreeAv {
+  position: absolute;
+  width: 426.96px;
+  height: 400px;
+  left: 118px;
+  top: 340px;
+  background: url(/assets/images/characterSplashes/charSelect/charThree.png);
+  background-size: contain;
+  border-radius: 10px;
+  font-size: 0;
+  line-height: 0;
 }
 
-
-
-#charTwoAv{
-position: absolute;
-width: 426.96px;
-height: 400px;
-left: calc(50% - 426.96px/2 + 0.48px);
-bottom: 340px;
-background: url(/assets/images/characterSplashes/charSelect/charTwo.png);
-background-size: contain;
-border-radius: 10px;
-font-size: 0;
-line-height: 0;
+#charTwoAv {
+  position: absolute;
+  width: 426.96px;
+  height: 400px;
+  left: calc(50% - 426.96px / 2 + 0.48px);
+  bottom: 340px;
+  background: url(/assets/images/characterSplashes/charSelect/charTwo.png);
+  background-size: contain;
+  border-radius: 10px;
+  font-size: 0;
+  line-height: 0;
 }
 
-#charOneAv{
+#charOneAv {
   position: absolute;
   width: 427.27px;
   height: 400px;
@@ -421,31 +411,31 @@ line-height: 0;
   line-height: 0;
 }
 
-#charSelectStart{
-position: absolute;
-width: 700px;
-height: 110px;
-left: calc(50% - 690px/2 + 4px);
-bottom: 71px;
-background: url(/assets/images/ui/startBtn.png);
-background-repeat:no-repeat;
-border-style:none;
+#charSelectStart {
+  position: absolute;
+  width: 700px;
+  height: 110px;
+  left: calc(50% - 690px / 2 + 4px);
+  bottom: 71px;
+  background: url(/assets/images/ui/startBtn.png);
+  background-repeat: no-repeat;
+  border-style: none;
 }
 
-#charSelectStart:hover{
+#charSelectStart:hover {
   background: url(/assets/images/ui/startBtnHover.png);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
 }
 
-#charSelectHeader{
-position: absolute;
-width: 713px;
-height: 77px;
-left: 607px;
-top: 90px;
-animation-name: pulse;
-animation-duration: 1s;
-animation-iteration-count: infinite;
+#charSelectHeader {
+  position: absolute;
+  width: 713px;
+  height: 77px;
+  left: 607px;
+  top: 90px;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes pulse {
@@ -460,12 +450,10 @@ animation-iteration-count: infinite;
   }
 }
 
-#charSelExit{
-  position:absolute;
+#charSelExit {
+  position: absolute;
   width: 75px;
   height: 75px;
   left: 10px;
   top: 10px;
-
 }
-

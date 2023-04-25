@@ -1,0 +1,53 @@
+[
+  {
+    "INDEX": "QUESTION 1",
+    "question": "/assets/images/minigame3/NG_p1_pumpdiagram-innerhighlight.png",
+    "answers": [
+      "/assets/images/minigame3/NG_p1_Axehead.png",
+      "/assets/images/minigame3/NG_p1_Horn.png",
+      "/assets/images/minigame3/NG_p1_InnerPipe.png",
+      "/assets/images/minigame3/NG_p1_Ocarina.png"
+    ],
+    "keywords": [
+      "Keyword: Item 1",
+      "Keyword: Item 2",
+      "Keyword: Item 3",
+      "Keyword: Item 4"
+    ],
+    "answer": 2
+  },
+  {
+    "INDEX": "QUESTION 2",
+    "question": "/assets/images/minigame3/NG_p2_pumpdiagram-pipehighlight.png",
+    "answers": [
+      "/assets/images/minigame3/NG_p2_Pipe.png",
+      "/assets/images/minigame3/NG_p2_GlassPane.png",
+      "/assets/images/minigame3/NG_p2_KeyPipe.png",
+      "/assets/images/minigame3/NG_p2_ScrewPipe.png"
+    ],
+    "keywords": [
+      "Keyword: Item 1",
+      "Keyword: Item 2",
+      "Keyword: Item 3",
+      "Keyword: Item 4"
+    ],
+    "answer": 0
+  },
+  {
+    "INDEX": "QUESTION 2",
+    "question": "/assets/images/minigame3/NG_p3_pumpdiagram-middlehighlight.png",
+    "answers": [
+      "/assets/images/minigame3/NG_p3_Clam.png",
+      "/assets/images/minigame3/NG_p3_Idol.png",
+      "/assets/images/minigame3/NG_p3_Vest.png",
+      "/assets/images/minigame3/NG_p3_OuterLayer.png"
+    ],
+    "keywords": [
+      "Keyword: Item 1",
+      "Keyword: Item 2",
+      "Keyword: Item 3",
+      "Keyword: Item 4"
+    ],
+    "answer": 3
+  }
+]

@@ -14,34 +14,16 @@ export function loadScene9() {
   const chosen = document.getElementById("mg3chosenItem");
   const itemImages = document.getElementsByClassName("mg3itemImg");
   const itemTexts = document.getElementsByClassName("mg3itemText");
-  const textBox = document.getElementById("mg3questionText");
-
-  //Data
-  const possibleImages = [
-    "/assets/images/minigame3/Minigame3_placeholder_item1.png",
-    "/assets/images/minigame3/Minigame3_placeholder_item2.png",
-    "/assets/images/minigame3/Minigame3_placeholder_item3.png",
-    "/assets/images/minigame3/Minigame3_placeholder_item4.png",
-  ];
-  const possibleTexts = [
-    "Keyword: Item 1",
-    "Keyword: Item 2",
-    "Keyword: Item 3",
-    "Keyword: Item 4",
-  ];
+  const diagram = document.getElementById("mg3diagram");
 
   //variables
   let questionIndex = 0;
-  let correctIndex = 0;
   let possibleAnswers = [0, 1, 2, 3];
-
-  let scrollIndex = 0;
-  let scrollTimer;
-  let scrollSpeed = 50;
 
   let hasPlayerChosenItem = false;
 
-  fetch("/scenes/09-shopping-minigame/minigame3.json")
+  //    END INIT    //
+  fetch("/scenes/09-shopping-minigame/data.json")
     .then((response) => response.json())
     .then((data) => {
       //Add event listeners
@@ -50,8 +32,8 @@ export function loadScene9() {
           if (!hasPlayerChosenItem) selectAnswer(itemImages[i]);
         };
       }
+
       newQuestion();
-      //    END INIT    //
 
       //Resets screen after answering correct
       function newQuestion() {
@@ -67,54 +49,13 @@ export function loadScene9() {
         for (let i = 0; i < 4; i++) {
           itemImages[i].style.display = "block";
           itemImages[i].value = possibleAnswers[i];
-          itemImages[i].src = possibleImages[possibleAnswers[i]];
+          itemImages[i].src = data[questionIndex].answers[possibleAnswers[i]];
           itemImages[i].style.filter = "brightness(0%)";
-          itemTexts[i].innerHTML = possibleTexts[possibleAnswers[i]];
+          itemTexts[i].innerHTML =
+            data[questionIndex].keywords[possibleAnswers[i]];
         }
+        diagram.src = data[questionIndex].question;
         resetChosenImage();
-
-        //Display question in scrolling format
-        textBox.innerHTML = "";
-
-        //Starts scrolling text at scroll speed
-        scrollTimer = setTimeout(() => {
-          scrollingText(data[questionIndex].question);
-        }, scrollSpeed);
-
-        //If the player clicks the text box they can skip the scroll
-        textBox.onclick = () => {
-          event.stopPropagation();
-          skipText(data[questionIndex].question);
-        };
-
-        //Scrolls question text
-        function scrollingText(text) {
-          //if text isn't finished scrolling
-          if (scrollIndex < text.length) {
-            //Display scrolling text character in text box at scrollIndex
-            textBox.innerHTML += text.charAt(scrollIndex);
-            scrollIndex++;
-
-            //Recalls scrollingText at scrollSpeed
-            scrollTimer = setTimeout(() => {
-              scrollingText(text);
-            }, scrollSpeed);
-          } else {
-            //Sets scrollIndex null, and sets scrollIndex to 0
-            scrollTimer = null;
-            scrollIndex = 0;
-          }
-        }
-
-        //Skips question text
-        function skipText(text) {
-          //Clears scrollTimer, set it null, and sets scrollIndex to 0
-          clearTimeout(scrollTimer);
-          scrollTimer = null;
-          scrollIndex = 0;
-          //Displays text without scrolling
-          textBox.innerHTML = text;
-        }
       }
 
       function resetChosenImage() {
@@ -137,10 +78,9 @@ export function loadScene9() {
         if (selected.value == data[questionIndex].answer) {
           setTimeout(() => {
             questionIndex++;
-            correctIndex++;
             hasPlayerChosenItem = false;
 
-            if (correctIndex >= data.length) {
+            if (questionIndex >= data.length) {
               startDialogueNext(
                 2,
                 "/scenes/09-shopping-minigame/dialogue.json",
