@@ -17,6 +17,10 @@ export function miniGame4() {
     let posX = 0;
     let posY = 0;
 
+    // load audio assets
+    let pickUpPaperAudio = new Audio('/assets/audio/pickupPaper.wav');
+    let dropPaperAudio = new Audio('/assets/audio/dropPaper.mp3');
+
     fetch('/scenes/12-mini-game-4/data.json')
     .then((res) => res.json())
     .then((data) => {
@@ -29,6 +33,7 @@ export function miniGame4() {
         for(let i = 0; i < options.length; i++) {
             options[i].dataset.hasMoved = "false";
             options[i].addEventListener("mousedown", (event) => {
+                pickUpPaperAudio.play();
                 posX = event.pageX;
                 posY = event.pageY;
                 dragMove(options[i].id);
@@ -72,6 +77,7 @@ export function miniGame4() {
         for(let i = 0; i < gridItems.length; i++) {
             if(draggableElement) {
                 if(mouseIsOver(event.clientX, event.clientY, gridItems[i])) {
+                    dropPaperAudio.play();
                     // tell grid item that it has an option
                     gridItems[i].dataset.option = draggableElement.id;
                     draggableElement.dataset.hasMoved = "true";
