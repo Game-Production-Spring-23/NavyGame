@@ -181,7 +181,8 @@
         "text": "Aye! *Squawk* There be six core steps of Systems Engineering.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -193,7 +194,8 @@
         "text": "1) Requirements Development and System Analysis",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -205,7 +207,8 @@
         "text": "2) Logical Analysis and Design Solution ",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -217,7 +220,8 @@
         "text": "3) Implementation ",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -229,7 +233,9 @@
         "text": "4) Integration ",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -241,7 +247,9 @@
         "text": "5) Verification and Validation ",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -253,7 +261,8 @@
         "text": "and 6) Transition",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -265,7 +274,8 @@
         "text": "That sounds straightforward. What should Ye' know about each step?",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -277,7 +287,8 @@
         "text": "*Squawk* Aye, great question! Ye be a smart one…",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -289,7 +300,8 @@
         "text": "Using the Requirements Development and System Analysis step, ye crew uses computer models to simulate different scenarios and identify the requirements for making yon ship repairs.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -301,7 +313,8 @@
         "text": "Y'all have to consider factors like *Squawk* available resources, time constraints, safety requirements, and risks involved.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -313,7 +326,8 @@
         "text": "Got it. What's next?",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -325,7 +339,8 @@
         "text": "For the Logical Analysis and Design Solution step ye use the same models to design and optimize the repair solutions.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -337,7 +352,8 @@
         "text": "*Squawk* Yon team needs to continue to balance factors like risk, speed, power, and safety to come up with a logical design solution that meets all the requirements.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -349,7 +365,8 @@
         "text": "And then what happens?",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -361,7 +378,8 @@
         "text": "Ye has ta' get 'er done in the Implementation step. *Squawk* This means actually carrying out the repairs.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -373,7 +391,8 @@
         "text": "Then, with the Integration step, ye have to make sure everything works together smoothly and efficiently with the ship's existing systems.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -385,7 +404,8 @@
         "text": "And how do we make sure everything is working properly?",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -397,7 +417,8 @@
         "text": "*Squawk* Ye haf'ta do the Verification and Validation step with the computer models. Ye' crew needs to test and verify that everything is working correctly and meets all the requirements.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -409,7 +430,8 @@
         "text": "Then we're done?",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -421,7 +443,8 @@
         "text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. The Transition step gets the ship back to its normal operating mode, and move ye crew to the next repair. Got all this? *Squawk*",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -460,7 +483,8 @@
         "text": "1) Requirements Development and System Analysis, 2) Logical Analysis and Design Solution, 3) Implementation, 4) Integration, 5) Verification and Validation, and 6) Transition",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
         "imageWidth": "960px",
-        "imageHeight": "540px"
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
