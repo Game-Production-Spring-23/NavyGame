@@ -17,6 +17,7 @@ export function startDialogue(index, data) {
   const leftPortrait = document.getElementById("lCharaPortrait");
   const rightPortrait = document.getElementById("rCharaPortrait");
   const dialogueImage = document.getElementById("dialogueImage");
+  dialogueImage.style.top = "150px";
 
   //variables
   let dialogueIndex = 0;
@@ -111,6 +112,14 @@ export function startDialogue(index, data) {
         //  Sets background image if it exists
         if (dialogue[dialogueIndex].image != null) {
           dialogueImage.src = dialogue[dialogueIndex].image;
+          // set width & height, (if given)
+          if(
+            dialogue[dialogueIndex].imageWidth != null &&
+            dialogue[dialogueIndex].imageHeight != null
+            ) {
+              dialogueImage.style.width = dialogue[dialogueIndex].imageWidth;
+              dialogueImage.style.height = dialogue[dialogueIndex].imageHeight;
+          } // end if
         } else {
           dialogueImage.src = "/assets/images/NG_empty.png";
         }
@@ -186,6 +195,7 @@ export function startDialogueNext(index, data, next) {
   const leftPortrait = document.getElementById("lCharaPortrait");
   const rightPortrait = document.getElementById("rCharaPortrait");
   const dialogueImage = document.getElementById("dialogueImage");
+  dialogueImage.style.top = "150px";
 
   //variables
   let dialogueIndex = 0;
@@ -281,6 +291,14 @@ export function startDialogueNext(index, data, next) {
         //  Sets background image if it exists
         if (dialogue[dialogueIndex].image != null) {
           dialogueImage.src = dialogue[dialogueIndex].image;
+          // set width & height, (if given)
+          if(
+            dialogue[dialogueIndex].imageWidth != null &&
+            dialogue[dialogueIndex].imageHeight != null
+            ) {
+              dialogueImage.style.width = dialogue[dialogueIndex].imageWidth;
+              dialogueImage.style.height = dialogue[dialogueIndex].imageHeight;
+          } // end if
         } else {
           dialogueImage.src = "/assets/images/NG_empty.png";
         }
