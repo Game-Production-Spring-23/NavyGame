@@ -1,4 +1,9 @@
-import { loadNewHTMLFile, devSkip } from "/lib.js";
+import {
+  loadNewHTMLFile,
+  devSkip,
+  addToEventListenerList,
+  removeFromEventListenerList,
+} from "/lib.js";
 import { loadScene9 } from "/scenes/09-shopping-minigame/shopping-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
@@ -16,6 +21,12 @@ export function loadScene8() {
   const fgContainer = document.getElementById("foreground");
   const parrot = document.getElementById("parrot");
   const shopkeep = document.getElementById("shopkeep");
+  const merchant = document.getElementById("shopkeep2");
+  const chief = document.getElementById("chief");
+  const native1 = document.getElementById("native1");
+  const native2 = document.getElementById("native2");
+  const native3 = document.getElementById("native3");
+  const native4 = document.getElementById("native4");
   const subtitles = document.getElementById("subtitles");
   const keyMark0 = document.getElementById("keyMark0");
   const dialogueReady = document.getElementById("dialogueReady");
@@ -26,7 +37,7 @@ export function loadScene8() {
   let playerLBound;
   let playerRBound;
 
-  let bgOffset = 0;
+  //let bgOffset = 0;
   //let mgOffset = 0;
   let fgOffset = 0;
 
@@ -39,19 +50,20 @@ export function loadScene8() {
   let speed;
   let fgSpeed;
   //let mgSpeed;
-  let bgSpeed;
+  //let bgSpeed;
 
   let keysFound = 0;
   let interaction = "";
 
   // Get JSON Data
-  fetch("/scenes/05-beach-explore/scene5.json")
+  fetch("/scenes/08-jungle-explore/scene8.json")
     .then((response) => response.json())
     .then((data) => {
       global_data = JSON.parse(JSON.stringify(data));
 
       // Apply Styles to Document Elements
       player.style.left = data.characters.player.offset + "px";
+      player.style.transform = "scaleX(-1)";
       player.style.backgroundImage =
         "url(" + data.characters.player.sprite[0] + ")";
       player.setAttribute("name", data.characters.player.name);
@@ -66,6 +78,36 @@ export function loadScene8() {
         "url(" + data.characters.shopkeep.sprite[0] + ")";
       shopkeep.setAttribute("name", data.characters.shopkeep.name);
 
+      merchant.style.left = data.characters.shopkeep2.offset + "px";
+      merchant.style.backgroundImage =
+        "url(" + data.characters.shopkeep2.sprite[0] + ")";
+      merchant.setAttribute("name", data.characters.shopkeep2.name);
+
+      chief.style.left = data.characters.chief.offset + "px";
+      chief.style.backgroundImage =
+        "url(" + data.characters.chief.sprite[0] + ")";
+      chief.setAttribute("name", data.characters.chief.name);
+
+      native1.style.left = data.characters.native1.offset + "px";
+      native1.style.backgroundImage =
+        "url(" + data.characters.native1.sprite[0] + ")";
+      native1.setAttribute("name", data.characters.native1.name);
+
+      native2.style.left = data.characters.native2.offset + "px";
+      native2.style.backgroundImage =
+        "url(" + data.characters.native2.sprite[0] + ")";
+      native2.setAttribute("name", data.characters.native2.name);
+
+      native3.style.left = data.characters.native3.offset + "px";
+      native3.style.backgroundImage =
+        "url(" + data.characters.native3.sprite[0] + ")";
+      native3.setAttribute("name", data.characters.native3.name);
+
+      native4.style.left = data.characters.native4.offset + "px";
+      native4.style.backgroundImage =
+        "url(" + data.characters.native4.sprite[0] + ")";
+      native4.setAttribute("name", data.characters.native4.name);
+
       //bgContainer.style.width = 1920 * data.params.bg_scale + "px";
       //bgContainer.style.backgroundImage =
       //  "url(" + data.params.bg_images[0] + ")";
@@ -76,8 +118,8 @@ export function loadScene8() {
       cgContainer.style.backgroundImage =
         "url(" + data.params.cg_images[0] + ")";
       fgContainer.style.width = 1920 * data.params.fg_scale + "px";
-      //fgContainer.style.backgroundImage =
-      //  "url(" + data.params.fg_images[0] + ")";
+      fgContainer.style.backgroundImage =
+        "url(" + data.params.fg_images[0] + ")";
 
       //console.log(global_data);
       init(global_data);
@@ -100,7 +142,7 @@ export function loadScene8() {
     speed = global_data.params.fg_speed;
     fgSpeed = global_data.params.fg_speed;
     //mgSpeed = global_data.params.mg_speed;
-    bgSpeed = global_data.params.bg_speed;
+    //bgSpeed = global_data.params.bg_speed;
 
     if (playerAbs > playerRBound) {
       if (playerAbs > playerAbsLimit) {
@@ -146,8 +188,11 @@ export function loadScene8() {
         playerLBound = playerAbs - 640;
       }
     }
+    //Adds event listeners to event listeners list
+    document.addEventListener("keyup", handleKeyup);
+    addToEventListenerList("handleKeyupExplore", "keyup", handleKeyup);
 
-    document.addEventListener("keyup", (event) => {
+    function handleKeyup(event) {
       if (
         event.key === "ArrowRight" ||
         event.key === "d" ||
@@ -157,9 +202,12 @@ export function loadScene8() {
         player.style.backgroundImage =
           "url(" + global_data.characters.player.sprite[0] + ")";
       }
-    });
+    }
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", handleKeydown);
+    addToEventListenerList("handleKeydownExplore", "keydown", handleKeydown);
+
+    function handleKeydown(event) {
       if (
         (event.key === "ArrowRight" || event.key === "d") &&
         !isDialogueOccurring
@@ -179,53 +227,53 @@ export function loadScene8() {
       }
 
       if (
-        playerAbs > global_data.characters.captain.offset - 24 &&
-        playerAbs < global_data.characters.captain.offset + 96
-      ) {
-        // captain
-        interaction = global_data.characters.captain.name;
-      } else if (
         playerAbs > global_data.characters.parrot.offset - 24 &&
         playerAbs < global_data.characters.parrot.offset + 96
       ) {
         // parrot
         interaction = global_data.characters.parrot.name;
       } else if (
-        playerAbs > global_data.characters.quartermaster.offset - 24 &&
-        playerAbs < global_data.characters.quartermaster.offset + 96
+        playerAbs > global_data.characters.shopkeep.offset - 24 &&
+        playerAbs < global_data.characters.shopkeep.offset + 96
       ) {
-        // quartermaster
-        interaction = global_data.characters.quartermaster.name;
+        // shopkeep
+        interaction = global_data.characters.shopkeep.name;
       } else if (
-        playerAbs > global_data.characters.chef.offset - 24 &&
-        playerAbs < global_data.characters.chef.offset + 96
+        playerAbs > global_data.characters.shopkeep2.offset - 24 &&
+        playerAbs < global_data.characters.shopkeep2.offset + 96
       ) {
-        // chef
-        interaction = global_data.characters.chef.name;
+        // shopkeep2
+        interaction = global_data.characters.shopkeep2.name;
       } else if (
-        playerAbs > global_data.characters.officers.offset - 24 &&
-        playerAbs < global_data.characters.officers.offset + 96
+        playerAbs > global_data.characters.chief.offset - 24 &&
+        playerAbs < global_data.characters.chief.offset + 96
       ) {
-        // officers
-        interaction = global_data.characters.officers.name;
+        // chief
+        interaction = global_data.characters.chief.name;
       } else if (
-        playerAbs > global_data.characters.nontech.offset - 24 &&
-        playerAbs < global_data.characters.nontech.offset + 96
+        playerAbs > global_data.characters.native1.offset - 24 &&
+        playerAbs < global_data.characters.native1.offset + 96
       ) {
-        // nontech
-        interaction = global_data.characters.nontech.name;
+        // native1
+        interaction = global_data.characters.native1.name;
       } else if (
-        playerAbs > global_data.characters.tech.offset - 24 &&
-        playerAbs < global_data.characters.tech.offset + 96
+        playerAbs > global_data.characters.native2.offset - 24 &&
+        playerAbs < global_data.characters.native2.offset + 96
       ) {
-        // tech
-        interaction = global_data.characters.tech.name;
+        // native2
+        interaction = global_data.characters.native2.name;
       } else if (
-        playerAbs > global_data.characters.veteran.offset - 24 &&
-        playerAbs < global_data.characters.veteran.offset + 96
+        playerAbs > global_data.characters.native3.offset - 24 &&
+        playerAbs < global_data.characters.native3.offset + 96
       ) {
-        // vet
-        interaction = global_data.characters.veteran.name;
+        // native3
+        interaction = global_data.characters.native3.name;
+      } else if (
+        playerAbs > global_data.characters.native4.offset - 24 &&
+        playerAbs < global_data.characters.native4.offset + 96
+      ) {
+        // native4
+        interaction = global_data.characters.native4.name;
       } else {
         interaction = "";
       }
@@ -244,6 +292,15 @@ export function loadScene8() {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
           hasPlayerReachedMinigame = true;
+
+          //Removes all event listeners
+          document.removeEventListener("keyup", handleKeyup);
+          removeFromEventListenerList("handleKeyupExplore");
+
+          document.removeEventListener("keydown", handleKeydown);
+          removeFromEventListenerList("handleKeydownExplore");
+
+          //Loads new file
           loadNewHTMLFile(
             "/scenes/09-shopping-minigame/shopping_minigame.html",
             "/scenes/09-shopping-minigame/minigame3styles.css",
@@ -255,7 +312,7 @@ export function loadScene8() {
       if (event.key === "e") {
         interact(global_data);
       }
-    });
+    }
 
     /*
     // This Does Not Seem To Work
@@ -296,8 +353,8 @@ export function loadScene8() {
           cgContainer.style.left = fgOffset + "px";
           //mgOffset -= mgSpeed;
           //mgContainer.style.left = mgOffset + "px";
-          bgOffset -= bgSpeed;
-          bgContainer.style.left = bgOffset + "px";
+          //bgOffset -= bgSpeed;
+          //bgContainer.style.left = bgOffset + "px";
           // Player Right
           playerAbs += speed;
           player.style.left = playerAbs + "px";
@@ -335,8 +392,8 @@ export function loadScene8() {
           cgContainer.style.left = fgOffset + "px";
           //mgOffset += mgSpeed;
           //mgContainer.style.left = mgOffset + "px";
-          bgOffset += bgSpeed;
-          bgContainer.style.left = bgOffset + "px";
+          //bgOffset += bgSpeed;
+          //bgContainer.style.left = bgOffset + "px";
           // Player Left
           playerAbs -= speed;
           player.style.left = playerAbs + "px";

@@ -119,6 +119,11 @@ export function devSkip(filePath, styleSheetPath, next) {
   document.devSkipObj.next = next;
 } // end devSkip
 
+//Lists all event listeners in document as a reference
+var eventListenerList = [];
+
+document.addEventListener("keydown", skipper);
+
 function skipper(event) {
   // check if the ~ key was pressed
   if (event.key == "~") {
@@ -126,6 +131,17 @@ function skipper(event) {
     for (let i = 0; i < document.globalTimeouts.length; i++) {
       clearTimeout(document.globalTimeouts[i]);
     } // end for
+
+    //Removes all event listeners from document by going through the eventListenerList manually
+    for (let i = 0; i < eventListenerList.length; i++) {
+      document.removeEventListener(
+        eventListenerList[i].type,
+        eventListenerList[i].listener
+      );
+    } // end for
+    //Clears the eventListenerList
+    eventListenerList = [];
+
     setDialogueOccurring(false);
     loadNewHTMLFile(
       document.devSkipObj.filePath,
@@ -133,6 +149,17 @@ function skipper(event) {
       document.devSkipObj.next
     );
   } // end if
+  if (event.key == "@") {
+    console.log(eventListenerList);
+  }
 } // end skipper
 
-document.addEventListener("keydown", skipper);
+//Adds event listener to the event listener list, needs a key (identifier), a type (onkeydown, onkeyup, etc) and the event listener callback function
+export function addToEventListenerList(key, type, listener) {
+  eventListenerList.push({ key, type, listener });
+}
+
+//Removes event listener from the event listener list, needs a key to remove it
+export function removeFromEventListenerList(key) {
+  eventListenerList = eventListenerList.filter((obj) => !key.includes(obj.key));
+}

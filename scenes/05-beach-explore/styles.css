@@ -119,6 +119,27 @@ body {
   height: 128px;
   font-size: 40px;
   color: black;
+  background-color: antiquewhite;
+}
+
+#keyCounter {
+  color: black;
+  font-size: 42px;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 32px;
+  z-index: 10;
+
+  background-image: url("../12-mini-game-4/images/NG_RiskAssessment_Options_Sheet.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#keyCounter p {
+  padding-left: 64px;
+  padding-top: 50px;
 }
 
 .keyMark {

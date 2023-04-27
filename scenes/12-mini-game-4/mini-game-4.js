@@ -1,6 +1,6 @@
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
 import { loadScene14 } from "/scenes/14-beach-explore/scene14.js";
-import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
+import { startDialogue, isDialogueOccurring, startDialogueNext } from "/scenes/dialogue.js";
 
 export function miniGame4() {
     devSkip(
@@ -9,10 +9,17 @@ export function miniGame4() {
         loadScene14
     );
 
+    // Start Dialogue
+    startDialogue(0, "/scenes/12-mini-game-4/dialogue.json");
+
     // draggable element
     let draggableElement;
     let posX = 0;
     let posY = 0;
+
+    // load audio assets
+    let pickUpPaperAudio = new Audio('/assets/audio/pickupPaper.wav');
+    let dropPaperAudio = new Audio('/assets/audio/dropPaper.mp3');
 
     fetch('/scenes/12-mini-game-4/data.json')
     .then((res) => res.json())
@@ -26,6 +33,7 @@ export function miniGame4() {
         for(let i = 0; i < options.length; i++) {
             options[i].dataset.hasMoved = "false";
             options[i].addEventListener("mousedown", (event) => {
+                pickUpPaperAudio.play();
                 posX = event.pageX;
                 posY = event.pageY;
                 dragMove(options[i].id);
@@ -69,6 +77,7 @@ export function miniGame4() {
         for(let i = 0; i < gridItems.length; i++) {
             if(draggableElement) {
                 if(mouseIsOver(event.clientX, event.clientY, gridItems[i])) {
+                    dropPaperAudio.play();
                     // tell grid item that it has an option
                     gridItems[i].dataset.option = draggableElement.id;
                     draggableElement.dataset.hasMoved = "true";
@@ -86,7 +95,6 @@ export function miniGame4() {
 
     document.onmousemove = (event) => {
         if(draggableElement != null) {
-            draggableElement.dataset.hasMoved = "true";
             let mouseX = posX - event.pageX;
             let mouseY = posY - event.pageY;
             posX = event.pageX;
@@ -154,11 +162,13 @@ export function miniGame4() {
 
             // check if win
             if(correctCounter >= 3) {
-                loadNewHTMLFile(
-                    "/scenes/14-beach-explore/index.html",
-                    "/scenes/14-beach-explore/styles.css",
-                    loadScene14
-                );
+                startDialogueNext(1, "/scenes/12-mini-game-4/dialogue.json", () => {
+                    loadNewHTMLFile(
+                        "/scenes/14-beach-explore/index.html",
+                        "/scenes/14-beach-explore/styles.css",
+                        loadScene14
+                    );
+                }); 
             } // end if
 
             // find out how many options have been moved

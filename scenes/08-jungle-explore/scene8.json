@@ -6,17 +6,47 @@
         "../../assets/images/characters/player/pwalk1.png",
         "../../assets/images/characters/player/playerwalk.gif "
       ],
-      "offset": 8640
+      "offset": 8400
     },
     "parrot": {
       "name": "Parrot",
       "sprite": ["../../assets/images/characters/parrot/parrot.png"],
-      "offset": 8200
+      "offset": 7840
     },
     "shopkeep": {
       "name": "Shopkeep",
       "sprite": [],
-      "offset": 2880
+      "offset": 2760
+    },
+    "shopkeep2": {
+      "name": "Merchant",
+      "sprite": [],
+      "offset": 2150
+    },
+    "chief": {
+      "name": "Native Chieftain",
+      "sprite": ["../../assets/images/characters/monkey/kingMonkey.png"],
+      "offset": 1240
+    },
+    "native1": {
+      "name": "Native",
+      "sprite": ["../../assets/images/characters/monkey/mon1B.png"],
+      "offset": 1480
+    },
+    "native2": {
+      "name": "Native",
+      "sprite": ["../../assets/images/characters/monkey/mon2B.png"],
+      "offset": 1800
+    },
+    "native3": {
+      "name": "Native",
+      "sprite": ["../../assets/images/characters/monkey/mon3B.png"],
+      "offset": 4000
+    },
+    "native4": {
+      "name": "Native",
+      "sprite": ["../../assets/images/characters/monkey/mon1B.png"],
+      "offset": 7200
     }
   },
   "params": {

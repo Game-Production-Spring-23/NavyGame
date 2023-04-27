@@ -1,29 +1,27 @@
 <!-- Shopping mini game -->
 <div id="miniGame3">
-    <img id="mg3chosenItem" src="/assets/images/minigame3/Minigame3_placeholder_item1.png" />
-    <div id="mg3items">
-        <div class="mg3item">
-            <input type="image" class="mg3itemImg" src="/assets/images/minigame3/Minigame3_placeholder_item1.png"
-                value="0" />
-            <span class="mg3itemText"></span>
-        </div>
-        <div class="mg3item">
-            <input type="image" class="mg3itemImg" src="/assets/images/minigame3/Minigame3_placeholder_item2.png"
-                value="1" />
-            <span class="mg3itemText"></span>
-        </div>
-        <div class="mg3item">
-            <input type="image" class="mg3itemImg" src="/assets/images/minigame3/Minigame3_placeholder_item3.png"
-                value="2" />
-            <span class="mg3itemText"></span>
-        </div>
-        <div class="mg3item">
-            <input type="image" class="mg3itemImg" src="/assets/images/minigame3/Minigame3_placeholder_item4.png"
-                value="3" />
-            <span class="mg3itemText"></span>
+    <img id="mg3chosenItem" src="/assets/images/NG_empty.png" />
+    <div id="mg3shack">
+        <div id="mg3items">
+            <div class="mg3item" draggable="false">
+                <img type="image" class="mg3itemImg" src="/assets/images/NG_empty.png" data-value="0" />
+                <span class="mg3itemText"></span>
+            </div>
+            <div class="mg3item" draggable="false">
+                <img type="image" class="mg3itemImg" src="/assets/images/NG_empty.png" data-value="1" />
+                <span class="mg3itemText"></span>
+            </div>
+            <div class="mg3item" draggable="false">
+                <img type="image" class="mg3itemImg" src="/assets/images/NG_empty.png" data-value="2" />
+                <span class="mg3itemText"></span>
+            </div>
+            <div class="mg3item" draggable="false">
+                <img type="image" class="mg3itemImg" src="/assets/images/NG_empty.png" data-value=""="3" />
+                <span class="mg3itemText"></span>
+            </div>
         </div>
     </div>
-    <p id="mg3questionText">I am looking for item 3</p>
+    <img id="mg3diagram" src="/assets/images/minigame3/NG_p1_pumpdiagram-innerhighlight.png" />
 </div>
 <!-- Dialogue Screen -->
 <div id="dialogueScreen">
@@ -36,5 +34,3 @@
         <input type="image" class="dialogueBtn" id="frontButton" src="/assets/images/ui/rightBtn.png" />
     </div>
 </div>
-
-<script type="module" src="/scenes/dialogue.js"></script>

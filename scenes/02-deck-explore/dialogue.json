@@ -10,17 +10,7 @@
         "playerPortrait3": "",
         "otherPortrait": "",
         "isPlayerTalking": false,
-        "text": "Welcome to the deck! use the arrow keys or the [w] or [d] key to move, and [e] key to interact with the crew"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
-        "otherPortrait": "",
-        "isPlayerTalking": false,
-        "text": "This is a test to see if an image appears",
-        "image": "/assets/images/placeholders/screen3imgTest1.png"
+        "text": "Welcome to the deck! use the arrow keys or the [w] or [d] key to move, and [e] key to interact with the crew."
       }
     ]
   },
@@ -89,8 +79,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "It can help ye be better pirate engineers by improving the ship systems' efficiency and effectiveness. *Squawk*",
-        "image": "/assets/images/placeholders/screen3imgTest2.png"
+        "text": "It can help ye be better pirate engineers by improving the ship systems' efficiency and effectiveness. *Squawk*"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -117,7 +106,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "With MBSE, we can create digital 3D models of our ships and systems to show us all the important parts and how they fit together."
+        "text": "Systems Engineering (SE) can help test ye different approaches to see how the ship's systems would behave under different conditions."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -126,7 +115,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "MBSE can also help test ye different approaches to see how the ship's systems would behave under different conditions. *Squawk* Need to take on the Pirates of Ambush Island?"
+        "text": "These systems can include hardware, software, information, processes, facilities and more, working together as part of an interconnecting network."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -135,7 +124,25 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Ye can model their defenses and test the Signet Messenger's canon upgrades before spending many chests of ye gold."
+        "text": "When they work together, the system performs in a way that is different than how each individual part behaves. *Squawk*"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "MBSE is a form of SE. With MBSE, ye can create digital models of our ships and systems to show us all the important parts and how they fit together."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Need to take on the Pirates of Ambush Island? Ye can model their defenses and test the Signet Messenger's canon upgrades before spending many chests of ye gold. "
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -171,7 +178,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Aye! *Squawk* There be six core steps:"
+        "text": "Aye! *Squawk* There be six core steps of Systems Engineering.",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -180,8 +191,76 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": " 1) Requirements Development and System Analysis, 2) Logical Analysis and Design Solution, 3) Implementation, 4) Integration, 5) Verification and Validation, and 6) Transition",
-        "image": "/assets/images/placeholders/screen3imgTest3.png"
+        "text": "1) Requirements Development and System Analysis",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "2) Logical Analysis and Design Solution ",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "3) Implementation ",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "4) Integration ",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "5) Verification and Validation ",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "and 6) Transition",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -190,7 +269,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "That sounds straightforward. What should Ye' know about each step?"
+        "text": "That sounds straightforward. What should Ye' know about each step?",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -199,7 +282,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Aye, great question! Ye be a smart one…"
+        "text": "*Squawk* Aye, great question! Ye be a smart one…",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -208,7 +295,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Using the Requirements Development and System Analysis step, ye crew uses computer models to simulate different scenarios and identify the requirements for making yon ship repairs."
+        "text": "Using the Requirements Development and System Analysis step, ye crew uses computer models to simulate different scenarios and identify the requirements for making yon ship repairs.",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -217,7 +308,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Y'all have to consider factors like *Squawk* available resources, time constraints, safety requirements, and risks involved."
+        "text": "Y'all have to consider factors like *Squawk* available resources, time constraints, safety requirements, and risks involved.",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -226,7 +321,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "Got it. What's next?"
+        "text": "Got it. What's next?",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -235,7 +334,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "For the Logical Analysis and Design Solution step ye use the same computer models to design and optimize the repair solutions."
+        "text": "For the Logical Analysis and Design Solution step ye use the same models to design and optimize the repair solutions.",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -244,7 +347,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Yon team needs to continue to balance factors like risk, speed, power, and safety to come up with a logical design solution that meets all the requirements."
+        "text": "*Squawk* Yon team needs to continue to balance factors like risk, speed, power, and safety to come up with a logical design solution that meets all the requirements.",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -253,7 +360,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "And then what happens?"
+        "text": "And then what happens?",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -262,7 +373,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Ye has ta' get 'er done in the Implementation step. *Squawk* This means actually carrying out the repairs."
+        "text": "Ye has ta' get 'er done in the Implementation step. *Squawk* This means actually carrying out the repairs.",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -271,7 +386,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Then, with the Integration step, ye have to make sure everything works together smoothly and efficiently with the ship's existing systems."
+        "text": "Then, with the Integration step, ye have to make sure everything works together smoothly and efficiently with the ship's existing systems.",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -280,7 +399,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "And how do we make sure everything is working properly?"
+        "text": "And how do we make sure everything is working properly?",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -289,7 +412,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Ye haf'ta do the Verification and Validation step with the computer models. Ye' crew needs to test and verify that everything is working correctly and meets all the requirements."
+        "text": "*Squawk* Ye haf'ta do the Verification and Validation step with the computer models. Ye' crew needs to test and verify that everything is working correctly and meets all the requirements.",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -298,7 +425,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "Then we're done?"
+        "text": "Then we're done?",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -307,7 +438,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. The Transition step gets the ship back to its normal operating mode, and move ye crew to the next repair. Got all this? *Squawk*"
+        "text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. The Transition step gets the ship back to its normal operating mode, and move ye crew to the next repair. Got all this? *Squawk*",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -343,7 +478,11 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": true,
-        "text": "1) Requirements Development and System Analysis, 2) Logical Analysis and Design Solution, 3) Implementation, 4) Integration, 5) Verification and Validation, and 6) Transition"
+        "text": "1) Requirements Development and System Analysis, 2) Logical Analysis and Design Solution, 3) Implementation, 4) Integration, 5) Verification and Validation, and 6) Transition",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -370,7 +509,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Learning MBSE can take some time, but it's worth the investment and effort."
+        "text": "*Squawk* Learning SE can take some time, but it's worth the investment and effort."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -379,7 +518,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "You and ye crew w'll come away understanding MBSE better and how to apply it to ye work as pirate engineers. Are ye game? *Squawk*"
+        "text": "You and ye crew will come away understanding SE better and how to apply it to ye work as pirate engineers. Are ye game? *Squawk*"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",

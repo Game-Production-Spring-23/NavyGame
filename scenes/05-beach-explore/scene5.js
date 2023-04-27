@@ -1,4 +1,9 @@
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import {
+  loadNewHTMLFile,
+  devSkip,
+  addToEventListenerList,
+  removeFromEventListenerList,
+} from "/lib.js";
 import { loadScene6 } from "/scenes/06-priority-minigame/priority-minigame-part-1.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
@@ -9,6 +14,9 @@ export function loadScene5() {
     "/scenes/06-priority-minigame/minigame2styles.css",
     loadScene6
   );
+
+  // Scene 5 - Beach Dialogue
+  startDialogue(0, "/scenes/05-beach-explore/dialogue.json");
 
   // Get Document Elements
   const player = document.getElementById("player");
@@ -35,6 +43,7 @@ export function loadScene5() {
   const keyMark6 = document.getElementById("keyMark6");
   const keyMark7 = document.getElementById("keyMark7");
   const dialogueReady = document.getElementById("dialogueReady");
+  const keyCounter = document.getElementById("keyCounter");
 
   let global_data = null;
 
@@ -194,7 +203,11 @@ export function loadScene5() {
       }
     }
 
-    document.addEventListener("keyup", (event) => {
+    //Adds event listeners to event listeners list
+    document.addEventListener("keyup", handleKeyup);
+    addToEventListenerList("handleKeyupExplore", "keyup", handleKeyup);
+
+    function handleKeyup(event) {
       if (
         event.key === "ArrowRight" ||
         event.key === "d" ||
@@ -204,9 +217,12 @@ export function loadScene5() {
         player.style.backgroundImage =
           "url(" + global_data.characters.player.sprite[0] + ")";
       }
-    });
+    }
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", handleKeydown);
+    addToEventListenerList("handleKeydownExplore", "keydown", handleKeydown);
+
+    function handleKeydown(event) {
       if (
         (event.key === "ArrowRight" || event.key === "d") &&
         !isDialogueOccurring
@@ -291,6 +307,15 @@ export function loadScene5() {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
           hasPlayerReachedMinigame = true;
+
+          //Removes all event listeners
+          document.removeEventListener("keyup", handleKeyup);
+          removeFromEventListenerList("handleKeyupExplore");
+
+          document.removeEventListener("keydown", handleKeydown);
+          removeFromEventListenerList("handleKeydownExplore");
+
+          //Loads new file
           loadNewHTMLFile(
             "/scenes/06-priority-minigame/priority-minigame.html",
             "/scenes/06-priority-minigame/minigame2styles.css",
@@ -302,7 +327,7 @@ export function loadScene5() {
       if (event.key === "e") {
         interact(global_data);
       }
-    });
+    }
 
     /*
     // This Does Not Seem To Work
@@ -494,6 +519,9 @@ export function loadScene5() {
       subtitles.innerHTML = interaction + ': "That is all I know."';
       document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
     }
+
+    keyCounter.innerHTML =
+      "<p>" + keysFound + " / " + global_data.keys.num_keys + "</p>";
 
     if (keysFound == global_data.keys.num_keys) {
       console.log("All Pieces Found");

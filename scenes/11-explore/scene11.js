@@ -1,4 +1,9 @@
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import {
+  loadNewHTMLFile,
+  devSkip,
+  addToEventListenerList,
+  removeFromEventListenerList,
+} from "/lib.js";
 import { miniGame4 } from "/scenes/12-mini-game-4/mini-game-4.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
@@ -196,7 +201,11 @@ export function loadScene11() {
 
     totalKeys = global_data.keys.num_keys;
 
-    document.addEventListener("keyup", (event) => {
+    //Adds event listeners to event listeners list
+    document.addEventListener("keyup", handleKeyup);
+    addToEventListenerList("handleKeyupExplore", "keyup", handleKeyup);
+
+    function handleKeyup(event) {
       if (
         event.key === "ArrowRight" ||
         event.key === "d" ||
@@ -206,9 +215,12 @@ export function loadScene11() {
         player.style.backgroundImage =
           "url(" + global_data.characters.player.sprite[0] + ")";
       }
-    });
+    }
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", handleKeydown);
+    addToEventListenerList("handleKeydownExplore", "keydown", handleKeydown);
+
+    function handleKeydown(event) {
       if (
         (event.key === "ArrowRight" || event.key === "d") &&
         !isDialogueOccurring
@@ -293,6 +305,15 @@ export function loadScene11() {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
           hasPlayerReachedMinigame = true;
+
+          //Removes all event listeners
+          document.removeEventListener("keyup", handleKeyup);
+          removeFromEventListenerList("handleKeyupExplore");
+
+          document.removeEventListener("keydown", handleKeydown);
+          removeFromEventListenerList("handleKeydownExplore");
+
+          //Loads new file
           loadNewHTMLFile(
             "/scenes/12-mini-game-4/index.html",
             "/scenes/12-mini-game-4/style.css",
@@ -304,7 +325,7 @@ export function loadScene11() {
       if (event.key === "e") {
         interact(global_data);
       }
-    });
+    }
 
     /*
     // This Does Not Seem To Work
