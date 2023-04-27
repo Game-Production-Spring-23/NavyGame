@@ -1,4 +1,9 @@
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import {
+  loadNewHTMLFile,
+  devSkip,
+  addToEventListenerList,
+  removeFromEventListenerList,
+} from "/lib.js";
 import { loadScene6 } from "/scenes/06-priority-minigame/priority-minigame-part-1.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
@@ -198,7 +203,11 @@ export function loadScene5() {
       }
     }
 
-    document.addEventListener("keyup", (event) => {
+    //Adds event listeners to event listeners list
+    document.addEventListener("keyup", handleKeyup);
+    addToEventListenerList("handleKeyupExplore", "keyup", handleKeyup);
+
+    function handleKeyup(event) {
       if (
         event.key === "ArrowRight" ||
         event.key === "d" ||
@@ -208,9 +217,12 @@ export function loadScene5() {
         player.style.backgroundImage =
           "url(" + global_data.characters.player.sprite[0] + ")";
       }
-    });
+    }
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", handleKeydown);
+    addToEventListenerList("handleKeydownExplore", "keydown", handleKeydown);
+
+    function handleKeydown(event) {
       if (
         (event.key === "ArrowRight" || event.key === "d") &&
         !isDialogueOccurring
@@ -295,6 +307,15 @@ export function loadScene5() {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
           hasPlayerReachedMinigame = true;
+
+          //Removes all event listeners
+          document.removeEventListener("keyup", handleKeyup);
+          removeFromEventListenerList("handleKeyupExplore");
+
+          document.removeEventListener("keydown", handleKeydown);
+          removeFromEventListenerList("handleKeydownExplore");
+
+          //Loads new file
           loadNewHTMLFile(
             "/scenes/06-priority-minigame/priority-minigame.html",
             "/scenes/06-priority-minigame/minigame2styles.css",
@@ -306,7 +327,7 @@ export function loadScene5() {
       if (event.key === "e") {
         interact(global_data);
       }
-    });
+    }
 
     /*
     // This Does Not Seem To Work

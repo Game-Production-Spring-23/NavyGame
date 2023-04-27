@@ -1,4 +1,9 @@
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import {
+  loadNewHTMLFile,
+  devSkip,
+  addToEventListenerList,
+  removeFromEventListenerList,
+} from "/lib.js";
 import { loadScene3 } from "/scenes/03-pipe-minigame/pipe-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
@@ -140,7 +145,11 @@ export function loadScene2() {
 
     key = global_data.key;
 
-    document.addEventListener("keyup", (event) => {
+    //Adds event listeners to event listeners list
+    document.addEventListener("keyup", handleKeyup);
+    addToEventListenerList("handleKeyupExplore", "keyup", handleKeyup);
+
+    function handleKeyup(event) {
       if (
         event.key === "ArrowRight" ||
         event.key === "d" ||
@@ -150,9 +159,12 @@ export function loadScene2() {
         player.style.backgroundImage =
           "url(" + global_data.characters.player.sprite[0] + ")";
       }
-    });
+    }
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", handleKeydown);
+    addToEventListenerList("handleKeydownExplore", "keydown", handleKeydown);
+
+    function handleKeydown(event) {
       if (
         (event.key === "ArrowRight" || event.key === "d") &&
         !isDialogueOccurring
@@ -236,6 +248,15 @@ export function loadScene2() {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
           hasPlayerReachedMinigame = true;
+
+          //Removes all event listeners
+          document.removeEventListener("keyup", handleKeyup);
+          removeFromEventListenerList("handleKeyupExplore");
+
+          document.removeEventListener("keydown", handleKeydown);
+          removeFromEventListenerList("handleKeydownExplore");
+
+          //Loads new file
           loadNewHTMLFile(
             "/scenes/03-pipe-minigame/pipemini-game.html",
             "/scenes/03-pipe-minigame/minigame1styles.css",
@@ -247,7 +268,7 @@ export function loadScene2() {
       if (event.key === "e") {
         interact(global_data);
       }
-    });
+    }
 
     /*
     // This Does Not Seem To Work
@@ -353,17 +374,15 @@ export function loadScene2() {
     console.log(interaction);
 
     if (interaction == key && locked) {
+      locked = false;
       startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
       keyMark.style.visibility = "hidden";
-      locked = false;
 
       // wait 5 seconds and display arrow to right of screen
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
       subtitles.innerHTML = interaction + ': "Go talk to the parrot."';
-      document.globalTimeouts.push(
-        setTimeout(resetSubtitles, 2500)
-      );
+      document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
     }
   }
 }

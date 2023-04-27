@@ -119,6 +119,8 @@ export function devSkip(filePath, styleSheetPath, next) {
   document.devSkipObj.next = next;
 } // end devSkip
 
+var eventListenerList = [];
+
 function skipper(event) {
   // check if the ~ key was pressed
   if (event.key == "~") {
@@ -126,6 +128,15 @@ function skipper(event) {
     for (let i = 0; i < document.globalTimeouts.length; i++) {
       clearTimeout(document.globalTimeouts[i]);
     } // end for
+
+    for (let i = 0; i < eventListenerList.length; i++) {
+      document.removeEventListener(
+        eventListenerList[i].type,
+        eventListenerList[i].listener
+      );
+    }
+    eventListenerList = [];
+
     setDialogueOccurring(false);
     loadNewHTMLFile(
       document.devSkipObj.filePath,
@@ -133,6 +144,17 @@ function skipper(event) {
       document.devSkipObj.next
     );
   } // end if
+  if (event.key == "@") {
+    console.log(eventListenerList);
+  }
 } // end skipper
 
 document.addEventListener("keydown", skipper);
+
+export function addToEventListenerList(key, type, listener) {
+  eventListenerList.push({ key, type, listener });
+}
+
+export function removeFromEventListenerList(key) {
+  eventListenerList = eventListenerList.filter((obj) => !key.includes(obj.key));
+}

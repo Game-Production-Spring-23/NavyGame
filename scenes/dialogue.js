@@ -1,3 +1,5 @@
+import { addToEventListenerList, removeFromEventListenerList } from "/lib.js";
+
 // Start
 var characterIndex = 0;
 var dataPath = "";
@@ -41,6 +43,31 @@ export function startDialogue(index, data) {
         backDialogue();
       };
 
+      //Adds event listener and adds it to global list
+      document.addEventListener("keydown", handleKeydown);
+      addToEventListenerList("keydownDialogue", "keydown", handleKeydown);
+
+      function handleKeydown(event) {
+        //SKIP ALL DIALOGUE
+        if (event.key == "!") {
+          //Fetches a dialogue from JSON
+          clearTimeout(scrollTimer);
+          scrollTimer = null;
+          scrollIndex = 0;
+          dialogueText.innerHTML = "";
+
+          if (dialogueIndex < data[characterIndex].dialogue.length - 1) {
+            //Clears scrollTimer, set it null, and sets scrollIndex to 0
+            dialogueIndex = data[characterIndex].dialogue.length - 1;
+          }
+        }
+
+        //Moves dialogue if the player presses space
+        if (event.key == " " || event.code == "Space" || event.keyCode == 32) {
+          console.log("HOW MANY TIMES");
+          displayDialogue();
+        }
+      }
       //Displays dialogue
       function displayDialogue() {
         //Fetches a dialogue from JSON
@@ -75,6 +102,8 @@ export function startDialogue(index, data) {
           dialogueImage.src = "/assets/images/NG_empty.png";
           dialogueText.innerHTML = "";
           document.getElementById("dialogueScreen").style.display = "none";
+          document.removeEventListener("keydown", handleKeydown);
+          removeFromEventListenerList("keydownDialogue");
           isDialogueOccurring = false;
         }
       }
@@ -112,15 +141,15 @@ export function startDialogue(index, data) {
         if (dialogue[dialogueIndex].image != null) {
           dialogueImage.src = dialogue[dialogueIndex].image;
           // set width & height, (if given)
-          if(
+          if (
             dialogue[dialogueIndex].imageWidth != null &&
             dialogue[dialogueIndex].imageHeight != null
-            ) {
-              dialogueImage.style.width = dialogue[dialogueIndex].imageWidth;
-              dialogueImage.style.height = dialogue[dialogueIndex].imageHeight;
+          ) {
+            dialogueImage.style.width = dialogue[dialogueIndex].imageWidth;
+            dialogueImage.style.height = dialogue[dialogueIndex].imageHeight;
           } // end if
           // set top offset (if given)
-          if(dialogue[dialogueIndex].imageTopOffset != null) {
+          if (dialogue[dialogueIndex].imageTopOffset != null) {
             dialogueImage.style.top = dialogue[dialogueIndex].imageTopOffset;
           } // end if
         } else {
@@ -163,23 +192,6 @@ export function startDialogue(index, data) {
         if (dialogueIndex > 0) {
           dialogueIndex--;
           displayDialogue();
-        }
-      }
-
-      document.addEventListener("keydown", skipDialogueAll);
-
-      function skipDialogueAll(event) {
-        if (event.key == "!") {
-          //Fetches a dialogue from JSON
-          clearTimeout(scrollTimer);
-          scrollTimer = null;
-          scrollIndex = 0;
-          dialogueText.innerHTML = "";
-
-          if (dialogueIndex < data[characterIndex].dialogue.length - 1) {
-            //Clears scrollTimer, set it null, and sets scrollIndex to 0
-            dialogueIndex = data[characterIndex].dialogue.length - 1;
-          }
         }
       }
     });
@@ -222,6 +234,31 @@ export function startDialogueNext(index, data, next) {
         backDialogue();
       };
 
+      //Adds event listener and adds it to global list
+      document.addEventListener("keydown", handleKeydown);
+      addToEventListenerList("keydownDialogue", "keydown", handleKeydown);
+
+      function handleKeydown(event) {
+        //SKIP ALL DIALOGUE
+        if (event.key == "!") {
+          //Fetches a dialogue from JSON
+          clearTimeout(scrollTimer);
+          scrollTimer = null;
+          scrollIndex = 0;
+          dialogueText.innerHTML = "";
+
+          if (dialogueIndex < data[characterIndex].dialogue.length - 1) {
+            //Clears scrollTimer, set it null, and sets scrollIndex to 0
+            dialogueIndex = data[characterIndex].dialogue.length - 1;
+          }
+        }
+
+        //Moves dialogue if the player presses space
+        if (event.key == " " || event.code == "Space" || event.keyCode == 32) {
+          console.log("HOW MANY TIMES");
+          displayDialogue();
+        }
+      }
       //Displays dialogue
       function displayDialogue() {
         //Fetches a dialogue from JSON
@@ -256,6 +293,8 @@ export function startDialogueNext(index, data, next) {
           dialogueImage.src = "/assets/images/NG_empty.png";
           dialogueText.innerHTML = "";
           document.getElementById("dialogueScreen").style.display = "none";
+          document.removeEventListener("keydown", handleKeydown);
+          removeFromEventListenerList("keydownDialogue");
           isDialogueOccurring = false;
           endDialogue(next);
         }
@@ -294,15 +333,15 @@ export function startDialogueNext(index, data, next) {
         if (dialogue[dialogueIndex].image != null) {
           dialogueImage.src = dialogue[dialogueIndex].image;
           // set width & height, (if given)
-          if(
+          if (
             dialogue[dialogueIndex].imageWidth != null &&
             dialogue[dialogueIndex].imageHeight != null
-            ) {
-              dialogueImage.style.width = dialogue[dialogueIndex].imageWidth;
-              dialogueImage.style.height = dialogue[dialogueIndex].imageHeight;
+          ) {
+            dialogueImage.style.width = dialogue[dialogueIndex].imageWidth;
+            dialogueImage.style.height = dialogue[dialogueIndex].imageHeight;
           } // end if
           // set top offset (if given)
-          if(dialogue[dialogueIndex].imageTopOffset != null) {
+          if (dialogue[dialogueIndex].imageTopOffset != null) {
             dialogueImage.style.top = dialogue[dialogueIndex].imageTopOffset;
           } // end if
         } else {
@@ -345,23 +384,6 @@ export function startDialogueNext(index, data, next) {
         if (dialogueIndex > 0) {
           dialogueIndex--;
           displayDialogue();
-        }
-      }
-
-      document.addEventListener("keydown", skipDialogueAll);
-
-      function skipDialogueAll(event) {
-        if (event.key == "!") {
-          //Fetches a dialogue from JSON
-          clearTimeout(scrollTimer);
-          scrollTimer = null;
-          scrollIndex = 0;
-          dialogueText.innerHTML = "";
-
-          if (dialogueIndex < data[characterIndex].dialogue.length - 1) {
-            //Clears scrollTimer, set it null, and sets scrollIndex to 0
-            dialogueIndex = data[characterIndex].dialogue.length - 1;
-          }
         }
       }
     });
