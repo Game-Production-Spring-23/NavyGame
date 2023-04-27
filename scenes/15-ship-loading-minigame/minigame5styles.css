@@ -17,8 +17,8 @@
 }
 #mg5officers {
   position: inherit;
-  width: 35%;
-  height: 32.5%;
+  width: 55%;
+  height: 35%;
   left: 1%;
   bottom: 2.5%;
   display: flex;
@@ -26,10 +26,21 @@
 }
 .mg5officer {
   height: 100%;
-  width: auto;
+  width: 22.5%;
   transition: all 4s;
   z-index: 5;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.mg5officerImg {
+  height: 75%;
+  width: auto;
+}
+.mg5indicator {
+  height: 25%;
+  width: auto;
+  margin: 0 auto;
 }
 .mg5containerBG {
   width: 35%;

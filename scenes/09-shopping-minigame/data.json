@@ -9,10 +9,10 @@
       "/assets/images/minigame3/NG_p1_Ocarina.png"
     ],
     "keywords": [
-      "Keyword: Item 1",
-      "Keyword: Item 2",
-      "Keyword: Item 3",
-      "Keyword: Item 4"
+      "Keyword: solid, chopping",
+      "Keyword: brassy, toots",
+      "Keyword: power generation",
+      "Keyword: musical instrument"
     ],
     "answer": 2
   },
@@ -26,15 +26,15 @@
       "/assets/images/minigame3/NG_p2_ScrewPipe.png"
     ],
     "keywords": [
-      "Keyword: Item 1",
-      "Keyword: Item 2",
-      "Keyword: Item 3",
-      "Keyword: Item 4"
+      "Keyword: water expulsion",
+      "Keyword: waste, sharp",
+      "Keyword: opens something",
+      "Keyword: groovy, fastener"
     ],
     "answer": 0
   },
   {
-    "INDEX": "QUESTION 2",
+    "INDEX": "QUESTION 3",
     "question": "/assets/images/minigame3/NG_p3_pumpdiagram-middlehighlight.png",
     "answers": [
       "/assets/images/minigame3/NG_p3_Clam.png",
@@ -43,10 +43,10 @@
       "/assets/images/minigame3/NG_p3_OuterLayer.png"
     ],
     "keywords": [
-      "Keyword: Item 1",
-      "Keyword: Item 2",
-      "Keyword: Item 3",
-      "Keyword: Item 4"
+      "Keyword: pearls, seafood",
+      "Keyword: gold, decoration",
+      "Keyword: comfy, textile",
+      "Keyword: mechanical housing"
     ],
     "answer": 3
   }

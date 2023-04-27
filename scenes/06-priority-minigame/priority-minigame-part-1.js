@@ -1,4 +1,4 @@
-import { startDialogue } from "/scenes/dialogue.js";
+import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
 import { devSkip } from "/lib.js";
 import { loadScene6_2 } from "/scenes/06-priority-minigame/priority-minigame-part-2.js";
 import { loadScene8 } from "/scenes/08-jungle-explore/scene8.js";
@@ -116,19 +116,27 @@ export function loadScene6() {
         completeCount++;
 
         // Dialogue
-        startDialogue(tabIndex+1, "/scenes/06-priority-minigame/dialogue.json");
 
         //if all 3 answers are finished
         if (completeCount >= 3) {
-          document.getElementById("mg2p1Submit").style.display = "block";
           document.getElementById("mg2Part2").style.display = "block";
+          startDialogueNext(
+            tabIndex + 1,
+            "/scenes/06-priority-minigame/dialogue.json",
+            endScene6_1
+          );
+        } else {
+          startDialogue(
+            tabIndex + 1,
+            "/scenes/06-priority-minigame/dialogue.json"
+          );
         }
       }
     }
   }
 
-  mg2p1Submit.onclick = () => {
+  function endScene6_1() {
     document.getElementById("mg2Part1").style.display = "none";
     loadScene6_2();
-  };
+  }
 }

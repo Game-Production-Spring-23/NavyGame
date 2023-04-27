@@ -12,6 +12,7 @@ export function loadScene9() {
 
   //Get references from document
   const chosen = document.getElementById("mg3chosenItem");
+  const items = document.getElementsByClassName("mg3item");
   const itemImages = document.getElementsByClassName("mg3itemImg");
   const itemTexts = document.getElementsByClassName("mg3itemText");
   const diagram = document.getElementById("mg3diagram");
@@ -27,8 +28,8 @@ export function loadScene9() {
     .then((response) => response.json())
     .then((data) => {
       //Add event listeners
-      for (let i = 0; i < itemImages.length; i++) {
-        itemImages[i].onclick = () => {
+      for (let i = 0; i < items.length; i++) {
+        items[i].onclick = () => {
           if (!hasPlayerChosenItem) selectAnswer(itemImages[i]);
         };
       }
@@ -48,7 +49,7 @@ export function loadScene9() {
         //sets items to possible answers
         for (let i = 0; i < 4; i++) {
           itemImages[i].style.display = "block";
-          itemImages[i].value = possibleAnswers[i];
+          itemImages[i].setAttribute("data-value", possibleAnswers[i]);
           itemImages[i].src = data[questionIndex].answers[possibleAnswers[i]];
           itemImages[i].style.filter = "brightness(0%)";
           itemTexts[i].innerHTML =
@@ -75,7 +76,7 @@ export function loadScene9() {
         chosen.style.width = "55%";
         chosen.style.filter = "brightness(100%)";
 
-        if (selected.value == data[questionIndex].answer) {
+        if (selected.getAttribute("data-value") == data[questionIndex].answer) {
           setTimeout(() => {
             questionIndex++;
             hasPlayerChosenItem = false;
@@ -84,11 +85,13 @@ export function loadScene9() {
               startDialogueNext(
                 2,
                 "/scenes/09-shopping-minigame/dialogue.json",
-                loadNewHTMLFile(
-                  "/scenes/11-explore/index.html",
-                  "/scenes/11-explore/styles.css",
-                  loadScene11
-                )
+                () => {
+                  loadNewHTMLFile(
+                    "/scenes/11-explore/index.html",
+                    "/scenes/11-explore/styles.css",
+                    loadScene11
+                  );
+                }
               );
             } else {
               startDialogueNext(
