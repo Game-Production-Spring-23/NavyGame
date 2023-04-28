@@ -132,6 +132,24 @@ h3 {
 #settingModal {
   display: none;
 }
+
+#lArrowUI{
+position: absolute;
+width: 100px;
+height: 100px;
+left:5%;
+top: 50%;
+z-index:998;
+}
+
+#rArrowUI{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 82%;
+top: 50%;
+z-index:999;
+}
 /* position map overlay icon below setting overlay */
 
 #dialogueScreen {

@@ -26,12 +26,20 @@ let charTwoSelect = document.getElementById("charTwoAv");
 let charThreeSelect = document.getElementById("charThreeAv");
 let uiTab = document.getElementById("uiTab");
 let ui = document.getElementById("uiOverlayLeft");
+let uiKeyRt = document.getElementById("rArrowUI");
+let uiKeyLt = document.getElementById("lArrowUI");
+
 let uiOpen = true;
 let charSprite; //sprite of the character selected
 let splashSprite; //sprite of the splash screen
 let mapStatus = false;
 let journalStatus = false;
 let volume = true;
+let uiKeyR=false;
+let uiKeyL=false;
+
+uiKeyRt.style.display = "none";
+uiKeyLt.style.display = "none";
 
 
 function closeUI(){
@@ -40,6 +48,11 @@ function closeUI(){
   uiTab.style.left = "0px";
   uiOpen=false;
 }
+
+
+
+
+
 
 //sprite selection [need to import assets]
 // let charSelect(){
@@ -59,6 +72,8 @@ function closeUI(){
 journalScreen.style.display = "none";
 mapScreen.style.display = "none";
 settingsContainer.style.display = "none";
+uiKeyRt.style.display = "none";
+uiKeyLt.style.display = "none";
 
 function toggleVolume() {
   if (volume == true) {
@@ -91,6 +106,22 @@ function toggleJournal() {
   } else {
     journalScreen.style.display = "none";
     console.log("journal off");
+  }
+}
+
+function rKeyOnScreen(){
+  if (uiKeyR == true){
+    uiKeyRt.style.display = "block";
+  }else{
+    uiKeyRt.style.display = "none";
+  }
+}
+
+function lKeyOnScreen(){
+  if (uiKeyL == true){
+    uiKeyLt.style.display = "block";
+  }else{
+    uiKeyLt.style.display = "none";
   }
 }
 
