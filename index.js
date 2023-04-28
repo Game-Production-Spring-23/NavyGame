@@ -110,20 +110,26 @@ function toggleJournal() {
 }
 
 function rKeyOnScreen(){
-  if (uiKeyR == true){
-    uiKeyRt.style.display = "block";
-  }else{
-    uiKeyRt.style.display = "none";
-  }
+  uiKeyRt.style.display = "block";
+  uiKeyR=true;
 }
 
 function lKeyOnScreen(){
-  if (uiKeyL == true){
-    uiKeyLt.style.display = "block";
-  }else{
-    uiKeyLt.style.display = "none";
-  }
+  uiKeyLt.style.display = "block";
+  uiKeyL=true;
 }
+
+function lKeyOffScreen(){
+  uiKeyLt.style.display = "none";
+  uiKeyL=false;
+}
+
+function rKeyOffScreen(){
+  uiKeyRt.style.display = "none";
+  uiKeyR=false;
+}
+
+
 
 
 
