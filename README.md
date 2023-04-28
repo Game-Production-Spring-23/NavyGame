@@ -139,15 +139,78 @@ What does this mean for the HTML components of each level? Since each level has 
 
 As you can see, other than the boilerplate html you would normally put in the html file, you would set up the level html files exactly how you would a normal html file: making elements that are displayed to the body of the html file. The only change is that the boilerplate html is not needed; everything else works the same.
 
-
 #### CSS
-The CSS files work very similarly to the 
+The CSS files work like normal CSS files - there is no change to the format. However, it is important to note the behaviour of the CSS between levels. Since each level has its own style sheet, the style sheet gets loaded in when the level gets loaded in. In the case that someone used the same name for any styles (tags, classes, or ids), this will be overwritten with the new stylings of the level being loaded in. **However, any stylings that were not changed between levels will remain.** That means if the previous level sets a styling for the `<div>` tag, but the next level doesn't, then the styling from the previous level will be used. That means if the next level makes use of any `<div>` tags, it will have the previous level's stylings (even if this wasn't the desired output).
+
+At the initial load of the game, an initial style sheet is used. This can be where any default stylings go, when you think it won't need to be changed between levels.
+
+This is the dynamic we chose for the CSS, but is by no means required. It is entirely possible to cut all of the styles from all of the levels and paste them into a single style sheet that is linked in the main html file. This would work **as long as you make sure there aren't any collisions with namings in the merged CSS file.** This would make updating/changing CSS a nightmare, so we suggest against doing this. 
+
+Since CSS also has a built-in way to link multiple style sheets into one, you could make individual style sheets for each level, then link them to the main style sheet that is loaded in when the game first starts (initialization). This would probably be more clean than our implementation. Since CSS doesn't require an html element to exist for the styling to be set, all the stylings could be loaded at the game start, and when new elements are added to the html file, the stylings would automatically apply. Again, you would have to make sure there were no naming collisions between stylings, but otherwise it would be a great way to reimplement the CSS.
 
 #### JavaScript
+This section goes over how we used JavaScript throughout the project. As mentioned previously in the **Initializing the Game** section, the game starts by loading the root `index.js` file through a script tag in the root `index.html` file. This subsequently loads in all of the JavaScript code of all of the linked files.
+
+We made use of the JavaScript *module*. This means that our JavaScript code is broken up into separate files, with each file containing code for a level. Because we utilize *callbacks* in our level loading functions, each level's code **MUST be encapsulated in a function and exported.** This allows the a level to load in the next level's code as a function and pass it as a callback to the function that loads the next page. An example is shown below:
+
+Example JavaScript file for a level:
+```
+// Imports
+
+// This imports library functions that we use to move between levels
+import { loadNewHTMLFile, devSkip } from "/lib.js";
+
+/* 
+    This will import the code that will be run when the next level starts.
+    It is encapsulated in a function that will be called when this level has
+    been completed.
+*/ 
+import { nextLevel } from "/scenes/nextLevel/nextLevelCode.js";
+
+
+/* 
+    The function that encapsulates this level's code. The previous level
+    loads this function as a callback.
+*/ 
+export function thisLevel() {
+    // This function enables us to skip past a level quickly (by pressing SHIFT and ~)
+    devSkip(
+        "/scenes/nextLevel/nextLevel.html", // HTML for the next level (in the level-html format)
+        "/scenes/nextLevel/nextLevel.css", // CSS for the next level 
+        nextLevel // the name of the function that encapsulates the code for the next level (similar to the 'thisLevel' function)
+    ); // end devSkip
+
+    /*
+        Level Specific Code goes here... Add in whatever variables you need and whatever functions
+        need to be executed. Set up a conditional so that when you have completed all of the tasks
+        for this level, the next level is called.
+    */
+
+    bool isLevelOver = true;
+    // check if the level has been completed
+    if(isLevelOver) {
+        // This function loads in the next Level's code
+        loadNewHTMLFile(
+            "/scenes/nextLevel/nextLevel.html", // HTML for the next level (in the level-html format)
+            "/scenes/nextLevel/nextLevel.css", // CSS for the next level 
+            nextLevel // the name of the function that encapsulates the code for the next level (similar to the 'thisLevel' function)
+        ); // end loadNewHTMLFile
+    } // end if
+} // end thisLevel
+```
+
+Here, you can see all of the core components of a JavaScript file for a level:
+
+1. First, all necessary functions are imported. This includes the **loadNewHTMLFile** function from **lib.js** (which allows you to load a new level) and the **devSkip** function (which does the same, but on a key binding). You also import the function that has all of the code for the next level.
+2. Next, you create and export a function to encapsulate all of the code for this level. This will allow the *previous* level to load in *this* level's code (just as you are loading in the functionality of the *next* level).
+3. You write any code you need to for this level. (This will be different for each level).
+
+Here are a few things to remember:
+* Make sure that you have a condition that decides when your level is over! When the player has met this condition, the **loadNewHTMLFile** function needs to be called with the next level's parameters.
+* If you create any eventListeners, make sure to get rid of them when the level ends, *especially* if the eventListeners are attached to anything that exists between levels. If you don't they will stay and whenever the player does the same thing again, that same functionality will still be bound to that action and be triggered again. For example, if you bind a sound when whenever the player clicks the mouse in your level, that sound will also play in the next level if you don't remove the event!
+* Understand that *all* of the level's JavaScript code will be loaded at initialization. While it is not all being called or accessed, it will be loaded since each file links to the next one. The root `index.js` file will load the first level's JavaScript file, then the first level will load the next level's file, and so on. That means a major syntax error in *any* file will cause the game to break, which is just something to be prepared for. Minor errors (errors caught at runtime) will not necessarily break other levels though.
 
 ### Dialogue System
-
-### Level Loading System
 
 #### Potential Catches/Issues
 
