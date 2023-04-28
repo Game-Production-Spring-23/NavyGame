@@ -2,6 +2,9 @@
   user-select: none; /* deal with issue with highlighting assets making the UI look funny */
 }
 
+
+
+
 html {
   height: 1080px !important;
   width: 1920px !important;
@@ -104,6 +107,8 @@ h3 {
   top: 25.66%;
   bottom: 25%;
 }
+
+
 
 /* Position UI icons right side of the screen*/
 #exitOverlay {
