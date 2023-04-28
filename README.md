@@ -51,7 +51,7 @@ To reiterate, each one of these stages have a devoted *Observe/Learn* Level foll
 #### Levels
 With the MBSE System being the driving factor in level design, our levels are shown below:
 
-1. Start Screen
+1. Main Menu Screen
 2. Player Select Screen
 3. Boat Animation
 4. Boat Deck Explore Scene (*Observe/Learn for STAGE 1*)
@@ -64,9 +64,10 @@ With the MBSE System being the driving factor in level design, our levels are sh
 11. Severity-Probability Mini Game (*Play for STAGE 4*)
 12. Final Explore Scene (*Observe/Learn for STAGE 5*)
 13. Ship Loading Mini Game (*Play for STAGE 5*)
-14. MBSE Review Scene (*Signifies Transition STAGE in MBSE*)
+14. MBSE Review Scene (*Signifies Transition STAGE in MBSE - returns to Main Menu*)
 
 ### Individual Level Format
+Levels are broken down into parts in the *scenes/* folder in the project root directory. They in the order in which they are
 
 #### HTML
 
