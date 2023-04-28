@@ -1,6 +1,6 @@
 import { loadNewHTMLFile, devSkip } from "/lib.js";
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
-import { endScreen } from "../16-end-screen/endScreen.js";
+import { endScreen } from "/scenes/16-end-screen/endScreen.js";
 
 export function shipMiniGame() {
   devSkip(

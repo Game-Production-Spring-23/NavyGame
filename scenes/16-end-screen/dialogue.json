@@ -1,0 +1,17 @@
+[
+  {
+    "otherName": "Cross Bird",
+    "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Review MBSE..."
+      }
+    ]
+  }
+]
