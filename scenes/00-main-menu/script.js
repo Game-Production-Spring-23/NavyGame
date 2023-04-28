@@ -1,5 +1,5 @@
 import { loadNewHTMLFile, devSkip } from "/lib.js";
-import { charSelect } from "/scenes/charSelect/charSelect.js";
+import { charSelect } from "/scenes/00.5-char-select/charSelect.js";
 
 export function mainMenu() {
   //global variables
@@ -203,7 +203,7 @@ export function mainMenu() {
 
   // what to skip to
   devSkip(
-    "/scenes/charSelect/charSelect.html",
+    "/scenes/00.5-char-select/charSelect.html",
     "/style.css",
     charSelect
   );
@@ -213,7 +213,7 @@ export function mainMenu() {
   };
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
-      "/scenes/charSelect/charSelect.html",
+      "/scenes/00.5-char-select/charSelect.html",
       "/style.css",
       charSelect
     );
