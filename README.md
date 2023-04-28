@@ -67,7 +67,7 @@ With the MBSE System being the driving factor in level design, our levels are sh
 14. MBSE Review Scene (*Signifies Transition STAGE in MBSE - returns to Main Menu*)
 
 ### Individual Level Format
-Levels are broken down into parts in the *scenes/* folder in the project root directory. They in the order in which they are
+Levels are broken down into parts in the *scenes/* folder in the project root directory. They in the order in which they are played, starting with *00-main-menu/*, which holds all of the files related to the main menu, and ending with *16-end-screen/*, which holds all of the files related to the end screen.
 
 #### HTML
 
