@@ -49,7 +49,22 @@ Here's a quick overview of the MBSE System's Stages:
 To reiterate, each one of these stages have a devoted *Observe/Learn* Level followed by a *Play* Level that is themed around the stage.
 
 #### Levels
-With the MBSE System being the driving factor in level design, 
+With the MBSE System being the driving factor in level design, our levels are shown below:
+
+1. Start Screen
+2. Player Select Screen
+3. Boat Animation
+4. Boat Deck Explore Scene (*Observe/Learn for STAGE 1*)
+5. Pipe/Boiler Room Mini Game (*Play for STAGE 1*)
+6. Beach Expore Scene (*Observe/Learn for STAGE 2*)
+7. Priority Mini Game (*Play for STAGE 2*)
+8. Jungle Explore Scene (*Observe/Learn for STAGE 3*)
+9. Shopping Mini Game (*Play for STAGE 3*)
+10. Return to Beach Explore Scene (*Observe/Learn for STAGE 4*)
+11. Severity-Probability Mini Game (*Play for STAGE 4*)
+12. Final Explore Scene (*Observe/Learn for STAGE 5*)
+13. Ship Loading Mini Game (*Play for STAGE 5*)
+14. MBSE Review Scene (*Signifies Transition STAGE in MBSE*)
 
 ### Individual Level Format
 
