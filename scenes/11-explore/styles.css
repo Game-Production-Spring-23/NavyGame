@@ -109,6 +109,28 @@ body {
   left: 0;
 }
 
+#qm {
+  background-image: url("../../assets/images/characters/crew/crew2B.png");
+  transform: scaleX(-1);
+  bottom: 16px;
+  left: 1775px;
+  z-index: 2;
+}
+
+#p1 {
+  background-image: url("../../assets/images/characters/crew/crew4Front.png");
+  transform: scaleX(-1);
+  bottom: 8px;
+  left: 1705px;
+  z-index: 3;
+}
+
+#p2 {
+  background-image: url("../../assets/images/characters/crew/crew3Front.png");
+  left: 1920px;
+  z-index: 2;
+}
+
 #player {
   z-index: 3;
   height: 170px;
@@ -119,6 +141,7 @@ body {
   height: 128px;
   font-size: 40px;
   color: black;
+  background-color: antiquewhite;
 }
 
 .keyMark {

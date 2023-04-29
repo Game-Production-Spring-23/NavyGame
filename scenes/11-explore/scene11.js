@@ -8,7 +8,7 @@ import { miniGame4 } from "/scenes/12-mini-game-4/mini-game-4.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene11() {
-  console.log("Scene5 - Beach");
+  console.log("Scene11 - Beach");
   devSkip(
     "/scenes/12-mini-game-4/index.html",
     "/scenes/12-mini-game-4/style.css",
@@ -27,18 +27,18 @@ export function loadScene11() {
   const vet = document.getElementById("veteran");
   const chef = document.getElementById("chef");
   const officers = document.getElementById("officers");
-  const tech = document.getElementById("tech");
-  const nt = document.getElementById("nontech");
+  //const tech = document.getElementById("tech");
+  //const nt = document.getElementById("nontech");
   //const characters = document.getElementsByClassName("character");
   const subtitles = document.getElementById("subtitles");
-  const keyMark0 = document.getElementById("keyMark0");
-  const keyMark1 = document.getElementById("keyMark1");
-  const keyMark2 = document.getElementById("keyMark2");
-  const keyMark3 = document.getElementById("keyMark3");
+  //const keyMark0 = document.getElementById("keyMark0");
+  //const keyMark1 = document.getElementById("keyMark1");
+  //const keyMark2 = document.getElementById("keyMark2");
+  //const keyMark3 = document.getElementById("keyMark3");
   const keyMark4 = document.getElementById("keyMark4");
-  const keyMark5 = document.getElementById("keyMark5");
-  const keyMark6 = document.getElementById("keyMark6");
-  const keyMark7 = document.getElementById("keyMark7");
+  //const keyMark5 = document.getElementById("keyMark5");
+  //const keyMark6 = document.getElementById("keyMark6");
+  //const keyMark7 = document.getElementById("keyMark7");
   const dialogueReady = document.getElementById("dialogueReady");
 
   let global_data = null;
@@ -54,7 +54,7 @@ export function loadScene11() {
   let fgMaxOffset;
   let playerAbsLimit;
 
-  let locked = [true, true, true, true, true, true, true, true];
+  let locked = [true];
   let hasPlayerReachedMinigame = false;
 
   let speed;
@@ -67,7 +67,7 @@ export function loadScene11() {
   let interaction = "";
 
   // Get JSON Data
-  fetch("/scenes/05-beach-explore/scene5.json")
+  fetch("/scenes/11-explore/scene11.json")
     .then((response) => response.json())
     .then((data) => {
       global_data = JSON.parse(JSON.stringify(data));
@@ -107,16 +107,6 @@ export function loadScene11() {
       officers.style.backgroundImage =
         "url(" + data.characters.officers.sprite[0] + ")";
       officers.setAttribute("name", data.characters.officers.name);
-
-      tech.style.left = data.characters.tech.offset + "px";
-      tech.style.backgroundImage =
-        "url(" + data.characters.tech.sprite[0] + ")";
-      tech.setAttribute("name", data.characters.tech.name);
-
-      nt.style.left = data.characters.nontech.offset + "px";
-      nt.style.backgroundImage =
-        "url(" + data.characters.nontech.sprite[0] + ")";
-      nt.setAttribute("name", data.characters.nontech.name);
 
       bgContainer.style.width = 1920 * data.params.bg_scale + "px";
       bgContainer.style.backgroundImage =
@@ -270,18 +260,6 @@ export function loadScene11() {
         // officers
         interaction = global_data.characters.officers.name;
       } else if (
-        playerAbs > global_data.characters.nontech.offset - 24 &&
-        playerAbs < global_data.characters.nontech.offset + 96
-      ) {
-        // nontech
-        interaction = global_data.characters.nontech.name;
-      } else if (
-        playerAbs > global_data.characters.tech.offset - 24 &&
-        playerAbs < global_data.characters.tech.offset + 96
-      ) {
-        // tech
-        interaction = global_data.characters.tech.name;
-      } else if (
         playerAbs > global_data.characters.veteran.offset - 24 &&
         playerAbs < global_data.characters.veteran.offset + 96
       ) {
@@ -431,49 +409,13 @@ export function loadScene11() {
     console.log(interaction);
 
     if (interaction == global_data.keys.keys[0] && locked[0]) {
-      // Play Captain Dialogue
-      //startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
-      keyMark0.style.visibility = "hidden";
-      keysFound++;
-      locked[0] = false;
-    } else if (interaction == global_data.keys.keys[1] && locked[1]) {
-      // Play Parrot Dialogue
-      keyMark1.style.visibility = "hidden";
-      keysFound++;
-      locked[1] = false;
-    } else if (interaction == global_data.keys.keys[2] && locked[2]) {
-      // Play Quartermaster Dialogue
       keyMark4.style.visibility = "hidden";
       keysFound++;
-      locked[2] = false;
-    } else if (interaction == global_data.keys.keys[3] && locked[3]) {
-      // Play Chef Dialogue
-      keyMark2.style.visibility = "hidden";
-      keysFound++;
-      locked[3] = false;
-    } else if (interaction == global_data.keys.keys[4] && locked[4]) {
-      // Play Gunner Dialogue
-      keyMark5.style.visibility = "hidden";
-      keysFound++;
-      locked[4] = false;
-    } else if (interaction == global_data.keys.keys[5] && locked[5]) {
-      // Play Pirate 1 Dialogue
-      keyMark3.style.visibility = "hidden";
-      keysFound++;
-      locked[5] = false;
-    } else if (interaction == global_data.keys.keys[6] && locked[6]) {
-      // Play Pirate 2 Dialogue
-      keyMark6.style.visibility = "hidden";
-      keysFound++;
-      locked[6] = false;
-    } else if (interaction == global_data.keys.keys[7] && locked[7]) {
-      // Play Veteran Dialogue
-      keyMark7.style.visibility = "hidden";
-      keysFound++;
-      locked[7] = false;
+      locked[0] = false;
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
-      subtitles.innerHTML = interaction + ': "That is all I know."';
+      subtitles.innerHTML =
+        interaction + ': "Go sort out those scallywags, Chief!"';
       document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
     }
 
