@@ -5,18 +5,7 @@ html {
   max-width: 100%;
   max-height: 100%;
 }
-body {
-  background: #373b44;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4286f4, #373b44);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4286f4, #373b44);
-  background-image: url("/assets/images/ui/navyBkgrnd.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position-x: center;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+
 
 h1 {
   font-family: "Lilita One", cursive;
