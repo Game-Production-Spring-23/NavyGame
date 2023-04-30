@@ -14,6 +14,9 @@ export function endScreen() {
     mainMenu
   );
 
+  // pre-level dialogue
+  startDialogue(0, "/scenes/16-end-screen/dialogue.json");
+
   // Get Document Elements
   const player = document.getElementById("player");
   const bgContainer = document.getElementById("background");
@@ -374,7 +377,7 @@ export function endScreen() {
 
     if (interaction == key && locked) {
       locked = false;
-      startDialogueNext(0, "/scenes/16-end-screen/dialogue.json", () => {
+      startDialogueNext(1, "/scenes/16-end-screen/dialogue.json", () => {
         loadNewHTMLFile(
           "/scenes/00-main-menu/Main-Menu-Scene.html",
           "/scenes/00-main-menu/style.css",
