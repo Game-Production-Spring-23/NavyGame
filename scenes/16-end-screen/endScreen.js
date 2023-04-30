@@ -381,9 +381,6 @@ export function endScreen() {
 
     if (interaction == key && locked) {
       locked = false;
-<<<<<<< HEAD
-      startDialogueNext(1, "/scenes/16-end-screen/dialogue.json", () => {
-=======
       document.removeEventListener("keyup", keyUpFunction);
       removeFromEventListenerList("handleKeyupExplore");
 
@@ -391,7 +388,6 @@ export function endScreen() {
       removeFromEventListenerList("handleKeydownExplore");
 
       startDialogueNext(0, "/scenes/16-end-screen/dialogue.json", () => {
->>>>>>> 9b926c9ab2e4cd46945e497ffa418503a9d78473
         loadNewHTMLFile(
           "/scenes/00-main-menu/Main-Menu-Scene.html",
           "/scenes/00-main-menu/style.css",
