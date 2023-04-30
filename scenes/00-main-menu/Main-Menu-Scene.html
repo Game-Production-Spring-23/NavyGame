@@ -2,18 +2,25 @@
 </header>
 -->
 <!-- This div is the questions and answer section this might change based on how the game is setup, -->
+<div id="titleLogo"></div>
 <div id="app">
 
     <div id="gameContainer">
+        
         <!-- Start Screen Container --------------------------------------------------------------------------------------------------------->
         <input id="start" class="button-2" type="image" value="Start Test" onMouseOver="settingsHover(this)"
             onMouseout="settingOut(this)" src="/assets/images/ui/startBtn.png">
-        <input id="setting" class="button-1" type="image" onclick="showOptions()"  value="Options" src="/assets/images/ui/introBtn.png">
+        <input id="setting" class="button-1" type="image" onclick="showOptions()"  value="Options" src="/assets/images/ui/controlBtn.png">
 
     </div>
     <!-- Tutorial Screen----------------------------------------------------------------------------------------------------------------- -->
     <div id="settingsContainer">
+        
            <img id="controlTutScreen" src="/assets/images/ui/controlScreen.png">
+           <input id="startControlScreen" class="button-2" type="image" value="Start Test" onMouseOver="settingsHover(this)"
+            onMouseout="settingOut(this)" src="/assets/images/ui/startBtn.png">
+           <!-- start game button-->
+              
     </div>
     <!-- Score Container----------------------------------------------------------------------------------------------------------------- -->
     <div id="scoreContainer" class="hidden">

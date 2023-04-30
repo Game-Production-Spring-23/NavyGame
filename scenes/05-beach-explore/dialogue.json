@@ -5,27 +5,24 @@
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
         "text": "Avast, me hearty! Ye be the Chief Engineer o' th' Signet Messenger, and yer duty be to get this ship sailin' again."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
         "text": "To begin playin' th' game, ye must take a saunter 'round th' beach and gab with ye’ fellow crew members to gather intel 'bout th' damages to th' ship and th' risks involved."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
         "text": "As ye parley with these scallywags, keep yer wits 'bout ye and remember th' MBSE approach ye be takin' to assess th' damage and repair th' ship. With yer keen mind and expert know-how, ye'll have th' Signet Messenger back on th' high seas in no time! Arrr!"

@@ -31,15 +31,15 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  /* background-image:url("/assets/images/ui/titleLogo.png"); */
-  /* background-repeat: no-repeat;
+  z-index: 999;
+  background-image:url("/assets/images/ui/titleLogo.png");
+  background-repeat: no-repeat;
   background-position: center;
   background-position-x: center;
   background-size:contain;
   height:40%;
   width:100%;
-  padding-bottom:5px; */
+  padding-bottom:5px;
 }
 /*Button css*/
 
@@ -127,7 +127,7 @@ h3 {
 /* Main container CSS */
 
 #app {
-  margin-top: 4%;
+  margin-top: 15%;
   width: 100%;
   padding: 10px;
   margin-left: auto;
