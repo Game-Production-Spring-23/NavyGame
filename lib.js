@@ -11,6 +11,14 @@ document.globalTimeouts = [];
 // Loads and transitions to a new HTML file given a file name and a style sheet
 // the next parameter is a callback function.
 export function loadNewHTMLFile(filePath, styleSheetPath, next) {
+  // update page counter
+  let pageCounter = localStorage.getItem("page");
+  if(pageCounter) { // if page counter exists
+    pageCounter = parseInt(pageCounter); // parse as an integer
+    pageCounter += 1; // increment
+    localStorage.setItem("page", `${pageCounter}`); // set back to page variable, as a string
+  } // end if
+
   //Fade in
   transition.style.display = "block";
   transition.classList.add("fadeInAndOut");
@@ -163,3 +171,15 @@ export function addToEventListenerList(key, type, listener) {
 export function removeFromEventListenerList(key) {
   eventListenerList = eventListenerList.filter((obj) => !key.includes(obj.key));
 }
+
+
+// get page counter as an int
+export function getPageCounterInt() {
+  return parseInt(localStorage.getItem("page"));
+} // end getPageCounterInt
+
+
+// get page counter as a string
+export function getPageCounterStr() {
+  return localStorage.getItem("page");
+} // end getPageCounterStr

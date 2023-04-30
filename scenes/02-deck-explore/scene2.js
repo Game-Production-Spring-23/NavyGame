@@ -3,11 +3,13 @@ import {
   devSkip,
   addToEventListenerList,
   removeFromEventListenerList,
+  getPageCounterInt
 } from "/lib.js";
 import { loadScene3 } from "/scenes/03-pipe-minigame/pipe-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene2() {
+  console.log(getPageCounterInt());
   devSkip(
     "/scenes/03-pipe-minigame/pipemini-game.html",
     "/scenes/03-pipe-minigame/minigame1styles.css",

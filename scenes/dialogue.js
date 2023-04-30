@@ -4,7 +4,7 @@ import { addToEventListenerList, removeFromEventListenerList } from "/lib.js";
 var characterIndex = 0;
 var dataPath = "";
 var isDialogueOccurring = false;
-var playerTone = 0;
+var playerTone = 2;
 
 //Starts dialogue screen
 export function startDialogue(index, data) {

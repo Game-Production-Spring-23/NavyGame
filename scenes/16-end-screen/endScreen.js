@@ -5,7 +5,11 @@ import {
   removeFromEventListenerList,
 } from "/lib.js";
 import { mainMenu } from "/scenes/00-main-menu/script.js";
-import { startDialogue, isDialogueOccurring, startDialogueNext } from "/scenes/dialogue.js";
+import {
+  startDialogue,
+  isDialogueOccurring,
+  startDialogueNext,
+} from "/scenes/dialogue.js";
 
 export function endScreen() {
   devSkip(
@@ -268,7 +272,7 @@ export function endScreen() {
       }
 
       if (event.key === "e") {
-        interact(global_data);
+        interact(global_data, handleKeyup, handleKeydown);
       }
     }
 
@@ -372,12 +376,22 @@ export function endScreen() {
     }
   }
 
-  function interact(global_data) {
+  function interact(global_data, keyUpFunction, keyDownFunction) {
     console.log(interaction);
 
     if (interaction == key && locked) {
       locked = false;
+<<<<<<< HEAD
       startDialogueNext(1, "/scenes/16-end-screen/dialogue.json", () => {
+=======
+      document.removeEventListener("keyup", keyUpFunction);
+      removeFromEventListenerList("handleKeyupExplore");
+
+      document.removeEventListener("keydown", keyDownFunction);
+      removeFromEventListenerList("handleKeydownExplore");
+
+      startDialogueNext(0, "/scenes/16-end-screen/dialogue.json", () => {
+>>>>>>> 9b926c9ab2e4cd46945e497ffa418503a9d78473
         loadNewHTMLFile(
           "/scenes/00-main-menu/Main-Menu-Scene.html",
           "/scenes/00-main-menu/style.css",
