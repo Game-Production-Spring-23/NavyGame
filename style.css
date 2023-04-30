@@ -39,6 +39,21 @@ h3 {
   color: #ffffff;
   text-align: center;
 }
+
+
+#titleLogo{
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  left: 35%;
+  top: 0px;
+  z-index: 999;
+  background-image: url("/assets/images/ui/titleLogo.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-x: center;
+
+}
 /*----------------- UI Overlay CSS------------------------------ */
 #charRank {
   position: absolute;
@@ -438,15 +453,16 @@ z-index:999;
   line-height: 0;
 }
 
-#charSelectStart {
+#charSelectStart, #startControlScreen {
   position: absolute;
-  width: 700px;
-  height: 110px;
-  left: calc(50% - 690px / 2 + 4px);
-  bottom: 71px;
+  width: 600px;
+  height: 90px;
+  left: 34%;
+  bottom:10%;
   background: url(/assets/images/ui/startBtn.png);
   background-repeat: no-repeat;
   border-style: none;
+  z-index:999;
 }
 
 #charSelectStart:hover {
