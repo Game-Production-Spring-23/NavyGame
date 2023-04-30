@@ -2,6 +2,9 @@
   user-select: none; /* deal with issue with highlighting assets making the UI look funny */
 }
 
+
+
+
 html {
   height: 1080px !important;
   width: 1920px !important;
@@ -35,6 +38,21 @@ h3 {
   font-size: 30px;
   color: #ffffff;
   text-align: center;
+}
+
+
+#titleLogo{
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  left: 35%;
+  top: 0px;
+  z-index: 999;
+  background-image: url("/assets/images/ui/titleLogo.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-x: center;
+
 }
 /*----------------- UI Overlay CSS------------------------------ */
 #charRank {
@@ -105,6 +123,8 @@ h3 {
   bottom: 25%;
 }
 
+
+
 /* Position UI icons right side of the screen*/
 #exitOverlay {
   position: absolute;
@@ -126,6 +146,24 @@ h3 {
 
 #settingModal {
   display: none;
+}
+
+#lArrowUI{
+position: absolute;
+width: 100px;
+height: 100px;
+left:5%;
+top: 50%;
+z-index:998;
+}
+
+#rArrowUI{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 82%;
+top: 50%;
+z-index:999;
 }
 /* position map overlay icon below setting overlay */
 
@@ -415,15 +453,16 @@ h3 {
   line-height: 0;
 }
 
-#charSelectStart {
+#charSelectStart, #startControlScreen {
   position: absolute;
-  width: 700px;
-  height: 110px;
-  left: calc(50% - 690px / 2 + 4px);
-  bottom: 71px;
+  width: 600px;
+  height: 90px;
+  left: 34%;
+  bottom:10%;
   background: url(/assets/images/ui/startBtn.png);
   background-repeat: no-repeat;
   border-style: none;
+  z-index:999;
 }
 
 #charSelectStart:hover {
