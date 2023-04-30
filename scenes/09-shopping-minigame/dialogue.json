@@ -19,8 +19,8 @@
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "",
         "isPlayerTalking": true,
         "text": "This is the right one"
@@ -32,12 +32,12 @@
     "otherOffset": 0,
     "dialogue": [
       {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "",
-        "isPlayerTalking": false,
-        "text": "END OF MINIGAME 3"
+        "isPlayerTalking": true,
+        "text": "I got all the pieces, I should head back to the beach"
       }
     ]
   },
@@ -47,45 +47,40 @@
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": true,
         "text": "Arrr, shiver me timbers! Every scallywag on this here island be a bit peculiar... "
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": false,
         "text": "Stay there! You can't have your items unless you guess which is which!"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": true,
         "text": "Blast me barnacles! The blacksmith be keepin' a tight hold on the parts until I can guess which be which."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": true,
         "text": "I reckon I can make use 'o' the Block Definition Diagram that was given to me."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": true,
         "text": "If I be using th' clues from the SysML tongue about the items and compare them to the diagram, I should be able to nab the right pieces."

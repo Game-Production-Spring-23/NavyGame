@@ -97,8 +97,15 @@ export function shipMiniGame() {
 
     //Moves the next container forward
     containerIndex++;
-    if (containerIndex < possibleImages.length) moveContainerIn(!isFirst);
-    else {
+    if (containerIndex < possibleImages.length) {
+      moveContainerIn(!isFirst);
+      //Moves the next container out
+      setTimeout(() => {
+        containers[i].style.transition = "none";
+        containers[i].style.left = "200%";
+        isFirstContainer = !isFirstContainer;
+      }, 4000);
+    } else {
       //End mini game dialogue
       startDialogueNext(
         2,
@@ -112,12 +119,5 @@ export function shipMiniGame() {
         }
       );
     }
-
-    //Moves the next container out
-    setTimeout(() => {
-      containers[i].style.transition = "none";
-      containers[i].style.left = "200%";
-      isFirstContainer = !isFirstContainer;
-    }, 4000);
   }
 } // end shipMiniGame
