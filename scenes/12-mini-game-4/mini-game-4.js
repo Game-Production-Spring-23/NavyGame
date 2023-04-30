@@ -1,4 +1,4 @@
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import { loadNewHTMLFile, devSkip } from "/lib.js";
 import { shipMiniGame } from "/scenes/15-ship-loading-minigame/ship-loading-minigam.js";
 import {
   startDialogue,
@@ -173,9 +173,9 @@ export function miniGame4() {
         if (correctCounter >= 3) {
           startDialogueNext(1, "/scenes/12-mini-game-4/dialogue.json", () => {
             loadNewHTMLFile(
-              "/scenes/14-beach-explore/index.html",
-              "/scenes/14-beach-explore/styles.css",
-              loadScene14
+              "/scenes/15-ship-loading-minigame/ship-loading-minigame.html",
+              "/scenes/15-ship-loading-minigame/minigame5styles.css",
+              shipMiniGame
             );
           });
         } // end if
