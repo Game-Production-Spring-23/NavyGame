@@ -6,7 +6,7 @@
         "../../assets/images/characters/player/pwalk1.png",
         "../../assets/images/characters/player/playerwalk.gif "
       ],
-      "offset": 5376
+      "offset": 376
     },
     "captain": {
       "name": "Captain",
@@ -19,9 +19,9 @@
       "offset": 1500
     },
     "quartermaster": {
-      "name": "Quartermaster",
-      "sprite": ["../../assets/images/characters/crew/crew2B.png"],
-      "offset": 2650
+      "name": "The Meeting",
+      "sprite": [],
+      "offset": 1845
     },
     "chef": {
       "name": "Chef",
@@ -31,17 +31,7 @@
     "officers": {
       "name": "Gunner",
       "sprite": ["../../assets/images/characters/crew/crew1B.png"],
-      "offset": 1960
-    },
-    "nontech": {
-      "name": "Pirate 1",
-      "sprite": ["../../assets/images/characters/crew/crew3Front.png"],
-      "offset": 512
-    },
-    "tech": {
-      "name": "Pirate 2",
-      "sprite": ["../../assets/images/characters/crew/crew4Front.png"],
-      "offset": 4200
+      "offset": 2600
     },
     "veteran": {
       "name": "Veteran Engineer",
@@ -71,16 +61,7 @@
     "offsetsY": [480]
   },
   "keys": {
-    "num_keys": 8,
-    "keys": [
-      "Captain",
-      "Parrot",
-      "Quartermaster",
-      "Chef",
-      "Gunner",
-      "Pirate 1",
-      "Pirate 2",
-      "Veteran Engineer"
-    ]
+    "num_keys": 1,
+    "keys": ["The Meeting"]
   }
 }
