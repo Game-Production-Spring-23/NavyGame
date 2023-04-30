@@ -1,5 +1,5 @@
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
-import { startDialogueNext } from "/scenes/dialogue.js";
+import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
 import { loadScene11 } from "/scenes/11-explore/scene11.js";
 
 //    START INIT    //
@@ -9,6 +9,9 @@ export function loadScene9() {
     "/scenes/11-explore/styles.css",
     loadScene11
   );
+
+  // begin dialogue
+  startDialogue(3, "/scenes/09-shopping-minigame/dialogue.json");
 
   //Get references from document
   const chosen = document.getElementById("mg3chosenItem");

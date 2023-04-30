@@ -43,5 +43,56 @@
         "text": "END OF MINIGAME 3"
       }
     ]
+  },
+  {
+    "otherName": "Blacksmith",
+    "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": true,
+        "text": "Arrr, shiver me timbers! Every scallywag on this here island be a bit peculiar... "
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Stay there! You can't have your items unless you guess which is which!"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": true,
+        "text": "Blast me barnacles! The blacksmith be keepin' a tight hold on the parts until I can guess which be which."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": true,
+        "text": "I reckon I can make use 'o' the Block Definition Diagram that was given to me."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "",
+        "playerPortrait2": "",
+        "playerPortrait3": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": true,
+        "text": "If I be using th' clues from the SysML tongue about the items and compare them to the diagram, I should be able to nab the right pieces."
+      }
+    ]
   }
 ]
