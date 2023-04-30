@@ -3,6 +3,7 @@ import {
   devSkip,
   addToEventListenerList,
   removeFromEventListenerList,
+  resetPageCounter
 } from "/lib.js";
 import { mainMenu } from "/scenes/00-main-menu/script.js";
 import {
@@ -15,7 +16,7 @@ export function endScreen() {
   devSkip(
     "/scenes/00-main-menu/Main-Menu-Scene.html",
     "/scenes/00-main-menu/style.css",
-    mainMenu
+    () => {resetPageCounter(); mainMenu();} // make sure page counter is reset when using devSkip
   );
 
   // pre-level dialogue
@@ -393,6 +394,7 @@ export function endScreen() {
           "/scenes/00-main-menu/style.css",
           mainMenu
         );
+        resetPageCounter();
       });
       keyMark.style.visibility = "hidden";
 
