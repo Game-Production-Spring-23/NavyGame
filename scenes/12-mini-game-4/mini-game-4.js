@@ -1,4 +1,9 @@
-import { loadNewHTMLFile, devSkip } from "/lib.js";
+import {
+  loadNewHTMLFile,
+  devSkip,
+  addToEventListenerList,
+  removeFromEventListenerList,
+} from "/lib.js";
 import { shipMiniGame } from "/scenes/15-ship-loading-minigame/ship-loading-minigam.js";
 import {
   startDialogue,
@@ -36,13 +41,13 @@ export function miniGame4() {
       // loop over options, set them to be draggable
       for (let i = 0; i < options.length; i++) {
         options[i].dataset.hasMoved = "false";
-        options[i].addEventListener("mousedown", (event) => {
+        options[i].onmousedown = (event) => {
           pickUpPaperAudio.play();
           posX = event.pageX;
           posY = event.pageY;
           dragMove(options[i].id);
           changeCharacterText(i);
-        }); // end mousedown event listener
+        }; // end mousedown event listener
 
         optionTexts[i].textContent = data["options-text"][i];
       } // end for
@@ -75,7 +80,11 @@ export function miniGame4() {
     }; // end onmousedown
   } // end dragMove
 
-  document.onmouseup = (event) => {
+  //Adds mouse up to doc
+  document.addEventListener("mouseup", handleMouseUp);
+  addToEventListenerList("mg4MouseUp", "mouseup", handleMouseUp);
+
+  function handleMouseUp(event) {
     // loop over grid items, check if any are overlapping w/ dragged option
     let gridItems = document.getElementsByClassName("grid-item");
     for (let i = 0; i < gridItems.length; i++) {
@@ -95,9 +104,13 @@ export function miniGame4() {
 
     draggableElement = null;
     checkForGameFinished();
-  }; // end doc onmouseup
+  } // end doc onmouseup
 
-  document.onmousemove = (event) => {
+  //Adds mouse up to doc
+  document.addEventListener("mousemove", handleMouseMove);
+  addToEventListenerList("mg4MouseMove", "mousemove", handleMouseMove);
+
+  function handleMouseMove(event) {
     if (draggableElement != null) {
       let mouseX = posX - event.pageX;
       let mouseY = posY - event.pageY;
@@ -106,7 +119,7 @@ export function miniGame4() {
       draggableElement.style.left = draggableElement.offsetLeft - mouseX + "px";
       draggableElement.style.top = draggableElement.offsetTop - mouseY + "px";
     } // end if
-  }; // end onmousemove
+  } // end onmousemove
 
   // changes the text of the character when an option is selected
   function changeCharacterText(optionIndex) {
@@ -171,6 +184,14 @@ export function miniGame4() {
 
         // check if win
         if (correctCounter >= 3) {
+          console.log("HELLO");
+          //Removes all event listeners from doc
+          document.removeEventListener("mouseup", handleMouseUp);
+          removeFromEventListenerList("mg4MouseUp");
+
+          document.removeEventListener("mousemove", handleMouseMove);
+          removeFromEventListenerList("mg4MouseMove");
+
           startDialogueNext(1, "/scenes/12-mini-game-4/dialogue.json", () => {
             loadNewHTMLFile(
               "/scenes/15-ship-loading-minigame/ship-loading-minigame.html",

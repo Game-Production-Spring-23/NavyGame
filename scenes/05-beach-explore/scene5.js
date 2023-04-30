@@ -325,7 +325,7 @@ export function loadScene5() {
       }
 
       if (event.key === "e") {
-        interact(global_data);
+        interact(global_data, handleKeyup, handleKeydown);
       }
     }
 
@@ -429,7 +429,7 @@ export function loadScene5() {
     }
   }
 
-  function interact(global_data) {
+  function interact(global_data, keyUpFunction, keyDownFunction) {
     console.log(interaction);
 
     if (interaction == global_data.keys.keys[0] && locked[0]) {
@@ -528,6 +528,15 @@ export function loadScene5() {
       // Transition to Minigame after Delay
       if (!hasPlayerReachedMinigame) {
         hasPlayerReachedMinigame = true;
+
+        //Removes all event listeners
+        document.removeEventListener("keyup", keyUpFunction);
+        removeFromEventListenerList("handleKeyupExplore");
+
+        document.removeEventListener("keydown", keyDownFunction);
+        removeFromEventListenerList("handleKeydownExplore");
+
+        //Loads new file
         loadNewHTMLFile(
           "/scenes/06-priority-minigame/priority-minigame.html",
           "/scenes/06-priority-minigame/minigame2styles.css",

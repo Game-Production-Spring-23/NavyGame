@@ -5,6 +5,9 @@ import * as mainMenuScene from "./scenes/00-main-menu/script.js";
 
 const transition = document.getElementById("transition");
 
+// initialize page counter
+localStorage.setItem("page", "0");
+
 // loads next screen using an html file (given a path)
 // and a function to call when the page is loaded
 loadNewHTMLFileIndex(

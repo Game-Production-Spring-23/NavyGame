@@ -1,8 +1,9 @@
-import { loadNewHTMLFile, devSkip } from "/lib.js";
+import { loadNewHTMLFile, devSkip, getPageCounterInt } from "/lib.js";
 //import { charSelect } from "/scenes/00.5-char-select/charSelect.js";
 import { boatScene } from "/scenes/01-intro-boat-scene/boat-scene.js";
 
 export function mainMenu() {
+  console.log(getPageCounterInt());
   //global variables
   let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
   let gameContainer = document.getElementById("gameContainer"); //Container for game

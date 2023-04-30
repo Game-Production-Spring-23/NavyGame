@@ -4,7 +4,7 @@ import { addToEventListenerList, removeFromEventListenerList } from "/lib.js";
 var characterIndex = 0;
 var dataPath = "";
 var isDialogueOccurring = false;
-var playerTone = 0;
+var playerTone = 2;
 
 //Starts dialogue screen
 export function startDialogue(index, data) {
@@ -110,14 +110,12 @@ export function startDialogue(index, data) {
       //Displays the portraits of dialogue
       function displayPortrait(dialogue) {
         //Sets players's portrait
-        if (playerTone == 0) {
+        if (playerTone == 2) {
           leftPortrait.src = dialogue[dialogueIndex].playerPortrait;
         } else if (playerTone == 1) {
           leftPortrait.src = dialogue[dialogueIndex].playerPortrait1;
-        } else if (playerTone == 2) {
+        } else if (playerTone == 0) {
           leftPortrait.src = dialogue[dialogueIndex].playerPortrait2;
-        } else if (playerTone == 3) {
-          leftPortrait.src = dialogue[dialogueIndex].playerPortrait3;
         }
         //Sets right's portrait
         rightPortrait.src = dialogue[dialogueIndex].otherPortrait;
@@ -302,14 +300,12 @@ export function startDialogueNext(index, data, next) {
       //Displays the portraits of dialogue
       function displayPortrait(dialogue) {
         //Sets players's portrait
-        if (playerTone == 0) {
+        if (playerTone == 2) {
           leftPortrait.src = dialogue[dialogueIndex].playerPortrait;
         } else if (playerTone == 1) {
           leftPortrait.src = dialogue[dialogueIndex].playerPortrait1;
-        } else if (playerTone == 2) {
+        } else if (playerTone == 0) {
           leftPortrait.src = dialogue[dialogueIndex].playerPortrait2;
-        } else if (playerTone == 3) {
-          leftPortrait.src = dialogue[dialogueIndex].playerPortrait3;
         }
         //Sets right's portrait
         rightPortrait.src = dialogue[dialogueIndex].otherPortrait;

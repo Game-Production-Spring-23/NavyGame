@@ -123,7 +123,7 @@ export function loadScene8() {
 
       //console.log(global_data);
       init(global_data);
-      // startDialogue(0, "/scenes/02-deck-explore/dialogue.json");
+      startDialogue(0, "/scenes/08-jungle-explore/dialogue.json");
       console.log(isDialogueOccurring);
       //isDialogueOccurring = false;
     });
@@ -310,7 +310,7 @@ export function loadScene8() {
       }
 
       if (event.key === "e") {
-        interact(global_data);
+        interact(global_data, handleKeyup, handleKeydown);
       }
     }
 
@@ -414,7 +414,7 @@ export function loadScene8() {
     }
   }
 
-  function interact(global_data) {
+  function interact(global_data, keyUpFunction, keyDownFunction) {
     console.log(interaction);
 
     if (interaction == global_data.keys.keys[0] && locked[0]) {
@@ -428,7 +428,14 @@ export function loadScene8() {
       subtitles.innerHTML = interaction + ": *Squawk* Go find that shopkeep!";
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
-      subtitles.innerHTML = interaction + ': "?????"';
+      let nativeTexts = [
+        ": Looks like you need a Discharge Nozzle with SYSML <water expulsion>",
+        ": An Impeller with SYSML <power generation> would help you lots!",
+        ": If I were to fix this pump I would use a Casing with SYSML <mechanical housing>",
+      ]; // end nativeTexts
+
+      let selectedText = nativeTexts[Math.floor(Math.random() * 2.9)];
+      subtitles.innerHTML = interaction + selectedText;
       document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
     }
 
@@ -437,6 +444,14 @@ export function loadScene8() {
       // Transition to Minigame after Delay
       if (!hasPlayerReachedMinigame) {
         hasPlayerReachedMinigame = true;
+
+        document.removeEventListener("keyup", keyUpFunction);
+        removeFromEventListenerList("handleKeyupExplore");
+
+        document.removeEventListener("keydown", keyDownFunction);
+        removeFromEventListenerList("handleKeydownExplore");
+
+        //Loads new file
         loadNewHTMLFile(
           "/scenes/09-shopping-minigame/shopping_minigame.html",
           "/scenes/09-shopping-minigame/minigame3styles.css",
