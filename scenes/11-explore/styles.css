@@ -153,10 +153,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   bottom: 132px;
-  left: 40px;
+  left: 0px;
 
   margin: 0;
   padding: 0;
