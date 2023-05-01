@@ -2,6 +2,15 @@
   user-select: none; /* deal with issue with highlighting assets making the UI look funny */
 }
 
+/* media breakpoint for screens that are not 1920x1080 */
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  html {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+  }
+}
 
 
 

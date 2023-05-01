@@ -78,7 +78,7 @@ function setMapAndJournal(){
 }
 
 
-setMapAndJournal();
+// setMapAndJournal();
 
 
 //sprite selection [need to import assets]
@@ -96,11 +96,11 @@ setMapAndJournal();
 
 
 //-----------UI Controls--------------//
-journalScreen.style.display = "none";
-mapScreen.style.display = "none";
-settingsContainer.style.display = "none";
-uiKeyRt.style.display = "none";
-uiKeyLt.style.display = "none";
+// journalScreen.style.display = "none";
+// mapScreen.style.display = "none";
+// settingsContainer.style.display = "none";
+// uiKeyRt.style.display = "none";
+// uiKeyLt.style.display = "none";
 
 function toggleVolume() {
   if (volume == true) {
