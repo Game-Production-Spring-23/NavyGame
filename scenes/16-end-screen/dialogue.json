@@ -10,7 +10,7 @@
         "playerPortrait3": "",
         "otherPortrait": "",
         "isPlayerTalking": false,
-        "text": " [PLACEHOLDER] Talk to Cross Bird to review MBSE and Transition out of our adventure."
+        "text": "Talk to Cross Bird to review MBSE and Transition out of our adventure."
       }
     ]
   },
@@ -25,7 +25,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "[PLACEHOLDER] Ahoy there, me hearty! *Squawk* That was some mighty-fine work yar been done! It be time to review."
+        "text": "Ahoy there, me hearty! *Squawk* That was some mighty-fine work yar been done! It be time to review."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
