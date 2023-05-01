@@ -15,26 +15,38 @@ export function credits() {
 
   //Data
   const credits = `
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum animi
-accusantium, earum quis repellat
-expedita officia maiores dolores aspernatur accusamus, ducimus ullam nesciunt possimus vel, ad fuga
-in!
-Cumque, temporibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ullam
-facilis
-soluta facere aliquam ad atque unde, corrupti numquam itaque. Quaerat voluptates quos, eos pariatur
-temporibus veritatis tempora delectus earum? Lorem ipsum dolor sit amet consectetur adipisicing
-elit.
-Deserunt reprehenderit, maiores iure tenetur libero quam sed corporis provident? Quam officiis eos
-et
-est esse eaque, fugit dolor quo sed nobis.
+<p>Kylee Dicken: Artist</p>
+<p>Hailey Lundy: Artist</p>
+<p>William Rubino: Artist</p>
+<p>Trent Wilhelm: Artist</p>
+<p>Maddie Pasquale: Artist, Madroy's Funny Poll Creator</p>
+<p>Angelo Allen: Artist, Sound Producer, Game Designer, Writer</p>
+<p>Mathew Powers: Chief Poll Taker, Mathew Powers</p>
+<p>Emmanuel Atilola: Game Designer</p>
+<p>Cameron Barnes: Game Designer</p>
+<p>Lee Cameron: Game Designer</p>
+<p>Taylor DeHaven: Game Designer</p>
+<p>Bruno Kitazuka: Game Designer</p>
+<p>Ethan Mize: Game Designer</p>
+<p>Imani Peters: Game Designer, Artist</p>
+<p>Nathaniel Greiner: Game Designer, Artist, Writer</p>
+<p>Todd Shelton: Foil for Powers</p>
+<p>Andrew Choi: Programmer</p>
+<p>Logan Orender: Programmer</p>
+<p>Devon Richey: Programmer</p>
+<p>Edwin Sanchez: Programmer</p>
+<p>Hunter Shields: Programmer</p>
+<p>Logan Kurker: Programmer</p>
+<p>Evie Iles: Programmer, Project Coordinator</p>
+<p>John Blue: Writer, Project Coordinator</p>
 `;
 
   //Variables
-  let creditsSpeed = 60;
+  let creditsSpeed = 80;
 
   //Sets credits
   creditsScroll.style.transition = "all " + creditsSpeed + "s";
-  creditsStaff.innerHTML = "<p>" + credits + "</p>";
+  creditsStaff.innerHTML = credits;
 
   startCredits();
   //    END INIT    //

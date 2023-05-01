@@ -34,6 +34,9 @@
   color: black;
   text-align: center;
 }
+#creditsStaff p {
+  margin-bottom: 32px;
+}
 #creditsEnd {
   height: 100vh;
   width: 100%;
