@@ -1,11 +1,11 @@
-import { loadNewHTMLFile, devSkip } from "/lib.js";
+import { loadNewHTMLFile, devSkip, resetPageCounter } from "/lib.js";
 import { mainMenu } from "/scenes/00-main-menu/script.js";
 
 export function credits() {
   devSkip(
     "/scenes/00-main-menu/Main-Menu-Scene.html",
     "/scenes/00-main-menu/style.css",
-    mainMenu
+    () => {resetPageCounter();mainMenu();} // make sure page counter resets when looping all the way around
   );
 
   //    START INIT    //
@@ -64,7 +64,7 @@ export function credits() {
         loadNewHTMLFile(
           "/scenes/00-main-menu/Main-Menu-Scene.html",
           "/scenes/00-main-menu/style.css",
-          mainMenu
+          () => {resetPageCounter();mainMenu();} // make sure page counter resets when looping all the way around
         );
       }, creditsSpeed * 1000 + 3000);
     }, 3000);

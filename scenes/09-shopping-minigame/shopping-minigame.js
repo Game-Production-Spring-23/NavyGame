@@ -1,13 +1,13 @@
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
-import { loadScene11 } from "/scenes/11-explore/scene11.js";
+import { splashScreen } from "/scenes/10-splash-screen/splash-screen.js";
 
 //    START INIT    //
 export function loadScene9() {
   devSkip(
-    "/scenes/11-explore/index.html",
-    "/scenes/11-explore/styles.css",
-    loadScene11
+    "/scenes/10-splash-screen/splash-screen.html",
+    "/scenes/10-splash-screen/style.css",
+    splashScreen
   );
 
   // begin dialogue
@@ -90,9 +90,9 @@ export function loadScene9() {
                 "/scenes/09-shopping-minigame/dialogue.json",
                 () => {
                   loadNewHTMLFile(
-                    "/scenes/11-explore/index.html",
-                    "/scenes/11-explore/styles.css",
-                    loadScene11
+                    "/scenes/10-splash-screen/splash-screen.html",
+                    "/scenes/10-splash-screen/style.css",
+                    splashScreen
                   );
                 }
               );
