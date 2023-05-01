@@ -27,6 +27,7 @@ export function loadScene8() {
   const native2 = document.getElementById("native2");
   const native3 = document.getElementById("native3");
   const native4 = document.getElementById("native4");
+  const stationary = document.getElementById("stationary");
   const subtitles = document.getElementById("subtitles");
   const keyMark0 = document.getElementById("keyMark0");
   const dialogueReady = document.getElementById("dialogueReady");
@@ -330,10 +331,12 @@ export function loadScene8() {
 
   function setSubtitle(text) {
     subtitles.innerHTML = text;
+    stationary.style.visibility = "visible";
   }
 
   function resetSubtitles() {
     subtitles.innerHTML = "";
+    stationary.style.visibility = "hidden";
   }
 
   function moveRight() {

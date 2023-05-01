@@ -30,6 +30,7 @@ export function loadScene11() {
   //const tech = document.getElementById("tech");
   //const nt = document.getElementById("nontech");
   //const characters = document.getElementsByClassName("character");
+  const stationary = document.getElementById("stationary");
   const subtitles = document.getElementById("subtitles");
   //const keyMark0 = document.getElementById("keyMark0");
   //const keyMark1 = document.getElementById("keyMark1");
@@ -321,10 +322,12 @@ export function loadScene11() {
 
   function setSubtitle(text) {
     subtitles.innerHTML = text;
+    stationary.style.visibility = "visible";
   }
 
   function resetSubtitles() {
     subtitles.innerHTML = "";
+    stationary.style.visibility = "hidden";
   }
 
   function moveRight() {

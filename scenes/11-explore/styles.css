@@ -81,18 +81,25 @@ body {
 }
 
 #stationary {
+  visibility: hidden;
+
   z-index: 10;
-  width: 1920px;
-  height: 128px;
+  width: 960px;
+  height: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   margin: 0;
-  padding: 0;
+  padding-bottom: 32px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 24px;
+  left: 480px;
+
+  background-image: url("../../assets/images/ui/botttomscreentextarea.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .character {
@@ -141,7 +148,6 @@ body {
   height: 128px;
   font-size: 40px;
   color: black;
-  background-color: antiquewhite;
 }
 
 .keyMark {

@@ -2,7 +2,7 @@ import {
   loadNewHTMLFile,
   devSkip,
   addToEventListenerList,
-  removeFromEventListenerList
+  removeFromEventListenerList,
 } from "/lib.js";
 import { splashScreen } from "/scenes/16.5-splash-screen/splash-screen.js";
 import {
@@ -36,6 +36,7 @@ export function endScreen() {
   const tech = document.getElementById("tech");
   const nt = document.getElementById("nontech");
   //const characters = document.getElementsByClassName("character");
+  const stationary = document.getElementById("stationary");
   const subtitles = document.getElementById("subtitles");
   const keyMark = document.getElementById("keyMark");
   const dialogueReady = document.getElementById("dialogueReady");
@@ -292,10 +293,12 @@ export function endScreen() {
 
   function setSubtitle(text) {
     subtitles.innerHTML = text;
+    stationary.style.visibility = "visible";
   }
 
   function resetSubtitles() {
     subtitles.innerHTML = "";
+    stationary.style.visibility = "hidden";
   }
 
   function moveRight() {
