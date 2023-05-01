@@ -1,5 +1,5 @@
 // Imports
-import { playSplashScreen, devSkip } from "../../lib.js";
+import { playSplashScreen, devSkip } from "/lib.js";
 import { loadScene5 } from "/scenes/05-beach-explore/scene5.js";
 
 export function splashScreen() {
@@ -7,7 +7,7 @@ export function splashScreen() {
     "/scenes/05-beach-explore/index.html",
     "/scenes/05-beach-explore/styles.css",
     loadScene5
-  )
+  );
 
   playSplashScreen(
     "/scenes/05-beach-explore/index.html", // next scene's html
