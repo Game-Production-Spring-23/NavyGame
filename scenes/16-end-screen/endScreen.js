@@ -5,7 +5,7 @@ import {
   removeFromEventListenerList,
   resetPageCounter
 } from "/lib.js";
-import { mainMenu } from "/scenes/00-main-menu/script.js";
+import { credits } from "/scenes/17-credits/credits.js";
 import {
   startDialogue,
   isDialogueOccurring,
@@ -265,9 +265,9 @@ export function endScreen() {
 
           //Loads new file
           loadNewHTMLFile(
-            "/scenes/00-main-menu/Main-Menu-Scene.html",
-            "/scenes/00-main-menu/style.css",
-            mainMenu
+            "/scenes/17-credits/credits.html",
+            "/scenes/17-credits/creditsStyle.css",
+            credits
           );
         }
       }
@@ -390,9 +390,9 @@ export function endScreen() {
 
       startDialogueNext(0, "/scenes/16-end-screen/dialogue.json", () => {
         loadNewHTMLFile(
-          "/scenes/00-main-menu/Main-Menu-Scene.html",
-          "/scenes/00-main-menu/style.css",
-          mainMenu
+          "/scenes/17-credits/credits.html",
+          "/scenes/17-credits/creditsStyle.css",
+          credits
         );
         resetPageCounter();
       });
