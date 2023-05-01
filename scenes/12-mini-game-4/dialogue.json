@@ -9,7 +9,15 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": false,
-        "text": "How to play the Game..."
+        "text": "How to Play: Click on an option to propose the option and to see what the other crewmates think about it."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "How to Play: Once you have seen what they think in terms of probability and severity, drag the option onto the peg board."
       }
     ]
   },
@@ -23,7 +31,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": false,
-        "text": "You have completed the game..."
+        "text": "You have completed the game! As we so cunningly deduced, Option 3 is the best Option."
       }
     ]
   }

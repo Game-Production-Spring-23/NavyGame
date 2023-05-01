@@ -387,7 +387,7 @@ export function endScreen() {
       document.removeEventListener("keydown", keyDownFunction);
       removeFromEventListenerList("handleKeydownExplore");
 
-      startDialogueNext(0, "/scenes/16-end-screen/dialogue.json", () => {
+      startDialogueNext(1, "/scenes/16-end-screen/dialogue.json", () => {
         loadNewHTMLFile(
           "/scenes/16.5-splash-screen/splash-screen.html",
           "/scenes/16.5-splash-screen/style.css",
