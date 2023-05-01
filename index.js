@@ -1,6 +1,6 @@
 // Start Script
 
-import { loadNewHTMLFileIndex } from "./lib.js";
+import { getPageCounterInt, loadNewHTMLFileIndex } from "./lib.js";
 import * as mainMenuScene from "./scenes/00-main-menu/script.js";
 
 const transition = document.getElementById("transition");
@@ -52,9 +52,32 @@ function closeUI(){
   uiOpen=false;
 }
 
+function setMapAndJournal(){
+  console.log("trying to get the page number.");
+  //get page from local storage
+  let page = getPageCounterInt();
+
+  let minimap = document.getElementById("mapModal");
+  let charRank = document.getElementById("charRank");
+
+  //switch statement for page
+  switch (page) {
+    case 0:
+      minimap.style.backgroundImage= "assets/images/ui/maps/mapBlank.png";
+      console.log("startScreen");
+      break;
+    case 1:
+      minimap.src = "assets/images/ui/maps/mapBlank.png";
+    
+      default:
+        console.log("Your function's not working, homie.");
+      break;
+  }
+ 
+}
 
 
-
+setMapAndJournal();
 
 
 //sprite selection [need to import assets]
@@ -139,6 +162,9 @@ function rKeyOffScreen(){
 
 
 //--------------Event Listeners-----------------//
+
+//on page load
+
 document.getElementById("mapOverlay").onclick = () => {
   toggleMap();
 };
@@ -152,6 +178,7 @@ document.getElementById("uiTab").onclick = () => {
   if(uiOpen){
     closeUI();
   }else{
+    setMapAndJournal();
     ui.style.display = "block";
     uiTab.style.left = "172px";
     uiOpen=true;
