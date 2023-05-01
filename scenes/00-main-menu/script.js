@@ -210,9 +210,9 @@ export function mainMenu() {
     boatScene
   );
 
-  document.getElementById("mapOverlay").onclick = () => {
-    toggleMap();
-  };
+  // document.getElementById("mapOverlay").onclick = () => {
+  //   toggleMap();
+  // };
   document.getElementById("start").onclick = () => {
     loadNewHTMLFile(
       "/scenes/01-intro-boat-scene/boat-scene.html",

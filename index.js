@@ -165,24 +165,24 @@ function rKeyOffScreen(){
 
 //on page load
 
-document.getElementById("mapOverlay").onclick = () => {
-  toggleMap();
-};
-document.getElementById("journalOverlay").onclick = () => {
-  toggleJournal();
-};
-document.getElementById("volumeIcon").onclick = () => {
-  toggleVolume();
-};
-document.getElementById("uiTab").onclick = () => {
-  if(uiOpen){
-    closeUI();
-  }else{
-    setMapAndJournal();
-    ui.style.display = "block";
-    uiTab.style.left = "172px";
-    uiOpen=true;
-  }
-};
+// document.getElementById("mapOverlay").onclick = () => {
+//   toggleMap();
+// };
+// document.getElementById("journalOverlay").onclick = () => {
+//   toggleJournal();
+// };
+// document.getElementById("volumeIcon").onclick = () => {
+//   toggleVolume();
+// };
+// document.getElementById("uiTab").onclick = () => {
+//   if(uiOpen){
+//     // closeUI();
+//   }else{
+//     setMapAndJournal();
+//     ui.style.display = "block";
+//     uiTab.style.left = "172px";
+//     uiOpen=true;
+//   }
+// };
 
-closeUI();
+// closeUI();
