@@ -7,7 +7,6 @@ body {
 #background {
   height: 1080px;
   z-index: 0;
-  background-color: skyblue;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -21,7 +20,6 @@ body {
 #midground {
   height: 440px;
   z-index: 1;
-  background-color: #469bf0;
 
   margin: 0;
   padding: 0;
@@ -34,7 +32,6 @@ body {
   height: 1080px;
   z-index: 2;
   background-image: url("../../assets/images/backdrops/deckgif.gif");
-  background-color: burlywood;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;

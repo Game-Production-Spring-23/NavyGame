@@ -7,6 +7,7 @@ import {
 } from "/lib.js";
 import { loadScene3 } from "/scenes/03-pipe-minigame/pipe-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
+import { rKeyOnScreen, rKeyOffScreen } from "../../index.js";
 
 export function loadScene2() {
   console.log(getPageCounterInt());
@@ -247,10 +248,15 @@ export function loadScene2() {
         resetSubtitles();
       }
 
+      if (!locked && !isDialogueOccurring) {
+        rKeyOnScreen();
+      }
+
       if (!locked && playerAbs > playerAbsLimit - 200) {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
           hasPlayerReachedMinigame = true;
+          rKeyOffScreen();
 
           //Removes all event listeners
           document.removeEventListener("keyup", handleKeyup);
