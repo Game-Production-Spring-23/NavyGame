@@ -154,16 +154,16 @@ export function mainMenu() {
 
   //Changes display state of icons on hover
   function settingsHover(img) {
-    if (img.src.match("/assets/images/ui/introBtn.png")) {
-      img.src = "/assets/images/ui/introBtnHover.png";
+    if (img.src.match("/assets/images/ui/controlBtn.png")) {
+      img.src = "/assets/images/ui/controlBtnHover.png";
     } else {
       img.src = "assets/images/ui/startBtnHover.png";
     }
   }
 
   function settingOut(img) {
-    if (img.src.match("/assets/images/ui/introBtnHover.png")) {
-      img.src = "/assets/images/ui/introBtn.png";
+    if (img.src.match("/assets/images/ui/controlBtnHover.png")) {
+      img.src = "/assets/images/ui/controlBtn.png";
     } else {
       img.src = "/assets/images/ui/startBtn.png";
     }
@@ -179,7 +179,7 @@ export function mainMenu() {
   }
 
   function settingOut(img) {
-    if (img.src.match("/assets/images/ui/introBtnHover.png")) {
+    if (img.src.match("/assets/images/ui/controlBtnHover.png")) {
       img.src = "/assets/images/ui/controlBtn.png";
     } else {
       img.src = "/assets/images/ui/startBtn.png";
