@@ -1,0 +1,48 @@
+* {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#credits {
+  position: fixed;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/water.gif),
+    url(/assets/images/backdrops/skyparallax.png);
+}
+#creditsScroll {
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#creditsScroll img {
+  object-fit: contain;
+  margin: 30% auto;
+}
+#creditsScroll p {
+  font-family: "Raleway", sans-serif;
+  font-size: 4vh;
+  color: black;
+  text-align: center;
+}
+#creditsStaff p {
+  margin-bottom: 32px;
+}
+#creditsEnd {
+  height: 100vh;
+  width: 100%;
+}
+#creditsEnd p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -35,7 +35,7 @@
     "officers": {
       "name": "Gunner",
       "sprite": ["../../assets/images/characters/crew/crew1B.png"],
-      "offset": 1600,
+      "offset": 1480,
       "key": false
     },
     "nontech": {
@@ -47,7 +47,7 @@
     "tech": {
       "name": "Pirate 2",
       "sprite": ["../../assets/images/characters/crew/crew4Front.png"],
-      "offset": 1780,
+      "offset": 1600,
       "key": false
     },
     "veteran": {
@@ -60,13 +60,13 @@
   "params": {
     "bg_images": ["../../assets/images/backdrops/skyparallax.png"],
     "mg_images": [],
-    "cg_images": ["../../assets/images/backdrops/deckbg-blankplaceholder.png"],
-    "fg_images": [],
+    "cg_images": ["../../assets/images/backdrops/deckgif.gif"],
+    "fg_images": ["../../assets/images/backdrops/deckforeground.png"],
     "bg_scale": 1.5,
     "mg_scale": 1.5,
     "fg_scale": 1.5,
-    "bg_speed": 10,
-    "mg_speed": 11.5,
+    "bg_speed": 14,
+    "mg_speed": 14,
     "fg_speed": 14
   },
   "mark": {

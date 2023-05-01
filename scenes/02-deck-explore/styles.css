@@ -31,14 +31,13 @@ body {
 }
 
 #charground {
-  height: 240px;
-  bottom: 112px;
+  height: 1080px;
   z-index: 2;
-  background-image: url("../../assets/images/backdrops/deckbg-blankplaceholder.png");
+  background-image: url("../../assets/images/backdrops/deckgif.gif");
   background-color: burlywood;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 200% 400%;
+  background-size: cover;
 
   margin: 0;
   padding: 0;
@@ -49,7 +48,7 @@ body {
 #chars-upper {
   z-index: 2;
   height: 128px;
-  bottom: 160px;
+  bottom: 212px;
 
   margin: 0;
   padding: 0;
@@ -60,7 +59,7 @@ body {
 #chars-lower {
   z-index: 4;
   height: 128px;
-  bottom: 48px;
+  bottom: 64px;
 
   margin: 0;
   padding: 0;
@@ -69,9 +68,12 @@ body {
 }
 
 #foreground {
-  height: 112px;
+  height: 1080px;
   z-index: 5;
-  background-color: #1a1218;
+  background-image: url("../../assets/images/backdrops/deckforeground.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   margin: 0;
   padding: 0;
@@ -151,6 +153,5 @@ body {
   left: 0;
 }
 
-#rightArrowContainer{
-  
+#rightArrowContainer {
 }

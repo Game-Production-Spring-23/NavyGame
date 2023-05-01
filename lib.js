@@ -183,3 +183,9 @@ export function getPageCounterInt() {
 export function getPageCounterStr() {
   return localStorage.getItem("page");
 } // end getPageCounterStr
+
+
+// reset the page counter when the game restarts
+export function resetPageCounter() {
+  localStorage.setItem("page", "0");
+} // end resetPageCounter
