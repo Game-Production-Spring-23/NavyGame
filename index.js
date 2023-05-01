@@ -158,13 +158,7 @@ function rKeyOffScreen(){
 
 
 
-document.getElementById("startControlScreen").onclick = () => {
-  loadNewHTMLFile(
-    "/scenes/01-intro-boat-scene/boat-scene.html",
-    "/scenes/01-intro-boat-scene/style.css",
-    boatScene
-  );
-};
+
 
 
 //--------------Event Listeners-----------------//
