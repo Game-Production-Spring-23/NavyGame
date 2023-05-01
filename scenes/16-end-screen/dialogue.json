@@ -10,7 +10,7 @@
         "playerPortrait3": "",
         "otherPortrait": "",
         "isPlayerTalking": false,
-        "text": " [PLACEHOLDER] Talk to Cross Bird to review MBSE and Transition out of our adventure."
+        "text": "Talk to Cross Bird to review MBSE and Transition out of our adventure."
       }
     ]
   },
@@ -25,7 +25,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "[PLACEHOLDER] Ahoy there, me hearty! *Squawk* That was some mighty-fine work yar been done! It be time to review."
+        "text": "Ahoy there, me hearty! *Squawk* That was some mighty-fine work yar been done! It be time to review."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -52,7 +52,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "How so?"
+        "text": "Yes, I remember!"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -124,7 +124,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Is that something ye think ye can learn? *Squawk*"
+        "text": "Is that something ye think ye remember? *Squawk*"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -133,7 +133,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "I think so. There be a process to follow?"
+        "text": "I think so. Let's go over it just to be sure."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -464,7 +464,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "Aye. Let's get started."
+        "text": "Aye. A beautiful tool if do say so."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -482,7 +482,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "You and ye crew will come away understanding SE better and how to apply it to ye work as pirate engineers. Are ye game? *Squawk*"
+        "text": "You and ye crew have now come away understanding SE better and how to apply it to ye work as pirate engineers. Ready for your next adventure? *Squawk*"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -491,7 +491,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "Let's do this!"
+        "text": "Aye Aye, Cross Bird!"
       }
     ]
   }

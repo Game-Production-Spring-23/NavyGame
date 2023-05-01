@@ -2,10 +2,9 @@ import {
   loadNewHTMLFile,
   devSkip,
   addToEventListenerList,
-  removeFromEventListenerList,
-  resetPageCounter
+  removeFromEventListenerList
 } from "/lib.js";
-import { credits } from "/scenes/17-credits/credits.js";
+import { splashScreen } from "/scenes/16.5-splash-screen/splash-screen.js";
 import {
   startDialogue,
   isDialogueOccurring,
@@ -14,9 +13,9 @@ import {
 
 export function endScreen() {
   devSkip(
-    "/scenes/00-main-menu/Main-Menu-Scene.html",
-    "/scenes/00-main-menu/style.css",
-    () => {resetPageCounter(); mainMenu();} // make sure page counter is reset when using devSkip
+    "/scenes/16.5-splash-screen/splash-screen.html",
+    "/scenes/16.5-splash-screen/style.css",
+    splashScreen
   );
 
   // pre-level dialogue
@@ -265,9 +264,9 @@ export function endScreen() {
 
           //Loads new file
           loadNewHTMLFile(
-            "/scenes/17-credits/credits.html",
-            "/scenes/17-credits/creditsStyle.css",
-            credits
+            "/scenes/16.5-splash-screen/splash-screen.html",
+            "/scenes/16.5-splash-screen/style.css",
+            splashScreen
           );
         }
       }
@@ -388,11 +387,11 @@ export function endScreen() {
       document.removeEventListener("keydown", keyDownFunction);
       removeFromEventListenerList("handleKeydownExplore");
 
-      startDialogueNext(0, "/scenes/16-end-screen/dialogue.json", () => {
+      startDialogueNext(1, "/scenes/16-end-screen/dialogue.json", () => {
         loadNewHTMLFile(
-          "/scenes/17-credits/credits.html",
-          "/scenes/17-credits/creditsStyle.css",
-          credits
+          "/scenes/16.5-splash-screen/splash-screen.html",
+          "/scenes/16.5-splash-screen/style.css",
+          splashScreen
         );
         resetPageCounter();
       });
