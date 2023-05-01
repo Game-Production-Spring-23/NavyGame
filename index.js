@@ -1,7 +1,8 @@
 // Start Script
 
-import { getPageCounterInt, loadNewHTMLFileIndex } from "./lib.js";
+import { getPageCounterInt, loadNewHTMLFileIndex, loadNewHTMLFile } from "./lib.js";
 import * as mainMenuScene from "./scenes/00-main-menu/script.js";
+
 
 const transition = document.getElementById("transition");
 
@@ -157,8 +158,13 @@ function rKeyOffScreen(){
 
 
 
-
-
+document.getElementById("startControlScreen").onclick = () => {
+  loadNewHTMLFile(
+    "/scenes/01-intro-boat-scene/boat-scene.html",
+    "/scenes/01-intro-boat-scene/style.css",
+    boatScene
+  );
+};
 
 
 //--------------Event Listeners-----------------//

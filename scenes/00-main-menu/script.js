@@ -194,6 +194,7 @@ export function mainMenu() {
     settingsContainer.style.display = "block";
     score.style.visibility = "hidden";
     document.getElementById("app").style.backgroundImage ="none";
+    document.getElementById("titleLogo").style.display = "none";
     
   }
 
@@ -220,4 +221,12 @@ export function mainMenu() {
       boatScene
     );
   }; // end setOnclick for start
+
+  document.getElementById("startControlScreen").onclick = () => {
+    loadNewHTMLFile(
+      "/scenes/01-intro-boat-scene/boat-scene.html",
+      "/scenes/01-intro-boat-scene/style.css",
+      boatScene
+    );
+  };
 } // end mainMenu
