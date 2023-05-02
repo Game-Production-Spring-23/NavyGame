@@ -1,7 +1,7 @@
 [
   {
     "otherName": "Blacksmith",
-    "otherOffset": -250,
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -15,7 +15,7 @@
   },
   {
     "otherName": "Blacksmith",
-    "otherOffset": -250,
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -37,13 +37,13 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "I got all the pieces, I should head back to the beach"
+        "text": "I got all the parts, I should head back to the beach"
       }
     ]
   },
   {
     "otherName": "Blacksmith",
-    "otherOffset": -250,
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -84,6 +84,14 @@
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
         "text": "If I be using th' clues from the SysML tongue about the items and compare them to the diagram, I should be able to nab the right pieces."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/NG_empty.png",
+        "isPlayerTalking": false,
+        "text": "How to play: Find the correct part of the pump from the diagram on the top right, hover over each item to see a clue for what it is, left click on it to reveal if it is the correct part or not."
       }
     ]
   }

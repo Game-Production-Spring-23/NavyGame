@@ -4,9 +4,6 @@ import { splashScreen } from "/scenes/10-damage-splash/splash-screen.js";
 
 //    START INIT    //
 export function loadScene9() {
-  const rightPortrait = document.getElementById("rCharaPortrait");
-  rightPortrait.style.width = "600px";
-  rightPortrait.style.height = "1000px";
   devSkip(
     "/scenes/10-damage-splash/splash-screen.html",
     "/scenes/10-damage-splash/style.css",

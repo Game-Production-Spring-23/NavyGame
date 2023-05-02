@@ -57,7 +57,15 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Blimey, each officer is responsible for verifying specific mission essential systems on the ship. Therefore, it be essential to match 'em with their respective pallets accurately. Let's Get 'or ship a running ag'in! "
+        "text": "Blimey, each officer is responsible for verifying specific mission essential systems on the ship. Therefore, it be essential to match 'em with their respective pallets accurately. Let's Get 'or ship a running ag'in!"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/NG_empty.png",
+        "isPlayerTalking": false,
+        "text": "How to play: click on the officer to the corresponding pallet, for example a fighting officer should be clicked if the pallet is loaded with weapons."
       }
     ]
   },
