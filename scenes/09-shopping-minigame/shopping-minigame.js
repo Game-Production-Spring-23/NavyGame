@@ -4,6 +4,9 @@ import { splashScreen } from "/scenes/10-splash-screen/splash-screen.js";
 
 //    START INIT    //
 export function loadScene9() {
+  const rightPortrait = document.getElementById("rCharaPortrait");
+  rightPortrait.style.width = "600px";
+  rightPortrait.style.height = "1000px";
   devSkip(
     "/scenes/10-splash-screen/splash-screen.html",
     "/scenes/10-splash-screen/style.css",
