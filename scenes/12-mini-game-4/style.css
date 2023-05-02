@@ -58,6 +58,7 @@ body {
     padding-left: 80px;
     padding-right: 35px;
     user-select: none;
+    color: black;
 }
 
 /* Options Styles */
@@ -98,6 +99,7 @@ body {
     font-size: x-large;
     padding-top: 45px;
     user-select: none;
+    color: black;
 }
 
 /* Severity-Probability Grid Styles */
