@@ -25,59 +25,59 @@
         [
             {
                 "axis": 0,
-                "text": "I propose Option 1." 
+                "text": "I propose Option 1: Do nothin' and set sail, hopin' to make it to the nearest ship repair facility." 
             },
             {
                 "axis": 1,
-                "text": "You can't be serious." 
+                "text": "Yar can't be serious." 
             },
             {
                 "axis": 2,
-                "text": "This idea is mid at best." 
+                "text": "That be a great idea... if ye be wantin' to swim with the fishies!" 
             }
         ],
         [
             {
                 "axis": 1,
-                "text": "I dunno about this one." 
+                "text": "Well this do be sounding a touch practical..." 
             },
             {
                 "axis": 0,
-                "text": "I propose Option 2." 
+                "text": "I propose Option 2: Patch the holes with tree sap hole goo and piratanium metal plates and get underway, me hearties!" 
             },
             {
                 "axis": 2,
-                "text": "Do you want us all to die?" 
+                "text": "I reckon I ain't got no qualms with ye's proposal." 
             }
         ],
         [
             {
                 "axis": 1,
-                "text": "Crazy Jack always has the best ideas." 
+                "text": "Yer idea may have some merit..." 
             },
             {
                 "axis": 2,
-                "text": "What do you mean? Crazy Jack NEVER has good ideas... except this time." 
+                "text": "What ya mean? We don't have none time to be waitin' around!" 
             },
             {
                 "axis": 0,
-                "text": "I propose Option 3."
+                "text": "I propose Option 3: Blimy! I be suggesting we wait for the next shipment of wood to arrive!"
             }
         ]
     ],
 
     "solutions": [
         {
-            "probability": 3,
-            "severity": 2
-        },
-        {
-            "probability": 3,
+            "probability": 4,
             "severity": 4
         },
         {
             "probability": 0,
             "severity": 0
+        },
+        {
+            "probability": 2,
+            "severity": 4
         }
     ]
 }

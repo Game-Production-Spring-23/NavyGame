@@ -9,6 +9,38 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": false,
+        "text": "Ahoy, me hearties! As the Chief Engineer of the Signet Messenger, I've found meself in a right tough spot. Our ship be in dire need of repairs, and it seems we be short on time and resources."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "And to make matters worse, we've found more holes in the hull! "
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "Now, with the hull in need of patching, we have three options. I'll be needing to get the advice of the ship's experts and weigh each option's probability of failure versus its severity of failure. "
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "We'll need to be careful and wise in our decision-making, lest we put the ship and crew in even more danger."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
         "text": "How to Play: Click on an option to propose the option and to see what the other crewmates think about it."
       },
       {
@@ -31,7 +63,23 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": false,
-        "text": "You have completed the game! As we so cunningly deduced, Option 3 is the best Option."
+        "text": "Arrr, me hearties! The patchin' should hold up for a good long while. The hole goo be super strong, makin' the probability of failure low."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "And the piratanium is water resistant and easy ta’ apply, so the severity of failure is low."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "We should be able to set sail with some confidence. We must be remain vigilant and keep an eye out for any signs of trouble!"
       }
     ]
   }
