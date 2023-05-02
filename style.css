@@ -27,7 +27,6 @@ body {
   background: -webkit-linear-gradient(to right, #4286f4, #373b44);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4286f4, #373b44);
-  background-image: url("/assets/images/waterAnimation.gif");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position-x: center;
