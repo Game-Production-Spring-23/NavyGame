@@ -5,8 +5,7 @@ import {
   loadNewHTMLFileIndex,
   loadNewHTMLFile,
 } from "./lib.js";
-// import * as mainMenuScene from "./scenes/00-main-menu/script.js";
-import { loadScene9 } from "./scenes/09-shopping-minigame/shopping-minigame.js";
+import * as mainMenuScene from "./scenes/00-main-menu/script.js";
 
 const transition = document.getElementById("transition");
 
@@ -16,12 +15,9 @@ localStorage.setItem("page", "0");
 // loads next screen using an html file (given a path)
 // and a function to call when the page is loaded
 loadNewHTMLFileIndex(
-  // "/scenes/00-main-menu/Main-Menu-Scene.html",
-  // "/scenes/00-main-menu/style.css",
-  // mainMenuScene.mainMenu
-  "/scenes/09-shopping-minigame/shopping_minigame.html",
-  "/scenes/09-shopping-minigame/minigame3styles.css",
-  loadScene9
+  "/scenes/00-main-menu/Main-Menu-Scene.html",
+  "/scenes/00-main-menu/style.css",
+  mainMenuScene.mainMenu
 );
 
 export { transition };
