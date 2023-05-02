@@ -4,7 +4,7 @@ import {
   addToEventListenerList,
   removeFromEventListenerList,
 } from "/lib.js";
-import { splashScreen } from "/scenes/16.5-splash-screen/splash-screen.js";
+import { splashScreen } from "/scenes/16.5-sail-away-splash/splash-screen.js";
 import {
   startDialogue,
   isDialogueOccurring,
@@ -13,8 +13,8 @@ import {
 
 export function endScreen() {
   devSkip(
-    "/scenes/16.5-splash-screen/splash-screen.html",
-    "/scenes/16.5-splash-screen/style.css",
+    "/scenes/16.5-sail-away-splash/splash-screen.html",
+    "/scenes/16.5-sail-away-splash/style.css",
     splashScreen
   );
 
@@ -265,8 +265,8 @@ export function endScreen() {
 
           //Loads new file
           loadNewHTMLFile(
-            "/scenes/16.5-splash-screen/splash-screen.html",
-            "/scenes/16.5-splash-screen/style.css",
+            "/scenes/16.5-sail-away-splash/splash-screen.html",
+            "/scenes/16.5-sail-away-splash/style.css",
             splashScreen
           );
         }
@@ -392,8 +392,8 @@ export function endScreen() {
 
       startDialogueNext(1, "/scenes/16-end-screen/dialogue.json", () => {
         loadNewHTMLFile(
-          "/scenes/16.5-splash-screen/splash-screen.html",
-          "/scenes/16.5-splash-screen/style.css",
+          "/scenes/16.5-sail-away-splash/splash-screen.html",
+          "/scenes/16.5-sail-away-splash/style.css",
           splashScreen
         );
         resetPageCounter();

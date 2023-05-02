@@ -32,7 +32,7 @@ body {
   height: 1080px;
   bottom: 0px;
   z-index: 2;
-  background-image: url("../../assets/images/backdrops/deckbg-blankplaceholder.png");
+  /* background-image: url("../../assets/images/backdrops/deckbg-blankplaceholder.png"); */
   background-position: bottom;
   background-repeat: no-repeat;
 

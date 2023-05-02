@@ -1,13 +1,13 @@
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
-import { splashScreen } from "/scenes/04-splash-screen/splash-screen.js";
+import { splashScreen } from "/scenes/04-ship-in-storm/splash-screen.js";
 
 // Start
 export function loadScene3() {
   // Allow developer to skip to next file
   devSkip(
-    "/scenes/04-splash-screen/splash-screen.html",
-    "/scenes/04-splash-screen/style.css",
+    "/scenes/04-ship-in-storm/splash-screen.html",
+    "/scenes/04-ship-in-storm/style.css",
     splashScreen
   );
 
@@ -119,8 +119,8 @@ export function loadScene3() {
         //Add mini game complete dialogue
         startDialogueNext(1, "/scenes/03-pipe-minigame/dialogue.json", () => {
           loadNewHTMLFile(
-            "/scenes/04-splash-screen/splash-screen.html",
-            "/scenes/04-splash-screen/style.css",
+            "/scenes/04-ship-in-storm/splash-screen.html",
+            "/scenes/04-ship-in-storm/style.css",
             splashScreen
           );
         });

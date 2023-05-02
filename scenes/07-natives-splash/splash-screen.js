@@ -2,7 +2,7 @@
 import { playSplashScreen, devSkip } from "/lib.js";
 import { loadScene8 } from "/scenes/08-jungle-explore/scene8.js";
 
-export function splashScreen() {
+export function splashScreen_B() {
   devSkip(
     "/scenes/08-jungle-explore/index.html",
     "/scenes/08-jungle-explore/styles.css",

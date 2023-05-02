@@ -2,7 +2,7 @@
 import { playSplashScreen, devSkip } from "/lib.js";
 import { loadScene5 } from "/scenes/05-beach-explore/scene5.js";
 
-export function splashScreen() {
+export function splashScreen_B() {
   devSkip(
     "/scenes/05-beach-explore/index.html",
     "/scenes/05-beach-explore/styles.css",
@@ -10,8 +10,8 @@ export function splashScreen() {
   );
 
   playSplashScreen(
-    "/scenes/05-beach-explore/index.html", // next scene's html
-    "/scenes/05-beach-explore/styles.css", // next scene's css
+    "/scenes/05-beach-explore/index.html",
+    "/scenes/05-beach-explore/styles.css",
     loadScene5, // the next scene's init function (called when the html & css have loaded)
     4000 // miliseconds for the delay before transitioning
   );

@@ -4,7 +4,7 @@ import {
   addToEventListenerList,
   removeFromEventListenerList,
 } from "/lib.js";
-import { splashScreen } from "/scenes/13-splash-screen/splash-screen.js";
+import { shipMiniGame } from "/scenes/15-ship-loading-minigame/ship-loading-minigam.js";
 import {
   startDialogue,
   isDialogueOccurring,
@@ -13,9 +13,9 @@ import {
 
 export function miniGame4() {
   devSkip(
-    "/scenes/13-splash-screen/splash-screen.html",
-    "/scenes/13-splash-screen/style.css",
-    splashScreen
+    "/scenes/15-ship-loading-minigame/ship-loading-minigame.html",
+    "/scenes/15-ship-loading-minigame/minigame5styles.css",
+    shipMiniGame
   );
 
   // Start Dialogue
@@ -194,9 +194,9 @@ export function miniGame4() {
 
           startDialogueNext(1, "/scenes/12-mini-game-4/dialogue.json", () => {
             loadNewHTMLFile(
-              "/scenes/13-splash-screen/splash-screen.html",
-              "/scenes/13-splash-screen/style.css",
-              splashScreen
+              "/scenes/15-ship-loading-minigame/ship-loading-minigame.html",
+              "/scenes/15-ship-loading-minigame/minigame5styles.css",
+              shipMiniGame
             );
           });
         } // end if

@@ -1,5 +1,5 @@
 // Imports
-import { playSplashScreen, devSkip } from "../../lib.js";
+import { playSplashScreen, devSkip } from "/lib.js";
 import { loadScene11 } from "/scenes/11-explore/scene11.js";
 
 export function splashScreen() {

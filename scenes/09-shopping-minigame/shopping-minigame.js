@@ -1,6 +1,6 @@
 import { loadNewHTMLFile, devSkip } from "../../lib.js";
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
-import { splashScreen } from "/scenes/10-splash-screen/splash-screen.js";
+import { splashScreen } from "/scenes/10-damage-splash/splash-screen.js";
 
 //    START INIT    //
 export function loadScene9() {
@@ -8,8 +8,8 @@ export function loadScene9() {
   rightPortrait.style.width = "600px";
   rightPortrait.style.height = "1000px";
   devSkip(
-    "/scenes/10-splash-screen/splash-screen.html",
-    "/scenes/10-splash-screen/style.css",
+    "/scenes/10-damage-splash/splash-screen.html",
+    "/scenes/10-damage-splash/style.css",
     splashScreen
   );
 
@@ -93,8 +93,8 @@ export function loadScene9() {
                 "/scenes/09-shopping-minigame/dialogue.json",
                 () => {
                   loadNewHTMLFile(
-                    "/scenes/10-splash-screen/splash-screen.html",
-                    "/scenes/10-splash-screen/style.css",
+                    "/scenes/10-damage-splash/splash-screen.html",
+                    "/scenes/10-damage-splash/style.css",
                     splashScreen
                   );
                 }
