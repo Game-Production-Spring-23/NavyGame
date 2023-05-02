@@ -9,7 +9,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "I don't think that was correct"
+        "text": "I reckon that weren't rightly so, matey."
       }
     ]
   },
@@ -23,7 +23,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "This is the right one"
+        "text": "Arrr, this be the proper one, matey!"
       }
     ]
   },
@@ -37,7 +37,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "I got all the parts, I should head back to the beach"
+        "text": "Arrr, by using SysML and block definition diagrams, I've laid me eyes on the parts needed to fix the pump! I best be headin' back to the beach to fetch 'em and bring 'em aboard the ship."
       }
     ]
   },

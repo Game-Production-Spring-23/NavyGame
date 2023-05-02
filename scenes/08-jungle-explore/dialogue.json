@@ -82,15 +82,6 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Squawk! I'll be relaying this information to the Captain so ye can start engaging the native blacksmiths and carpenters."
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "",
-        "playerPortrait2": "",
-        "playerPortrait3": "",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
         "text": "Them natives be a mischievous lot, and their tongue be a devilish thing to decipher, so take this here Block Definition Diagram of the centrifugal pump to help ye."
       },
       {
