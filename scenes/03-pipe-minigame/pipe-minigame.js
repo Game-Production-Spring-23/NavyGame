@@ -1,16 +1,8 @@
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
-import { splashScreen } from "/scenes/04-ship-in-storm/splash-screen.js";
+import { loadNextLevel } from "../../lib.js";
 
 // Start
 export function loadScene3() {
-  // Allow developer to skip to next file
-  devSkip(
-    "/scenes/04-ship-in-storm/splash-screen.html",
-    "/scenes/04-ship-in-storm/style.css",
-    splashScreen
-  );
-
   //Get references from document
   const valves = [
     document.getElementById("mg1Valve1"),
@@ -118,11 +110,7 @@ export function loadScene3() {
       setTimeout(() => {
         //Add mini game complete dialogue
         startDialogueNext(1, "/scenes/03-pipe-minigame/dialogue.json", () => {
-          loadNewHTMLFile(
-            "/scenes/04-ship-in-storm/splash-screen.html",
-            "/scenes/04-ship-in-storm/style.css",
-            splashScreen
-          );
+          loadNextLevel();
         });
       }, 500);
     } else {

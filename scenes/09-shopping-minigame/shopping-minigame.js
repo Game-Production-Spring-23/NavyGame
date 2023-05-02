@@ -1,14 +1,8 @@
-import { loadNewHTMLFile, devSkip } from "../../lib.js";
+import { loadNextLevel } from "../../lib.js";
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
-import { splashScreen } from "/scenes/10-damage-splash/splash-screen.js";
 
 //    START INIT    //
 export function loadScene9() {
-  devSkip(
-    "/scenes/10-damage-splash/splash-screen.html",
-    "/scenes/10-damage-splash/style.css",
-    splashScreen
-  );
 
   // begin dialogue
   startDialogue(3, "/scenes/09-shopping-minigame/dialogue.json");
@@ -89,11 +83,7 @@ export function loadScene9() {
                 2,
                 "/scenes/09-shopping-minigame/dialogue.json",
                 () => {
-                  loadNewHTMLFile(
-                    "/scenes/10-damage-splash/splash-screen.html",
-                    "/scenes/10-damage-splash/style.css",
-                    splashScreen
-                  );
+                  loadNextLevel();
                 }
               );
             } else {

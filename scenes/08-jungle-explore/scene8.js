@@ -1,19 +1,12 @@
 import {
-  loadNewHTMLFile,
-  devSkip,
+  loadNextLevel,
   addToEventListenerList,
   removeFromEventListenerList,
 } from "/lib.js";
-import { loadScene9 } from "/scenes/09-shopping-minigame/shopping-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene8() {
   console.log("Scene8 - Beach");
-  devSkip(
-    "/scenes/09-shopping-minigame/shopping_minigame.html",
-    "/scenes/09-shopping-minigame/minigame3styles.css",
-    loadScene9
-  );
 
   // Get Document Elements
   const player = document.getElementById("player");
@@ -302,11 +295,7 @@ export function loadScene8() {
           removeFromEventListenerList("handleKeydownExplore");
 
           //Loads new file
-          loadNewHTMLFile(
-            "/scenes/09-shopping-minigame/shopping_minigame.html",
-            "/scenes/09-shopping-minigame/minigame3styles.css",
-            loadScene9
-          );
+          loadNextLevel();
         }
       }
 
@@ -455,11 +444,7 @@ export function loadScene8() {
         removeFromEventListenerList("handleKeydownExplore");
 
         //Loads new file
-        loadNewHTMLFile(
-          "/scenes/09-shopping-minigame/shopping_minigame.html",
-          "/scenes/09-shopping-minigame/minigame3styles.css",
-          loadScene9
-        );
+        loadNextLevel();
       }
     }
   }

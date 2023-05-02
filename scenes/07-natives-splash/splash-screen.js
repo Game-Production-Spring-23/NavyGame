@@ -1,18 +1,9 @@
 // Imports
-import { playSplashScreen, devSkip } from "/lib.js";
-import { loadScene8 } from "/scenes/08-jungle-explore/scene8.js";
+import { playSplashScreen, getCurrentLevelIndex } from "/lib.js";
 
-export function splashScreen_B() {
-  devSkip(
-    "/scenes/08-jungle-explore/index.html",
-    "/scenes/08-jungle-explore/styles.css",
-    loadScene8
-  );
-
+export function natives() {
   playSplashScreen(
-    "/scenes/08-jungle-explore/index.html",
-    "/scenes/08-jungle-explore/styles.css",
-    loadScene8,
+    getCurrentLevelIndex() + 1,
     4000 // miliseconds for the delay before transitioning
   );
 } // end splashScreen

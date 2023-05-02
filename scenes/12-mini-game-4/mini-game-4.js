@@ -1,6 +1,5 @@
 import {
-  loadNewHTMLFile,
-  devSkip,
+  loadNextLevel,
   addToEventListenerList,
   removeFromEventListenerList,
 } from "/lib.js";
@@ -12,12 +11,6 @@ import {
 } from "/scenes/dialogue.js";
 
 export function miniGame4() {
-  devSkip(
-    "/scenes/15-ship-loading-minigame/ship-loading-minigame.html",
-    "/scenes/15-ship-loading-minigame/minigame5styles.css",
-    shipMiniGame
-  );
-
   // Start Dialogue
   startDialogue(0, "/scenes/12-mini-game-4/dialogue.json");
 
@@ -196,11 +189,7 @@ export function miniGame4() {
           removeFromEventListenerList("mg4MouseMove");
 
           startDialogueNext(1, "/scenes/12-mini-game-4/dialogue.json", () => {
-            loadNewHTMLFile(
-              "/scenes/15-ship-loading-minigame/ship-loading-minigame.html",
-              "/scenes/15-ship-loading-minigame/minigame5styles.css",
-              shipMiniGame
-            );
+            loadNextLevel();
           });
         } // end if
 

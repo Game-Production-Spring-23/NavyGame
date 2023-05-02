@@ -1,18 +1,9 @@
 // Imports
-import { playSplashScreen, devSkip } from "/lib.js";
-import { loadScene11 } from "/scenes/11-explore/scene11.js";
+import { playSplashScreen, getCurrentLevelIndex } from "/lib.js";
 
-export function splashScreen() {
-  devSkip(
-    "/scenes/11-explore/index.html",
-    "/scenes/11-explore/styles.css",
-    loadScene11
-  )
-
+export function damage() {
   playSplashScreen(
-    "/scenes/11-explore/index.html",
-    "/scenes/11-explore/styles.css",
-    loadScene11,
+    getCurrentLevelIndex() + 1,
     4000 // miliseconds for the delay before transitioning
   );
 } // end splashScreen

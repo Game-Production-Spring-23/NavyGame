@@ -1,19 +1,12 @@
 import {
-  loadNewHTMLFile,
-  devSkip,
+  loadNextLevel,
   addToEventListenerList,
   removeFromEventListenerList,
 } from "/lib.js";
-import { loadScene6 } from "/scenes/06-priority-minigame/priority-minigame-part-1.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene5() {
   console.log("Scene5 - Beach");
-  devSkip(
-    "/scenes/06-priority-minigame/priority-minigame.html",
-    "/scenes/06-priority-minigame/minigame2styles.css",
-    loadScene6
-  );
 
   // Scene 5 - Beach Dialogue
   startDialogue(0, "/scenes/05-beach-explore/dialogue.json");
@@ -317,11 +310,7 @@ export function loadScene5() {
           removeFromEventListenerList("handleKeydownExplore");
 
           //Loads new file
-          loadNewHTMLFile(
-            "/scenes/06-priority-minigame/priority-minigame.html",
-            "/scenes/06-priority-minigame/minigame2styles.css",
-            loadScene6
-          );
+          loadNextLevel();
         }
       }
 
@@ -540,11 +529,7 @@ export function loadScene5() {
         removeFromEventListenerList("handleKeydownExplore");
 
         //Loads new file
-        loadNewHTMLFile(
-          "/scenes/06-priority-minigame/priority-minigame.html",
-          "/scenes/06-priority-minigame/minigame2styles.css",
-          loadScene6
-        );
+        loadNextLevel();
       }
     }
   }

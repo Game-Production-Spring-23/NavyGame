@@ -1,19 +1,12 @@
 import {
-  loadNewHTMLFile,
-  devSkip,
+  loadNextLevel,
   addToEventListenerList,
   removeFromEventListenerList,
 } from "/lib.js";
-import { miniGame4 } from "/scenes/12-mini-game-4/mini-game-4.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene11() {
   console.log("Scene11 - Beach");
-  devSkip(
-    "/scenes/12-mini-game-4/index.html",
-    "/scenes/12-mini-game-4/style.css",
-    miniGame4
-  );
 
   // Get Document Elements
   const player = document.getElementById("player");
@@ -293,11 +286,7 @@ export function loadScene11() {
           removeFromEventListenerList("handleKeydownExplore");
 
           //Loads new file
-          loadNewHTMLFile(
-            "/scenes/12-mini-game-4/index.html",
-            "/scenes/12-mini-game-4/style.css",
-            miniGame4
-          );
+          loadNextLevel();
         }
       }
 
@@ -436,11 +425,7 @@ export function loadScene11() {
         removeFromEventListenerList("handleKeydownExplore");
 
         //Loads new file
-        loadNewHTMLFile(
-          "/scenes/12-mini-game-4/index.html",
-          "/scenes/12-mini-game-4/style.css",
-          miniGame4
-        );
+        loadNextLevel();
       }
     }
   }

@@ -1,22 +1,13 @@
 import {
-  loadNewHTMLFile,
-  devSkip,
+  loadNextLevel,
   addToEventListenerList,
   removeFromEventListenerList,
   getPageCounterInt,
 } from "/lib.js";
-import { loadScene3 } from "/scenes/03-pipe-minigame/pipe-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 import { rKeyOnScreen, rKeyOffScreen } from "../../index.js";
 
 export function loadScene2() {
-  console.log(getPageCounterInt());
-  devSkip(
-    "/scenes/03-pipe-minigame/pipemini-game.html",
-    "/scenes/03-pipe-minigame/minigame1styles.css",
-    loadScene3
-  );
-
   // Get Document Elements
   const player = document.getElementById("player");
   const bgContainer = document.getElementById("background");
@@ -265,12 +256,8 @@ export function loadScene2() {
           document.removeEventListener("keydown", handleKeydown);
           removeFromEventListenerList("handleKeydownExplore");
 
-          //Loads new file
-          loadNewHTMLFile(
-            "/scenes/03-pipe-minigame/pipemini-game.html",
-            "/scenes/03-pipe-minigame/minigame1styles.css",
-            loadScene3
-          );
+          //Loads next level
+          loadNextLevel();
         }
       }
 

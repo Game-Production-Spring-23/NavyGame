@@ -1,14 +1,8 @@
-import { loadNewHTMLFile, devSkip } from "/lib.js";
+import { loadNextLevel } from "/lib.js";
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
 import { endScreen } from "/scenes/16-end-screen/endScreen.js";
 
 export function shipMiniGame() {
-  devSkip(
-    "/scenes/16-end-screen/endScreen.html",
-    "/scenes/16-end-screen/style.css",
-    endScreen
-  );
-
   //    START INIT    //
   //Get references from document
   const officers = document.getElementsByClassName("mg5officer");
@@ -111,11 +105,7 @@ export function shipMiniGame() {
         2,
         "/scenes/15-ship-loading-minigame/dialogue.json",
         () => {
-          loadNewHTMLFile(
-            "/scenes/16-end-screen/endScreen.html",
-            "/scenes/16-end-screen/style.css",
-            endScreen
-          );
+          loadNextLevel();
         }
       );
     }

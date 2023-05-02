@@ -1,10 +1,8 @@
 import {
-  loadNewHTMLFile,
-  devSkip,
+  loadNextLevel,
   addToEventListenerList,
   removeFromEventListenerList,
 } from "/lib.js";
-import { splashScreen } from "/scenes/16.5-sail-away-splash/splash-screen.js";
 import {
   startDialogue,
   isDialogueOccurring,
@@ -12,12 +10,6 @@ import {
 } from "/scenes/dialogue.js";
 
 export function endScreen() {
-  devSkip(
-    "/scenes/16.5-sail-away-splash/splash-screen.html",
-    "/scenes/16.5-sail-away-splash/style.css",
-    splashScreen
-  );
-
   // pre-level dialogue
   startDialogue(0, "/scenes/16-end-screen/dialogue.json");
 
@@ -264,11 +256,7 @@ export function endScreen() {
           removeFromEventListenerList("handleKeydownExplore");
 
           //Loads new file
-          loadNewHTMLFile(
-            "/scenes/16.5-sail-away-splash/splash-screen.html",
-            "/scenes/16.5-sail-away-splash/style.css",
-            splashScreen
-          );
+          loadNextLevel();
         }
       }
 
@@ -391,12 +379,8 @@ export function endScreen() {
       removeFromEventListenerList("handleKeydownExplore");
 
       startDialogueNext(1, "/scenes/16-end-screen/dialogue.json", () => {
-        loadNewHTMLFile(
-          "/scenes/16.5-sail-away-splash/splash-screen.html",
-          "/scenes/16.5-sail-away-splash/style.css",
-          splashScreen
-        );
-        resetPageCounter();
+        loadNextLevel();
+        resetPageCounter(); // might not work properly anymore; no longer the last page of the game
       });
       keyMark.style.visibility = "hidden";
 
