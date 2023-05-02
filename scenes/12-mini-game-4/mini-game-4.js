@@ -50,8 +50,6 @@ export function miniGame4() {
           pickUpPaperAudio.play();
           posX = event.pageX;
           posY = event.pageY;
-          console.log(posX);
-          console.log(posY);
           dragMove(options[i].id);
           changeCharacterText(i);
         }; // end mousedown event listener
