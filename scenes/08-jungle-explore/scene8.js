@@ -432,9 +432,9 @@ export function loadScene8() {
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
       let nativeTexts = [
-        ": Looks like you need a Discharge Nozzle with SYSML <water expulsion>",
-        ": An Impeller with SYSML <power generation> would help you lots!",
-        ": If I were to fix this pump I would use a Casing with SYSML <mechanical housing>",
+        ": lambugaj ahi newtaba <water expulsion>",
+        ": genariki <power generation> enlu salbai! HEHEHEHA",
+        ": Mariklo ensluneme haritosno <mechanical housing>",
       ]; // end nativeTexts
 
       let selectedText = nativeTexts[Math.floor(Math.random() * 2.9)];
