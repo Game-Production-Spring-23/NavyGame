@@ -2,9 +2,6 @@
   user-select: none; /* deal with issue with highlighting assets making the UI look funny */
 }
 
-
-
-
 html {
   height: 1080px !important;
   width: 1920px !important;
@@ -102,7 +99,6 @@ h3 {
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
-
   color: #ffffff;
 }
 
@@ -236,8 +232,10 @@ z-index:999;
   padding: 0 20px;
   margin: 0;
   font-size: 2vw;
+  font-weight:bold
+  ;
   font-family: "Raleway", sans-serif;
-  color: darkred;
+  color: black;
 }
 .dialogueBtn {
   width: 50px;

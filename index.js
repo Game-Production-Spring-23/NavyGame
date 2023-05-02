@@ -25,9 +25,9 @@ let journalScreen = document.getElementById("journalContainer");
 let mapScreen = document.getElementById("mapContainer");
 let music = document.getElementById("audio");
 let settingsContainer = document.getElementById("settingsContainer");
-let charOneSelect = document.getElementById("charOneAv");
-let charTwoSelect = document.getElementById("charTwoAv");
-let charThreeSelect = document.getElementById("charThreeAv");
+// let charOneSelect = document.getElementById("charOneAv");
+// let charTwoSelect = document.getElementById("charTwoAv");
+// let charThreeSelect = document.getElementById("charThreeAv");
 let uiTab = document.getElementById("uiTab");
 let ui = document.getElementById("uiOverlayLeft");
 let uiKeyRt = document.getElementById("rArrowUI");
@@ -156,33 +156,35 @@ function rKeyOffScreen(){
   uiKeyR=false;
 }
 
-
-
+function changeBackground(){
+  body.style.backgroundImage = none;
+  body.style.backgroundColor = "black";
+}
 
 
 
 //--------------Event Listeners-----------------//
 
-//on page load
 
-// document.getElementById("mapOverlay").onclick = () => {
-//   toggleMap();
-// };
-// document.getElementById("journalOverlay").onclick = () => {
-//   toggleJournal();
-// };
-// document.getElementById("volumeIcon").onclick = () => {
-//   toggleVolume();
-// };
-// document.getElementById("uiTab").onclick = () => {
-//   if(uiOpen){
-//     // closeUI();
-//   }else{
-//     setMapAndJournal();
-//     ui.style.display = "block";
-//     uiTab.style.left = "172px";
-//     uiOpen=true;
-//   }
-// };
 
-// closeUI();
+document.getElementById("mapOverlay").onclick = () => {
+  toggleMap();
+};
+document.getElementById("journalOverlay").onclick = () => {
+  toggleJournal();
+};
+document.getElementById("volumeIcon").onclick = () => {
+  toggleVolume();
+};
+document.getElementById("uiTab").onclick = () => {
+  if(uiOpen){
+    // closeUI();
+  }else{
+    setMapAndJournal();
+    ui.style.display = "block";
+    uiTab.style.left = "172px";
+    uiOpen=true;
+  }
+};
+
+closeUI();

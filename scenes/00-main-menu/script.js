@@ -1,4 +1,4 @@
-import { loadNewHTMLFile, devSkip, getPageCounterInt } from "/lib.js";
+import { loadNewHTMLFile, devSkip, getPageCounterInt} from "/lib.js";
 //import { charSelect } from "/scenes/00.5-char-select/charSelect.js";
 import { boatScene } from "/scenes/01-intro-boat-scene/boat-scene.js";
 
@@ -34,6 +34,10 @@ export function mainMenu() {
   }
 
   //Future Functions -------------------------------------------------//
+  function changeBackground(){
+    document.getElementById("html").style.backgroundImage = "none";
+    document.getElementById("html").style.backgroundColor = "black";
+  }
 
   //grabs a video from the queue and plays it in the gameContainer div
   function playVideo() {
@@ -218,6 +222,7 @@ export function mainMenu() {
     loadNewHTMLFile(
       "/scenes/01-intro-boat-scene/boat-scene.html",
       "/scenes/01-intro-boat-scene/style.css",
+      changeBackground(),
       boatScene
     );
   }; // end setOnclick for start
@@ -226,6 +231,7 @@ export function mainMenu() {
     loadNewHTMLFile(
       "/scenes/01-intro-boat-scene/boat-scene.html",
       "/scenes/01-intro-boat-scene/style.css",
+      changeBackground(),
       boatScene
     );
   };
