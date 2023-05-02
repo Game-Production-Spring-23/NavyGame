@@ -21,6 +21,11 @@ export function miniGame4() {
   // Start Dialogue
   startDialogue(0, "/scenes/12-mini-game-4/dialogue.json");
 
+  // allow player to reset grid items (if stuff breaks)
+  document.getElementById("resetBtn").onclick = () => {
+    resetGridItems();
+  } // end resetBtn onclick function
+
   // draggable element
   let draggableElement;
   let posX = 0;
@@ -45,6 +50,8 @@ export function miniGame4() {
           pickUpPaperAudio.play();
           posX = event.pageX;
           posY = event.pageY;
+          console.log(posX);
+          console.log(posY);
           dragMove(options[i].id);
           changeCharacterText(i);
         }; // end mousedown event listener
@@ -75,9 +82,7 @@ export function miniGame4() {
   // allows element to be dragged
   function dragMove(id) {
     let element = document.getElementById(id);
-    element.onmousedown = () => {
-      draggableElement = element;
-    }; // end onmousedown
+    draggableElement = element;
   } // end dragMove
 
   //Adds mouse up to doc
@@ -212,38 +217,45 @@ export function miniGame4() {
 
         // check if failed, then reset
         if (movedOptionsCount >= 3 && correctCounter < 3) {
-          // reset grid items
-          for (let i = 0; i < gridItems.length; i++) {
-            gridItems[i].dataset.option = "";
-          } // end for
-
-          // reset
-          let x = 55;
-          let initLoc = [
-            {
-              x: x,
-              y: 50,
-            },
-            {
-              x: x,
-              y: 250,
-            },
-            {
-              x: x,
-              y: 450,
-            },
-          ]; // end initLoc
-          for (let i = 0; i < options.length; i++) {
-            options[i].dataset.hasMoved = "false";
-            let destX =
-              initLoc[i].x - parseInt(options[i].style.left.slice(0, -2));
-            let destY =
-              initLoc[i].y - parseInt(options[i].style.top.slice(0, -2));
-            slide(options[i].id, destX, destY, initLoc[i].x, initLoc[i].y);
-          } // end for
+          resetGridItems();
         } // end if
       }); // end load data.json
   } // end checkForGameFinished
+
+  function resetGridItems() {
+    draggableElement = null;
+    let gridItems = document.getElementsByClassName("grid-item");
+    let options = document.getElementsByClassName("option");
+    // reset grid items
+    for (let i = 0; i < gridItems.length; i++) {
+      gridItems[i].dataset.option = "";
+    } // end for
+
+    // reset
+    let x = 55;
+    let initLoc = [
+      {
+        x: x,
+        y: 50,
+      },
+      {
+        x: x,
+        y: 250,
+      },
+      {
+        x: x,
+        y: 450,
+      },
+    ]; // end initLoc
+    for (let i = 0; i < options.length; i++) {
+      options[i].dataset.hasMoved = "false";
+      let destX =
+        initLoc[i].x - parseInt(options[i].style.left.slice(0, -2));
+      let destY =
+        initLoc[i].y - parseInt(options[i].style.top.slice(0, -2));
+      slide(options[i].id, destX, destY, initLoc[i].x, initLoc[i].y);
+    } // end for
+  } // end resetGridItems
 
   // shakes the screen
   function shake(elementID, iterations = 10, duration = 100) {

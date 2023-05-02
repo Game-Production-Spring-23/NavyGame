@@ -22,6 +22,18 @@ body {
     background-color: antiquewhite;
 }
 
+/* reset button */
+#resetBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    transform: rotate(-25deg);
+
+    width: 100px;
+    height: 100px;
+}
+
 /* Speech Bubble Styles */
 .speech-bubbles {
     background-image: url("/scenes/12-mini-game-4/images/NG_RiskAssessment_SpeechBubble.png");
