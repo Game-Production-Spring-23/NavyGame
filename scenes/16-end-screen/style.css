@@ -7,7 +7,6 @@ body {
 #background {
   height: 1080px;
   z-index: 0;
-  background-color: skyblue;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -21,7 +20,6 @@ body {
 #midground {
   height: 440px;
   z-index: 1;
-  background-color: #469bf0;
 
   margin: 0;
   padding: 0;
@@ -34,7 +32,6 @@ body {
   height: 1080px;
   z-index: 2;
   background-image: url("../../assets/images/backdrops/deckgif.gif");
-  background-color: burlywood;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,18 +80,25 @@ body {
 }
 
 #stationary {
+  visibility: hidden;
+
   z-index: 10;
-  width: 1920px;
-  height: 128px;
+  width: 960px;
+  height: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   margin: 0;
-  padding: 0;
+  padding-bottom: 32px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 24px;
+  left: 480px;
+
+  background-image: url("../../assets/images/ui/botttomscreentextarea.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .character {
@@ -120,7 +124,7 @@ body {
 #subtitles {
   height: 128px;
   font-size: 32px;
-  color: white;
+  color: black;
 }
 
 #keyMark {
@@ -128,10 +132,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   bottom: 132px;
-  left: 40px;
+  left: 0px;
 
   margin: 0;
   padding: 0;

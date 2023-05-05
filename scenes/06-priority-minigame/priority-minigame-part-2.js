@@ -1,6 +1,5 @@
 import { startDialogue, startDialogueNext } from "/scenes/dialogue.js";
-import { loadNewHTMLFile } from "/lib.js";
-import { splashScreen } from "/scenes/07-splash-screen/splash-screen.js";
+import { loadNextLevel } from "/lib.js";
 
 export function loadScene6_2() {
   // Start
@@ -126,11 +125,7 @@ export function loadScene6_2() {
             5,
             "/scenes/06-priority-minigame/dialogue.json",
             () => {
-              loadNewHTMLFile(
-                "/scenes/07-splash-screen/splash-screen.html",
-                "/scenes/07-splash-screen/style.css",
-                splashScreen
-              );
+              loadNextLevel();
             }
           );
         }, 500);

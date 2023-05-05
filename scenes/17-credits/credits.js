@@ -1,13 +1,6 @@
-import { loadNewHTMLFile, devSkip, resetPageCounter } from "/lib.js";
-import { mainMenu } from "/scenes/00-main-menu/script.js";
+import { loadNextLevel, resetPageCounter } from "/lib.js";
 
 export function credits() {
-  devSkip(
-    "/scenes/00-main-menu/Main-Menu-Scene.html",
-    "/scenes/00-main-menu/style.css",
-    () => {resetPageCounter();mainMenu();} // make sure page counter resets when looping all the way around
-  );
-
   //    START INIT    //
   //Get references from document
   const creditsScroll = document.getElementById("creditsScroll");
@@ -61,11 +54,7 @@ export function credits() {
 
       //Backs out to main menu
       setTimeout(() => {
-        loadNewHTMLFile(
-          "/scenes/00-main-menu/Main-Menu-Scene.html",
-          "/scenes/00-main-menu/style.css",
-          () => {resetPageCounter();mainMenu();} // make sure page counter resets when looping all the way around
-        );
+        loadNextLevel();
       }, creditsSpeed * 1000 + 3000);
     }, 3000);
   }

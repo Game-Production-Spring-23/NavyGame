@@ -1,9 +1,6 @@
-import { loadNewHTMLFile, devSkip, getPageCounterInt} from "/lib.js";
-//import { charSelect } from "/scenes/00.5-char-select/charSelect.js";
-import { boatScene } from "/scenes/01-intro-boat-scene/boat-scene.js";
+import { loadNextLevel, getPageCounterInt} from "/lib.js";
 
 export function mainMenu() {
-  console.log(getPageCounterInt());
   //global variables
   let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
   let gameContainer = document.getElementById("gameContainer"); //Container for game
@@ -208,12 +205,6 @@ export function mainMenu() {
   window.changeVolume = changeVolume;
   window.toggleMap = toggleMap;
 
-  // what to skip to
-  devSkip(
-    "/scenes/01-intro-boat-scene/boat-scene.html",
-    "/scenes/01-intro-boat-scene/style.css",
-    boatScene
-  );
 
   // document.getElementById("mapOverlay").onclick = () => {
   //   toggleMap();
@@ -222,7 +213,6 @@ export function mainMenu() {
     loadNewHTMLFile(
       "/scenes/01-intro-boat-scene/boat-scene.html",
       "/scenes/01-intro-boat-scene/style.css",
-      changeBackground(),
       boatScene
     );
   }; // end setOnclick for start
@@ -231,7 +221,6 @@ export function mainMenu() {
     loadNewHTMLFile(
       "/scenes/01-intro-boat-scene/boat-scene.html",
       "/scenes/01-intro-boat-scene/style.css",
-      changeBackground(),
       boatScene
     );
   };

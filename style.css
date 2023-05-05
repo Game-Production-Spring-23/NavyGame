@@ -2,6 +2,18 @@
   user-select: none; /* deal with issue with highlighting assets making the UI look funny */
 }
 
+/* media breakpoint for screens that are not 1920x1080 */
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  html {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+  }
+}
+
+
+
 html {
   height: 1080px !important;
   width: 1920px !important;
@@ -15,7 +27,6 @@ body {
   background: -webkit-linear-gradient(to right, #4286f4, #373b44);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4286f4, #373b44);
-  background-image: url("/assets/images/waterAnimation.gif");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position-x: center;

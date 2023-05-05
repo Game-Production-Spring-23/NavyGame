@@ -1,8 +1,11 @@
 // Start Script
 
-import { getPageCounterInt, loadNewHTMLFileIndex, loadNewHTMLFile } from "./lib.js";
+import {
+  getPageCounterInt,
+  loadNewHTMLFileIndex,
+  loadNewHTMLFile,
+} from "./lib.js";
 import * as mainMenuScene from "./scenes/00-main-menu/script.js";
-
 
 const transition = document.getElementById("transition");
 
@@ -39,21 +42,20 @@ let splashSprite; //sprite of the splash screen
 let mapStatus = false;
 let journalStatus = false;
 let volume = true;
-let uiKeyR=false;
-let uiKeyL=false;
+let uiKeyR = false;
+let uiKeyL = false;
 
 uiKeyRt.style.display = "none";
 uiKeyLt.style.display = "none";
 
-
-function closeUI(){
+function closeUI() {
   //hide ui and slide uiTab to left of screen
   ui.style.display = "none";
   uiTab.style.left = "0px";
-  uiOpen=false;
+  uiOpen = false;
 }
 
-function setMapAndJournal(){
+function setMapAndJournal() {
   console.log("trying to get the page number.");
   //get page from local storage
   let page = getPageCounterInt();
@@ -64,22 +66,19 @@ function setMapAndJournal(){
   //switch statement for page
   switch (page) {
     case 0:
-      minimap.style.backgroundImage= "assets/images/ui/maps/mapBlank.png";
+      minimap.style.backgroundImage = "assets/images/ui/maps/mapBlank.png";
       console.log("startScreen");
       break;
     case 1:
       minimap.src = "assets/images/ui/maps/mapBlank.png";
-    
-      default:
-        console.log("Your function's not working, homie.");
+
+    default:
+      console.log("Your function's not working, homie.");
       break;
   }
- 
 }
 
-
-setMapAndJournal();
-
+// setMapAndJournal();
 
 //sprite selection [need to import assets]
 // let charSelect(){
@@ -94,13 +93,12 @@ setMapAndJournal();
 //     splashSprite = "/charThree.png";
 //   }}
 
-
 //-----------UI Controls--------------//
-journalScreen.style.display = "none";
-mapScreen.style.display = "none";
-settingsContainer.style.display = "none";
-uiKeyRt.style.display = "none";
-uiKeyLt.style.display = "none";
+// journalScreen.style.display = "none";
+// mapScreen.style.display = "none";
+// settingsContainer.style.display = "none";
+// uiKeyRt.style.display = "none";
+// uiKeyLt.style.display = "none";
 
 function toggleVolume() {
   if (volume == true) {
@@ -136,24 +134,24 @@ function toggleJournal() {
   }
 }
 
-function rKeyOnScreen(){
+export function rKeyOnScreen() {
   uiKeyRt.style.display = "block";
-  uiKeyR=true;
+  uiKeyR = true;
 }
 
-function lKeyOnScreen(){
+export function lKeyOnScreen() {
   uiKeyLt.style.display = "block";
-  uiKeyL=true;
+  uiKeyL = true;
 }
 
-function lKeyOffScreen(){
+export function lKeyOffScreen() {
   uiKeyLt.style.display = "none";
-  uiKeyL=false;
+  uiKeyL = false;
 }
 
-function rKeyOffScreen(){
+export function rKeyOffScreen() {
   uiKeyRt.style.display = "none";
-  uiKeyR=false;
+  uiKeyR = false;
 }
 
 function changeBackground(){
@@ -167,24 +165,4 @@ function changeBackground(){
 
 
 
-document.getElementById("mapOverlay").onclick = () => {
-  toggleMap();
-};
-document.getElementById("journalOverlay").onclick = () => {
-  toggleJournal();
-};
-document.getElementById("volumeIcon").onclick = () => {
-  toggleVolume();
-};
-document.getElementById("uiTab").onclick = () => {
-  if(uiOpen){
-    // closeUI();
-  }else{
-    setMapAndJournal();
-    ui.style.display = "block";
-    uiTab.style.left = "172px";
-    uiOpen=true;
-  }
-};
-
-closeUI();
+// closeUI();

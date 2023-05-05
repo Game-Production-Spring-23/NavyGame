@@ -1,43 +1,99 @@
 [
   {
-    "otherName": "",
-    "otherOffset": 0,
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
     "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Yarr, yer duty be to match the officers with their respective pallets o' booty."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "There be four officers responsible for checkin' the mission essential systems on the ship. "
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "They be in charge o' combat, ISR, navigation, and life sustainment, and they use Model Based Systems Engineering to document their tests and verification. "
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Match the officer with their respective pallet by layin' eyes on the goods on the pallet. "
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "The officers available have icons that mark 'em: Information 'I' for gatherin' intelligence, rocket for fightin', radar web for navigation, and heart for life sustainment. "
+      },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": false,
-        "text": "Click on an officer to the corresponding shipping container"
+        "text": "If ye have matched the officer with the right pallet, ye will proceed to the next pallet. If ye have matched the officer with the wrong pallet, ye will have to try again. "
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+        "text": "Blimey, each officer is responsible for verifying specific mission essential systems on the ship. Therefore, it be essential to match 'em with their respective pallets accurately. Let's Get 'or ship a running ag'in!"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/NG_empty.png",
+        "isPlayerTalking": false,
+        "text": "How to play: click on the officer to the corresponding pallet, for example a fighting officer should be clicked if the pallet is loaded with weapons."
       }
     ]
   },
   {
-    "otherName": "",
-    "otherOffset": 0,
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Not sure that was correct"
+        "text": "Avast ye! Be ye certain, matey? That pallet ye picked looks like it belongs t' another officer. Ye best try yer luck again and match it with the right officer. Arrr!"
       }
     ]
   },
   {
-    "otherName": "",
-    "otherOffset": 0,
+    "otherName": "Cross Bird",
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "END OF MINIGAME 5"
+        "text": "Shiver me timbers! Well done, me hearty! Looks like the verification process be completed and we might just be able to get ready t' set sail! Avast ye, mateys, and hoist the anchor! We be takin' off on our next adventure soon!"
       }
     ]
   }

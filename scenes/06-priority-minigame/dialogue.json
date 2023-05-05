@@ -34,6 +34,14 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
         "text": "Solve each puzzle piece by piece, and as ye do, the order o' repair will become clear. Be swift, be smart, and fix these parts up right, so we can set sail and find our new adventure! Arrr!"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/NG_empty.png",
+        "isPlayerTalking": false,
+        "text": "How to play: Drag and drop each the correct piece into the highlighted section of a  ship part. Click on each of the post-it notes to switch what ship part you want to work on. When you complete the part the Crossbird should let you know the time importance of said part."
       }
     ]
   },
@@ -130,6 +138,14 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
         "text": "Once ye are certain with the priority order, click on the ink well to submit yer answer. "
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/NG_empty.png",
+        "isPlayerTalking": false,
+        "text": "How to play: Drag and drop each element in the list in the order mentioned previously. After all three elements have been ordered accordingly click on the ink well on the bottom right to check if it is correct"
       }
     ]
   },

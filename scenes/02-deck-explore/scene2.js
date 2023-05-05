@@ -1,21 +1,13 @@
 import {
-  loadNewHTMLFile,
-  devSkip,
+  loadNextLevel,
   addToEventListenerList,
   removeFromEventListenerList,
-  getPageCounterInt
+  getPageCounterInt,
 } from "/lib.js";
-import { loadScene3 } from "/scenes/03-pipe-minigame/pipe-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
+import { rKeyOnScreen, rKeyOffScreen } from "../../index.js";
 
 export function loadScene2() {
-  console.log(getPageCounterInt());
-  devSkip(
-    "/scenes/03-pipe-minigame/pipemini-game.html",
-    "/scenes/03-pipe-minigame/minigame1styles.css",
-    loadScene3
-  );
-
   // Get Document Elements
   const player = document.getElementById("player");
   const bgContainer = document.getElementById("background");
@@ -31,6 +23,7 @@ export function loadScene2() {
   const tech = document.getElementById("tech");
   const nt = document.getElementById("nontech");
   //const characters = document.getElementsByClassName("character");
+  const stationary = document.getElementById("stationary");
   const subtitles = document.getElementById("subtitles");
   const keyMark = document.getElementById("keyMark");
   const dialogueReady = document.getElementById("dialogueReady");
@@ -246,10 +239,15 @@ export function loadScene2() {
         resetSubtitles();
       }
 
+      if (!locked && !isDialogueOccurring) {
+        rKeyOnScreen();
+      }
+
       if (!locked && playerAbs > playerAbsLimit - 200) {
         // transition to minigame
         if (!hasPlayerReachedMinigame) {
           hasPlayerReachedMinigame = true;
+          rKeyOffScreen();
 
           //Removes all event listeners
           document.removeEventListener("keyup", handleKeyup);
@@ -258,12 +256,8 @@ export function loadScene2() {
           document.removeEventListener("keydown", handleKeydown);
           removeFromEventListenerList("handleKeydownExplore");
 
-          //Loads new file
-          loadNewHTMLFile(
-            "/scenes/03-pipe-minigame/pipemini-game.html",
-            "/scenes/03-pipe-minigame/minigame1styles.css",
-            loadScene3
-          );
+          //Loads next level
+          loadNextLevel();
         }
       }
 
@@ -288,10 +282,12 @@ export function loadScene2() {
 
   function setSubtitle(text) {
     subtitles.innerHTML = text;
+    stationary.style.visibility = "visible";
   }
 
   function resetSubtitles() {
     subtitles.innerHTML = "";
+    stationary.style.visibility = "hidden";
   }
 
   function moveRight() {
@@ -382,9 +378,15 @@ export function loadScene2() {
 
       // wait 5 seconds and display arrow to right of screen
     } else if (interaction != "") {
-      // sub-dialogue? Format: 'Name: "Text"'
-      subtitles.innerHTML = interaction + ': "Go talk to the parrot."';
-      document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
+      if (locked) {
+        // sub-dialogue? Format: 'Name: "Text"'
+        subtitles.innerHTML = interaction + ': "Go talk to the parrot."';
+        document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
+      } else {
+        subtitles.innerHTML =
+          interaction + ': "Head to the Boiler Room, Chief."';
+        document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
+      }
     }
   }
 }

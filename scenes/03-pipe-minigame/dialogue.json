@@ -114,18 +114,38 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
         "text": "Ye'll be fine. Sailors honor."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/NG_empty.png",
+        "isPlayerTalking": false,
+        "text": "How to play: your goal is to make all six valves resemble the MBSE Model, hover your mouse over a valve (shown in the picture above), to see what value it is, and left click it to change the value",
+        "image": "/assets/images/minigame1/howToPlay_1.png",
+        "imageWidth": "1440px",
+        "imageHeight": "810px",
+        "imageTopOffset": "50px"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "",
+        "isPlayerTalking": false,
+        "text": "when finished press the arrow icon on the bottom left, if the valve turns green that means you are correct, and if it turns red, it means you need to try again."
       }
     ]
   },
   {
-    "otherName": "",
+    "otherName": "Gobs",
     "otherOffset": 0,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
         "text": "Ahoy matey! Shiver me timbers, ye have finished the steam pipe demonstration! Ye be ready to set sail and take on new challenges. Arrr!"
       }

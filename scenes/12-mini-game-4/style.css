@@ -22,6 +22,18 @@ body {
     background-color: antiquewhite;
 }
 
+/* reset button */
+#resetBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    transform: rotate(-25deg);
+
+    width: 100px;
+    height: 100px;
+}
+
 /* Speech Bubble Styles */
 .speech-bubbles {
     background-image: url("/scenes/12-mini-game-4/images/NG_RiskAssessment_SpeechBubble.png");
@@ -52,12 +64,13 @@ body {
 }
 
 .speech-bubble-text {
-    font: bold;
-    font-size: large;
-    padding-top: 20px;
-    padding-left: 80px;
-    padding-right: 35px;
+    font: bolder;
+    font-size: x-large;
+    padding-top: 15px;
+    padding-left: 75px;
+    padding-right: 30px;
     user-select: none;
+    color: black;
 }
 
 /* Options Styles */
@@ -95,9 +108,11 @@ body {
 }
 
 .option-text {
-    font-size: x-large;
-    padding-top: 45px;
+    font-size: xx-large;
+    padding-top: 30px;
     user-select: none;
+    color: black;
+    font-weight: bolder;
 }
 
 /* Severity-Probability Grid Styles */

@@ -6,6 +6,10 @@ html {
   max-height: 100%;
 }
 
+body {
+  background-image: url("/assets/images/waterAnimation.gif");
+}
+
 
 h1 {
   font-family: "Lilita One", cursive;

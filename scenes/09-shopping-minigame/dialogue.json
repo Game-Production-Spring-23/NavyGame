@@ -1,55 +1,55 @@
 [
   {
-    "otherName": "",
-    "otherOffset": 0,
+    "otherName": "Blacksmith",
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "I don't think that was correct"
-      }
-    ]
-  },
-  {
-    "otherName": "",
-    "otherOffset": 0,
-    "dialogue": [
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
-        "otherPortrait": "",
-        "isPlayerTalking": true,
-        "text": "This is the right one"
-      }
-    ]
-  },
-  {
-    "otherName": "",
-    "otherOffset": 0,
-    "dialogue": [
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
-        "otherPortrait": "",
-        "isPlayerTalking": true,
-        "text": "I got all the pieces, I should head back to the beach"
+        "text": "I reckon that weren't rightly so, matey."
       }
     ]
   },
   {
     "otherName": "Blacksmith",
+    "otherOffset": -50,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
+        "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
+        "isPlayerTalking": true,
+        "text": "Arrr, this be the proper one, matey!"
+      }
+    ]
+  },
+  {
+    "otherName": "",
     "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
+        "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
+        "isPlayerTalking": true,
+        "text": "Arrr, by using SysML and block definition diagrams, I've laid me eyes on the parts needed to fix the pump! I best be headin' back to the beach to fetch 'em and bring 'em aboard the ship."
+      }
+    ]
+  },
+  {
+    "otherName": "Blacksmith",
+    "otherOffset": -50,
     "dialogue": [
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
         "text": "Arrr, shiver me timbers! Every scallywag on this here island be a bit peculiar... "
       },
@@ -57,7 +57,7 @@
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": false,
         "text": "Stay there! You can't have your items unless you guess which is which!"
       },
@@ -65,7 +65,7 @@
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
         "text": "Blast me barnacles! The blacksmith be keepin' a tight hold on the parts until I can guess which be which."
       },
@@ -73,7 +73,7 @@
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
         "text": "I reckon I can make use 'o' the Block Definition Diagram that was given to me."
       },
@@ -81,9 +81,17 @@
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
         "text": "If I be using th' clues from the SysML tongue about the items and compare them to the diagram, I should be able to nab the right pieces."
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/NG_empty.png",
+        "isPlayerTalking": false,
+        "text": "How to play: Find the correct part of the pump from the diagram on the top right, hover over each item to see a clue for what it is, left click on it to reveal if it is the correct part or not."
       }
     ]
   }

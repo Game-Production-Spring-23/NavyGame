@@ -1,19 +1,12 @@
 import {
-  loadNewHTMLFile,
-  devSkip,
+  loadNextLevel,
   addToEventListenerList,
   removeFromEventListenerList,
 } from "/lib.js";
-import { loadScene9 } from "/scenes/09-shopping-minigame/shopping-minigame.js";
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 
 export function loadScene8() {
   console.log("Scene8 - Beach");
-  devSkip(
-    "/scenes/09-shopping-minigame/shopping_minigame.html",
-    "/scenes/09-shopping-minigame/minigame3styles.css",
-    loadScene9
-  );
 
   // Get Document Elements
   const player = document.getElementById("player");
@@ -27,6 +20,7 @@ export function loadScene8() {
   const native2 = document.getElementById("native2");
   const native3 = document.getElementById("native3");
   const native4 = document.getElementById("native4");
+  const stationary = document.getElementById("stationary");
   const subtitles = document.getElementById("subtitles");
   const keyMark0 = document.getElementById("keyMark0");
   const dialogueReady = document.getElementById("dialogueReady");
@@ -301,11 +295,7 @@ export function loadScene8() {
           removeFromEventListenerList("handleKeydownExplore");
 
           //Loads new file
-          loadNewHTMLFile(
-            "/scenes/09-shopping-minigame/shopping_minigame.html",
-            "/scenes/09-shopping-minigame/minigame3styles.css",
-            loadScene9
-          );
+          loadNextLevel();
         }
       }
 
@@ -330,10 +320,12 @@ export function loadScene8() {
 
   function setSubtitle(text) {
     subtitles.innerHTML = text;
+    stationary.style.visibility = "visible";
   }
 
   function resetSubtitles() {
     subtitles.innerHTML = "";
+    stationary.style.visibility = "hidden";
   }
 
   function moveRight() {
@@ -429,9 +421,9 @@ export function loadScene8() {
     } else if (interaction != "") {
       // sub-dialogue? Format: 'Name: "Text"'
       let nativeTexts = [
-        ": Looks like you need a Discharge Nozzle with SYSML <water expulsion>",
-        ": An Impeller with SYSML <power generation> would help you lots!",
-        ": If I were to fix this pump I would use a Casing with SYSML <mechanical housing>",
+        ": lambugaj ahi newtaba <water expulsion>",
+        ": genariki <power generation> enlu salbai! HEHEHEHA",
+        ": Mariklo ensluneme haritosno <mechanical housing>",
       ]; // end nativeTexts
 
       let selectedText = nativeTexts[Math.floor(Math.random() * 2.9)];
@@ -452,11 +444,7 @@ export function loadScene8() {
         removeFromEventListenerList("handleKeydownExplore");
 
         //Loads new file
-        loadNewHTMLFile(
-          "/scenes/09-shopping-minigame/shopping_minigame.html",
-          "/scenes/09-shopping-minigame/minigame3styles.css",
-          loadScene9
-        );
+        loadNextLevel();
       }
     }
   }
