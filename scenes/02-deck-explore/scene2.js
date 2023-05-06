@@ -7,6 +7,8 @@ import {
 import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 import { rKeyOnScreen, rKeyOffScreen } from "../../index.js";
 
+
+
 export function loadScene2() {
   // Get Document Elements
   const player = document.getElementById("player");

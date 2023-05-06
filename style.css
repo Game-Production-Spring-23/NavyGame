@@ -361,6 +361,7 @@ z-index:999;
   overflow: scroll;
 }
 
+
 #mapContainer {
   /* display in center of screen*/
   position: absolute;
@@ -371,7 +372,8 @@ z-index:999;
   transform: translate(-50%, -50%);
   z-index: 100;
 }
-#miniMap{
+#mapModal{
+  background-image:url("/assets/images/ui/maps/map1.png");
   position: absolute;
   width: 1000px;
   height: 500px;

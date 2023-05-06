@@ -28,17 +28,19 @@ let journalScreen = document.getElementById("journalContainer");
 let mapScreen = document.getElementById("mapContainer");
 let music = document.getElementById("audio");
 let settingsContainer = document.getElementById("settingsContainer");
-let charOneSelect = document.getElementById("charOneAv");
-let charTwoSelect = document.getElementById("charTwoAv");
-let charThreeSelect = document.getElementById("charThreeAv");
 let uiTab = document.getElementById("uiTab");
 let ui = document.getElementById("uiOverlayLeft");
 let uiKeyRt = document.getElementById("rArrowUI");
 let uiKeyLt = document.getElementById("lArrowUI");
+let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
+let gameContainer = document.getElementById("gameContainer"); //Container for game
+journalScreen.style.display = "none";
+mapScreen.style.display = "none";
+settingsContainer.style.display = "none";
+
+let uiOverlay = document.getElementById("uiOverlay");
 
 let uiOpen = true;
-let charSprite; //sprite of the character selected
-let splashSprite; //sprite of the splash screen
 let mapStatus = false;
 let journalStatus = false;
 let volume = true;
@@ -55,50 +57,15 @@ function closeUI() {
   uiOpen = false;
 }
 
-function setMapAndJournal() {
-  console.log("trying to get the page number.");
-  //get page from local storage
-  let page = getPageCounterInt();
 
-  let minimap = document.getElementById("mapModal");
-  let charRank = document.getElementById("charRank");
 
-  //switch statement for page
-  switch (page) {
-    case 0:
-      minimap.style.backgroundImage = "assets/images/ui/maps/mapBlank.png";
-      console.log("startScreen");
-      break;
-    case 1:
-      minimap.src = "assets/images/ui/maps/mapBlank.png";
-
-    default:
-      console.log("Your function's not working, homie.");
-      break;
-  }
-}
-
-// setMapAndJournal();
-
-//sprite selection [need to import assets]
-// let charSelect(){
-//   if (charOneSelect == true){
-//     charSprite = "/playerwalk.gif";
-//     splashSprite = "/charOne.png";}
-//   else if (charTwoSelect == true){
-//     charSprite = "/playerwalk2.gif";
-//     splashSprite = "/charTwo.png";}
-//   else if (charThreeSelect == true){
-//     charSprite = "/playerwalk3.gif";
-//     splashSprite = "/charThree.png";
-//   }}
 
 //-----------UI Controls--------------//
-// journalScreen.style.display = "none";
-// mapScreen.style.display = "none";
-// settingsContainer.style.display = "none";
-// uiKeyRt.style.display = "none";
-// uiKeyLt.style.display = "none";
+journalScreen.style.display = "none";
+mapScreen.style.display = "none";
+settingsContainer.style.display = "none";
+uiKeyRt.style.display = "none";
+uiKeyLt.style.display = "none";
 
 function toggleVolume() {
   if (volume == true) {
@@ -158,24 +125,24 @@ export function rKeyOffScreen() {
 
 //on page load
 
-// document.getElementById("mapOverlay").onclick = () => {
-//   toggleMap();
-// };
-// document.getElementById("journalOverlay").onclick = () => {
-//   toggleJournal();
-// };
-// document.getElementById("volumeIcon").onclick = () => {
-//   toggleVolume();
-// };
-// document.getElementById("uiTab").onclick = () => {
-//   if(uiOpen){
-//     // closeUI();
-//   }else{
-//     setMapAndJournal();
-//     ui.style.display = "block";
-//     uiTab.style.left = "172px";
-//     uiOpen=true;
-//   }
-// };
+document.getElementById("mapOverlay").onclick = () => {
+  toggleMap();
+};
+document.getElementById("journalOverlay").onclick = () => {
+  toggleJournal();
+};
+document.getElementById("volumeIcon").onclick = () => {
+  toggleVolume();
+};
+document.getElementById("uiTab").onclick = () => {
+  if(uiOpen){
+    closeUI();
+  }else{
+    // setMapAndJournal();
+    ui.style.display = "block";
+    uiTab.style.left = "172px";
+    uiOpen=true;
+  }
+};
 
-// closeUI();
+closeUI();
