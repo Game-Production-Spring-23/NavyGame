@@ -1,10 +1,6 @@
 // Start Script
 
-import {
-  getPageCounterInt,
-  loadNewHTMLFileIndex,
-  loadNewHTMLFile,
-} from "./lib.js";
+import { getPageCounterInt, loadNewHTMLFile } from "./lib.js";
 import * as mainMenuScene from "./scenes/00-main-menu/script.js";
 
 const transition = document.getElementById("transition");
@@ -14,7 +10,7 @@ localStorage.setItem("page", "0");
 
 // loads next screen using an html file (given a path)
 // and a function to call when the page is loaded
-loadNewHTMLFileIndex(
+loadNewHTMLFile(
   "/scenes/00-main-menu/Main-Menu-Scene.html",
   "/scenes/00-main-menu/style.css",
   mainMenuScene.mainMenu

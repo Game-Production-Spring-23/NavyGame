@@ -13,7 +13,8 @@ document.globalTimeouts = [];
 export function loadNewHTMLFile(filePath, styleSheetPath, next) {
   // update page counter
   let pageCounter = localStorage.getItem("page");
-  if(pageCounter) { // if page counter exists
+  if (pageCounter) {
+    // if page counter exists
     pageCounter = parseInt(pageCounter); // parse as an integer
     pageCounter += 1; // increment
     localStorage.setItem("page", `${pageCounter}`); // set back to page variable, as a string
@@ -21,7 +22,7 @@ export function loadNewHTMLFile(filePath, styleSheetPath, next) {
 
   //Fade in
   transition.style.display = "block";
-  transition.classList.add("fadeInAndOut");
+  transition.classList.add("fadeIn");
 
   //Loads new html file in between fade in and out
   //document.globalTimeouts.push(
@@ -36,39 +37,31 @@ export function loadNewHTMLFile(filePath, styleSheetPath, next) {
       .then(() => {
         loadStyleSheet(styleSheetPath);
         next();
-
-        //Fade Out
-        setTimeout(() => {
-          transition.classList.remove("fadeInAndOut");
-          transition.style.display = "none";
-        }, 2000); // end setTimeout
+      })
+      .then(() => {
+        finishedLoading(styleSheetPath);
       });
-  }, 1000); // end setTimeout
+  }, 1500); // end setTimeout
   //);
 } // end loadNewHTMLFile
 
-// Loads a new HTML file given a file name and a style sheet for the beginning
-// the next parameter is a callback function.
-export function loadNewHTMLFileIndex(filePath, styleSheetPath, next) {
-  // load the new html file
-  fetch(filePath)
-    .then((response) => response.text())
-    .then(
-      (text) => (document.getElementById("htmlMainContainer").innerHTML = text)
-    )
-    .then(() => {
-      loadStyleSheet(styleSheetPath);
-      next();
-    });
-} // end loadNewHTMLFile
+function finishedLoading(styleSheetPath) {
+  var img = document.createElement("img");
+  img.onerror = function () {
+    transition.classList.remove("fadeIn");
+    transition.classList.add("fadeOut");
+    setTimeout(() => {
+      transition.style.display = "none";
+      transition.classList.remove("fadeOut");
+    }, 2000);
+  };
+  img.src = styleSheetPath;
+}
 
 // loads the next screen once the given video ends.
 // The video is given as the id of the element.
 // the first 3 parameters are the same as loadNewHTMLFile
-export function loadHTMLOnVideoEnd(
-  levelIndex,
-  videoElementID
-) {
+export function loadHTMLOnVideoEnd(levelIndex, videoElementID) {
   let video = document.getElementById(videoElementID);
   video.onloadedmetadata = () => {
     video.play();
@@ -126,7 +119,7 @@ function skipper(event) {
   } // end if
 
   // load the previous level (skip)
-  if(event.key == "#") {
+  if (event.key == "#") {
     resetWebpage();
     loadPrevLevel();
   } // end if
@@ -137,8 +130,8 @@ function skipper(event) {
 } // end skipper
 
 function resetWebpage() {
-   // remove all setTimeouts that have been set
-   for (let i = 0; i < document.globalTimeouts.length; i++) {
+  // remove all setTimeouts that have been set
+  for (let i = 0; i < document.globalTimeouts.length; i++) {
     clearTimeout(document.globalTimeouts[i]);
   } // end for
 
@@ -165,24 +158,20 @@ export function removeFromEventListenerList(key) {
   eventListenerList = eventListenerList.filter((obj) => !key.includes(obj.key));
 }
 
-
 // get page counter as an int
 export function getPageCounterInt() {
   return parseInt(localStorage.getItem("page"));
 } // end getPageCounterInt
-
 
 // get page counter as a string
 export function getPageCounterStr() {
   return localStorage.getItem("page");
 } // end getPageCounterStr
 
-
 // reset the page counter when the game restarts
 export function resetPageCounter() {
   localStorage.setItem("page", "0");
 } // end resetPageCounter
-
 
 /* setup new level navigation system */
 
@@ -214,110 +203,109 @@ let currentLevelIndex = 0; // set to 0 by default
 // list of all levels
 const levelList = [
   {
-    "html_file": "/scenes/00-main-menu/Main-Menu-Scene.html",
-    "css_file": "/scenes/00-main-menu/style.css",
-    "callback": mainMenu
+    html_file: "/scenes/00-main-menu/Main-Menu-Scene.html",
+    css_file: "/scenes/00-main-menu/style.css",
+    callback: mainMenu,
   },
   {
-    "html_file": "/scenes/01-intro-boat-scene/boat-scene.html",
-    "css_file": "/scenes/01-intro-boat-scene/style.css",
-    "callback": boatScene
+    html_file: "/scenes/01-intro-boat-scene/boat-scene.html",
+    css_file: "/scenes/01-intro-boat-scene/style.css",
+    callback: boatScene,
   },
   {
-    "html_file": "/scenes/02-deck-explore/index.html",
-    "css_file": "/scenes/02-deck-explore/styles.css",
-    "callback": loadScene2
+    html_file: "/scenes/02-deck-explore/index.html",
+    css_file: "/scenes/02-deck-explore/styles.css",
+    callback: loadScene2,
   },
   {
-    "html_file": "/scenes/03-pipe-minigame/pipemini-game.html",
-    "css_file": "/scenes/03-pipe-minigame/minigame1styles.css",
-    "callback": loadScene3
+    html_file: "/scenes/03-pipe-minigame/pipemini-game.html",
+    css_file: "/scenes/03-pipe-minigame/minigame1styles.css",
+    callback: loadScene3,
   },
   {
-    "html_file": "/scenes/04-ship-in-storm/splash-screen.html",
-    "css_file": "/scenes/04-ship-in-storm/style.css",
-    "callback": shipInStorm
+    html_file: "/scenes/04-ship-in-storm/splash-screen.html",
+    css_file: "/scenes/04-ship-in-storm/style.css",
+    callback: shipInStorm,
   },
   {
-    "html_file": "/scenes/04.5-ship-wreck-splash/splash-screen.html",
-    "css_file": "/scenes/04.5-ship-wreck-splash/style.css",
-    "callback": shipWreck
+    html_file: "/scenes/04.5-ship-wreck-splash/splash-screen.html",
+    css_file: "/scenes/04.5-ship-wreck-splash/style.css",
+    callback: shipWreck,
   },
   {
-    "html_file": "/scenes/05-beach-explore/index.html",
-    "css_file": "/scenes/05-beach-explore/styles.css",
-    "callback": loadScene5
+    html_file: "/scenes/05-beach-explore/index.html",
+    css_file: "/scenes/05-beach-explore/styles.css",
+    callback: loadScene5,
   },
   {
-    "html_file": "/scenes/06-priority-minigame/priority-minigame.html",
-    "css_file": "/scenes/06-priority-minigame/minigame2styles.css",
-    "callback": loadScene6
+    html_file: "/scenes/06-priority-minigame/priority-minigame.html",
+    css_file: "/scenes/06-priority-minigame/minigame2styles.css",
+    callback: loadScene6,
   },
   {
-    "html_file": "/scenes/06.5-fixing-mast-splash/splash-screen.html",
-    "css_file": "/scenes/06.5-fixing-mast-splash/style.css",
-    "callback": fixMast
+    html_file: "/scenes/06.5-fixing-mast-splash/splash-screen.html",
+    css_file: "/scenes/06.5-fixing-mast-splash/style.css",
+    callback: fixMast,
   },
   {
-    "html_file": "/scenes/07-natives-splash/splash-screen.html",
-    "css_file": "/scenes/07-natives-splash/style.css",
-    "callback": natives
+    html_file: "/scenes/07-natives-splash/splash-screen.html",
+    css_file: "/scenes/07-natives-splash/style.css",
+    callback: natives,
   },
   {
-    "html_file": "/scenes/08-jungle-explore/index.html",
-    "css_file": "/scenes/08-jungle-explore/styles.css",
-    "callback": loadScene8
+    html_file: "/scenes/08-jungle-explore/index.html",
+    css_file: "/scenes/08-jungle-explore/styles.css",
+    callback: loadScene8,
   },
   {
-    "html_file": "/scenes/09-shopping-minigame/shopping_minigame.html",
-    "css_file": "/scenes/09-shopping-minigame/minigame3styles.css",
-    "callback": loadScene9
+    html_file: "/scenes/09-shopping-minigame/shopping_minigame.html",
+    css_file: "/scenes/09-shopping-minigame/minigame3styles.css",
+    callback: loadScene9,
   },
   {
-    "html_file": "/scenes/10-damage-splash/splash-screen.html",
-    "css_file": "/scenes/10-damage-splash/style.css",
-    "callback": damage
+    html_file: "/scenes/10-damage-splash/splash-screen.html",
+    css_file: "/scenes/10-damage-splash/style.css",
+    callback: damage,
   },
   {
-    "html_file": "/scenes/11-explore/index.html",
-    "css_file": "/scenes/11-explore/styles.css",
-    "callback": loadScene11
+    html_file: "/scenes/11-explore/index.html",
+    css_file: "/scenes/11-explore/styles.css",
+    callback: loadScene11,
   },
   {
-    "html_file": "/scenes/12-mini-game-4/index.html",
-    "css_file": "/scenes/12-mini-game-4/style.css",
-    "callback": miniGame4
+    html_file: "/scenes/12-mini-game-4/index.html",
+    css_file: "/scenes/12-mini-game-4/style.css",
+    callback: miniGame4,
   },
   {
-    "html_file": "/scenes/15-ship-loading-minigame/ship-loading-minigame.html",
-    "css_file": "/scenes/15-ship-loading-minigame/minigame5styles.css",
-    "callback": shipMiniGame
+    html_file: "/scenes/15-ship-loading-minigame/ship-loading-minigame.html",
+    css_file: "/scenes/15-ship-loading-minigame/minigame5styles.css",
+    callback: shipMiniGame,
   },
   {
-    "html_file": "/scenes/16-end-screen/endScreen.html",
-    "css_file": "/scenes/16-end-screen/style.css",
-    "callback": endScreen
+    html_file: "/scenes/16-end-screen/endScreen.html",
+    css_file: "/scenes/16-end-screen/style.css",
+    callback: endScreen,
   },
   {
-    "html_file": "/scenes/16.5-sail-away-splash/splash-screen.html",
-    "css_file": "/scenes/16.5-sail-away-splash/style.css",
-    "callback": sailAway
+    html_file: "/scenes/16.5-sail-away-splash/splash-screen.html",
+    css_file: "/scenes/16.5-sail-away-splash/style.css",
+    callback: sailAway,
   },
   {
-    "html_file": "/scenes/17-credits/credits.html",
-    "css_file": "/scenes/17-credits/creditsStyle.css",
-    "callback": credits
-  }
+    html_file: "/scenes/17-credits/credits.html",
+    css_file: "/scenes/17-credits/creditsStyle.css",
+    callback: credits,
+  },
 ]; // end levelList
-
 
 // loads a level based on a given index
 export function loadLevel(levelIndex) {
   // make sure index is in range
   levelIndex = levelIndex % levelList.length;
-  
+
   // make sure its not less than 0
-  if(levelIndex < 0) {
+  if (levelIndex < 0) {
     levelIndex = 0;
   } // end if
 
@@ -328,7 +316,9 @@ export function loadLevel(levelIndex) {
   let levelInfo = levelList[levelIndex];
 
   // check if the page counter needs to be reset
-  if (levelIndex == 0) { resetPageCounter(); }
+  if (levelIndex == 0) {
+    resetPageCounter();
+  }
 
   // load the file
   loadNewHTMLFile(
