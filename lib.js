@@ -7,10 +7,12 @@ import { setDialogueOccurring } from "./scenes/dialogue.js";
 
 // the list of globalTimeouts. used to remove timeouts when devSkip is called.
 document.globalTimeouts = [];
+let isLevelLoading = false;
 
 // Loads and transitions to a new HTML file given a file name and a style sheet
 // the next parameter is a callback function.
 export function loadNewHTMLFile(filePath, styleSheetPath, next) {
+  isLevelLoading = true;
   // update page counter
   let pageCounter = localStorage.getItem("page");
   if (pageCounter) {
@@ -30,15 +32,14 @@ export function loadNewHTMLFile(filePath, styleSheetPath, next) {
     // load the new html file
     fetch(filePath)
       .then((response) => response.text())
-      .then(
-        (text) =>
-          (document.getElementById("htmlMainContainer").innerHTML = text)
-      )
-      .then(() => {
+      .then((text) => {
         loadStyleSheet(styleSheetPath);
-        next();
+        document.getElementById("htmlMainContainer").innerHTML = text;
       })
       .then(() => {
+        next();
+      })
+      .finally(() => {
         finishedLoading(styleSheetPath);
       });
   }, 1500); // end setTimeout
@@ -53,6 +54,7 @@ function finishedLoading(styleSheetPath) {
     setTimeout(() => {
       transition.style.display = "none";
       transition.classList.remove("fadeOut");
+      isLevelLoading = false;
     }, 2000);
   };
   img.src = styleSheetPath;
@@ -113,18 +115,18 @@ document.addEventListener("keydown", skipper);
 // used to skip between levels
 function skipper(event) {
   // load the next level (skip)
-  if (event.key == "~") {
+  if (event.key == "~" && !isLevelLoading) {
     resetWebpage();
     loadNextLevel();
   } // end if
 
   // load the previous level (skip)
-  if (event.key == "#") {
+  if (event.key == "#" && !isLevelLoading) {
     resetWebpage();
     loadPrevLevel();
   } // end if
 
-  if (event.key == "@") {
+  if (event.key == "@" && !isLevelLoading) {
     console.log(eventListenerList);
   }
 } // end skipper
