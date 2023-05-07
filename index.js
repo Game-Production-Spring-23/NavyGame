@@ -30,6 +30,7 @@ let uiKeyRt = document.getElementById("rArrowUI");
 let uiKeyLt = document.getElementById("lArrowUI");
 let bottomLinks = document.getElementById("bottomLinks"); //Links at bottom of start screen
 let gameContainer = document.getElementById("gameContainer"); //Container for game
+let mapImage = document.getElementById("mapModal");
 journalScreen.style.display = "none";
 mapScreen.style.display = "none";
 settingsContainer.style.display = "none";
@@ -45,6 +46,109 @@ let uiKeyL = false;
 
 uiKeyRt.style.display = "none";
 uiKeyLt.style.display = "none";
+
+function getMap(){
+  //get page from local storage
+  let page=localStorage.getItem("page");
+
+  //switch statement to get map image
+  switch (page) {
+    case "0":
+      //apply .mapBlank class to mapModal
+      mapImage.classList.add("mapBlank");
+      console.log("screen 0 starting screen");
+      break;
+    case "1":
+      mapImage.classList.add("mapBlank");
+      console.log("screen 1 starting screen");
+      break;
+    case "2":
+      mapImage.classList.add("mapBlank");
+      console.log("screen2 = boatscreen");
+      break;
+    case "3":
+      mapImage.classList.add("mapBlank");
+      console.log("screen 3 = boat Explore 1");
+      break;
+
+    case "4":
+    mapImage.classList.add("map1");
+    console.log("screen 4 = boiler room");  
+    break;
+
+    case "5":
+    mapImage.classList.add("map1");
+    console.log("screen 5 = ship splash");
+    break;
+
+    case "6":
+    mapImage.classList.add("map1");
+    console.log("screen 6 = ship crash splash ");
+    break;
+
+    case "7":
+    mapImage.classList.add("map2");
+    console.log("screen 7 = beach explore1 ");
+    break;
+
+    case "8":
+    mapImage.classList.add("map2");
+    console.log("screen 8 = minigame2");
+    break;
+
+    case "9":
+    mapImage.classList.add("map2");
+    console.log("screen 9 = fixing splash");
+    break;
+
+    case "10":
+    mapImage.classList.remove("map2");
+    mapImage.classList.add("map3");
+    console.log("screen 10 = island splash ");
+    break;
+
+    case "11":
+    mapImage.classList.add("map3");
+    console.log("screen 11 = jungle explore1");
+    break;
+
+    case "12":
+    mapImage.classList.add("map4");
+    console.log("screen 12 = blacksmith minigame ");
+    break;
+
+    case "13":
+    mapImage.classList.add("map4");
+    console.log("screen 13 = splash");
+
+    case "14":
+    mapImage.classList.add("map6");
+    console.log("screen 14 = beach explore 2");
+    break;
+
+    case "15":
+    mapImage.classList.add("map6");
+    console.log("screen 15 = probability game ");
+    break;
+
+    case "16":
+    mapImage.classList.add("map2");
+    console.log("screen 16 = resources minigame ");
+    break;
+
+    case "17":
+    mapImage.classList.add("map2");
+    console.log("screen 17 = ending boat explore");
+    break;
+
+
+      default:
+        mapImageImage.classList.add("mapBlank");
+        console.log("map 0 starting screen");
+        break;
+
+  }
+}
 
 function closeUI() {
   //hide ui and slide uiTab to left of screen
@@ -72,6 +176,7 @@ function toggleVolume() {
 }
 
 function toggleMap() {
+  getMap();
   console.log(mapStatus);
   if (mapStatus == false) {
     mapScreen.style.display = "block";

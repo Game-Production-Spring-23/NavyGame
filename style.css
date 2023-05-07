@@ -338,13 +338,47 @@ h3 {
   z-index: 100;
 }
 #mapModal {
-  background-image: url("/assets/images/ui/maps/map1.png");
+  /* background-image: url("/assets/images/ui/maps/map1.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
   position: absolute;
   width: 1000px;
   height: 500px;
   left: 460px;
   top: 297px;
 }
+
+/* Map classes for dynamic switching of background */
+.mapBlank {
+  background-image: url("/assets/images/ui/maps/mapBlank.png");
+}
+
+.map1 {
+  background-image: url("/assets/images/ui/maps/map1.png");
+}
+
+.map2 {
+  background-image: url("/assets/images/ui/maps/map2.png");
+}
+
+.map3 {
+  background-image: url("/assets/images/ui/maps/map3.png");
+}
+
+.map4 {
+  background-image: url("/assets/images/ui/maps/map4.png");
+}
+
+.map5 {
+  background-image: url("/assets/images/ui/maps/map5.png");
+}
+
+.map6 {
+  background-image: url("/assets/images/ui/maps/map6.png");
+}
+
+
 
 #journalContainer {
   position: absolute;
@@ -353,7 +387,7 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 100;
+  z-index: 1000;
   background-color: transparent;
   border-radius: 10px;
 }
