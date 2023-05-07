@@ -60,6 +60,9 @@ h3 {
 }
 /*----------------- UI Overlay CSS------------------------------ */
 #charRank {
+  
+  background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
   width: 108px;
   height: 180px;
@@ -67,6 +70,26 @@ h3 {
   top: 59px;
   border-radius: 0px 50px 50px 0px;
 }
+
+.rank1{
+  background-image:url("/assets/images/ui/rank1.png");
+}
+.rank2{
+  background-image:url("/assets/images/ui/rank2.png");
+}
+.rank3{
+  background-image:url("/assets/images/ui/rank3.png");
+}
+.rank4{
+  background-image:url("/assets/images/ui/rank4.png");
+}
+.rank5{
+  background-image:url("/assets/images/ui/rank5.png");
+}
+.rank6{
+  background-image:url("/assets/images/ui/rank6.png");
+}
+
 
 #volumeIcon {
   position: absolute;
@@ -127,7 +150,7 @@ h3 {
   bottom: 25%;
 }
 
-/* Position UI icons right side of the screen*/
+
 #exitOverlay {
   position: absolute;
   left: 0;
@@ -167,8 +190,11 @@ h3 {
   top: 50%;
   z-index: 999;
 }
-/* position map overlay icon below setting overlay */
 
+
+
+
+/* Begin Dialogue Styling ------------------------------------- */
 #dialogueScreen {
   position: fixed;
   width: 100%;
@@ -246,6 +272,7 @@ h3 {
   height: 50px;
 }
 
+/* End Dialogue Styling ------------------------------------- */
 #uiOVerlay {
   position: absolute;
   top: 0;
@@ -376,6 +403,31 @@ h3 {
 
 .map6 {
   background-image: url("/assets/images/ui/maps/map6.png");
+}
+
+/* engineer rank changes after mini games */
+.rank1{
+  background-image: url("/assets/images/ui/rank1.png");
+}
+
+.rank2{
+  background-image: url("/assets/images/ui/rank2.png");
+}
+
+.rank3{
+  background-image: url("/assets/images/ui/rank3.png");
+}
+
+.rank4{
+  background-image: url("/assets/images/ui/rank4.png");
+}
+
+.rank5{
+  background-image: url("/assets/images/ui/rank5.png");
+}
+
+.rank6{
+  background-image: url("/assets/images/ui/rank6.png");
 }
 
 
