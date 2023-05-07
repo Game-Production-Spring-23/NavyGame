@@ -35,6 +35,7 @@ journalScreen.style.display = "none";
 mapScreen.style.display = "none";
 settingsContainer.style.display = "none";
 let charRank = document.getElementById("charRank");
+let journalPage = document.getElementById("journalModal");
 
 let uiOverlay = document.getElementById("uiOverlay");
 
@@ -55,7 +56,6 @@ function getMap(){
   //switch statement to get map image, journal content and rank
   switch (page) {
     case "0":
-     
       charRank.classList.add("rank1");
       mapImage.classList.add("mapBlank");
       console.log("screen 0 starting screen");
@@ -77,6 +77,7 @@ function getMap(){
       break;
 
     case "4":
+    journalPage.classList.add("journal1");
     charRank.classList.add("rank1");
     mapImage.classList.add("map1");
     console.log("screen 4 = boiler room");  
@@ -89,18 +90,21 @@ function getMap(){
     break;
 
     case "6":
+    journalPage.classList.add("journal2");
     charRank.classList.add("rank2");
     mapImage.classList.add("map1");
     console.log("screen 6 = ship crash splash ");
     break;
 
     case "7":
+    journalPage.classList.add("journal2");
     charRank.classList.add("rank2");
     mapImage.classList.add("map2");
     console.log("screen 7 = beach explore1 ");
     break;
 
     case "8":
+    journalPage.classList.add("journal3");
     charRank.classList.add("rank2");
     mapImage.classList.add("map2");
     console.log("screen 8 = minigame2");
@@ -113,6 +117,7 @@ function getMap(){
     break;
 
     case "10":
+    journalPage.classList.add("journal4");
     charRank.classList.add("rank3");
     mapImage.classList.remove("map2");
     mapImage.classList.add("map3");
@@ -120,12 +125,14 @@ function getMap(){
     break;
 
     case "11":
+    journalPage.classList.add("journal4");
     charRank.classList.add("rank3");
     mapImage.classList.add("map3");
     console.log("screen 11 = jungle explore1");
     break;
 
     case "12":
+    journalPage.classList.add("journal5");
     charRank.classList.add("rank3");
     mapImage.classList.add("map4");
     console.log("screen 12 = blacksmith minigame ");
@@ -137,24 +144,28 @@ function getMap(){
     console.log("screen 13 = splash");
 
     case "14":
+    journalPage.classList.remove("journal5");
     charRank.classList.add("rank4");
     mapImage.classList.add("map6");
     console.log("screen 14 = beach explore 2");
     break;
 
     case "15":
+    journalPage.classList.add("journal6");
     charRank.classList.add("rank4");
     mapImage.classList.add("map6");
     console.log("screen 15 = probability game ");
     break;
 
     case "16":
+    journalPage.classList.add("journal7");
     charRank.classList.add("rank5");
     mapImage.classList.add("map2");
     console.log("screen 16 = resources minigame ");
     break;
 
     case "17":
+    journalPage.classList.remove("journal7");
     charRank.classList.add("rank6");
     mapImage.classList.add("map2");
     console.log("screen 17 = ending boat explore");
