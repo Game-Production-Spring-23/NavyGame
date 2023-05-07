@@ -6,13 +6,11 @@
 
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
   html {
-      width: 1920px;
-      height: 1080px;
-      overflow: hidden;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
   }
 }
-
-
 
 html {
   height: 1080px !important;
@@ -48,8 +46,7 @@ h3 {
   text-align: center;
 }
 
-
-#titleLogo{
+#titleLogo {
   position: absolute;
   width: 30%;
   height: 40%;
@@ -60,7 +57,6 @@ h3 {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position-x: center;
-
 }
 /*----------------- UI Overlay CSS------------------------------ */
 #charRank {
@@ -131,8 +127,6 @@ h3 {
   bottom: 25%;
 }
 
-
-
 /* Position UI icons right side of the screen*/
 #exitOverlay {
   position: absolute;
@@ -156,22 +150,22 @@ h3 {
   display: none;
 }
 
-#lArrowUI{
-position: absolute;
-width: 100px;
-height: 100px;
-left:5%;
-top: 50%;
-z-index:998;
+#lArrowUI {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 5%;
+  top: 50%;
+  z-index: 998;
 }
 
-#rArrowUI{
-position: absolute;
-width: 100px;
-height: 100px;
-left: 82%;
-top: 50%;
-z-index:999;
+#rArrowUI {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 82%;
+  top: 50%;
+  z-index: 999;
 }
 /* position map overlay icon below setting overlay */
 
@@ -343,7 +337,7 @@ z-index:999;
   width: 50%;
   height: 70%;
   top: 10%;
-  background-color:transparent;
+  background-color: transparent;
   margin-right: auto;
   margin-left: auto;
   z-index: 100;
@@ -361,7 +355,6 @@ z-index:999;
   overflow: scroll;
 }
 
-
 #mapContainer {
   /* display in center of screen*/
   position: absolute;
@@ -372,14 +365,13 @@ z-index:999;
   transform: translate(-50%, -50%);
   z-index: 100;
 }
-#mapModal{
-  background-image:url("/assets/images/ui/maps/map1.png");
+#mapModal {
+  background-image: url("/assets/images/ui/maps/map1.png");
   position: absolute;
   width: 1000px;
   height: 500px;
   left: 460px;
   top: 297px;
-  
 }
 
 #journalContainer {
@@ -390,7 +382,7 @@ z-index:999;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  background-color:transparent;
+  background-color: transparent;
   border-radius: 10px;
 }
 
@@ -459,16 +451,17 @@ z-index:999;
   line-height: 0;
 }
 
-#charSelectStart, #startControlScreen {
+#charSelectStart,
+#startControlScreen {
   position: absolute;
   width: 600px;
   height: 90px;
   left: 34%;
-  bottom:10%;
+  bottom: 10%;
   background: url(/assets/images/ui/startBtn.png);
   background-repeat: no-repeat;
   border-style: none;
-  z-index:999;
+  z-index: 999;
 }
 
 #charSelectStart:hover {

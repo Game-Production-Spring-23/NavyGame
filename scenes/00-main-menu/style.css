@@ -10,7 +10,6 @@ body {
   background-image: url("/assets/images/waterAnimation.gif");
 }
 
-
 h1 {
   font-family: "Lilita One", cursive;
   font-size: 50px;
@@ -25,14 +24,14 @@ header {
   left: 0;
   right: 0;
   z-index: 999;
-  background-image:url("/assets/images/ui/titleLogo.png");
+  background-image: url("/assets/images/ui/titleLogo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-position-x: center;
-  background-size:contain;
-  height:40%;
-  width:100%;
-  padding-bottom:5px;
+  background-size: contain;
+  height: 40%;
+  width: 100%;
+  padding-bottom: 5px;
 }
 /*Button css*/
 
@@ -193,7 +192,7 @@ h3 {
   width: 25%;
   height: 70%;
   top: 10%;
-  background-color:transparent;
+  background-color: transparent;
   margin-right: auto;
   margin-left: auto;
   z-index: 100;
@@ -202,26 +201,6 @@ h3 {
 
 #crewRecs {
   padding-left: 5%;
-}
-
-#mapContainer,
-#settingModal {
-  position: fixed;
-  width: 50%;
-  height: 70%;
-  top: 10%;
-  background-color: transparent;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: 100;
-  border-radius: 10px;
-}
-
-#map {
-  width: 500px;
-  height: 100%;
-  margin-left: 40%;
-  margin-right: auto;
 }
 
 #settingModal {
@@ -263,10 +242,9 @@ h3 {
   position: absolute;
   top: 0;
   left: 0;
-  width:5%;
-  margin-top:2%;
+  width: 5%;
+  margin-top: 2%;
   height: 100%;
- 
 }
 
 .uiIcon {
@@ -328,16 +306,4 @@ h3 {
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 10%;
-}
-
-
-#mapContainer{
-  /* display in center of screen*/
-  position: absolute;
-  height:100%;
-  width:100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
 }

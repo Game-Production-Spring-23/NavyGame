@@ -57,9 +57,6 @@ function closeUI() {
   uiOpen = false;
 }
 
-
-
-
 //-----------UI Controls--------------//
 journalScreen.style.display = "none";
 mapScreen.style.display = "none";
@@ -79,13 +76,14 @@ function toggleVolume() {
 }
 
 function toggleMap() {
+  console.log(mapStatus);
   if (mapStatus == false) {
     mapScreen.style.display = "block";
-    console.log("map on");
+    // console.log("map on");
     mapStatus = true;
   } else {
     mapScreen.style.display = "none";
-    console.log("map off");
+    // console.log("map off");
     mapStatus = false;
   }
 }
@@ -124,7 +122,6 @@ export function rKeyOffScreen() {
 //--------------Event Listeners-----------------//
 
 //on page load
-
 document.getElementById("mapOverlay").onclick = () => {
   toggleMap();
 };
@@ -135,13 +132,13 @@ document.getElementById("volumeIcon").onclick = () => {
   toggleVolume();
 };
 document.getElementById("uiTab").onclick = () => {
-  if(uiOpen){
+  if (uiOpen) {
     closeUI();
-  }else{
+  } else {
     // setMapAndJournal();
     ui.style.display = "block";
     uiTab.style.left = "172px";
-    uiOpen=true;
+    uiOpen = true;
   }
 };
 

@@ -17,20 +17,18 @@ export function mainMenu() {
   let mapStatus = false;
   let uiOverlay = document.getElementById("uiOverlay");
 
-
-  
   //shows map in a pop up box when clicked
-  function toggleMap() {
-    if (mapStatus == false) {
-      mapScreen.style.display = "block";
-      console.log("map on");
-      mapStatus = true;
-    } else {
-      mapScreen.style.display = "none";
-      console.log("map off");
-      mapStatus = false;
-    }
-  }
+  // function toggleMap() {
+  //   if (mapStatus == false) {
+  //     mapScreen.style.display = "block";
+  //     console.log("map on");
+  //     mapStatus = true;
+  //   } else {
+  //     mapScreen.style.display = "none";
+  //     console.log("map off");
+  //     mapStatus = false;
+  //   }
+  // }
 
   //Future Functions -------------------------------------------------//
 
@@ -48,7 +46,6 @@ export function mainMenu() {
     //hides options
     bottomLinks.style.visibility = "visible";
   }
-
 
   function toggleSettingsOn() {
     //shows settings in a pop up box when clicked
@@ -88,7 +85,6 @@ export function mainMenu() {
       }, 1000);
     });
   }
-
 
   //Changes display state of icons on hover
   function settingsHover(img) {
@@ -131,27 +127,21 @@ export function mainMenu() {
     gameContainer.style.display = "none";
     settingsContainer.style.display = "block";
     score.style.visibility = "hidden";
-    document.getElementById("app").style.backgroundImage ="none";
+    document.getElementById("app").style.backgroundImage = "none";
     document.getElementById("titleLogo").style.display = "none";
-    
   }
-
-  
 
   window.settingsHover = settingsHover;
   window.settingOut = settingOut;
   window.showOptions = showOptions;
   window.changeVolume = changeVolume;
-  window.toggleMap = toggleMap;
+  // window.toggleMap = toggleMap;
 
-//Event Listeners
-  document.getElementById("mapOverlay").onclick = () => {
-    toggleMap();
-  };
+  //Event Listeners
   document.getElementById("start").onclick = () => {
     loadNextLevel();
-  }; 
+  };
   document.getElementById("startControlScreen").onclick = () => {
     loadNextLevel();
-  }; 
+  };
 } // end mainMenu
