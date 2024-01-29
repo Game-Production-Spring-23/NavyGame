@@ -3,15 +3,23 @@
 }
 
 /* media breakpoint for screens that are not 1920x1080 */
-
-@media screen and (min-width: 1920px) and (min-height: 1080px) {
-  html {
-    width: 1920px;
-    height: 1080px;
-    overflow: hidden;
+@media (-webkit-device-pixel-ratio: 1.25) {
+  * {
+    zoom: 0.95;
   }
 }
 
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  html {
+    /* width: 1920px; */
+    /* height: 1080px; */
+    width: 1920vw;
+    height: 1080vh;
+    overflow: hidden;
+  }
+}
+/* Main Resolution */
+/* 1920 x 1080 */
 html {
   height: 1080px !important;
   width: 1920px !important;
@@ -31,6 +39,13 @@ body {
   background-position-x: center;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+/* Main Container */
+#htmlMainContainer {
+  display: flex;
+  align-items: center;
+}
+
 h1 {
   font-family: "CubicFive10", sans-serif;
   font-style: normal;
@@ -47,6 +62,7 @@ h3 {
   text-align: center;
 }
 
+/* Change Image Size to ignore stretching  */
 #titleLogo {
   position: absolute;
   width: 30%;
@@ -56,90 +72,102 @@ h3 {
   z-index: 999;
   background-image: url("/assets/images/ui/titleLogo.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position-x: center;
+  /* background-size: 100% 100%; */
+  background-size: contain;
+  background-position: center;
+  /* background-position-x: center; */
 }
 /*----------------- UI Overlay CSS------------------------------ */
 #charRank {
-  
   background-repeat: no-repeat;
   background-size: contain;
-  position: absolute;
-  width: 108px;
-  height: 180px;
+  background-position-y: -5;
+  /* position: absolute; */
+  /* width: 108px;
+  height: 180px; */
+  width: clamp(54px, 6.75vw, 108px);
+  height: clamp(90px, 11.25vw, 180px);
   left: 32px;
   top: 59px;
   border-radius: 0px 50px 50px 0px;
 }
 
-.rank1{
-  background-image:url("/assets/images/ui/rank1.png");
+.rank1 {
+  background-image: url("/assets/images/ui/rank1.png");
 }
-.rank2{
-  background-image:url("/assets/images/ui/rank2.png");
+.rank2 {
+  background-image: url("/assets/images/ui/rank2.png");
 }
-.rank3{
-  background-image:url("/assets/images/ui/rank3.png");
+.rank3 {
+  background-image: url("/assets/images/ui/rank3.png");
 }
-.rank4{
-  background-image:url("/assets/images/ui/rank4.png");
+.rank4 {
+  background-image: url("/assets/images/ui/rank4.png");
 }
-.rank5{
-  background-image:url("/assets/images/ui/rank5.png");
+.rank5 {
+  background-image: url("/assets/images/ui/rank5.png");
 }
-.rank6{
-  background-image:url("/assets/images/ui/rank6.png");
+.rank6 {
+  background-image: url("/assets/images/ui/rank6.png");
 }
 
+#rankText {
+  /* position: absolute; */
+  /* width: 79px; */
+  /* height: 39px; */
+  left: 48px;
+  top: 240px;
+  font-family: "Raleway";
+  /* font-style: semi-bold; */
+  font-weight: 400;
+  /* font-size: 32px; */
+  font-size: clamp(24px, 2vw, 32px);
+  line-height: 39px;
+  color: #ffffff;
+}
 
 #volumeIcon {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 37px;
+  /* position: absolute; */
+  /* width: 100px; */
+  /* height: 100px; */
+  width: clamp(50px, 6.3vw, 100px);
+  height: clamp(50px, 6.3vw, 100px);
+  left: 32px;
   top: 336px;
   border-radius: 0px 50px 50px 0px;
 }
 
 #mapOverlay {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 28px;
+  /* position: absolute; */
+  /* width: 100px;
+  height: 100px; */
+  width: clamp(50px, 6.3vw, 100px);
+  height: clamp(50px, 6.3vw, 100px);
+  left: 32px;
   top: 511px;
   border-radius: 0px 50px 50px 0px;
 }
 
 #journalOverlay {
-  position: absolute;
-  width: 100px;
-  height: 100px;
+  /* position: absolute; */
+  /* width: 100px;
+  height: 100px; */
+  width: clamp(50px, 6.3vw, 100px);
+  height: clamp(50px, 6.3vw, 100px);
   left: 32px;
   top: 687px;
   border-radius: 0px 50px 50px 0px;
 }
 
-#rankText {
-  position: absolute;
-  width: 79px;
-  height: 39px;
-  left: 48px;
-  top: 240px;
-  font-family: "Raleway";
-  font-style: semi-bold;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
-
-  color: #ffffff;
-}
-
+/* User InterFace Button */
 #uiTab {
   position: absolute;
   width: 96px;
   height: 152px;
   left: 172px;
-  top: 600px;
+  /* top: 600px; */
+  /* top: 60%; */
+  top: 60vh;
   z-index: 999;
 }
 
@@ -151,7 +179,6 @@ h3 {
   bottom: 25%;
 }
 
-
 #exitOverlay {
   position: absolute;
   left: 0;
@@ -161,13 +188,24 @@ h3 {
 
 #uiOverlayLeft {
   position: absolute;
-  width: 174px;
-  height: 872px;
+  /* width: 100%;
+    max-width: 175px; */
+  /* width: 175px; */
+  width: 10.875vw;
+  /* min-height: 872px; */
+  min-height: 80vh;
+  /* min-height: 825px; */
+  /* height: 872vh; */
+  /* height: 54.5vw; */
   left: 0px;
-  top: 214px;
+  /* top: 214px; */
+  top: 18.4375vh;
   background: rgba(28, 28, 70, 0.69);
   border-radius: 0px 50px 50px 0px;
   z-index: 999;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 #settingModal {
@@ -191,9 +229,6 @@ h3 {
   top: 50%;
   z-index: 999;
 }
-
-
-
 
 /* Begin Dialogue Styling ------------------------------------- */
 #dialogueScreen {
@@ -369,7 +404,7 @@ h3 {
   /* background-image: url("/assets/images/ui/maps/map1.png"); */
   background-position: center;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size: contain;
   position: absolute;
   width: 1000px;
   height: 500px;
@@ -407,31 +442,29 @@ h3 {
 }
 
 /* engineer rank changes after mini games */
-.rank1{
+.rank1 {
   background-image: url("/assets/images/ui/rank1.png");
 }
 
-.rank2{
+.rank2 {
   background-image: url("/assets/images/ui/rank2.png");
 }
 
-.rank3{
+.rank3 {
   background-image: url("/assets/images/ui/rank3.png");
 }
 
-.rank4{
+.rank4 {
   background-image: url("/assets/images/ui/rank4.png");
 }
 
-.rank5{
+.rank5 {
   background-image: url("/assets/images/ui/rank5.png");
 }
 
-.rank6{
+.rank6 {
   background-image: url("/assets/images/ui/rank6.png");
 }
-
-
 
 #journalContainer {
   position: absolute;
@@ -440,7 +473,9 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  /* z-index: 1000; */
+  /* ??? Why is this 1000 */
+  z-index: 100;
   background-color: transparent;
   border-radius: 10px;
 }
@@ -457,31 +492,31 @@ h3 {
   z-index: 100;
 }
 
-.journal1{
+.journal1 {
   background-image: url("/assets/images/ui/journals/journalPage1.png");
 }
 
-.journal2{
+.journal2 {
   background-image: url("/assets/images/ui/journals/journalPage2.png");
 }
 
-.journal3{
+.journal3 {
   background-image: url("/assets/images/ui/journals/journalPage3.png");
 }
 
-.journal4{
+.journal4 {
   background-image: url("/assets/images/ui/journals/journalPage4.png");
 }
 
-.journal5{
+.journal5 {
   background-image: url("/assets/images/ui/journals/journalPage5.png");
 }
 
-.journal6{
+.journal6 {
   background-image: url("/assets/images/ui/journals/journalPage6.png");
 }
 
-.journal7{
+.journal7 {
   background-image: url("/assets/images/ui/journals/journalPage7.png");
 }
 /* Controls Screen */

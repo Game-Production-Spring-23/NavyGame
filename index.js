@@ -49,9 +49,9 @@ let uiKeyL = false;
 uiKeyRt.style.display = "none";
 uiKeyLt.style.display = "none";
 
-function getMap(){
+function getMap() {
   //get page from local storage
-  let page=localStorage.getItem("page");
+  let page = localStorage.getItem("page");
 
   //switch statement to get map image, journal content and rank
   switch (page) {
@@ -77,106 +77,104 @@ function getMap(){
       break;
 
     case "4":
-    journalPage.classList.add("journal1");
-    charRank.classList.add("rank1");
-    mapImage.classList.add("map1");
-    console.log("screen 4 = boiler room");  
-    break;
+      journalPage.classList.add("journal1");
+      charRank.classList.add("rank1");
+      mapImage.classList.add("map1");
+      console.log("screen 4 = boiler room");
+      break;
 
     case "5":
-    charRank.classList.add("rank2");
-    mapImage.classList.add("map1");
-    console.log("screen 5 = ship splash");
-    break;
+      charRank.classList.add("rank2");
+      mapImage.classList.add("map1");
+      console.log("screen 5 = ship splash");
+      break;
 
     case "6":
-    journalPage.classList.add("journal2");
-    charRank.classList.add("rank2");
-    mapImage.classList.add("map1");
-    console.log("screen 6 = ship crash splash ");
-    break;
+      journalPage.classList.add("journal2");
+      charRank.classList.add("rank2");
+      mapImage.classList.add("map1");
+      console.log("screen 6 = ship crash splash ");
+      break;
 
     case "7":
-    journalPage.classList.add("journal2");
-    charRank.classList.add("rank2");
-    mapImage.classList.add("map2");
-    console.log("screen 7 = beach explore1 ");
-    break;
+      journalPage.classList.add("journal2");
+      charRank.classList.add("rank2");
+      mapImage.classList.add("map2");
+      console.log("screen 7 = beach explore1 ");
+      break;
 
     case "8":
-    journalPage.classList.add("journal3");
-    charRank.classList.add("rank2");
-    mapImage.classList.add("map2");
-    console.log("screen 8 = minigame2");
-    break;
+      journalPage.classList.add("journal3");
+      charRank.classList.add("rank2");
+      mapImage.classList.add("map2");
+      console.log("screen 8 = minigame2");
+      break;
 
     case "9":
-    charRank.classList.add("rank3");
-    mapImage.classList.add("map2");
-    console.log("screen 9 = fixing splash");
-    break;
+      charRank.classList.add("rank3");
+      mapImage.classList.add("map2");
+      console.log("screen 9 = fixing splash");
+      break;
 
     case "10":
-    journalPage.classList.add("journal4");
-    charRank.classList.add("rank3");
-    mapImage.classList.remove("map2");
-    mapImage.classList.add("map3");
-    console.log("screen 10 = island splash ");
-    break;
+      journalPage.classList.add("journal4");
+      charRank.classList.add("rank3");
+      mapImage.classList.remove("map2");
+      mapImage.classList.add("map3");
+      console.log("screen 10 = island splash ");
+      break;
 
     case "11":
-    journalPage.classList.add("journal4");
-    charRank.classList.add("rank3");
-    mapImage.classList.add("map3");
-    console.log("screen 11 = jungle explore1");
-    break;
+      journalPage.classList.add("journal4");
+      charRank.classList.add("rank3");
+      mapImage.classList.add("map3");
+      console.log("screen 11 = jungle explore1");
+      break;
 
     case "12":
-    journalPage.classList.add("journal5");
-    charRank.classList.add("rank3");
-    mapImage.classList.add("map4");
-    console.log("screen 12 = blacksmith minigame ");
-    break;
+      journalPage.classList.add("journal5");
+      charRank.classList.add("rank3");
+      mapImage.classList.add("map4");
+      console.log("screen 12 = blacksmith minigame ");
+      break;
 
     case "13":
-    charRank.classList.add("rank4");
-    mapImage.classList.add("map4");
-    console.log("screen 13 = splash");
+      charRank.classList.add("rank4");
+      mapImage.classList.add("map4");
+      console.log("screen 13 = splash");
 
     case "14":
-    journalPage.classList.remove("journal5");
-    charRank.classList.add("rank4");
-    mapImage.classList.add("map6");
-    console.log("screen 14 = beach explore 2");
-    break;
+      journalPage.classList.remove("journal5");
+      charRank.classList.add("rank4");
+      mapImage.classList.add("map6");
+      console.log("screen 14 = beach explore 2");
+      break;
 
     case "15":
-    journalPage.classList.add("journal6");
-    charRank.classList.add("rank4");
-    mapImage.classList.add("map6");
-    console.log("screen 15 = probability game ");
-    break;
+      journalPage.classList.add("journal6");
+      charRank.classList.add("rank4");
+      mapImage.classList.add("map6");
+      console.log("screen 15 = probability game ");
+      break;
 
     case "16":
-    journalPage.classList.add("journal7");
-    charRank.classList.add("rank5");
-    mapImage.classList.add("map2");
-    console.log("screen 16 = resources minigame ");
-    break;
+      journalPage.classList.add("journal7");
+      charRank.classList.add("rank5");
+      mapImage.classList.add("map2");
+      console.log("screen 16 = resources minigame ");
+      break;
 
     case "17":
-    journalPage.classList.remove("journal7");
-    charRank.classList.add("rank6");
-    mapImage.classList.add("map2");
-    console.log("screen 17 = ending boat explore");
-    break;
+      journalPage.classList.remove("journal7");
+      charRank.classList.add("rank6");
+      mapImage.classList.add("map2");
+      console.log("screen 17 = ending boat explore");
+      break;
 
-
-      default:
-        mapImageImage.classList.add("mapBlank");
-        console.log("map 0 starting screen");
-        break;
-
+    default:
+      mapImageImage.classList.add("mapBlank");
+      console.log("map 0 starting screen");
+      break;
   }
 }
 
@@ -268,8 +266,9 @@ document.getElementById("uiTab").onclick = () => {
     closeUI();
   } else {
     // setMapAndJournal();
-    ui.style.display = "block";
-    uiTab.style.left = "172px";
+    ui.style.display = "flex";
+    // uiTab.style.left = "175px"; // fixed width
+    uiTab.style.left = "10.875vw";
     uiOpen = true;
   }
 };
