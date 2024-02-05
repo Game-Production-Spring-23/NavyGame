@@ -198,7 +198,7 @@ function toggleVolume() {
     volume = false;
     let volumeIcon = document.getElementById("volumeIcon");
   } else {
-    music.volume = 0.4;
+    music.volume = 0.5;
     volume = true;
   }
 }
