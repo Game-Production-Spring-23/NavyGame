@@ -35,18 +35,17 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-
   margin: 0;
   padding: 0;
   position: absolute;
   left: 0;
+  bottom: 0;
 }
 
 #chars-upper {
   z-index: 2;
   height: 128px;
   bottom: 212px;
-
   margin: 0;
   padding: 0;
   position: absolute;
