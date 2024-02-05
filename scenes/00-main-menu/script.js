@@ -16,6 +16,9 @@ export function mainMenu() {
   let mainContainer = document.getElementById("app");
   let mapStatus = false;
   let uiOverlay = document.getElementById("uiOverlay");
+  
+  //sets the music volume to half 
+  music.volume = 0.5;
 
   //shows map in a pop up box when clicked
   // function toggleMap() {
@@ -72,10 +75,6 @@ export function mainMenu() {
 
   function splashScreen() {
     splash.addEventListener("click", () => {
-      //Plays background music
-      music.volume = 0.4;
-      //music.play();
-
       splash.classList.add("fadeOut");
 
       splash.style.opacity = 0;
