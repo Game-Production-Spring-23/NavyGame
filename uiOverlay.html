@@ -1,209 +1,232 @@
 <style>
-#uiOVerlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width:5%;
-  margin-top:2%;
-  height: 100%;
-  z-index:999;
- 
-}
+  #uiOVerlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5%;
+    margin-top: 2%;
+    height: 100%;
+    z-index: 999;
+  }
 
-.uiIcon {
-  height: 75px;
-  width: 75px;
-  margin-bottom: 20px;
-}
+  .uiIcon {
+    height: 75px;
+    width: 75px;
+    margin-bottom: 20px;
+  }
 
-/* slide icon to the left and add text next to it on hover */
-.uiIcon:hover {
-  margin-left: -20px;
-  margin-right: 20px;
-  transition: 0.5s;
-}
+  /* slide icon to the left and add text next to it on hover */
+  .uiIcon:hover {
+    margin-left: -20px;
+    margin-right: 20px;
+    transition: 0.5s;
+  }
 
-/* Position UI icons right side of the screen*/
-#exitOverlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 99;
-}
+  /* Position UI icons right side of the screen*/
+  #exitOverlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+  }
 
-#uiRightSide {
-  right: 0;
-  top: 0;
-  z-index: 100;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
+  #uiRightSide {
+    right: 0;
+    top: 0;
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
 
-}
+  /* Pop up Styling */
+  .modal {
+    position: fixed;
+    width: 25%;
+    height: 70%;
+    top: 10%;
+    background-color: #e1ecf4;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 100;
+    border-radius: 10px;
+  }
 
-/* Pop up Styling */
-.modal {
-  position: fixed;
-  width: 25%;
-  height: 70%;
-  top: 10%;
-  background-color: #e1ecf4;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: 100;
-  border-radius: 10px;
-}
+  #crewRecs {
+    padding-left: 5%;
+  }
 
-#crewRecs {
-  padding-left: 5%;
-}
+  #mapContainer,
+  #settingModal {
+    position: fixed;
+    width: 50%;
+    height: 70%;
+    top: 10%;
+    background-color: #e1ecf4;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 100;
+    border-radius: 10px;
+  }
 
-#mapContainer,
-#settingModal {
-  position: fixed;
-  width: 50%;
-  height: 70%;
-  top: 10%;
-  background-color: #e1ecf4;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: 100;
-  border-radius: 10px;
-}
+  #map {
+    width: 500px;
+    height: 100%;
+    margin-left: 40%;
+    margin-right: auto;
+  }
 
-#map {
-  width: 500px;
-  height: 100%;
-  margin-left: 40%;
-  margin-right: auto;
-}
+  #settingModal {
+    overflow: scroll;
+  }
 
-#settingModal {
-  overflow: scroll;
-}
+  #mapContainer {
+    /* display in center of screen*/
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+  #mapModal {
+    background-image: url("/assets/images/ui/miniMap.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
 
-#mapContainer{
-  /* display in center of screen*/
-  position: absolute;
-  height:80%;
-  width:80%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-}
-#mapModal{
-  background-image: url("/assets/images/ui/miniMap.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
+  #journalContainer {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: #e1ecf4;
+    border-radius: 10px;
+  }
 
-}
-
-#journalContainer{
-  position: absolute;
-  height:80%;
-  width:80%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  background-color: #e1ecf4;
-  border-radius: 10px;
-}
-
-#journalModal{
-  background-image: url("/assets/images/ui/bookscreen.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-
-}
+  #journalModal {
+    background-image: url("/assets/images/ui/bookscreen.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
 </style>
 
 <div id="settingsContainer">
   <h1>Select Your Character</h1>
   <div id="charRow">
-      <input id="characterOne" class="charSelectBtn" type="image" value="charOne"
-          src="/assets/images/characterSplashes/charSelect/charOne.png">
-      <input id="characterTwo" class="charSelectBtn" type="image" value="charTwo"
-          src="/assets/images/characterSplashes/charSelect/charTwo.png">
-      <input id="characterThree" class="charSelectBtn" type="image" value="charThree"
-          src="/assets/images/characterSplashes/charSelect/charThree.png">
-
+    <input
+      id="characterOne"
+      class="charSelectBtn"
+      type="image"
+      value="charOne"
+      src="/assets/images/characterSplashes/charSelect/charOne.png"
+    />
+    <input
+      id="characterTwo"
+      class="charSelectBtn"
+      type="image"
+      value="charTwo"
+      src="/assets/images/characterSplashes/charSelect/charTwo.png"
+    />
+    <input
+      id="characterThree"
+      class="charSelectBtn"
+      type="image"
+      value="charThree"
+      src="/assets/images/characterSplashes/charSelect/charThree.png"
+    />
   </div>
 </div>
-
 
 <!-- UI Containers ----------------------------------------------------------------------------------------------------------------->
 <div id="journalContainer">
   <div id="journalModal" class="modal">
-      <input id="modalButton" class="button-8" type="button" onclick="toggleJournalOff()" value="Close">
+    <input
+      id="modalButton"
+      class="button-8"
+      type="button"
+      onclick="toggleJournalOff()"
+      value="Close"
+    />
 
-      <div id="crewRecs" class="modalCard">
-          <h1 id="modalTitle">Journal</h1>
-          <h2>Crew Recommendations</h2>
-      </div>
-
-
+    <div id="crewRecs" class="modalCard">
+      <h1 id="modalTitle">Journal</h1>
+      <h2>Crew Recommendations</h2>
+    </div>
   </div>
-
 </div>
 
 <div id="mapContainer">
   <div id="mapModal" class="modal">
-
-
-      <div id="crewRecs" class="modalCard">
-      </div>
-
+    <div id="crewRecs" class="modalCard"></div>
   </div>
-
 </div>
 <div id="uiOVerlay" class="overlay">
   <div id="overlayContent">
-      <div id="uiRightSide">
-          <input id="volumeIcon" class="uiIcon" type="image" onclick="toggleVolume()" value="Options"
-              src="/assets/images/ui/soundBtn.png">
-          <input id="journalOverlay" class="uiIcon" type="image" onclick="toggleJournalOn()" value="Journal"
-              src="/assets/images/ui/pixelJournalIcon.png">
-          <input id="mapOverlay" class="uiIcon" type="image" onclick="toggleMap()" value="Map"
-              src="/assets/images/ui/pixelMapIcon.png">
-
-      </div>
+    <div id="uiRightSide">
+      <input
+        id="volumeIcon"
+        class="uiIcon"
+        type="image"
+        onclick="toggleVolume()"
+        value="Options"
+        src="/assets/images/ui/soundBtn.png"
+      />
+      <input
+        id="journalOverlay"
+        class="uiIcon"
+        type="image"
+        onclick="toggleJournalOn()"
+        value="Journal"
+        src="/assets/images/ui/pixelJournalIcon.png"
+      />
+      <input
+        id="mapOverlay"
+        class="uiIcon"
+        type="image"
+        onclick="toggleMap()"
+        value="Map"
+        src="/assets/images/ui/pixelMapIcon.png"
+      />
+    </div>
   </div>
-
 </div>
 
 <script>
-let settingModal = document.getElementById("settingContainer");
-let mainContainer = document.getElementById("app");
-let journalScreen = document.getElementById("journalContainer");
-let mapScreen = document.getElementById("mapContainer");
-let music = document.getElementById("audio");
-let settingsContainer = document.getElementById("settingsContainer");
+  let settingModal = document.getElementById("settingContainer");
+  let mainContainer = document.getElementById("app");
+  let journalScreen = document.getElementById("journalContainer");
+  let mapScreen = document.getElementById("mapContainer");
+  let music = document.getElementById("audio");
+  let settingsContainer = document.getElementById("settingsContainer");
 
-let mapStatus = false;
-let journalStatus = false;
-let volume = true;
+  let mapStatus = false;
+  let journalStatus = false;
+  let volume = true;
 
-journalScreen.style.display = "none";
-mapScreen.style.display = "none";
-settingsContainer.style.display = "none";
+  journalScreen.style.display = "none";
+  mapScreen.style.display = "none";
+  settingsContainer.style.display = "none";
 
-function toggleVolume() {
+  function toggleVolume() {
     if (volume == true) {
       music.volume = 0;
       volume = false;
@@ -214,32 +237,36 @@ function toggleVolume() {
     }
   }
 
- function toggleMap(){
+  function toggleMap() {
     if (mapStatus == false) {
-      mapScreen.style.display="block";
+      mapScreen.style.display = "block";
       console.log("map on");
       mapStatus = true;
     } else {
-      mapScreen.style.display="none";
+      mapScreen.style.display = "none";
       console.log("map off");
       mapStatus = false;
     }
   }
 
   //shows the player hournal when clicked
-  function toggleJournal(){
+  function toggleJournal() {
     if (journalScreen.style.display == "none") {
-      journalScreen.style.display="block";
+      journalScreen.style.display = "block";
       console.log("journal on");
     } else {
-      journalScreen.style.display="none";
+      journalScreen.style.display = "none";
       console.log("journal off");
     }
   }
 
-
-document.getElementById("mapOverlay").onclick = () => { toggleMap(); };
-document.getElementById("journalOverlay").onclick = () => { toggleJournal(); };
-document.getElementById("volumeIcon").onclick = () => { toggleVolume(); };
-
+  document.getElementById("mapOverlay").onclick = () => {
+    toggleMap();
+  };
+  document.getElementById("journalOverlay").onclick = () => {
+    toggleJournal();
+  };
+  document.getElementById("volumeIcon").onclick = () => {
+    toggleVolume();
+  };
 </script>

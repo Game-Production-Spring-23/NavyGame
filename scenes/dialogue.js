@@ -25,7 +25,7 @@ export function startDialogue(index, data) {
   let dialogueIndex = 0;
   let scrollIndex = 0;
   let scrollTimer;
-  let scrollSpeed = 50;
+  let scrollSpeed = 15; // To increase speed, decrease value
 
   fetch(dataPath)
     .then((response) => response.json())
@@ -122,11 +122,11 @@ export function startDialogue(index, data) {
         rightPortrait.src = dialogue[dialogueIndex].otherPortrait;
 
         //play audio if it exists
-        if(dialogue[dialogueIndex].audio != null) {
+        if (dialogue[dialogueIndex].audio != null) {
           audioPlayer.src = dialogue[dialogueIndex].audio;
           audioPlayer.play();
         }
-		
+
         //if the player is talking
         if (dialogue[dialogueIndex].isPlayerTalking) {
           //Enlarge and brighten left portrait, while shrink and darken right
