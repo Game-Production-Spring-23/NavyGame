@@ -331,6 +331,10 @@ h3 {
   margin-right: 20px;
   transition: 0.5s;
 }
+.uiIcon:active {
+  transform: scale(0.8);
+  transition: 0.2s;
+}
 
 /* Position UI icons right side of the screen*/
 #exitOverlay {

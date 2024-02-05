@@ -1,78 +1,98 @@
 <!--Html boilerplate-->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!--Set Viewport Size to 1080 x 1920-->
 
     <title>The Mystery of Vee Island</title>
     <!---change name once we have one-->
-    <link rel="icon" type="image/x-icon" href="/assets/images/mapOne.png">
-    <link id="styleSheet" rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/images/mapOne.png" />
+    <link id="styleSheet" rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
 
-    <link id="style" rel="stylesheet" href="/style.css">
-</head>
+    <link id="style" rel="stylesheet" href="/style.css" />
+  </head>
 
-<body>
+  <body>
     <div id="htmlMainContainer">
-        <!--
+      <!--
             Elements from a level's HTML File get loaded into here...
         -->
     </div>
+    <!-- 
+        Audio / Sound
+     -->
     <audio id="audio" autoplay loop>
-        <source src="/assets/audio/bgMusic/cursedSea.mp3" type="audio/mpeg">
+      <source src="/assets/audio/bgMusic/cursedSea.mp3" type="audio/mpeg" />
+      <!-- <source src="assets/audio/bgMusic/cursedSea.mp3" type="audio/mpeg" /> -->
     </audio>
-	<audio id="voiceover"></audio>
-    <div id="settingsContainer">
-    </div>
-
-
+    <audio id="voiceover"></audio>
+    <div id="settingsContainer"></div>
 
     <!-- UI Containers ----------------------------------------------------------------------------------------------------------------->
     <div id="journalContainer">
-        <div id="journalModal" class="modal">
-        </div>
+      <div id="journalModal" class="modal"></div>
     </div>
     <div id="mapContainer">
-        <div id="mapModal" class="modal">
-            <div id="miniMap" class="modalCard">
-            </div>
-        </div>
+      <div id="mapModal" class="modal">
+        <div id="miniMap" class="modalCard"></div>
+      </div>
     </div>
     <!---Arrow UIS-->
     <div id="leftArrowKeyboard">
-        <img id="lArrowUI" src="/assets/images/ui/keyLeft.png">
+      <img id="lArrowUI" src="/assets/images/ui/keyLeft.png" />
     </div>
 
     <div id="rightArrowKeyboard">
-        <img id="rArrowUI" src="/assets/images/ui/keyRight.png">
+      <img id="rArrowUI" src="/assets/images/ui/keyRight.png" />
     </div>
 
-
-    <input type="image" id="uiTab" onclick="uiClose()" src="/assets/images/ui/uiTabClose.png">
+    <input
+      type="image"
+      id="uiTab"
+      onclick="uiClose()"
+      src="/assets/images/ui/uiTabClose.png"
+    />
 
     <div id="uiOverlayLeft">
-
-        <div id="charRank" class="uiIcon"></div>
-        <p id="rankText">Rank</p>
-        <input id="volumeIcon" class="uiIcon" type="image" onclick="toggleVolume()" value="Options"
-            src="/assets/images/ui/soundBtn.png">
-        <input id="journalOverlay" class="uiIcon" type="image" onclick="toggleJournalOn()" value="Journal"
-            src="/assets/images/ui/pixelJournalIcon.png">
-        <input id="mapOverlay" class="uiIcon" type="image" value="Map" src="/assets/images/ui/pixelMapIcon.png">
-
+      <div id="charRank" class="uiIcon"></div>
+      <p id="rankText">Rank</p>
+      <input
+        id="volumeIcon"
+        class="uiIcon"
+        type="image"
+        onclick="toggleVolume()"
+        value="Options"
+        src="/assets/images/ui/soundBtn.png"
+      />
+      <input
+        id="journalOverlay"
+        class="uiIcon"
+        type="image"
+        onclick="toggleJournalOn()"
+        value="Journal"
+        src="/assets/images/ui/pixelJournalIcon.png"
+      />
+      <input
+        id="mapOverlay"
+        class="uiIcon"
+        type="image"
+        value="Map"
+        src="/assets/images/ui/pixelMapIcon.png"
+      />
     </div>
 
     <div id="transition">
-        <img src="/assets/images/NG_Loading.gif" />
+      <img src="/assets/images/NG_Loading.gif" />
     </div>
-</body>
-<script type="module" src="./index.js"></script>
-
+  </body>
+  <script type="module" src="./index.js"></script>
 </html>
