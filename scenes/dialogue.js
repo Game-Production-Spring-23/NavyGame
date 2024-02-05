@@ -19,6 +19,7 @@ export function startDialogue(index, data) {
   const leftPortrait = document.getElementById("lCharaPortrait");
   const rightPortrait = document.getElementById("rCharaPortrait");
   const dialogueImage = document.getElementById("dialogueImage");
+  const audioPlayer = document.getElementById("voiceover");
 
   //variables
   let dialogueIndex = 0;
@@ -120,6 +121,12 @@ export function startDialogue(index, data) {
         //Sets right's portrait
         rightPortrait.src = dialogue[dialogueIndex].otherPortrait;
 
+        //play audio if it exists
+        if(dialogue[dialogueIndex].audio != null) {
+          audioPlayer.src = dialogue[dialogueIndex].audio;
+          audioPlayer.play();
+        }
+		
         //if the player is talking
         if (dialogue[dialogueIndex].isPlayerTalking) {
           //Enlarge and brighten left portrait, while shrink and darken right

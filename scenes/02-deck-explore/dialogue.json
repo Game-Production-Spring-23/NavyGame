@@ -9,8 +9,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "",
         "isPlayerTalking": false,
-        "text": "Ahoy matey! Ye be welcome to the deck! Use the arrow keys or the [w] or [d] key to move yer booty, and the [e] key to parley with the crew."
-      }
+        "text": "Ahoy matey! Ye be welcome to the deck! Use the arrow keys or the [w] or [d] key to move yer booty, and the [e] key to parley with the crew.",
+		    "audio": "/assets/audio/voiceover/test.mp3"
+	  }
     ]
   },
   {
