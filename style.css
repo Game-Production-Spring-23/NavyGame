@@ -208,6 +208,30 @@ h3 {
   flex-direction: column;
 }
 
+.menuItem {
+  position: relative;
+}
+span {
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(28, 28, 70);
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: clamp(20px, 1.75vw, 28px);
+  padding: 15px 20px;
+  width: 10.25vw;
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  top: 1vw;
+}
+.menuItem:hover span {
+  visibility: visible;
+  opacity: 1;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+
 #settingModal {
   display: none;
 }

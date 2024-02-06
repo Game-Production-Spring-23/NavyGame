@@ -65,29 +65,41 @@
     <div id="uiOverlayLeft">
       <div id="charRank" class="uiIcon"></div>
       <p id="rankText">Rank</p>
-      <input
-        id="volumeIcon"
-        class="uiIcon"
-        type="image"
-        onclick="toggleVolume()"
-        value="Options"
-        src="/assets/images/ui/soundBtn.png"
-      />
-      <input
-        id="journalOverlay"
-        class="uiIcon"
-        type="image"
-        onclick="toggleJournalOn()"
-        value="Journal"
-        src="/assets/images/ui/pixelJournalIcon.png"
-      />
-      <input
-        id="mapOverlay"
-        class="uiIcon"
-        type="image"
-        value="Map"
-        src="/assets/images/ui/pixelMapIcon.png"
-      />
+
+      <div class="menuItem">
+        <input
+          id="volumeIcon"
+          class="uiIcon"
+          type="image"
+          onclick="toggleVolume()"
+          value="Options"
+          src="/assets/images/ui/soundBtn.png"
+        />
+        <span>Mute music</span>
+      </div>
+
+      <div class="menuItem">
+        <input
+          id="journalOverlay"
+          class="uiIcon"
+          type="image"
+          onclick="toggleJournalOn()"
+          value="Journal"
+          src="/assets/images/ui/pixelJournalIcon.png"
+        />
+        <span> Journal </span>
+      </div>
+
+      <div class="menuItem">
+        <input
+          id="mapOverlay"
+          class="uiIcon"
+          type="image"
+          value="Map"
+          src="/assets/images/ui/pixelMapIcon.png"
+        />
+        <span>Check Map</span>
+      </div>
     </div>
 
     <div id="transition">
