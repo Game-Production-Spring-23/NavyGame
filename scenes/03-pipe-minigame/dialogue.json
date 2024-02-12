@@ -17,7 +17,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "text": "Ahoy, matey. Lend an' old seafarer a hand would ye"
+        "text": "Ahoy, matey. Lend an' old seafarer a hand would ye",
+        "audio": "/assets/audio/voiceover/Tests/Gobs/ImaniPeters_NewGobs.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -25,7 +26,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
-        "text": "Aye aye. What can I help ye with?"
+        "text": "Aye aye. What can I help ye with?",
+        "audio": "/assets/audio/voiceover/Tests/Player/ImaniPeters_NewPlayer.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -41,7 +43,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
-        "text": "Sounds simple enough. What d'ya need me for?"
+        "text": "Sounds simple enough. What d'ya need me for?",
+        "audio": "/assets/audio/voiceover/Tests/Player/ImaniPeters_NewPlayer.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
