@@ -9,7 +9,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Ho ho, me hearty! 'Tis time to get our hands dirty and fix this ship up proper! Ye've spoken with th' crew and got some intel that th' rudder, main mast, and foremast be damaged."
+        "text": "Ho ho, me hearty! 'Tis time ta get our hands dirty and fix this ship up proper! Ye've spoken with tha crew and got some intel that tha rudder, main mast, and foremast be damaged."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -17,7 +17,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "But wait, we've got ourselves some outline puzzle games to solve first! Ye'll be given an outline puzzle piece game for each o' the rudder, main mast, and foremast. Ye must solve them to learn what part needs to be repaired first, second, or third."
+        "text": "But wait, we've got ourselves some outline puzzle games ta solve first! Ye'll be given an outline puzzle piece game for each o' tha rudder, main mast, and foremast. Ye must solve them ta learn what part needs ta be repaired first, second, or third."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -25,15 +25,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Listen closely, me hearties! Each piece o' the puzzle corresponds to a specific part o' the ship. Ye must use yer knowledge o' th' MBSE approach to assess th' damage to each part and figure out th' proper order o' repair."
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "Solve each puzzle piece by piece, and as ye do, the order o' repair will become clear. Be swift, be smart, and fix these parts up right, so we can set sail and find our new adventure! Arrr!"
+        "text": "Listen closely, me hearties! Ye must use yer MBSE knowledge ta assess tha damage ta each part and figure out tha proper order o’ repair. Be swift, be smart, and fix these parts up right, so we can set sail and find our new adventure! Arrr!"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -41,7 +33,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/NG_empty.png",
         "isPlayerTalking": false,
-        "text": "How to play: Drag and drop each the correct piece into the highlighted section of a  ship part. Click on each of the post-it notes to switch what ship part you want to work on. When you complete the part the Crossbird should let you know the time importance of said part."
+        "text": "How ta play: Drag and drop each tha correct piece inta tha highlighted section o’ a ship part. Click on each o’ tha post-it notes ta switch what ship part ye want ta work on. When ye complete tha part tha Crossbird should let ye know tha time importance o’ said part."
       }
     ]
   },
@@ -55,7 +47,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "We'll be fixin' the foremast last, which is still important, but not as crucial as the others."
+        "text": "We'll be fixin' tha foremast last, which is still important, but not as crucial as tha othars."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -63,7 +55,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Buckle down and prioritize the repairs to get the whole ship up and runnin' again, and fast!"
+        "text": "Buckle down and prioritize tha repairs ta get tha whole ship up and runnin' again, and fast!"
       }
     ]
   },
@@ -77,7 +69,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Arrr, it be crucial we fix the rudder first, as it be responsible for steerin' our vessel. Without a properly functioning rudder, the ship may not be able to navigate and could be at risk of running aground or colliding with other ships."
+        "text": "Arrr, it be crucial we fix tha rudder first, as it be responsible for steerin' our vessel. Without a properly functioning rudder, tha ship may not be able ta navigate and could be at risk o’ running aground or colliding with othar ships."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -85,7 +77,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Avast ye! The puzzles ye solved showed us the repair order for the parts of the ship that be damaged."
+        "text": "Avast ye! Tha puzzles ye solved showed us tha repair order for tha parts o’ tha ship that be damaged."
       }
     ]
   },
@@ -99,7 +91,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "We can mov'in to repair yon main mast second, which be holdin' our sails high and provide the power to move the ship forward."
+        "text": "We can mov'in ta repair yon main mast second, which be holdin' our sails high and provide tha power ta move tha ship forward."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -107,7 +99,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Arrr, settin' priorities for the repairs be crucial if we want our ship to sail again in a jiffy."
+        "text": "Arrr, settin' priorities for tha repairs be crucial if we want our ship ta sail again in a jiffy."
       }
     ]
   },
@@ -115,37 +107,13 @@
     "otherName": "Cross Bird",
     "otherOffset": -50,
     "dialogue": [
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "Avast! Listen ye all! Yer task is to drag the damaged parts to place them in the priority order based on the repair order ye have learned in the previous outline puzzle games."
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "Make sure ye got the first line representin' the ship's part that should be fixed first, the second line the ship's part that should be fixed second, and the third line the ship's part that should be fixed last, ya scallywag!"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "Once ye are certain with the priority order, click on the ink well to submit yer answer. "
-      },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/NG_empty.png",
         "isPlayerTalking": false,
-        "text": "How to play: Drag and drop each element in the list in the order mentioned previously. After all three elements have been ordered accordingly click on the ink well on the bottom right to check if it is correct"
+        "text": "How ta play: Drag and drop each element in tha list in tha order mentioned previously. After all three elements have been ordered accordingly click on tha ink well on tha bottam right ta check if it is correct."
       }
     ]
   },
@@ -159,7 +127,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk*! Hoist the Jolly Roger, ye scurvy dog! Ye proved yer worth by completing this challenge with the correct repair order! Carry on with the repairs, and make sure they're shipshape and Bristol fashion! "
+        "text": "*Squawk*! Hoist tha Jolly Roger, ye scurvy dog! Ye proved yer worth by completing this challenge with tha correct repair order! Carry on with tha repairs, and make sure thay're shipshape and Bristal fashion!"
       }
     ]
   }
