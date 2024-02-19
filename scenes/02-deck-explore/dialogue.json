@@ -7,9 +7,9 @@
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Ahoy matey! Ye be welcome to the deck! Use the arrow keys or the [w] or [d] key to move yer booty, and the [e] key to parley with the crew.",
+        "text": "Ahoy matey! Ye be welcome ta tha deck! Use tha arrow keys or tha [w] or [d] key ta move yer booty, and tha [e] key ta parley with tha crew.",
         "audio": "/assets/audio/voiceover/Tests/Parrot/ImaniPeters_Parrot.mp3"
       }
     ]
@@ -24,15 +24,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Ahoy there, me hearty! *Squawk* I'm Cross Bird, the pirate parrot. I see you are with the pirate ship Signet Messenger! *Squawk* Chief Engineer no less!"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "I have been a ship's parrot going over 200 years now *Squawk* and have seen me fair share of repairs. How can I help ye?"
+        "text": "Ahoy there, me hearty! *Squawk* I'm Cross Bird, tha pirate parrot. I have been a ship's parrot going over 200 years now *Squawk* and have seen me fair share o’ repairs. How can I help ye?"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -40,7 +32,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "I've been hearing some scuttlebutt from the Pirate School of Engineering about a way to get better at making repairs. What do ye know of it?"
+        "text": "I’m part of the Signet Messenger crew and I've been hearing some scuttlebutt from tha Pirate School o’ Engineering about a way ta get better at making ship repairs. What do ye know o’ it?"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -48,7 +40,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Aye! There is. *Squawk* Have ya heard of Model Based Systems Engineering?"
+        "text": "Aye! There is. *Squawk* Have ya heard o’ Model Based Systems Engineering?"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -64,7 +56,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Model-based systems engineering, or MBSE for short, is a way of designing and building complex systems using computer models."
+        "text": "*Squawk* Model-based systems engineering, or MBSE for short, is a way o’ designing and building complex systems using computer models."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -72,7 +64,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "It can help ye be better pirate engineers by improving the ship systems' efficiency and effectiveness. *Squawk*"
+        "text": "It can help ye be better pirate engineers by improving tha ship systems' efficiency and effectiveness. *Squawk*"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -88,7 +80,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "As a pirate engineer, ye know how important it is to make sure ships and systems are safe and reliable to take on them thar new adventures."
+        "text": "Systems Engineering (SE) can help test ye different approaches ta see how tha ship's systems would behave under different conditions ta make sure it is safe and reliable for ye adventures."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -96,15 +88,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Systems Engineering (SE) can help test ye different approaches to see how the ship's systems would behave under different conditions."
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "These systems can include hardware, software, information, processes, facilities and more, working together as part of an interconnecting network."
+        "text": "These systems can include hardware, software, information, processes, facilities and more, working together as part o’ an interconnecting network."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -120,7 +104,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "MBSE is a form of SE. With MBSE, ye can create digital models of our ships and systems to show us all the important parts and how they fit together."
+        "text": "MBSE is a form o’ SE. With MBSE, ye can create digital models o’ our ships and systems ta show us all tha important parts and how thay fit together."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -128,15 +112,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Need to take on the Pirates of Ambush Island? Ye can model their defenses and test the Signet Messenger's canon upgrades before spending many chests of ye gold. "
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "*Squawk* Thar models help ye better understand the approach to repairing the ships, and to catch any potential problems before they become too costly to fix."
+        "text": "*Squawk* Thar models help ye better understand tha approach ta repairing tha ships, and ta catch any potential problems before thay become too costly ta fix."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -152,7 +128,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "I think so. There be a process to follow?"
+        "text": "I think so. There be a process ta follow?"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -160,7 +136,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Aye! *Squawk* There be six core steps of Systems Engineering.",
+        "text": "Aye! *Squawk* There be six core steps o’ Systems Engineering.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -268,31 +244,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Using the Requirements Development and System Analysis step, ye crew uses computer models to simulate different scenarios and identify the requirements for making yon ship repairs.",
-        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
-        "imageWidth": "960px",
-        "imageHeight": "540px",
-        "imageTopOffset": "100px"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "Y'all have to consider factors like *Squawk* available resources, time constraints, safety requirements, and risks involved.",
-        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
-        "imageWidth": "960px",
-        "imageHeight": "540px",
-        "imageTopOffset": "100px"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": true,
-        "text": "Got it. What's next?",
+        "text": "Using tha Requirements Development and System Analysis step, ye crew uses computer models ta simulate different scenarios and identify tha requirements for making yon ship repairs. These include available resources, time constraints, safety requirements, and risks involved.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -304,7 +256,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "For the Logical Analysis and Design Solution step ye use the same models to design and optimize the repair solutions.",
+        "text": "For tha Logical Analysis and Design Solution step ye use tha same models ta design and optimize tha repair solutions. Balance factars like risk, speed, power, and safety.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -316,31 +268,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Yon team needs to continue to balance factors like risk, speed, power, and safety to come up with a logical design solution that meets all the requirements.",
-        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
-        "imageWidth": "960px",
-        "imageHeight": "540px",
-        "imageTopOffset": "100px"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": true,
-        "text": "And then what happens?",
-        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
-        "imageWidth": "960px",
-        "imageHeight": "540px",
-        "imageTopOffset": "100px"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-        "text": "Ye has ta' get 'er done in the Implementation step. *Squawk* This means actually carrying out the repairs.",
+        "text": "Ye has ta' get 'er done in tha Implementation step. *Squawk* This means actually carrying out tha repairs.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -352,7 +280,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Then, with the Integration step, ye have to make sure everything works together smoothly and efficiently with the ship's existing systems.",
+        "text": "Then, with tha Integration step, ye have ta make sure everything works together smoothly and efficiently with tha ship's existing systems.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -376,7 +304,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Ye haf'ta do the Verification and Validation step with the computer models. Ye' crew needs to test and verify that everything is working correctly and meets all the requirements.",
+        "text": "*Squawk* Ye haf'ta do tha Verification and Validation step with tha computer models. Ye' crew needs ta test and verify that everything is working correctly and meets all tha requirements.",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -400,7 +328,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. The Transition step gets the ship back to its normal operating mode, and move ye crew to the next repair. Got all this? *Squawk*",
+        "text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. Tha Transition step gets tha ship back ta its normal operating mode, and move ye crew ta tha next repair. Got all this? *Squawk*",
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -412,7 +340,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "That sounds like just the ticket for our crew and our ship!"
+        "text": "That sounds like just tha ticket for our crew and our ship!"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -429,19 +357,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": true,
         "text": "Aye I did!"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
-        "isPlayerTalking": true,
-        "text": "1) Requirements Development and System Analysis, 2) Logical Analysis and Design Solution, 3) Implementation, 4) Integration, 5) Verification and Validation, and 6) Transition",
-        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
-        "imageWidth": "960px",
-        "imageHeight": "540px",
-        "imageTopOffset": "100px"
-      },
+      },  
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
@@ -464,7 +380,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "*Squawk* Learning SE can take some time, but it's worth the investment and effort."
+        "text": "*Squawk* Learning SE can take some time, but it's worth tha investment and effort."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -472,7 +388,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "You and ye crew will come away understanding SE better and how to apply it to ye work as pirate engineers. Are ye game? *Squawk*"
+        "text": "Ye and yer crew will come away understanding SE better and how ta apply it ta ye work as pirate engineers. Are ye game? *Squawk*"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",

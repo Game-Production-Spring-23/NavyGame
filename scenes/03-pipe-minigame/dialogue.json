@@ -17,7 +17,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "text": "Ahoy, matey. Lend an' old seafarer a hand would ye",
+        "text": "Ahoy, matey. Lend an' old seafarer a hand would ye?",
         "audio": "/assets/audio/voiceover/Tests/Gobs/ImaniPeters_NewGobs.mp3"
       },
       {
@@ -35,7 +35,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "text": "To be honest with ya lad, me memory's not what she used ta be. The boiler downstairs be having a scary steam build up and we be needing ta release the steam by releasing the valves in the correct order."
+        "text": "Ta be honest with ye lad, me memory's not what she used ta be. Tha boiler downstairs be having a scary steam build up and we be needing ta release tha steam by releasing tha valves in tha correct order."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -52,7 +52,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "text": "Like I said, me memory's not all she used ta be. I'm just not quite sure I remember which valve needs ta be released and when and there be not enough time to review tha manual."
+        "text": "Like I said, me memory's not all she used ta be. I don’t remember which valve needs ta be released or when, and there be not enough time. So long as ye remember yer MBSE flow, ye'll do fine. Trust me."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi4.png",
@@ -60,7 +60,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC4.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
-        "text": "I haven't been taught to operate the boiler. How can I help?"
+        "text": "I haven't been taught ta operate tha boiler. How can I help?"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi4.png",
@@ -68,67 +68,31 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC4.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "text": "So long as ye remember yer MBSE flow, you'll do fine. Trust me. C'mon, there be little time!"
+        "text": "Just don’t let it explode."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/gob.png",
-        "isPlayerTalking": false,
-        "text": "Hover yer mouse over the valves to see which step in the MBSE it is."
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/gob.png",
-        "isPlayerTalking": false,
-        "text": "From the first step to the last, loosen the valves in the correct order of the MBSE flow. "
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/gob.png",
-        "isPlayerTalking": false,
-        "text": "When ye think ye have it right, press the arrow button to the right to expel the steam."
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/gob.png",
-        "isPlayerTalking": false,
-        "text": "If ye can't do it, then all hope be lost."
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi4.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB4.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC4.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
         "text": "No pressure."
       },
       {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi4.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB4.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC4.png",
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "text": "Ye'll be fine. Sailors honor."
+        "text": "How ta play: yer goal is ta make all six valves resemble tha MBSE Model, hover yer mouse over a valve (shown in tha picture above), ta see what value it is, and left click it ta change tha value."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/NG_empty.png",
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "text": "How to play: your goal is to make all six valves resemble the MBSE Model, hover your mouse over a valve (shown in the picture above), to see what value it is, and left click it to change the value",
-        "image": "/assets/images/minigame1/howToPlay_1.png",
-        "imageWidth": "1440px",
-        "imageHeight": "810px",
-        "imageTopOffset": "50px"
+        "text": "When finished press tha arrow icon on tha bottam left, if tha valve turns green that means ye are correct, and if it turns red, it means ye need ta try again."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -150,7 +114,7 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
-        "text": "Ahoy matey! Shiver me timbers, ye have finished the steam pipe demonstration! Ye be ready to set sail and take on new challenges. Arrr!"
+        "text": "Ahoy matey! Shiver me timbers, ye have finished tha steam pipe demonstration! Ye be ready ta set sail and take on new challenges. Arrr!"
       }
     ]
   }
