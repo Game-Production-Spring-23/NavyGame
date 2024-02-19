@@ -10,7 +10,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Squwak! Ahoy Chief Engineer! I heard you found a damaged centrifugal pump. What are you planning to do about it?"
+        "text": "*Squawk* Ahoy Chief Engineer! I heard ye found a damaged centrifugal pump. What are ye planning ta do about it?"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -19,7 +19,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "Yes Cross Bird, we need to replace yon damaged pump to remove water from the ship. Luckily, there is a lumber camp and blacksmith in the native village. We need to engage them to make a new pump for us."
+        "text": "Cross Bird, we need ta replace yon damaged pump ta remove water from tha ship. Luckily, there is a lumber camp and blacksmith in tha native village. We need ta engage them ta make a new pump for us."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -28,7 +28,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Squawk! Thar be great news! But how will ye communicate with yon blacksmith if they be speaking unknown languages?"
+        "text": "*Squawk* Thar be great news! But how will ye communicate with yon blacksmith if thay be speaking unknown languages?"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -37,7 +37,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "They may not speak our language, but they know SysML (Systems Modeling Language), the language of systems engineering. We can use SysMLdiagrams to show to the blacksmith our main requirement to remove water from the ship and that a pump of a certain size and performance will satisfy that."
+        "text": "Thay may not speak our language, but thay know SysML (Systems Modeling Language), tha language o’ systems engineering. We can use SysMLdiagrams ta show ta tha blacksmith our main requirement ta remove water from tha ship and that a pump o’ a certain size and performance will satisfy that."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -46,7 +46,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "If the blacksmith can understand our diagrams we can get our pump."
+        "text": "If tha blacksmith can understand our diagrams, we can get our pump."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -55,7 +55,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Sounds like a plan! Do we have enough gold and silver to pay them for their services? Squwak!"
+        "text": "Sounds like a plan! Do we have enough gold and silver ta pay them for thair services? Squawk!"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -64,7 +64,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "Aye, We have some gold and silver doubloon in our treasure... We be needing to negotiate with them for a fair price and timeline for the pump's delivery."
+        "text": "Aye, We have some gold and silver doubloon in our treasure... We be needing ta negotiate with them for a fair price and timeline for tha pump's delivery."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -73,7 +73,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Squawk! I'll be relaying this information to the Captain so ye can start engaging the native blacksmiths and carpenters."
+        "text": "*Squawk* I'll be relaying this information ta tha Captain so ye can start engaging tha native blacksmiths and carpenters."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -82,7 +82,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Them natives be a mischievous lot, and their tongue be a devilish thing to decipher, so take this here Block Definition Diagram of the centrifugal pump to help ye."
+        "text": "Them natives be a mischievous lot, and thair tongue be a devilish thing ta decipher, so take this here Block Definition Diagram o’ tha centrifugal pump ta help ye."
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -91,7 +91,7 @@
         "playerPortrait3": "",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "If ye follow this path into the jungle, ye'll come across the blacksmith at his hut."
+        "text": "If ye follow this path inta tha jungle, ye'll come across tha blacksmith at his hut."
       }
     ]
   }
