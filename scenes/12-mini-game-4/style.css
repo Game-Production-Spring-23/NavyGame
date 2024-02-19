@@ -1,140 +1,164 @@
 /* Base Styles */
 :root {
-    /* Speech Bubble Vars */
-    --speech-bubble-top-spacing: 68vh;
-    --speech-bubble-1-left-spacing: 18vw;
-    --speech-bubble-2-left-spacing: 50vw;
-    --speech-bubble-3-left-spacing: 83vw;
+  /* Speech Bubble Vars */
+  --speech-bubble-top-spacing: 68vh;
+  --speech-bubble-1-left-spacing: 18vw;
+  --speech-bubble-2-left-spacing: 50vw;
+  --speech-bubble-3-left-spacing: 83vw;
 
-    --speech-bubble-width: 295px;
-    --speech-bubble-height: 335px;
+  --speech-bubble-width: 295px;
+  --speech-bubble-height: 335px;
 
-    /* Options Vars */
-    --options-left-spacing: 3vw;
-    --options-width: 400px;
-    --options-height: 150px;
+  /* Options Vars */
+  --options-left-spacing: 3vw;
+  --options-width: 400px;
+  --options-height: 150px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: antiquewhite;
 }
 
 /* reset button */
 #resetBtn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 
-    transform: rotate(-25deg);
+  transform: rotate(-25deg);
 
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 /* Speech Bubble Styles */
 .speech-bubbles {
-    background-image: url("/scenes/12-mini-game-4/images/NG_RiskAssessment_SpeechBubble.png");
-    background-color: transparent;
-    position: absolute;
-    user-select: none;
+  background-image: url("/scenes/12-mini-game-4/images/NG_RiskAssessment_SpeechBubble.png");
+  background-color: transparent;
+  position: absolute;
+  user-select: none;
 
-    top: var(--speech-bubble-top-spacing);
+  /* top: var(--speech-bubble-top-spacing); */
+  bottom: 0;
 
-    width: var(--speech-bubble-width);
-    height: var(--speech-bubble-height);
+  width: var(--speech-bubble-width);
+  height: var(--speech-bubble-height);
 
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 #speech-bubble-1 {
-    left: var(--speech-bubble-1-left-spacing);
+  /* left: var(--speech-bubble-1-left-spacing); */
+  left: calc(var(--speech-bubble-1-left-spacing) + 4vw);
 }
 
 #speech-bubble-2 {
-    left: var(--speech-bubble-2-left-spacing);
+  /* left: var(--speech-bubble-2-left-spacing); */
+  left: calc(var(--speech-bubble-2-left-spacing) + 12vw);
 }
 
 #speech-bubble-3 {
+  /* left: var(--speech-bubble-3-left-spacing); */
+  left: calc(var(--speech-bubble-3-left-spacing) + 20vw);
+}
+
+@media screen and (min-width: 1920px) {
+  #speech-bubble-1 {
+    left: var(--speech-bubble-1-left-spacing);
+  }
+  #speech-bubble-2 {
+    left: var(--speech-bubble-2-left-spacing);
+  }
+  #speech-bubble-3 {
     left: var(--speech-bubble-3-left-spacing);
+  }
 }
 
 .speech-bubble-text {
-    font: bolder;
-    font-size: x-large;
-    padding-top: 15px;
-    padding-left: 75px;
-    padding-right: 30px;
-    user-select: none;
-    color: black;
+  font: bolder;
+  font-size: x-large;
+  padding-top: 15px;
+  padding-left: 75px;
+  padding-right: 30px;
+  user-select: none;
+  color: black;
 }
 
 /* Options Styles */
 .option {
-    background-image: url("/scenes/12-mini-game-4/images/NG_RiskAssessment_Options_Sheet.png");
-    background-color: transparent;
-    position: absolute;
-    user-select: none;
+  background-image: url("/scenes/12-mini-game-4/images/NG_RiskAssessment_Options_Sheet.png");
+  background-color: transparent;
+  position: absolute;
+  user-select: none;
 
-    left: var(--options-left-spacing);
+  left: var(--options-left-spacing);
 
-    width: var(--options-width);
-    height: var(--options-height);
+  width: var(--options-width);
+  height: var(--options-height);
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
-    z-index: 1;
+  z-index: 1;
 }
 
 #option-1 {
-    transform: rotate(5deg);
-    top: 5vh;
+  transform: rotate(5deg);
+  top: 5vh;
 }
 
 #option-2 {
-    transform: rotate(-7deg);
-    top: 25vh;
+  transform: rotate(-7deg);
+  top: 25vh;
 }
 
 #option-3 {
-    transform: rotate(2deg);
-    top: 44vh;
+  transform: rotate(2deg);
+  top: 44vh;
 }
 
 .option-text {
-    font-size: xx-large;
-    padding-top: 30px;
-    user-select: none;
-    color: black;
-    font-weight: bolder;
+  font-size: xx-large;
+  padding-top: 30px;
+  user-select: none;
+  color: black;
+  font-weight: bolder;
 }
 
 /* Severity-Probability Grid Styles */
 #severity-probability-grid {
-    background-color: transparent;
-    
-    position: absolute;
+  background-color: transparent;
+
+  position: absolute;
+  top: 10vh;
+  left: 53.5vw;
+  width: 63.5vw;
+  height: 52vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 4px;
+  user-select: none;
+}
+@media screen and (min-width: 1920px) {
+  #severity-probability-grid {
     top: 8vh;
     left: 43vw;
     width: 50.5vw;
     height: 43vh;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 4px;
-    user-select: none;
+  }
 }
 
 .grid-item {
-    background-color: transparent;
+  background-color: transparent;
 
-    border-style: solid;
-    border-width: 5px;
+  border-style: solid;
+  border-width: 5px;
 }
