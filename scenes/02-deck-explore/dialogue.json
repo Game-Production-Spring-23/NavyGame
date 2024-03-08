@@ -9,8 +9,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Ahoy matey! Ye be welcome ta tha deck! Use tha arrow keys or tha [w] or [d] key ta move yer booty, and tha [e] key ta parley with tha crew.",
-        "audio": "/assets/audio/voiceover/Tests/Parrot/ImaniPeters_Parrot.mp3"
+"text": "Ahoy matey! Ye be welcome ta tha deck! Use tha arrow keys or tha [w] or [d] key ta move yer booty, and tha [e] key ta parley with tha crew.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-01.mp3"
       }
     ]
   },
@@ -24,7 +24,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Ahoy there, me hearty! *Squawk* I'm Cross Bird, tha pirate parrot. I have been a ship's parrot going over 200 years now *Squawk* and have seen me fair share o’ repairs. How can I help ye?"
+"text": "Ahoy there, me hearty! *Squawk* I'm Cross Bird, tha pirate parrot. I have been a ship's parrot going over 200 years now *Squawk* and have seen me fair share o’ repairs. How can I help ye?",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-02.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -32,7 +33,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-        "text": "I’m part of the Signet Messenger crew and I've been hearing some scuttlebutt from tha Pirate School o’ Engineering about a way ta get better at making ship repairs. What do ye know o’ it?"
+"text": "I’m part of the Signet Messenger crew and I've been hearing some scuttlebutt from tha Pirate School o’ Engineering about a way ta get better at making ship repairs. What do ye know o’ it?",
+"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-01.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -40,7 +42,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Aye! There is. *Squawk* Have ya heard o’ Model Based Systems Engineering?"
+"text": "Aye! There is. *Squawk* Have ya heard o’ Model Based Systems Engineering?",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-03.mp3"
+
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
