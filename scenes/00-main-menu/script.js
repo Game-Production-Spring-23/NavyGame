@@ -16,9 +16,9 @@ export function mainMenu() {
   let mainContainer = document.getElementById("app");
   let mapStatus = false;
   let uiOverlay = document.getElementById("uiOverlay");
-  
-  //sets the music volume to half 
-  music.volume = 0.5;
+
+  //sets the music volume to half
+  music.volume = 0.05;
 
   //shows map in a pop up box when clicked
   // function toggleMap() {

@@ -194,11 +194,11 @@ uiKeyLt.style.display = "none";
 
 function toggleVolume() {
   if (volume == true) {
+    let volumeIcon = document.getElementById("volumeIcon");
     music.volume = 0;
     volume = false;
-    let volumeIcon = document.getElementById("volumeIcon");
   } else {
-    music.volume = 0.5;
+    music.volume = 0.05;
     volume = true;
   }
 }
