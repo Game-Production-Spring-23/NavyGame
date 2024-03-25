@@ -9,8 +9,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-"text": "Ahoy matey! Ye be welcome ta tha deck! Use tha arrow keys or tha [w] or [d] key ta move yer booty, and tha [e] key ta parley with tha crew.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-01.mp3"
+        "text": "Ahoy matey! Ye be welcome ta tha deck! Use tha arrow keys or tha [w] or [d] key ta move yer booty, and tha [e] key ta parley with tha crew.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-01.mp3"
       }
     ]
   },
@@ -24,8 +24,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-"text": "Ahoy there, me hearty! *Squawk* I'm Cross Bird, tha pirate parrot. I have been a ship's parrot going over 200 years now *Squawk* and have seen me fair share o’ repairs. How can I help ye?",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-02.mp3"
+        "text": "Ahoy there, me hearty! *Squawk* I'm Cross Bird, tha pirate parrot. I have been a ship's parrot going over 200 years now *Squawk* and have seen me fair share o’ repairs. How can I help ye?",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-02.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -33,8 +33,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-"text": "I’m part of the Signet Messenger crew and I've been hearing some scuttlebutt from tha Pirate School o’ Engineering about a way ta get better at making ship repairs. What do ye know o’ it?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-01.mp3"
+        "text": "I’m part of the Signet Messenger crew and I've been hearing some scuttlebutt from tha Pirate School o’ Engineering about a way ta get better at making ship repairs. What do ye know o’ it?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-01.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -42,9 +42,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-"text": "Aye! There is. *Squawk* Have ya heard o’ Model Based Systems Engineering?",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-03.mp3"
-
+        "text": "Aye! There is. *Squawk* Have ya heard o’ Model Based Systems Engineering?",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-03.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -52,8 +51,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-"text": "Some. Tell me more.""text": "Some. Tell me more.",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-02.mp3"
+        "text": "Some. Tell me more.",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-02.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -62,9 +61,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "*Squawk* Model-based systems engineering, or MBSE for short, is a way o’ designing and building complex systems using computer models.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-04.mp3"
-	
+        "text": "*Squawk* Model-based systems engineering, or MBSE for short, is a way o’ designing and building complex systems using computer models.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-04.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -72,9 +70,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-"text": "It can help pirates be better engineers by improving tha ship systems' efficiency and effectiveness. *Squawk*",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-05.mp3"
-	
+        "text": "It can help pirates be better engineers by improving tha ship systems' efficiency and effectiveness. *Squawk*",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-05.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -82,9 +79,8 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
-"text": "How so?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-03.mp3"
-
+        "text": "How so?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-03.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -93,9 +89,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "Systems Engineering (SE) can help test yer different approaches ta see how tha ship's systems would behave under different conditions ta make sure it is safe and reliable for ye adventures.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-06.mp3"
-	
+        "text": "Systems Engineering (SE) can help test yer different approaches ta see how tha ship's systems would behave under different conditions ta make sure it is safe and reliable for ye adventures.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-06.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -103,9 +98,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-	
-"text": "These systems can include hardware, software, information, processes, facilities and more, working together as part o’ an interconnecting network.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-07.mp3"	
+
+        "text": "These systems can include hardware, software, information, processes, facilities and more, working together as part o’ an interconnecting network.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-07.mp3"
       },
 
       {
@@ -115,9 +110,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "MBSE is a form o’ SE. With MBSE, ye can create digital models o’ our ships and systems ta show us all tha important parts and how thay fit together.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-08.mp3"
-
+        "text": "MBSE is a form o’ SE. With MBSE, ye can create digital models o’ our ships and systems ta show us all tha important parts and how thay fit together.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-08.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -126,9 +120,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "*Squawk* Thar models help ye better understand tha approach ta repairing tha ships, and ta catch any potential problems before thay become too costly ta fix.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-09.mp3"	
-	
+        "text": "*Squawk* Thar models help ye better understand tha approach ta repairing tha ships, and ta catch any potential problems before thay become too costly ta fix.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-09.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -137,8 +130,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "Is that something ye think ye can learn? *Squawk*",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-10.mp3"	
+        "text": "Is that something ye think ye can learn? *Squawk*",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-10.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -147,9 +140,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-
-"text": "I think so. There be a process ta follow?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-04.mp3"	
+        "text": "I think so. There be a process ta follow?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-04.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -158,10 +150,10 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "Aye! *Squawk* There be six core steps o’ Systems Engineering.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-11.mp3",	
+        "text": "Aye! *Squawk* There be six core steps o’ Systems Engineering.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-11.mp3",
 
-"image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
         "imageTopOffset": "100px"
@@ -173,8 +165,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "1) Requirements Development and System Analysis",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-12.mp3",
+        "text": "1) Requirements Development and System Analysis",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-12.mp3",
 
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
         "imageWidth": "960px",
@@ -188,8 +180,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "2) Logical Analysis and Design Solution",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-13.mp3",
+        "text": "2) Logical Analysis and Design Solution",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-13.mp3",
 
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
         "imageWidth": "960px",
@@ -203,10 +195,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
+        "text": "3) Implementation",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-14.mp3",
 
-"text": "3) Implementation",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-14.mp3",
-	
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -219,9 +210,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "4) Integration",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-15.mp3",
-	
+        "text": "4) Integration",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-15.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -234,10 +225,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
+        "text": "5) Verification and Validation",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-16.mp3",
 
-"text": "5) Verification and Validation",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-16.mp3",
-	
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -250,9 +240,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "and 6) Transition",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-17.mp3",
-	
+        "text": "and 6) Transition",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-17.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -265,23 +255,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"text": "That sounds straightforward. What should Ye' know about each step?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-05.mp3",
-	
-        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
-        "imageWidth": "960px",
-        "imageHeight": "540px",
-        "imageTopOffset": "100px"
-      },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
-        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
-        "isPlayerTalking": false,
-
-"text": "*Squawk* Aye, great question! Ye be a smart one…",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-18.mp3",
+        "text": "That sounds straightforward. What should Ye' know about each step?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-05.mp3",
 
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
         "imageWidth": "960px",
@@ -295,9 +270,24 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "Using tha Requirements Development and System Analysis step, ye crew uses computer models ta simulate different scenarios and identify tha requirements for making yon ship repairs. These include available resources, time constraints, safety requirements, and risks involved.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-19.mp3",
-	
+        "text": "*Squawk* Aye, great question! Ye be a smart one…",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-18.mp3",
+
+        "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
+        "imageWidth": "960px",
+        "imageHeight": "540px",
+        "imageTopOffset": "100px"
+      },
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+
+        "text": "Using tha Requirements Development and System Analysis step, ye crew uses computer models ta simulate different scenarios and identify tha requirements for making yon ship repairs. These include available resources, time constraints, safety requirements, and risks involved.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-19.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -310,9 +300,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "For tha Logical Analysis and Design Solution step ye use tha same models ta design and optimize tha repair solutions. Balance factars like risk, speed, power, and safety.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-20.mp3",
-	
+        "text": "For tha Logical Analysis and Design Solution step ye use tha same models ta design and optimize tha repair solutions. Balance factars like risk, speed, power, and safety.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-20.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -325,9 +315,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "Ye has ta' get 'er done in tha Implementation step. *Squawk* This means actually carrying out tha repairs.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-21.mp3",
-	
+        "text": "Ye has ta' get 'er done in tha Implementation step. *Squawk* This means actually carrying out tha repairs.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-21.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -340,9 +330,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "Then, with tha Integration step, ye have ta make sure everything works together smoothly and efficiently with tha ship's existing systems.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-22.mp3",
-	
+        "text": "Then, with tha Integration step, ye have ta make sure everything works together smoothly and efficiently with tha ship's existing systems.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-22.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -355,9 +345,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"text": "And how do we make sure everything is working properly?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-06.mp3",
-	
+        "text": "And how do we make sure everything is working properly?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-06.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -370,9 +360,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "*Squawk* Ye haf'ta do tha Verification and Validation step with tha computer models. Ye' crew needs ta test and verify that everything is working correctly and meets all tha requirements.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-23.mp3",
-	
+        "text": "*Squawk* Ye haf'ta do tha Verification and Validation step with tha computer models. Ye' crew needs ta test and verify that everything is working correctly and meets all tha requirements.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-23.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -385,9 +375,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"text": "Then we're done?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-07.mp3",
-	
+        "text": "Then we're done?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-07.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -400,9 +390,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. Tha Transition step gets tha ship back ta its normal operating mode and move ye crew ta tha next repair. Got all this? *Squawk*",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-24.mp3",
-	
+        "text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. Tha Transition step gets tha ship back ta its normal operating mode and move ye crew ta tha next repair. Got all this? *Squawk*",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-24.mp3",
+
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
         "imageWidth": "960px",
         "imageHeight": "540px",
@@ -415,9 +405,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"text": "That sounds like just tha ticket for our crew and our ship!",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-08.mp3"
-	
+        "text": "That sounds like just tha ticket for our crew and our ship!",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-08.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -426,9 +415,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": false,
 
-"text": "Did ye write those steps down in ye book o’ knowledge?",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-25.mp3"
-	
+        "text": "Did ye write those steps down in ye book o’ knowledge?",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-25.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -437,11 +425,9 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": true,
 
-"text": "Aye I did!",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-09.mp3"	
-
-	
-      },  
+        "text": "Aye I did!",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-09.mp3"
+      },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB2.png",
@@ -449,9 +435,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "So there ye have it, me hearties! That's what systems engineering be all about. Arrr! *Squawk*",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-26.mp3"
-	
+        "text": "So there ye have it, me hearties! That's what systems engineering be all about. Arrr! *Squawk*",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-26.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -460,9 +445,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"text": "Aye. Let's get started.",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-10.mp3"
-	
+        "text": "Aye. Let's get started.",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-10.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -471,9 +455,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "*Squawk* Learning SE can take some time, but it's worth tha investment and effort.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-27.mp3"	
-	
+        "text": "*Squawk* Learning SE can take some time, but it's worth tha investment and effort.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-27.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -482,9 +465,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"text": "Ye and ye crew will come away understanding SE better and how ta apply it ta ye work as pirate engineers. Are ye game? *Squawk*",
-"audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-28.mp3"
-	
+        "text": "Ye and ye crew will come away understanding SE better and how ta apply it ta ye work as pirate engineers. Are ye game? *Squawk*",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Parrot_VeeIsland-192kbs-constant-28.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -493,8 +475,8 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"text": "Let's do this!",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-11.mp3"	
+        "text": "Let's do this!",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-11.mp3"
       }
     ]
   }
