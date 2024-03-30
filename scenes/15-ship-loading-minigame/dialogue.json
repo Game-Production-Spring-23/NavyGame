@@ -9,7 +9,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Yarr, yer duty be to match the officers with their respective pallets o' booty."
+
+"test": "Yarr, yer duty be ta match tha officers with thair respective pallets o' booty.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-31.mp3"	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -17,7 +19,10 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "There be four officers responsible for checkin' the mission essential systems on the ship."
+
+
+"test": "There be four officers responsible for checkin' tha mission essential systems on tha ship.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-32.mp3"	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -25,7 +30,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "They be in charge o' combat, ISR, navigation, and life sustainment, and they use Model Based Systems Engineering to document their tests and verification. "
+
+"test": "Thay be in charge o' combat, ISR, navigation, and life sustainment, and thay use Systems Engineering ta document their tests and verification.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-33.mp3"	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -33,7 +40,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "The officers available have icons that mark 'em: Information 'I' for gatherin' intelligence, rocket for fightin', radar web for navigation, and heart for life sustainment. "
+
+"test": "Tha officers available have icons that mark 'em: Information 'I' for gatharin' intelligence, rocket for fightin', radar web for navigation, and heart for life sustainment.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-34.mp3"	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -41,7 +50,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Blimey, each officer is responsible for verifying specific mission essential systems on tha ship. Therefore, it be essential ta match 'em with thair respective pallets accurately. Let's get 'or ship a running ag'in!"
+
+"test": "Blimey, each officer is responsible for verifying specific mission essential systems on tha ship. Therefore, it be essential ta match 'em with thair respective pallets accurately. Let's Get 'or ship a running ag'in!",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-35.mp3"	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -49,7 +60,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/NG_empty.png",
         "isPlayerTalking": false,
-        "text": "How ta play: click on tha officer ta tha corresponding pallet, for example a fighting officer should be clicked if tha pallet is loaded with weapons."
+
+"test": "How ta play: click on tha officer ta tha corresponding pallet, for example a fighting officer should be clicked if tha pallet is loaded with weapons.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-36.mp3"	  
       }
     ]
   },
@@ -63,7 +76,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Avast ye! Be ye certain, matey? That pallet ye picked looks like it belongs t' anothar officer. Ye best try yer luck again and match it with tha right officer. Arrr!"
+
+"test": "Avast ye! Be ye certain, matey? That pallet ye picked looks like it belongs t' anothar officer. Ye best try yer luck again and match it with tha right officer. Arrr!",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-37.mp3"	  
       }
     ]
   },
@@ -77,7 +92,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Shiver me timbers! Well done, me hearty! Looks like tha verification process be completed and we might just be able ta get ready t' set sail! Avast ye, mateys, and hoist tha anchor! We be takin' off on our next adventure soon!"
+
+"test": "Shiver me timbers! Well done, me hearty! Looks like tha verification process be completed and we might just be able ta get ready t' set sail! Avast ye, mateys, and hoist tha anchor! We be takin' off on our next adventure soon!",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-38.mp3"	  
       }
     ]
   }
