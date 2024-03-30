@@ -9,7 +9,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "I reckon that weren't rightly so, matey."
+
+"text": "I reckon that weren't rightly so, matey.",
+"audio": "/assets/audio/voiceover/scene8JungleExplore-player-192kbs-constant-05.mp3"	  
       }
     ]
   },
@@ -23,7 +25,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "Arrr, this be the proper one, matey!"
+
+"text": "Arrr, this be tha proper one, matey!",
+"audio": "/assets/audio/voiceover/scene8JungleExplore-player-192kbs-constant-06.mp3"	  
       }
     ]
   },
@@ -37,7 +41,10 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC2.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "Arrr, by using SysML and block definition diagrams, I've laid me eyes on tha parts needed ta fix tha pump! I best be headin' back ta tha beach ta fetch 'em and bring 'em aboard tha ship."
+
+"text": "Arrr, by using SySML-made diagrams, I've laid me eyes on tha parts needed ta fix tha pump! I best be headin' back ta tha beach ta fetch 'em and bring 'em aboard tha ship.",
+"audio": "/assets/audio/voiceover/scene8JungleExplore-player-192kbs-constant-07.mp3"
+	  
       }
     ]
   },
@@ -51,7 +58,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "Arrr, shiver me timbers! Every scallywag on this here island be a bit peculiar..."
+
+"text": "Arrr, shiver me timbers! Every scallywag on this here island be a bit peculiar...",
+"audio": "/assets/audio/voiceover/scene8JungleExplore-player-192kbs-constant-08.mp3"	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -59,7 +68,10 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": false,
-        "text": "Stay there! Ye can't have yer items unless ye guess which is which!"
+
+"text": "Stay there! Ye can't have yer items unless ye guess which is which!",
+"audio": "/assets/audio/voiceover/scene8JungleExplore-blacksmith-192kbps-constant-01.mp3"
+	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -67,7 +79,10 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "Blast me barnacles! Tha blacksmith be keepin' a tight hold on tha parts until I can guess which be which."
+
+"text": "Blast me barnacles! Tha blacksmith be keepin' a tight hold on tha parts until I can guess which be which.",
+"audio": "/assets/audio/voiceover/scene8JungleExplore-player-192kbs-constant-09.mp3"	  
+	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -75,7 +90,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/Blacksmith.png",
         "isPlayerTalking": true,
-        "text": "I reckon I can make use 'o' tha Block Definition Diagram that was given ta me."
+
+"text": "I reckon I can make use 'o' tha Block Definition Diagram that was given ta me.",
+"audio": "/assets/audio/voiceover/scene8JungleExplore-player-192kbs-constant-10.mp3"	  
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -83,7 +100,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/NG_empty.png",
         "isPlayerTalking": false,
-        "text": "How ta play: Find tha correct part o’ tha pump from tha diagram on tha tap right, hover over each item ta see a clue for what it is, left click on it ta reveal if it is tha correct part or not."
+
+"text": "How ta play: Find tha correct part o’ tha pump from tha diagram on tha tap right, hover over each item ta see a clue for what it is, left click on it ta reveal if it is tha correct part or not.",
+"audio": "/assets/audio/voiceover/scene8JungleExplore-blacksmith-192kbps-constant-02.mp3"	  
       }
     ]
   }
