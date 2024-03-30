@@ -9,7 +9,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Avast, me hearty! Ye be tha Chief Engineer o' tha Signet Messenger, and yer duty be ta get this ship sailin' again."
+
+"text": "Avast, me hearty! Ye be tha Chief Engineer o' tha Signet Messenger, and yer duty be ta get this ship sailin' again.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-01.mp3"	
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -17,7 +19,9 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "Ta begin playin' tha game, ye must take a saunter 'round tha beach and gab with ye’ fellow crew members ta gathar intel 'bout tha damages ta tha ship and tha risks involved."
+
+"text": "Ta begin playin' tha game, ye must take a saunter 'round tha beach and gab with ye’ fellow crew members ta gathar intel 'bout tha damages ta tha ship and tha risks involved.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-02.mp3"	
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -25,8 +29,20 @@
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
-        "text": "As ye parley with these scallywags, keep yer wits 'bout ye and remember tha MBSE approach ye be takin' ta assess tha damage and repair tha ship. With yer keen mind and expert know-how, ye'll have tha Signet Messenger back on tha high seas in no time! Arrr!"
-      }
+
+"text": "As ye parley with these scallywags, keep yer wits 'bout ye and remember tha MBSE approach ye be takin' ta assess tha damage and repair tha ship.",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-03.mp3"	
+	}
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
+        "isPlayerTalking": false,
+
+"text": "With yer keen mind and expert know-how, ye'll have tha Signet Messenger back on tha high seas in no time! Arrr!",
+"audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-04.mp3"	
+      }	
     ]
   }
 ]
