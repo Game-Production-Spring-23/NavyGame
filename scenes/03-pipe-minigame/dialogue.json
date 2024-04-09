@@ -130,16 +130,6 @@
 "text": "When finished press tha arrow icon on tha bottam left, if tha valve turns green that means ye are correct, and if it turns red, it means ye need ta try again.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-07.mp3"	
       },
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "",
-        "isPlayerTalking": false,
-
-"text": "When finished press tha arrow icon on tha bottam left, if tha valve turns green that means ye are correct, and if it turns red, it means ye need ta try again.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-07.mp3"	
-      }
     ]
   },
   {
