@@ -8,6 +8,11 @@ import { startDialogue, isDialogueOccurring } from "/scenes/dialogue.js";
 export function loadScene5() {
   console.log("Scene5 - Beach");
 
+  // Ambience Music
+  const ambienceMusic = document.getElementById("ambience"); // Target the tag with "ambience" ID that play the music.
+  ambienceMusic.volume = 0.25; // Volume settings for Music
+  // Set value lower than 1 to decrease Sound
+
   // Scene 5 - Beach Dialogue
   startDialogue(0, "/scenes/05-beach-explore/dialogue.json");
 
