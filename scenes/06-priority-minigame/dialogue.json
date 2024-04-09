@@ -74,9 +74,7 @@
 "text": "How ta play: Drag and drop each tha correct piece inta tha highlighted section o’ a ship part.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-10.mp3"	  
 	  
-      }
-    ]
-  },
+      },
 
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -90,10 +88,8 @@
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-11.mp3"
 	  
 	  
-      }
-    ]
-  },
-
+      },
+    
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
@@ -139,6 +135,7 @@
       }
     ]
   },
+
   {
     "otherName": "Cross Bird",
     "otherOffset": -50,
@@ -153,8 +150,9 @@
 
 "text": "Arrr, it be crucial we fix tha rudder first, as it be responsible for steerin' our vessel.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-15.mp3"	  
-      },
-
+      }
+    ]
+    },
   {
     "otherName": "Cross Bird",
     "otherOffset": -50,
