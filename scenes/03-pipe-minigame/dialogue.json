@@ -10,9 +10,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
 
-"text": "*whistling*",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-12.mp3"
-	
+        "text": "*whistling*",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-12.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -21,9 +20,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
 
-
-"text": "Ahoy, matey. Lend an' old seafarer a hand would ye?",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-01.mp3"	
+        "text": "Ahoy, matey. Lend an' old seafarer a hand would ye?",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-01.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -32,9 +30,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
 
-"text": "Aye aye. What can I help ye with?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-13.mp3"
-
+        "text": "Aye aye. What can I help ye with?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-13.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -43,8 +40,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
 
-"text": "Ta be honest with ye lad, me memory's not what she used ta be. Tha boiler downstairs be having a scary steam build up and we be needing ta release tha steam by releasing tha valves in tha correct order.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-02.mp3"	
+        "text": "Ta be honest with ye lad, me memory's not what she used ta be. Tha boiler downstairs be having a scary steam build up and we be needing ta release tha steam by releasing tha valves in tha correct order.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-02.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi2.png",
@@ -53,8 +50,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
 
-"text": "Sounds simple enough. What d'ya need me for?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-14.mp3"	
+        "text": "Sounds simple enough. What d'ya need me for?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-14.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -63,8 +60,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
 
-"text": "Like I said, me memory's not all she used ta be. I don’t remember which valve needs ta be released or when, and there be not enough time. So long as ye remember yer SE flow, ye'll do fine. Trust me.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-03.mp3"	
+        "text": "Like I said, me memory's not all she used ta be. I don’t remember which valve needs ta be released or when, and there be not enough time. So long as ye remember yer SE flow, ye'll do fine. Trust me.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-03.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi4.png",
@@ -73,8 +70,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
 
-"text": "I haven't been taught ta operate tha boiler. How can I help?",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-15.mp3"	
+        "text": "I haven't been taught ta operate tha boiler. How can I help?",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-15.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi4.png",
@@ -83,8 +80,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
 
-"text": "Just don’t let it explode.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-04.mp3"	
+        "text": "Just don’t let it explode.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-04.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -93,21 +90,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": true,
 
-"text": "No pressure.",
-"audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-16.mp3"
-
-},
-
-      {
-        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
-        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
-        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
-        "otherPortrait": "/assets/images/characterSplashes/gob.png",
-        "isPlayerTalking": false,
-
-"text": "Ye'll be fine. Sailors honor.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-05.mp3"
-	
+        "text": "No pressure.",
+        "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-16.mp3"
       },
 
       {
@@ -117,8 +101,19 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
 
-"text": "How ta play: yer goal is ta make all six valves resemble tha SE V, hover yer mouse over a valve (shown in tha picture above), ta see what value it is, and left click it ta change tha value.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-06.mp3"	
+        "text": "Ye'll be fine. Sailors honor.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-05.mp3"
+      },
+
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/gob.png",
+        "isPlayerTalking": false,
+
+        "text": "How ta play: yer goal is ta make all six valves resemble tha SE V, hover yer mouse over a valve (shown in tha picture above), ta see what value it is, and left click it ta change tha value.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-06.mp3"
       },
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
@@ -127,8 +122,8 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
 
-"text": "When finished press tha arrow icon on tha bottam left, if tha valve turns green that means ye are correct, and if it turns red, it means ye need ta try again.",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-07.mp3"	
+        "text": "When finished press tha arrow icon on tha bottam left, if tha valve turns green that means ye are correct, and if it turns red, it means ye need ta try again.",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-07.mp3"
       }
     ]
   },
@@ -143,10 +138,9 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
 
-"text": "Ahoy matey! Shiver me timbers, ye have finished tha steam pipe demonstration! Ye be ready ta set sail and take on new challenges. Arrr!",
-"audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-08.mp3"	
+        "text": "Ahoy matey! Shiver me timbers, ye have finished tha steam pipe demonstration! Ye be ready ta set sail and take on new challenges. Arrr!",
+        "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-08.mp3"
       }
     ]
   }
 ]
-
