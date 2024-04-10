@@ -150,14 +150,8 @@
 
 "text": "Arrr, it be crucial we fix tha rudder first, as it be responsible for steerin' our vessel.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-15.mp3"	  
-      }
-    ]
     },
-  {
-    "otherName": "Cross Bird",
-    "otherOffset": -50,
-    "dialogue": [
-      {
+	{
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
         "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
@@ -170,8 +164,6 @@
 
       },	
 
-
-	
       {
         "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
         "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
