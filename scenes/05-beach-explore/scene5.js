@@ -10,7 +10,7 @@ export function loadScene5() {
 
   // Ambience Music
   const ambienceMusic = document.getElementById("ambience"); // Target the tag with "ambience" ID that play the music.
-  ambienceMusic.volume = 0.25; // Volume settings for Music
+  ambienceMusic.volume = 0.1; // Volume settings for Music. The volume property is a number between 0.0 and 1.0. 0.0 is muted, and 1.0 is the loudest volume.
   // Set value lower than 1 to decrease Sound
 
   // Scene 5 - Beach Dialogue
