@@ -26,6 +26,7 @@ export function startDialogue(index, data) {
   let scrollIndex = 0;
   let scrollTimer;
   let scrollSpeed = 15; // To increase speed, decrease value
+  let previousAudio = "";
 
   fetch(dataPath)
     .then((response) => response.json())
@@ -65,7 +66,6 @@ export function startDialogue(index, data) {
 
         //Moves dialogue if the player presses space
         if (event.key == " " || event.code == "Space" || event.keyCode == 32) {
-          console.log("HOW MANY TIMES");
           displayDialogue();
         }
       }
@@ -78,6 +78,14 @@ export function startDialogue(index, data) {
           dialogueText.innerHTML = "";
 
           displayPortrait(data[characterIndex].dialogue);
+
+          //play audio if it exists
+          var audio = data[characterIndex].dialogue[dialogueIndex].audio
+          if(audio != null && previousAudio != audio) { //ensures the same audio doesn't repeat
+            previousAudio = audio;
+            audioPlayer.src = audio;
+            audioPlayer.play();
+          }
 
           //  Changes the front button depending on if there is no more dialogue   //
           if (dialogueIndex == data[characterIndex].dialogue.length - 1)
@@ -120,12 +128,6 @@ export function startDialogue(index, data) {
         }
         //Sets right's portrait
         rightPortrait.src = dialogue[dialogueIndex].otherPortrait;
-
-        //play audio if it exists
-        if (dialogue[dialogueIndex].audio != null) {
-          audioPlayer.src = dialogue[dialogueIndex].audio;
-          audioPlayer.play();
-        }
 
         //if the player is talking
         if (dialogue[dialogueIndex].isPlayerTalking) {
@@ -221,6 +223,7 @@ export function startDialogueNext(index, data, next) {
   let scrollIndex = 0;
   let scrollTimer;
   let scrollSpeed = 50;
+  let previousAudio = "";
 
   fetch(dataPath)
     .then((response) => response.json())
@@ -273,7 +276,15 @@ export function startDialogueNext(index, data, next) {
           dialogueText.innerHTML = "";
 
           displayPortrait(data[characterIndex].dialogue);
-
+          
+          //play audio if it exists
+          var audio = data[characterIndex].dialogue[dialogueIndex].audio
+          if(audio != null && previousAudio != audio) { //ensures the same audio doesn't repeat
+            previousAudio = audio;
+            audioPlayer.src = audio;
+            audioPlayer.play();
+          }
+          
           //  Changes the front button depending on if there is no more dialogue   //
           if (dialogueIndex == data[characterIndex].dialogue.length - 1)
             //Changes the front button to a close button
