@@ -217,6 +217,7 @@ export function startDialogueNext(index, data, next) {
   const leftPortrait = document.getElementById("lCharaPortrait");
   const rightPortrait = document.getElementById("rCharaPortrait");
   const dialogueImage = document.getElementById("dialogueImage");
+  const audioPlayer = document.getElementById("voiceover");
 
   //variables
   let dialogueIndex = 0;
