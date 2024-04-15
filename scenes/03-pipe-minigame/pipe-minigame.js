@@ -33,6 +33,9 @@ export function loadScene3() {
     "/assets/images/minigame1/NG_PipeGame_ValveNumberDisplay_6.png",
   ];
 
+  const ambienceMusic = document.getElementById("ambience"); // Target the tag with "ambience" ID that play the music.
+  ambienceMusic.volume = 0.09;
+
   //variables
   let chosenIndices = [0, 0, 0, 0, 0, 0];
   let isMinigameOver = false;

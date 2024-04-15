@@ -13,6 +13,8 @@ export function loadScene9() {
   const itemImages = document.getElementsByClassName("mg3itemImg");
   const itemTexts = document.getElementsByClassName("mg3itemText");
   const diagram = document.getElementById("mg3diagram");
+  const ambienceMusic = document.getElementById("ambience"); // Target the tag with "ambience" ID that play the music.
+  ambienceMusic.volume = 0.09;
 
   //variables
   let questionIndex = 0;

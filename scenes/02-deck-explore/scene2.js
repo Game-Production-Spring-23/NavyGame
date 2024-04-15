@@ -29,6 +29,8 @@ export function loadScene2() {
   const subtitles = document.getElementById("subtitles");
   const keyMark = document.getElementById("keyMark");
   const dialogueReady = document.getElementById("dialogueReady");
+  const ambienceMusic = document.getElementById("ambience"); // Target the tag with "ambience" ID that play the music.
+  ambienceMusic.volume = 0.09;
 
   let global_data = null;
 
