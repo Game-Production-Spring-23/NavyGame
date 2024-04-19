@@ -122,7 +122,7 @@
         "otherPortrait": "/assets/images/characterSplashes/gob.png",
         "isPlayerTalking": false,
 
-        "text": "When finished press tha arrow icon on tha bottam left, if tha valve turns green that means ye are correct, and if it turns red, it means ye need ta try again.",
+        "text": "When finished press tha arrow icon on tha bottam right, if tha valve turns green that means ye are correct, and if it turns red, it means ye need ta try again.",
         "audio": "/assets/audio/voiceover/ImaniPeters_Gobs_VeeIsland-192kbs-constant-07.mp3"
       }
     ]
