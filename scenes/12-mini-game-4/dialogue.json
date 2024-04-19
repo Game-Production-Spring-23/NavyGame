@@ -10,7 +10,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "Ahoy, me hearties! As tha Chief Engineer o’ tha Signet Messenger, I've found meself in a right tough spot. Our ship be in dire need o’ repairs, and it seems we be short on time and resources.",
+"text": "Ahoy, me hearties! As tha Chief Engineer o’ tha Signet Messenger, I've found meself in a right tough spot. Our ship be in dire need o’ repairs, and it seems we be short on time and resources.",
 "audio": "/assets/audio/voiceover/scene12minigame4-cheifEngi-192kbps-constant-01.mp3"	  
       },
       {
@@ -20,7 +20,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "And ta make matters worse, we've found more holes in tha hull!",
+"text": "And ta make matters worse, we've found more holes in tha hull!",
 "audio": "/assets/audio/voiceover/scene12minigame4-cheifEngi-192kbps-constant-02.mp3"	  
       },
       {
@@ -30,7 +30,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "Now, with tha hull in need o’ patching, we have three options. I'll be needing ta get tha advice o’ tha ship's experts and weigh each option's probability o’ failure versus its severity o’ failure.",
+"text": "Now, with tha hull in need o’ patching, we have three options. I'll be needing ta get tha advice o’ tha ship's experts and weigh each option's probability o’ failure versus its severity o’ failure.",
 "audio": "/assets/audio/voiceover/scene12minigame4-cheifEngi-192kbps-constant-03.mp3"	  
       },
       {
@@ -40,7 +40,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "We'll need ta be careful and wise in our decision-making, lest we put tha ship and crew in even more danger.",
+"text": "We'll need ta be careful and wise in our decision-making, lest we put tha ship and crew in even more danger.",
 "audio": "/assets/audio/voiceover/scene12minigame4-cheifEngi-192kbps-constant-04.mp3"	  
       },
       {
@@ -50,7 +50,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "How ta Play: Click on an option ta propose tha option and ta see what tha othar crewmates think about it. Once ye have seen what thay think in terms o’ probability and severity, drag tha option onta tha peg board.",
+"text": "How ta Play: Click on an option ta propose tha option and ta see what tha othar crewmates think about it. Once ye have seen what thay think in terms o’ probability and severity, drag tha option onta tha peg board.",
 "audio": "/assets/audio/voiceover/scene12minigame4-cheifEngi-192kbps-constant-05.mp3"	  
       }
     ]
@@ -66,7 +66,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "Arrr, me hearties! Tha patchin' should hold up for a good long while. Tha hole goo be super strong, makin' tha probability o’ failure low.",
+"text": "Arrr, me hearties! Tha patchin' should hold up for a good long while. Tha hole goo be super strong, makin' tha probability o’ failure low.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-28.mp3"	  
       },
       {
@@ -76,7 +76,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "And tha piratanium is water resistant and easy ta’ apply, so tha severity o’ failure is low.",
+"text": "And tha piratanium is water resistant and easy ta’ apply, so tha severity o’ failure is low.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-29.mp3"	  
       },
       {
@@ -86,7 +86,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "We should be able ta set sail with some confidence. We must be remain vigilant and keep an eye out for any signs o’ trouble!",
+"text": "We should be able ta set sail with some confidence. We must be remain vigilant and keep an eye out for any signs o’ trouble!",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-30.mp3"	  
       }
     ]
