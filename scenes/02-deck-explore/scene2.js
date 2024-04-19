@@ -84,26 +84,6 @@ export function loadScene2() {
         "url(" + data.characters.veteran.sprite[0] + ")";
       vet.setAttribute("name", data.characters.veteran.name);
 
-      chef.style.left = data.characters.chef.offset + "px";
-      chef.style.backgroundImage =
-        "url(" + data.characters.chef.sprite[0] + ")";
-      chef.setAttribute("name", data.characters.chef.name);
-
-      officers.style.left = data.characters.officers.offset + "px";
-      officers.style.backgroundImage =
-        "url(" + data.characters.officers.sprite[0] + ")";
-      officers.setAttribute("name", data.characters.officers.name);
-
-      tech.style.left = data.characters.tech.offset + "px";
-      tech.style.backgroundImage =
-        "url(" + data.characters.tech.sprite[0] + ")";
-      tech.setAttribute("name", data.characters.tech.name);
-
-      nt.style.left = data.characters.nontech.offset + "px";
-      nt.style.backgroundImage =
-        "url(" + data.characters.nontech.sprite[0] + ")";
-      nt.setAttribute("name", data.characters.nontech.name);
-
       bgContainer.style.width = 1920 * data.params.bg_scale + "px";
       bgContainer.style.backgroundImage =
         "url(" + data.params.bg_images[0] + ")";
@@ -351,6 +331,6 @@ export function loadScene2() {
       keyMark.style.visibility = "hidden";
     } else if(interaction == global_data.characters.captain.name) {
       startDialogue(2, "/scenes/02-deck-explore/dialogue.json");
-    }
+    } 
   }
 }
