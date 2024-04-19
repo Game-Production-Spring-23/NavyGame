@@ -479,5 +479,20 @@
         "audio": "/assets/audio/voiceover/SamBanks_VeeIsland-192kbs-constant-11.mp3"
       }
     ]
+  },
+  {
+    "otherName": "Captain",
+    "otherOffset": 0,
+    "dialogue": [
+      {
+        "playerPortrait": "/assets/images/characterSplashes/engineer/engi1.png",
+        "playerPortrait1": "/assets/images/characterSplashes/engineer/engiB1.png",
+        "playerPortrait2": "/assets/images/characterSplashes/engineer/engiC1.png",
+        "otherPortrait": "/assets/images/characterSplashes/captain.png",
+        "isPlayerTalking": false,
+        "text": "Avast ye! I'm the Captain of the Signet Messenger. I hear you are new to the crew. Talk to my right hand, Crossbird the parrot, and make sure the ship stays in prime condition.",
+        "audio": "/assets/audio/voiceover/Scene1_PirateCaptain-01.mp3"
+      }
+    ]
   }
 ]

@@ -223,7 +223,7 @@ export function startDialogueNext(index, data, next) {
   let dialogueIndex = 0;
   let scrollIndex = 0;
   let scrollTimer;
-  let scrollSpeed = 50;
+  let scrollSpeed = 15;
   let previousAudio = "";
 
   fetch(dataPath)
@@ -264,7 +264,6 @@ export function startDialogueNext(index, data, next) {
 
         //Moves dialogue if the player presses space
         if (event.key == " " || event.code == "Space" || event.keyCode == 32) {
-          console.log("HOW MANY TIMES");
           displayDialogue();
         }
       }

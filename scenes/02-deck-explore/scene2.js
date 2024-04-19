@@ -20,10 +20,6 @@ export function loadScene2() {
   const parrot = document.getElementById("parrot");
   const qm = document.getElementById("quartermaster");
   const vet = document.getElementById("veteran");
-  const chef = document.getElementById("chef");
-  const officers = document.getElementById("officers");
-  const tech = document.getElementById("tech");
-  const nt = document.getElementById("nontech");
   //const characters = document.getElementsByClassName("character");
   const stationary = document.getElementById("stationary");
   const subtitles = document.getElementById("subtitles");
@@ -201,30 +197,6 @@ export function loadScene2() {
         // quartermaster
         interaction = global_data.characters.quartermaster.name;
       } else if (
-        playerAbs > global_data.characters.chef.offset - 24 &&
-        playerAbs < global_data.characters.chef.offset + 96
-      ) {
-        // chef
-        interaction = global_data.characters.chef.name;
-      } else if (
-        playerAbs > global_data.characters.officers.offset - 24 &&
-        playerAbs < global_data.characters.officers.offset + 96
-      ) {
-        // officers
-        interaction = global_data.characters.officers.name;
-      } else if (
-        playerAbs > global_data.characters.nontech.offset - 24 &&
-        playerAbs < global_data.characters.nontech.offset + 96
-      ) {
-        // nontech
-        interaction = global_data.characters.nontech.name;
-      } else if (
-        playerAbs > global_data.characters.tech.offset - 24 &&
-        playerAbs < global_data.characters.tech.offset + 96
-      ) {
-        // tech
-        interaction = global_data.characters.tech.name;
-      } else if (
         playerAbs > global_data.characters.veteran.offset - 24 &&
         playerAbs < global_data.characters.veteran.offset + 96
       ) {
@@ -373,24 +345,12 @@ export function loadScene2() {
   }
 
   function interact(global_data) {
-    console.log(interaction);
-
     if (interaction == key && locked) {
       locked = false;
       startDialogue(1, "/scenes/02-deck-explore/dialogue.json");
       keyMark.style.visibility = "hidden";
-
-      // wait 5 seconds and display arrow to right of screen
-    } else if (interaction != "") {
-      if (locked) {
-        // sub-dialogue? Format: 'Name: "Text"'
-        subtitles.innerHTML = interaction + ': "Go talk to the parrot."';
-        document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
-      } else {
-        subtitles.innerHTML =
-          interaction + ': "Head to the Boiler Room, Chief."';
-        document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
-      }
+    } else if(interaction == global_data.characters.captain.name) {
+      startDialogue(2, "/scenes/02-deck-explore/dialogue.json");
     }
   }
 }
