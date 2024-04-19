@@ -71,6 +71,7 @@
 }
 .mg3item:hover .mg3itemText {
   visibility: visible;
+  opacity: 1;
 }
 .mg3item .mg3itemText::after {
   content: " ";
