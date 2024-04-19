@@ -10,7 +10,7 @@
         "otherPortrait": "",
         "isPlayerTalking": false,
 
-"test": "Talk ta CrossBird ta review SE and Transition out o’ our adventure.",
+"text": "Talk ta CrossBird ta review SE and Transition out o’ our adventure.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-39.mp3"	  
       }
     ]
@@ -26,7 +26,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "Ahoy there, me hearty! *Squawk* That was some mighty-fine work yar been done! It be time ta review.",
+"text": "Ahoy there, me hearty! *Squawk* That was some mighty-fine work yar been done! It be time ta review.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-40.mp3"
 	  
       },
@@ -39,7 +39,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "Systems Engineering (SE) can help test ye different approaches ta see how tha ship's systems would behave under different conditions ta make sure it is safe and reliable for ye adventures.",
+"text": "Systems Engineering (SE) can help test ye different approaches ta see how tha ship's systems would behave under different conditions ta make sure it is safe and reliable for ye adventures.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-41.mp3"	  
       },
       {
@@ -49,7 +49,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "These systems can include hardware, software, information, processes, facilities and more, working together as part o’ an interconnecting network.",
+"text": "These systems can include hardware, software, information, processes, facilities and more, working together as part o’ an interconnecting network.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-42.mp3"	  
       },
       {
@@ -59,7 +59,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "MBSE is a form o’ SE. With MBSE, ye can create digital models o’ our ships and systems ta show us all tha important parts and how thay fit together.",
+"text": "MBSE is a form o’ SE. With MBSE, ye can create digital models o’ our ships and systems ta show us all tha important parts and how thay fit together.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-43.mp3"	  
       },
       {
@@ -69,7 +69,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "*Squawk* Thar models help ye better understand tha approach ta repairing tha ships, and ta catch any potential problems before thay become tao costly ta fix.",
+"text": "*Squawk* Thar models help ye better understand tha approach ta repairing tha ships, and ta catch any potential problems before thay become tao costly ta fix.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-44.mp3"	  
       },
       {
@@ -79,7 +79,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "Is that something ye think ye remember? *Squawk*",
+"text": "Is that something ye think ye remember? *Squawk*",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-45.mp3"
 	  
       },
@@ -90,7 +90,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"test": "I think so. Let's go over it just ta be sure.",
+"text": "I think so. Let's go over it just ta be sure.",
 "audio": "/assets/audio/voiceover/finalMBSEreview-192kbps-constant-01.mp3"	  
 	  
       },
@@ -101,7 +101,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "Aye! *Squawk* There be six core steps o’ Systems Engineering.",
+"text": "Aye! *Squawk* There be six core steps o’ Systems Engineering.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-46.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
@@ -116,7 +116,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "1) Requirements Development and System Analysis",
+"text": "1) Requirements Development and System Analysis",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-47.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
@@ -131,7 +131,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "2) Logical Analysis and Design Solution",
+"text": "2) Logical Analysis and Design Solution",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-48.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram2.png",
@@ -146,7 +146,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "3) Implementation",
+"text": "3) Implementation",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-49.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
@@ -161,7 +161,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "4) Integration",
+"text": "4) Integration",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-50.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
@@ -176,7 +176,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "5) Verification and Validation",
+"text": "5) Verification and Validation",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-51.mp3",
 
 	  
@@ -192,7 +192,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "and 6) Transition",
+"text": "and 6) Transition",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-52.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
@@ -207,7 +207,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"test": "That sounds straightforward. What should Ye' know about each step?",
+"text": "That sounds straightforward. What should Ye' know about each step?",
 "audio": "/assets/audio/voiceover/finalMBSEreview-192kbps-constant-02.mp3",	  
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
@@ -222,7 +222,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "*Squawk* Aye, great question! Ye be a smart one…",
+"text": "*Squawk* Aye, great question! Ye be a smart one…",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-53.mp3",
 
 	  
@@ -238,7 +238,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "Using tha Requirements Development and System Analysis step, ye crew uses computer models ta simulate different scenarios and identify tha requirements for making yon ship repairs. These include available resources, time constraints, safety requirements, and risks involved.",
+"text": "Using tha Requirements Development and System Analysis step, ye crew uses computer models ta simulate different scenarios and identify tha requirements for making yon ship repairs. These include available resources, time constraints, safety requirements, and risks involved.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-54.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram1.png",
@@ -253,7 +253,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "For tha Logical Analysis and Design Solution step ye use tha same models ta design and optimize tha repair solutions. Balance factars like risk, speed, power, and safety.",
+"text": "For tha Logical Analysis and Design Solution step ye use tha same models ta design and optimize tha repair solutions. Balance factars like risk, speed, power, and safety.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-55.mp3",	  
 
 	  
@@ -269,7 +269,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "Ye has ta' get 'er done in tha Implementation step. *Squawk* This means actually carrying out tha repairs.",
+"text": "Ye has ta' get 'er done in tha Implementation step. *Squawk* This means actually carrying out tha repairs.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-56.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram3.png",
@@ -284,7 +284,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "Then, with tha Integration step, ye have ta make sure everything works together smoothly and efficiently with tha ship's existing systems.",
+"text": "Then, with tha Integration step, ye have ta make sure everything works together smoothly and efficiently with tha ship's existing systems.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-57.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
@@ -299,7 +299,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"test": "And how do we make sure everything is working properly?",
+"text": "And how do we make sure everything is working properly?",
 "audio": "/assets/audio/voiceover/finalMBSEreview-192kbps-constant-03.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram4.png",
@@ -314,7 +314,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "*Squawk* Ye haf'ta do tha Verification and Validation step with tha computer models. Ye' crew needs ta test and verify that everything is working correctly and meets all tha requirements.",
+"text": "*Squawk* Ye haf'ta do tha Verification and Validation step with tha computer models. Ye' crew needs ta test and verify that everything is working correctly and meets all tha requirements.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-58.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
@@ -329,7 +329,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"test": "Then we're done?",
+"text": "Then we're done?",
 "audio": "/assets/audio/voiceover/finalMBSEreview-192kbps-constant-04.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram5.png",
@@ -344,7 +344,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "*Squawk* Almost! Ye' gots' ta wrap up ye work. Tha Transition step gets tha ship back ta its normal operating mode, and move ye crew ta tha next repair. Got all this? *Squawk*",
+"text": "*Squawk* Almost! Ye' gots' ta wrap up ye work. Tha Transition step gets tha ship back ta its normal operating mode, and move ye crew ta tha next repair. Got all this? *Squawk*",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-59.mp3",
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram6.png",
@@ -359,7 +359,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": true,
 
-"test": "That sounds like just tha ticket for our crew and our ship!",
+"text": "That sounds like just tha ticket for our crew and our ship!",
 "audio": "/assets/audio/voiceover/finalMBSEreview-192kbps-constant-05.mp3",	  
 	  
         "image": "/assets/images/stages-of-System-Engineering/NG_MBSEDiagram0.png",
@@ -376,7 +376,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "Did ye write those steps down in ye book o’ knowledge?",
+"text": "Did ye write those steps down in ye book o’ knowledge?",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-60.mp3"
       },
 	{
@@ -386,7 +386,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb2.png",
         "isPlayerTalking": true,
 
-"test": "Aye I did!",
+"text": "Aye I did!",
 "audio": "/assets/audio/voiceover/finalMBSEreview-192kbps-constant-06.mp3",
 	  
 	  
@@ -404,7 +404,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "So there ye have it, me hearties! That's what systems engineering be all about. Arrr! *Squawk*",
+"text": "So there ye have it, me hearties! That's what systems engineering be all about. Arrr! *Squawk*",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-61.mp3"	  
       },
       {
@@ -414,7 +414,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"test": "Aye. A beautiful tool if do say so.",
+"text": "Aye. A beautiful tool if do say so.",
 "audio": "/assets/audio/voiceover/finalMBSEreview-192kbps-constant-07.mp3"	  
       },
       {
@@ -424,7 +424,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": false,
 
-"test": "*Squawk* Learning SE can take some time, but it's worth tha investment and effort.",
+"text": "*Squawk* Learning SE can take some time, but it's worth tha investment and effort.",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-62.mp3"	  
       },
       {
@@ -435,7 +435,7 @@
         "isPlayerTalking": false,
 
 
-"test": "Ye and ye crew have now come away understanding SE better and how ta apply it ta ye work as pirate engineers. Ready for yer next adventure? *Squawk*",
+"text": "Ye and ye crew have now come away understanding SE better and how ta apply it ta ye work as pirate engineers. Ready for yer next adventure? *Squawk*",
 "audio": "/assets/audio/voiceover/ImaniPeters_Parrot2-192kbps-constant-63.mp3"	  
       },
       {
@@ -445,7 +445,7 @@
         "otherPortrait": "/assets/images/characterSplashes/crossBirb/cb1.png",
         "isPlayerTalking": true,
 
-"test": "Aye Aye, Cross Bird!",
+"text": "Aye Aye, Cross Bird!",
 "audio": "/assets/audio/voiceover/finalMBSEreview-192kbps-constant-08.mp3"	  
       }
     ]
