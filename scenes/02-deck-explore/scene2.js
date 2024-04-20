@@ -331,6 +331,12 @@ export function loadScene2() {
       keyMark.style.visibility = "hidden";
     } else if(interaction == global_data.characters.captain.name) {
       startDialogue(2, "/scenes/02-deck-explore/dialogue.json");
-    } 
+    } else if(interaction == global_data.characters.quartermaster.name) {
+      subtitles.innerHTML = interaction + ': "Ahoy Matey! Looks like Crossbird the Parrot has a word fer ye!"';
+      document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
+    } else {
+      subtitles.innerHTML = interaction + ': "Better talk to Crossbird or ye\'ll be stuck scrubbin\' the poop deck like me."';
+      document.globalTimeouts.push(setTimeout(resetSubtitles, 2500));
+    }
   }
 }
