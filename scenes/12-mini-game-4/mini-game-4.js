@@ -17,12 +17,13 @@ export function miniGame4() {
   // allow player to reset grid items (if stuff breaks)
   document.getElementById("resetBtn").onclick = () => {
     resetGridItems();
-  } // end resetBtn onclick function
+  }; // end resetBtn onclick function
 
   // draggable element
   let draggableElement;
   let posX = 0;
   let posY = 0;
+  let scale = 0.95;
 
   // load audio assets
   let pickUpPaperAudio = new Audio("/assets/audio/pickupPaper.wav");
@@ -91,8 +92,13 @@ export function miniGame4() {
           gridItems[i].dataset.option = draggableElement.id;
           draggableElement.dataset.hasMoved = "true";
           let rect = gridItems[i].getBoundingClientRect();
+          console.log(rect);
           draggableElement.style.top = rect.top - rect.height / 4 + "px";
           draggableElement.style.left = rect.left - rect.width / 2 + "px";
+          console.log(
+            "Element X: " + draggableElement.style.left,
+            "Element Y: " + draggableElement.style.top
+          );
           swing(draggableElement.id);
         } // end if
       } // end if
@@ -112,8 +118,26 @@ export function miniGame4() {
       let mouseY = posY - event.pageY;
       posX = event.pageX;
       posY = event.pageY;
-      draggableElement.style.left = draggableElement.offsetLeft - mouseX + "px";
-      draggableElement.style.top = draggableElement.offsetTop - mouseY + "px";
+
+      // I gotten 1.237-1.24 value from dividing the posX by Left value aka posX / draggableElement.style.left
+      draggableElement.style.left =
+        draggableElement.offsetLeft - mouseX * 1.2374 + "px";
+      draggableElement.style.top =
+        draggableElement.offsetTop - mouseY * 1.2374 + "px";
+      // draggableElement.style.left = draggableElement.offsetLeft - mouseX * (posX / elementPosX) + "px";
+      // draggableElement.style.top = draggableElement.offsetTop - mouseY * (posY / elementPosY) + "px";
+
+      // Show the position of Mouse and Draggable Element
+      // console.log("PosX: " + posX, "PosY: " + posY); // Track Positions
+      // console.log("X: " + mouseX, "Y: " + mouseY);
+      // console.log(
+      //   "Element X: " + draggableElement.style.left,
+      //   "Element Y: " + draggableElement.style.top
+      // );
+      // console.log(
+      //   "PosX / Left position: ",
+      //   posX / draggableElement.offsetLeft - mouseX
+      // );
     } // end if
   } // end onmousemove
 
@@ -236,10 +260,8 @@ export function miniGame4() {
     ]; // end initLoc
     for (let i = 0; i < options.length; i++) {
       options[i].dataset.hasMoved = "false";
-      let destX =
-        initLoc[i].x - parseInt(options[i].style.left.slice(0, -2));
-      let destY =
-        initLoc[i].y - parseInt(options[i].style.top.slice(0, -2));
+      let destX = initLoc[i].x - parseInt(options[i].style.left.slice(0, -2));
+      let destY = initLoc[i].y - parseInt(options[i].style.top.slice(0, -2));
       slide(options[i].id, destX, destY, initLoc[i].x, initLoc[i].y);
     } // end for
   } // end resetGridItems

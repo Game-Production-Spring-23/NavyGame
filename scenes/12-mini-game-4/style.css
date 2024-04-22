@@ -5,10 +5,8 @@
   --speech-bubble-1-left-spacing: 18vw;
   --speech-bubble-2-left-spacing: 50vw;
   --speech-bubble-3-left-spacing: 83vw;
-
   --speech-bubble-width: 295px;
   --speech-bubble-height: 335px;
-
   /* Options Vars */
   --options-left-spacing: 3vw;
   --options-width: 400px;
@@ -27,9 +25,7 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-
   transform: rotate(-25deg);
-
   width: 100px;
   height: 100px;
 }
@@ -40,13 +36,10 @@ body {
   background-color: transparent;
   position: absolute;
   user-select: none;
-
   /* top: var(--speech-bubble-top-spacing); */
   bottom: 0;
-
   width: var(--speech-bubble-width);
   height: var(--speech-bubble-height);
-
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -95,32 +88,28 @@ body {
   background-color: transparent;
   position: absolute;
   user-select: none;
-
   left: var(--options-left-spacing);
-
   width: var(--options-width);
   height: var(--options-height);
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
   z-index: 1;
 }
 
 #option-1 {
   transform: rotate(5deg);
-  top: 5vh;
+  top: 7vh;
 }
 
 #option-2 {
   transform: rotate(-7deg);
-  top: 25vh;
+  top: 31vh;
 }
 
 #option-3 {
   transform: rotate(2deg);
-  top: 44vh;
+  /* top: 44vh; */
 }
 
 .option-text {
@@ -134,12 +123,16 @@ body {
 /* Severity-Probability Grid Styles */
 #severity-probability-grid {
   background-color: transparent;
-
   position: absolute;
   top: 10vh;
   left: 53.5vw;
   width: 63.5vw;
   height: 52vh;
+  /* Old Values */
+  /* top: 8vh;
+  left: 43.5vw;
+  width: 50.5vw;
+  height: 43vh; */
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -158,7 +151,6 @@ body {
 
 .grid-item {
   background-color: transparent;
-
   border-style: solid;
   border-width: 5px;
 }
