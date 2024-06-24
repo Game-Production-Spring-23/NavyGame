@@ -1,5 +1,7 @@
-# Navy Game README
-Below are useful notes that we may need to refer back to later.
+# The Mystery of Vee Island
+Mystery of Vee Island is an educational game created by the N436 Game Production class of Spring 2023 for Crane Naval Base. The game places the player in the role of a pirate whose ship has crashed on Vee Island. The player and their crew must collaborate to repair the ship, learning about MBSE through the gameplay and story. The game, developed using pure JavaScript and compiled into an executable format, involves various minigames that serve as engaging quizzes, testing players' knowledge gathered from each level.
+
+# Navy Game Development Notes
 
 ## Overall Structure
 This project was made using the following technologies/languages:
